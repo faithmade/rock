@@ -1,5 +1,5 @@
 {
-  "name": "basis-pro",
+  "name": "rock-pro",
   "version": "0.0.1",
   "description": "A blog theme for pastors.",
   "main": "index.php",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/UpThemes/basis-pro.git"
+    "url": "git://github.com/UpThemes/rock-pro.git"
   },
   "author": "UpThemes",
   "license": "GPLv2",
   "bugs": {
-    "url": "https://github.com/UpThemes/basis-pro/issues"
+    "url": "https://github.com/UpThemes/rock-pro/issues"
   },
-  "homepage": "https://github.com/UpThemes/basis-pro",
+  "homepage": "https://github.com/UpThemes/rock-pro",
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-autoprefixer": "~1.0.0",

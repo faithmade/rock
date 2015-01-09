@@ -1,6 +1,6 @@
 Thanks for contributing to `_s` (Underscores) — you rock!
 
-## Basis
+## rock
 Before getting started, make sure your issue has not been discussed earlier. You can search for existing tickets [here](https://github.com/Automattic/_s/search).
 
 Here are some tips to consider and to help you write a great report:

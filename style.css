@@ -1,19 +1,15 @@
 /*
-Theme Name: Basis Framework
-Theme URI: http://basiswp.com/
-Author: UpThemes
-Author URI: https://upthemes.com/
-Description: Basis is a WordPress theme framework with modern development build tools developed with one goal in mind: speeding up design, development, and release of commercial themes to the WordPress.com theme marketplace.
-Version: 1.2
+Theme Name: Rock Framework
+Theme URI: http://churchthemes.net/
+Author: ChurchThemes.net
+Author URI: https://churchthemes.net/
+Description: Rock is a theme framework for churches and ministries.
+Version: 0.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: basis
+Text Domain: rock
 Domain Path: /languages/
 Tags:
-
-This theme, like WordPress, is licensed under the GPL.
-
-Basis includes code from Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
 */
 /*--------------------------------------------------------------
 Variables
@@ -45,7 +41,6 @@ html, body {
   height: 100%; }
 
 *, *:before, *:after {
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 html, body {
@@ -1282,7 +1277,6 @@ input[type="search"] {
   -webkit-appearance: textfield;
   /* Addresses appearance set to searchfield in S5, Chrome */
   /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
-  -moz-box-sizing: content-box;
   box-sizing: content-box; }
 
 input[type="search"]::-webkit-search-decoration {
@@ -1566,8 +1560,7 @@ a {
     width: 100%;
     background: #fff;
     border-radius: 2px;
-    -moz-box-sizing: border-box;
-         box-sizing: border-box; }
+    box-sizing: border-box; }
     .widget_search .search-field:focus {
       background: #fff; }
   .widget_search .search-submit {
@@ -1580,8 +1573,7 @@ a {
   margin: -20px -20px 1em;
   margin-bottom: 1rem;
   position: relative;
-  -moz-box-sizing: content-box;
-       box-sizing: content-box;
+  box-sizing: content-box;
   text-transform: uppercase;
   font-weight: bold;
   border-bottom: 1px solid #e7e7e7; }
@@ -1689,8 +1681,7 @@ a {
           display: block;
           font-weight: bold;
           border-bottom: none;
-          -webkit-transition: 200ms color linear;
-                  transition: 200ms color linear; }
+          transition: 200ms color linear; }
       .widget_calendar #calendar_wrap #wp-calendar tfoot {
         background: #cbd0d0; }
         .widget_calendar #calendar_wrap #wp-calendar tfoot td {
@@ -1698,8 +1689,7 @@ a {
           font-weight: bold; }
           .widget_calendar #calendar_wrap #wp-calendar tfoot td a {
             color: #444;
-            -webkit-transition: 200ms color linear;
-                    transition: 200ms color linear; }
+            transition: 200ms color linear; }
             .widget_calendar #calendar_wrap #wp-calendar tfoot td a:hover {
               color: #e91f2e; }
           .widget_calendar #calendar_wrap #wp-calendar tfoot td#prev {
@@ -1741,7 +1731,7 @@ a {
   margin-top: -2.5rem;
   margin-right: -3.5rem;
   margin-left: -3.5rem; }
-.hentry .attachment-basis-featured {
+.hentry .attachment-rock-featured {
   width: 100%;
   height: auto; }
 .hentry .entry-header {
@@ -1979,8 +1969,7 @@ img[class*="wp-image-"] {
   margin-bottom: 1em;
   margin-bottom: 1rem;
   max-width: 100%;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
   margin-left: 0;
   margin-right: 0; }
   .wp-caption img[class*="wp-image-"] {
@@ -2684,8 +2673,7 @@ body.layout-one-column-narrow .row, body.layout-one-column-narrow .main-navigati
         border: 0;
         width: 32px;
         height: 32px;
-        -webkit-transition: 200ms opacity;
-                transition: 200ms opacity; }
+        transition: 200ms opacity; }
         .social-menu ul li a:hover {
           opacity: 1; }
         .social-menu ul li a:before {

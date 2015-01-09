@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package Basis
+ * @package rock
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {

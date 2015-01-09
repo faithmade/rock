@@ -4,7 +4,7 @@
  *
  * This file is centrally included from `wp-content/mu-plugins/wpcom-theme-compat.php`.
  *
- * @package Basis
+ * @package rock
  */
 
 /**
@@ -12,7 +12,7 @@
  *
  * @global array $themecolors
  */
-function basis_wpcom_setup() {
+function rock_wpcom_setup() {
 	global $themecolors;
 
 	// Set theme colors for third party services.
@@ -26,4 +26,4 @@ function basis_wpcom_setup() {
 		);
 	}
 }
-add_action( 'after_setup_theme', 'basis_wpcom_setup' );
+add_action( 'after_setup_theme', 'rock_wpcom_setup' );

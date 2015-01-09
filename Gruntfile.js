@@ -40,7 +40,7 @@ module.exports = function(grunt) {
 
 		pot: {
 				options:{
-					text_domain: 'basis', //Your text domain. Produces my-text-domain.pot
+					text_domain: 'rock', //Your text domain. Produces my-text-domain.pot
 					dest: 'languages/', //directory to place the pot file
 					keywords: [ //WordPress localisation functions
 						'__:1',
@@ -82,8 +82,9 @@ module.exports = function(grunt) {
 				]
 			},
 			options: {
-				//proxy: "localhost", // enter your local WP URL here
-				watchTask: true
+				proxy: "rock.dev",
+				watchTask: true,
+				notify: false
 			}
 		    }
 		},

@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Basis
+ * @package rock
  */
 ?>
 <header class="entry-header">
@@ -19,7 +19,7 @@
 				}
 				echo '<span class="post-format">' . $format . '</span>';
 				?>
-				<?php basis_posted_on(); ?>
+				<?php rock_posted_on(); ?>
 			</div><!-- .entry-meta -->
 			<?php endif; ?>
 

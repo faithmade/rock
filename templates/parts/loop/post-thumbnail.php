@@ -4,12 +4,12 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Basis
+ * @package rock
  */
 ?>
 
 <?php if( has_post_thumbnail() ): ?>
 <div class="featured-image">
-	<?php the_post_thumbnail( 'basis-featured' ); ?>
+	<?php the_post_thumbnail( 'rock-featured' ); ?>
 </div><!-- .featured-image -->
 <?php endif; ?>

@@ -2,7 +2,7 @@
 /**
  * Displays the footer site info.
  *
- * @package Basis
+ * @package rock
  */
 ?>
 
@@ -11,9 +11,9 @@
 		<div class="site-info-inner">
 
 			<div class="site-info-text">
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'basis' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'basis' ), 'WordPress' ); ?></a>
+				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'rock' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'rock' ), 'WordPress' ); ?></a>
 				<span class="sep"> | </span>
-				<?php printf( __( 'Theme: %1$s by %2$s.', 'basis' ), 'Basis', '<a href="https://upthemes.com/" rel="designer">UpThemes</a>' ); ?>
+				<?php printf( __( 'Theme: %1$s by %2$s.', 'rock' ), 'rock', '<a href="https://upthemes.com/" rel="designer">UpThemes</a>' ); ?>
 			</div><!-- .site-info-text -->
 
 			<div class="social-menu">

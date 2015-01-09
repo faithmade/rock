@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page title within the loop.
  *
- * @package Basis
+ * @package rock
  */
 ?>
 <header class="entry-header">
