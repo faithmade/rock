@@ -6,6 +6,13 @@
  */
 
 /**
+ * Church Framework
+ */
+require get_template_directory() . '/framework/framework.php';
+require get_template_directory() . '/inc/support-ctc.php';
+require get_template_directory() . '/inc/support-framework.php';
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
