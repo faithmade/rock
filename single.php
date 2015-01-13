@@ -12,7 +12,18 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'content' ); ?>
+			<?php
+
+			switch ( get_post_type() ) {
+				case 'ctc_sermon':
+					get_template_part( 'content', 'sermon' );
+				break;
+				default:
+					get_template_part( 'content' );
+				break;
+			}
+
+			?>
 
 			<?php rock_post_nav(); ?>
 
