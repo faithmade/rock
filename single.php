@@ -18,6 +18,12 @@ get_header(); ?>
 				case 'ctc_sermon':
 					get_template_part( 'content', 'sermon' );
 				break;
+				case 'ctc_event':
+					get_template_part( 'content', 'event' );
+				break;
+				case 'ctc_person':
+					get_template_part( 'content', 'person' );
+				break;
 				default:
 					get_template_part( 'content' );
 				break;
