@@ -84,7 +84,8 @@ module.exports = function(grunt) {
 			options: {
 				proxy: "rock.dev",
 				watchTask: true,
-				notify: false
+				notify: false,
+				ghostMode: false
 			}
 		    }
 		},
