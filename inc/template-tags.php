@@ -159,3 +159,26 @@ function rock_category_transient_flusher() {
 }
 add_action( 'edit_category', 'rock_category_transient_flusher' );
 add_action( 'save_post',     'rock_category_transient_flusher' );
+
+
+/**
+ * Post featured image for full or short
+ *
+ * If short/multiple view (not singular), image is linked.
+ *
+ * @since 1.0
+ * @return string Featured image HTML
+ */
+function rock_post_image() {
+
+	// Featured image
+	$image = get_the_post_thumbnail( null, apply_filters('rock_post_image_size', 'rock-post-header'), array('class' => 'rock-image' ) );
+
+	// Link if short / multiple
+	if ( ! is_singular( get_post_type() ) ) {
+		$image = '<a href="' . esc_url( get_permalink() ) . '" title="' . esc_attr( the_title_attribute( array( 'echo' => false ) ) ) . '">' . $image . '</a>';
+	}
+
+	echo apply_filters( 'rock_post_image', $image );
+
+}
