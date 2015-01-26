@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rock-pro 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-16 09:36-0500\n"
+"POT-Creation-Date: 2015-01-16 16:17-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1457,13 +1457,68 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
+#: templates/parts/loop/event-content.php:34
+#: templates/parts/loop/person-content.php:34
+msgctxt "event"
+msgid "Get Directions"
+msgstr ""
+
+#. //codex.wordpress.org/Template_Hierarchy
+#. *
+#. * @package rock
+#.
+#: templates/parts/loop/event-content.php:42
+#: templates/parts/loop/location-content.php:43
+#: templates/parts/loop/person-content.php:42
+#: templates/parts/loop/post-content.php:11
+#: templates/parts/loop/sermon-content.php:107
+msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: templates/parts/loop/event-content.php:45
+#: templates/parts/loop/location-content.php:46
 #: templates/parts/loop/page-content.php:12
+#: templates/parts/loop/person-content.php:45
 #: templates/parts/loop/post-content.php:14
 #: templates/parts/loop/sermon-content.php:110
 msgid "Pages:"
 msgstr ""
 
+#. //codex.wordpress.org/Template_Hierarchy
+#. *
+#. * @package rock
+#.
+#: templates/parts/loop/event-footer.php:13
+#: templates/parts/loop/location-footer.php:13
+#: templates/parts/loop/person-footer.php:13
+#: templates/parts/loop/post-footer.php:13
+#: templates/parts/loop/post-search-footer.php:34
+#: templates/parts/loop/sermon-footer.php:13
+msgid "Leave a comment"
+msgstr ""
+
+#: templates/parts/loop/event-footer.php:13
+#: templates/parts/loop/location-footer.php:13
+#: templates/parts/loop/person-footer.php:13
+#: templates/parts/loop/post-footer.php:13
+#: templates/parts/loop/post-search-footer.php:34
+#: templates/parts/loop/sermon-footer.php:13
+msgid "1 Comment"
+msgstr ""
+
+#: templates/parts/loop/event-footer.php:13
+#: templates/parts/loop/location-footer.php:13
+#: templates/parts/loop/person-footer.php:13
+#: templates/parts/loop/post-footer.php:13
+#: templates/parts/loop/post-search-footer.php:34
+#: templates/parts/loop/sermon-footer.php:13
+msgid "% Comments"
+msgstr ""
+
+#: templates/parts/loop/event-footer.php:16
+#: templates/parts/loop/location-footer.php:16
 #: templates/parts/loop/page-footer.php:9
+#: templates/parts/loop/person-footer.php:16
 #: templates/parts/loop/post-footer.php:16
 #: templates/parts/loop/post-search-footer.php:37
 #: templates/parts/loop/sermon-footer.php:16
@@ -1474,37 +1529,12 @@ msgstr ""
 #. *
 #. * @package rock
 #.
-#: templates/parts/loop/post-content.php:11
-#: templates/parts/loop/sermon-content.php:107
-msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#. //codex.wordpress.org/Template_Hierarchy
-#. *
-#. * @package rock
-#.
-#: templates/parts/loop/post-footer.php:13
-#: templates/parts/loop/post-search-footer.php:34
-#: templates/parts/loop/sermon-footer.php:13
-msgid "Leave a comment"
-msgstr ""
-
-#: templates/parts/loop/post-footer.php:13
-#: templates/parts/loop/post-search-footer.php:34
-#: templates/parts/loop/sermon-footer.php:13
-msgid "1 Comment"
-msgstr ""
-
-#: templates/parts/loop/post-footer.php:13
-#: templates/parts/loop/post-search-footer.php:34
-#: templates/parts/loop/sermon-footer.php:13
-msgid "% Comments"
-msgstr ""
-
-#. //codex.wordpress.org/Template_Hierarchy
-#. *
-#. * @package rock
-#.
+#: templates/parts/loop/event-footer.php:22
+#: templates/parts/loop/event-footer.php:32
+#: templates/parts/loop/location-footer.php:22
+#: templates/parts/loop/location-footer.php:32
+#: templates/parts/loop/person-footer.php:22
+#: templates/parts/loop/person-footer.php:32
 #: templates/parts/loop/post-footer.php:22
 #: templates/parts/loop/post-footer.php:32
 #: templates/parts/loop/post-search-footer.php:14
@@ -1519,16 +1549,27 @@ msgstr ""
 msgid ", "
 msgstr ""
 
+#: templates/parts/loop/event-footer.php:26
+#: templates/parts/loop/location-footer.php:26
+#: templates/parts/loop/person-footer.php:26
 #: templates/parts/loop/post-footer.php:26
 #: templates/parts/loop/sermon-footer.php:26
 #, php-format
 msgid "Posted in: %1$s"
 msgstr ""
 
+#: templates/parts/loop/event-footer.php:36
+#: templates/parts/loop/location-footer.php:36
+#: templates/parts/loop/person-footer.php:36
 #: templates/parts/loop/post-footer.php:36
 #: templates/parts/loop/sermon-footer.php:36
 #, php-format
 msgid "Filed under: %1$s"
+msgstr ""
+
+#: templates/parts/loop/location-content.php:35
+msgctxt "location"
+msgid "Get Directions"
 msgstr ""
 
 #: templates/parts/loop/post-search-footer.php:18

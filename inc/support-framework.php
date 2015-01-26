@@ -422,4 +422,4 @@ function rock_add_theme_support_framework_widgets() {
 
 }
 
-add_action( 'after_setup_theme', 'rock_add_theme_support_framework_widgets' );
+// add_action( 'after_setup_theme', 'rock_add_theme_support_framework_widgets' );

@@ -24,6 +24,9 @@ get_header(); ?>
 				case 'ctc_person':
 					get_template_part( 'content', 'person' );
 				break;
+				case 'ctc_location':
+					get_template_part( 'content', 'location' );
+				break;
 				default:
 					get_template_part( 'content' );
 				break;
