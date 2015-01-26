@@ -30,31 +30,7 @@ get_header(); ?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php
-
-				switch ( get_post_type() ) {
-					case 'ctc_sermon':
-						get_template_part( 'content', 'sermon' );
-					break;
-					case 'ctc_event':
-						get_template_part( 'content', 'event' );
-					break;
-					case 'ctc_person':
-						get_template_part( 'content', 'person' );
-					break;
-					case 'ctc_location':
-						get_template_part( 'content', 'location' );
-					break;
-					default:
-						/* Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'content', get_post_format() );
-					break;
-				}
-
-				?>
+				<?php rock_get_content_template() ?>
 
 			<?php endwhile; ?>
 

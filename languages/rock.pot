@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rock-pro 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-26 12:58-0600\n"
+"POT-Creation-Date: 2015-01-26 13:33-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,6 +69,10 @@ msgstr ""
 msgid "Read More"
 msgstr ""
 
+#. //codex.wordpress.org/Template_Hierarchy
+#. *
+#. * @package rock
+#.
 #: content-none.php:13
 msgid "Nothing Found"
 msgstr ""
@@ -89,6 +93,1157 @@ msgstr ""
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
+msgstr ""
+
+#: framework/includes/admin/admin-taxonomies.php:70
+#, php-format
+msgid ""
+"<b>Custom Ordering:</b> Try <a href=\"%s\" target=\"_blank\">this plugin</a> "
+"for custom ordering your %s."
+msgstr ""
+
+#: framework/includes/admin/admin-widgets.php:33
+msgctxt "widget image library"
+msgid "Choose Image for Widget"
+msgstr ""
+
+#: framework/includes/admin/admin-widgets.php:34
+msgctxt "widget image library"
+msgid "Use in Widget"
+msgstr ""
+
+#: framework/includes/admin/admin-widgets.php:35
+msgid "Sorry, this widget is not made for use in this area. Please delete."
+msgstr ""
+
+#. /activaton
+#. optional message to show on options page
+#: framework/includes/admin/edd-license.php:74
+msgid "<strong>License key could not be activated.</strong>"
+msgstr ""
+
+#: framework/includes/admin/edd-license.php:75
+#, php-format
+msgid ""
+"<strong>Theme License Inactive:</strong> <a href=\"%1$s\">Activate Your "
+"Theme License</a> to enable updates for the <strong>%2$s</strong> theme."
+msgstr ""
+
+#: framework/includes/admin/edd-license.php:76
+#, php-format
+msgid ""
+"<strong>Theme License Expired:</strong> <a href=\"%1$s\">Renew Your Theme "
+"License</a> to re-enable updates for the <strong>%2$s</strong> theme "
+"(expired on <strong>%3$s</strong>)."
+msgstr ""
+
+#: framework/includes/admin/edd-license.php:77
+#, php-format
+msgid ""
+"<strong>Theme License Expiring Soon:</strong> <a href=\"%1$s\">Renew Your "
+"Theme License</a> to continue receiving updates for the <strong>%2$s</"
+"strong> theme (expires on <strong>%3$s</strong>)."
+msgstr ""
+
+#: framework/includes/admin/edd-license.php:343
+msgctxt "license expiration"
+msgid "unknown date"
+msgstr ""
+
+#: framework/includes/admin/edd-license.php:369
+#: framework/includes/admin/edd-license.php:395
+msgctxt "page title"
+msgid "Theme License"
+msgstr ""
+
+#: framework/includes/admin/edd-license.php:370
+msgctxt "menu title"
+msgid "Theme License"
+msgstr ""
+
+#: framework/includes/admin/edd-license.php:412
+msgctxt "heading"
+msgid "License Key"
+msgstr ""
+
+#: framework/includes/admin/edd-license.php:421
+msgid "License Key"
+msgstr ""
+
+#: framework/includes/admin/edd-license.php:434
+msgid "Save Key"
+msgstr ""
+
+#: framework/includes/admin/edd-license.php:438
+#: framework/includes/admin/edd-license.php:447
+msgid "License Status"
+msgstr ""
+
+#: framework/includes/admin/edd-license.php:454
+msgctxt "license key"
+msgid "Active"
+msgstr ""
+
+#: framework/includes/admin/edd-license.php:457
+msgctxt "license status"
+msgid "Expiring Soon"
+msgstr ""
+
+#: framework/includes/admin/edd-license.php:462
+msgctxt "license key"
+msgid "Expired"
+msgstr ""
+
+#: framework/includes/admin/edd-license.php:466
+msgctxt "license key"
+msgid "Inactive"
+msgstr ""
+
+#: framework/includes/admin/edd-license.php:479
+msgid "License Expiration"
+msgstr ""
+
+#: framework/includes/admin/edd-license.php:500
+msgid "Deactivate License"
+msgstr ""
+
+#: framework/includes/admin/edd-license.php:504
+msgid "Activate License"
+msgstr ""
+
+#: framework/includes/admin/edd-license.php:511
+msgid "Renew License"
+msgstr ""
+
+#: framework/includes/classes/CTFW_EDD_SL_Theme_Updater.php:73
+#, php-format
+msgid ""
+"Any customizations you have made directly to %s's theme files will be lost. "
+"Please consider using a child theme for modifications."
+msgstr ""
+
+#. /strong> is available. <a href="%3$s" class="thickbox" title="%4s">Check out what\'s new</a> or <a href="%5$s"%6$s>update now</a>.',
+#. $theme->get( 'Name' ),
+#. $api_response->new_version,
+#. '#TB_inline?width=640&amp;inlineId=' . $this->theme_slug . '_changelog',
+#. $theme->get( 'Name' ),
+#. $update_url,
+#. $update_onclick
+#. );
+#.
+#: framework/includes/classes/CTFW_EDD_SL_Theme_Updater.php:90
+#, php-format
+msgid ""
+"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\"%4$s>Update Now</a> "
+"or read the <a href=\"%5$s\" target=\"_blank\">Changelog</a>."
+msgstr ""
+
+#: framework/includes/classes/breadcrumbs.php:55
+msgctxt "breadcrumb separator"
+msgid " > "
+msgstr ""
+
+#: framework/includes/classes/breadcrumbs.php:241
+msgctxt "breadcrumb year format"
+msgid "Y"
+msgstr ""
+
+#: framework/includes/classes/breadcrumbs.php:258
+msgctxt "breadcrumb month format"
+msgid "F"
+msgstr ""
+
+#: framework/includes/classes/breadcrumbs.php:275
+msgctxt "breadcrumb day format"
+msgid "jS"
+msgstr ""
+
+#: framework/includes/classes/breadcrumbs.php:354
+#, php-format
+msgctxt "breadcrumb"
+msgid "Page %s"
+msgstr ""
+
+#: framework/includes/classes/breadcrumbs.php:365
+msgctxt "breadcrumb"
+msgid "Search Results"
+msgstr ""
+
+#: framework/includes/classes/breadcrumbs.php:527
+msgctxt "breadcrumbs"
+msgid "Home"
+msgstr ""
+
+#: framework/includes/classes/customize-controls.php:119
+#: framework/includes/classes/customize-controls.php:198
+msgid "Colorable"
+msgstr ""
+
+#: framework/includes/classes/customize-controls.php:138
+msgid "The selected image is <strong>colorable</strong>."
+msgstr ""
+
+#: framework/includes/classes/customize-controls.php:175
+msgctxt "customizer"
+msgid "Presets"
+msgstr ""
+
+#: framework/includes/classes/widget-archives.php:34
+msgctxt "widget"
+msgid "CT Archives"
+msgstr ""
+
+#: framework/includes/classes/widget-archives.php:36
+msgid "Monthly archive for chosen post type"
+msgstr ""
+
+#: framework/includes/classes/widget-archives.php:83
+msgctxt "archives widget"
+msgid "Title"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-archives.php:92
+msgctxt "archives widget title default"
+msgid "Archives"
+msgstr ""
+
+#: framework/includes/classes/widget-archives.php:107
+msgctxt "archives widget"
+msgid "Type"
+msgstr ""
+
+#: framework/includes/classes/widget-archives.php:131
+msgctxt "archives widget"
+msgid "Limit"
+msgstr ""
+
+#: framework/includes/classes/widget-archives.php:133
+msgctxt "archives widget"
+msgid "Set to 0 for no limit."
+msgstr ""
+
+#: framework/includes/classes/widget-archives.php:162
+msgctxt "archives widget"
+msgid "Show counts"
+msgstr ""
+
+#: framework/includes/classes/widget-archives.php:183
+msgctxt "archives widget"
+msgid "Show as dropdown"
+msgstr ""
+
+#: framework/includes/classes/widget-archives.php:237
+#: inc/support-framework.php:368
+msgctxt "archives widget"
+msgid "Blog"
+msgstr ""
+
+#: framework/includes/classes/widget-categories.php:34
+msgctxt "widget"
+msgid "CT Categories"
+msgstr ""
+
+#: framework/includes/classes/widget-categories.php:36
+msgid "Shows categories of various types"
+msgstr ""
+
+#: framework/includes/classes/widget-categories.php:86
+msgctxt "categories widget"
+msgid "Title"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-categories.php:95
+msgctxt "categories widget title default"
+msgid "Categories"
+msgstr ""
+
+#: framework/includes/classes/widget-categories.php:110
+msgctxt "categories widget"
+msgid "Type"
+msgstr ""
+
+#: framework/includes/classes/widget-categories.php:134
+msgctxt "categories widget"
+msgid "Order By"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-categories.php:143
+msgctxt "categories widget order by"
+msgid "Title"
+msgstr ""
+
+#: framework/includes/classes/widget-categories.php:144
+msgctxt "categories widget order by"
+msgid "Date"
+msgstr ""
+
+#: framework/includes/classes/widget-categories.php:145
+msgctxt "categories widget order by"
+msgid "Post Count"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-categories.php:171
+msgctxt "categories widget order"
+msgid "Low to High"
+msgstr ""
+
+#: framework/includes/classes/widget-categories.php:172
+msgctxt "categories widget order"
+msgid "High to Low"
+msgstr ""
+
+#: framework/includes/classes/widget-categories.php:189
+msgctxt "categories widget"
+msgid "Limit"
+msgstr ""
+
+#: framework/includes/classes/widget-categories.php:191
+msgctxt "categories widget"
+msgid "Set to 0 for unlimited."
+msgstr ""
+
+#: framework/includes/classes/widget-categories.php:220
+msgctxt "categories widget"
+msgid "Show counts"
+msgstr ""
+
+#: framework/includes/classes/widget-categories.php:244
+msgctxt "categories widget"
+msgid "Show hierarchy"
+msgstr ""
+
+#: framework/includes/classes/widget-categories.php:265
+msgctxt "categories widget"
+msgid "Show as dropdown"
+msgstr ""
+
+#: framework/includes/classes/widget-categories.php:312
+msgctxt "categories widget"
+msgid "Blog Categories"
+msgstr ""
+
+#: framework/includes/classes/widget-categories.php:314
+msgctxt "categories widget"
+msgid "Blog Tags"
+msgstr ""
+
+#: framework/includes/classes/widget-events.php:32
+msgctxt "events widget"
+msgid "CT Events"
+msgstr ""
+
+#: framework/includes/classes/widget-events.php:34
+msgctxt "events widget"
+msgid "Shows upcoming or past events"
+msgstr ""
+
+#: framework/includes/classes/widget-events.php:81
+msgctxt "events widget"
+msgid "Title"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-events.php:90
+msgctxt "events widget title default"
+msgid "Events"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-events.php:114
+msgctxt "events widget order"
+msgid "Upcoming"
+msgstr ""
+
+#: framework/includes/classes/widget-events.php:115
+msgctxt "events widget order"
+msgid "Past"
+msgstr ""
+
+#: framework/includes/classes/widget-events.php:132
+msgctxt "events widget"
+msgid "Limit"
+msgstr ""
+
+#: framework/includes/classes/widget-events.php:160
+#: framework/includes/classes/widget-locations.php:187
+msgctxt "events widget"
+msgid "Show image"
+msgstr ""
+
+#: framework/includes/classes/widget-events.php:187
+msgctxt "events widget"
+msgid "Show date"
+msgstr ""
+
+#: framework/includes/classes/widget-events.php:208
+msgctxt "events widget"
+msgid "Show time"
+msgstr ""
+
+#: framework/includes/classes/widget-events.php:232
+msgctxt "events widget"
+msgid "Show excerpt"
+msgstr ""
+
+#: framework/includes/classes/widget-galleries.php:34
+msgctxt "widget"
+msgid "CT Galleries"
+msgstr ""
+
+#: framework/includes/classes/widget-galleries.php:36
+msgid "Shows list of gallery pages"
+msgstr ""
+
+#: framework/includes/classes/widget-galleries.php:83
+msgctxt "galleries widget"
+msgid "Title"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-galleries.php:92
+msgctxt "galleries widget title default"
+msgid "Galleries"
+msgstr ""
+
+#: framework/includes/classes/widget-galleries.php:107
+msgctxt "galleries widget"
+msgid "Order By"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-galleries.php:116
+msgctxt "galleries widget order by"
+msgid "Date Added"
+msgstr ""
+
+#: framework/includes/classes/widget-galleries.php:117
+msgctxt "galleries widget order by"
+msgid "Title"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-galleries.php:143
+msgctxt "galleries widget order"
+msgid "Low to High"
+msgstr ""
+
+#: framework/includes/classes/widget-galleries.php:144
+msgctxt "galleries widget order"
+msgid "High to Low"
+msgstr ""
+
+#: framework/includes/classes/widget-galleries.php:161
+msgctxt "galleries widget"
+msgid "Limit"
+msgstr ""
+
+#: framework/includes/classes/widget-galleries.php:163
+msgctxt "galleries widget"
+msgid "Set to 0 for unlimited."
+msgstr ""
+
+#: framework/includes/classes/widget-gallery.php:32
+msgctxt "gallery widget"
+msgid "CT Gallery"
+msgstr ""
+
+#: framework/includes/classes/widget-gallery.php:34
+msgid "Shows gallery thumbnails"
+msgstr ""
+
+#: framework/includes/classes/widget-gallery.php:56
+msgctxt "gallery widget"
+msgid "All Galleries"
+msgstr ""
+
+#: framework/includes/classes/widget-gallery.php:92
+msgctxt "gallery widget"
+msgid "Title"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-gallery.php:101
+msgctxt "gallery widget title default"
+msgid "Gallery"
+msgstr ""
+
+#: framework/includes/classes/widget-gallery.php:116
+msgctxt "gallery widget"
+msgid "Gallery"
+msgstr ""
+
+#: framework/includes/classes/widget-gallery.php:144
+msgctxt "gallery widget"
+msgid "Show link to gallery"
+msgstr ""
+
+#: framework/includes/classes/widget-gallery.php:164
+msgctxt "gallery widget"
+msgid "Order By"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-gallery.php:173
+msgctxt "gallery widget order by"
+msgid "Upload Date"
+msgstr ""
+
+#: framework/includes/classes/widget-gallery.php:174
+msgctxt "gallery widget order by"
+msgid "Title"
+msgstr ""
+
+#: framework/includes/classes/widget-gallery.php:175
+msgctxt "gallery widget order by"
+msgid "Comment Count"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-gallery.php:201
+msgctxt "gallery widget order"
+msgid "Low to High"
+msgstr ""
+
+#: framework/includes/classes/widget-gallery.php:202
+msgctxt "gallery widget order"
+msgid "High to Low"
+msgstr ""
+
+#: framework/includes/classes/widget-gallery.php:219
+msgctxt "gallery widget"
+msgid "Limit"
+msgstr ""
+
+#: framework/includes/classes/widget-gallery.php:243
+msgctxt "gallery widget"
+msgid "Thumbnail Size"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-gallery.php:252
+msgctxt "gallery widget"
+msgid "Small"
+msgstr ""
+
+#: framework/includes/classes/widget-gallery.php:253
+msgctxt "gallery widget"
+msgid "Medium"
+msgstr ""
+
+#: framework/includes/classes/widget-gallery.php:254
+msgctxt "gallery widget"
+msgid "Large"
+msgstr ""
+
+#: framework/includes/classes/widget-giving.php:32
+msgctxt "widget"
+msgid "CT Giving"
+msgstr ""
+
+#: framework/includes/classes/widget-giving.php:34
+msgid "Shows a message and button"
+msgstr ""
+
+#: framework/includes/classes/widget-giving.php:81
+msgctxt "giving widget"
+msgid "Title"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-giving.php:90
+msgctxt "giving widget default title"
+msgid "Giving"
+msgstr ""
+
+#: framework/includes/classes/widget-giving.php:105
+msgctxt "giving widget"
+msgid "Message"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-giving.php:114
+msgid "You may give online by clicking below."
+msgstr ""
+
+#: framework/includes/classes/widget-giving.php:129
+msgctxt "giving widget"
+msgid "Button Text"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-giving.php:138
+msgctxt "giving widget"
+msgid "Give Now"
+msgstr ""
+
+#: framework/includes/classes/widget-giving.php:153
+msgctxt "giving widget"
+msgid "Button URL"
+msgstr ""
+
+#: framework/includes/classes/widget-highlight.php:32
+msgctxt "widget"
+msgid "CT Highlight"
+msgstr ""
+
+#: framework/includes/classes/widget-highlight.php:34
+msgid "Shows a highlight"
+msgstr ""
+
+#: framework/includes/classes/widget-highlight.php:81
+msgctxt "highlight widget"
+msgid "Title"
+msgstr ""
+
+#: framework/includes/classes/widget-highlight.php:105
+msgctxt "highlight widget"
+msgid "Description"
+msgstr ""
+
+#: framework/includes/classes/widget-highlight.php:129
+msgctxt "highlight widget"
+msgid "Click URL"
+msgstr ""
+
+#: framework/includes/classes/widget-highlight.php:157
+msgctxt "highlight widget"
+msgid "Open in new tab"
+msgstr ""
+
+#: framework/includes/classes/widget-highlight.php:177
+msgctxt "highlight widget"
+msgid "Image"
+msgstr ""
+
+#: framework/includes/classes/widget-locations.php:32
+msgctxt "widget"
+msgid "CT Locations"
+msgstr ""
+
+#: framework/includes/classes/widget-locations.php:34
+msgid "Shows church location(s)"
+msgstr ""
+
+#: framework/includes/classes/widget-locations.php:81
+msgctxt "locations widget"
+msgid "Title"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-locations.php:90
+msgctxt "locations widget title default"
+msgid "Locations"
+msgstr ""
+
+#: framework/includes/classes/widget-locations.php:105
+msgctxt "locations widget"
+msgid "Order By"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-locations.php:114
+msgctxt "locations widget order by"
+msgid "Custom Order"
+msgstr ""
+
+#: framework/includes/classes/widget-locations.php:115
+msgctxt "locations widget order by"
+msgid "Name"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-locations.php:141
+msgctxt "locations widget order"
+msgid "Low to High"
+msgstr ""
+
+#: framework/includes/classes/widget-locations.php:142
+msgctxt "locations widget order"
+msgid "High to Low"
+msgstr ""
+
+#: framework/includes/classes/widget-locations.php:159
+msgctxt "locations widget"
+msgid "Limit"
+msgstr ""
+
+#: framework/includes/classes/widget-locations.php:211
+msgctxt "locations widget"
+msgid "Show address"
+msgstr ""
+
+#: framework/includes/classes/widget-locations.php:235
+msgctxt "locations widget"
+msgid "Show phone number"
+msgstr ""
+
+#: framework/includes/classes/widget-locations.php:259
+msgctxt "locations widget"
+msgid "Show times"
+msgstr ""
+
+#: framework/includes/classes/widget-locations.php:283
+msgctxt "locations widget"
+msgid "Show map"
+msgstr ""
+
+#: framework/includes/classes/widget-people.php:32
+msgctxt "widget"
+msgid "CT People"
+msgstr ""
+
+#: framework/includes/classes/widget-people.php:34
+msgid "Shows people according to options"
+msgstr ""
+
+#: framework/includes/classes/widget-people.php:81
+msgctxt "people widget"
+msgid "Title"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-people.php:90
+msgctxt "people widget title default"
+msgid "People"
+msgstr ""
+
+#: framework/includes/classes/widget-people.php:105
+msgctxt "people widget"
+msgid "Group"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-people.php:114
+msgctxt "people widget"
+msgid "All Groups"
+msgstr ""
+
+#: framework/includes/classes/widget-people.php:131
+msgctxt "people widget"
+msgid "Order By"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-people.php:140
+msgctxt "people widget order by"
+msgid "Custom Order"
+msgstr ""
+
+#: framework/includes/classes/widget-people.php:141
+msgctxt "people widget order by"
+msgid "Name"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-people.php:167
+msgctxt "people widget order"
+msgid "Low to High"
+msgstr ""
+
+#: framework/includes/classes/widget-people.php:168
+msgctxt "people widget order"
+msgid "High to Low"
+msgstr ""
+
+#: framework/includes/classes/widget-people.php:185
+msgctxt "people widget"
+msgid "Limit"
+msgstr ""
+
+#: framework/includes/classes/widget-people.php:213
+msgctxt "people widget"
+msgid "Show photo"
+msgstr ""
+
+#: framework/includes/classes/widget-people.php:237
+msgctxt "people widget"
+msgid "Show position"
+msgstr ""
+
+#: framework/includes/classes/widget-people.php:261
+msgctxt "people widget"
+msgid "Show phone"
+msgstr ""
+
+#: framework/includes/classes/widget-people.php:285
+msgctxt "people widget"
+msgid "Show email"
+msgstr ""
+
+#: framework/includes/classes/widget-people.php:309
+msgctxt "people widget"
+msgid "Show icons"
+msgstr ""
+
+#: framework/includes/classes/widget-people.php:333
+#: framework/includes/classes/widget-posts.php:288
+msgctxt "posts widget"
+msgid "Show excerpt"
+msgstr ""
+
+#: framework/includes/classes/widget-posts.php:34
+msgctxt "widget"
+msgid "CT Posts"
+msgstr ""
+
+#: framework/includes/classes/widget-posts.php:36
+msgid "Shows blog posts according to options"
+msgstr ""
+
+#: framework/includes/classes/widget-posts.php:83
+msgctxt "posts widget"
+msgid "Title"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-posts.php:92
+msgctxt "posts widget title default"
+msgid "Posts"
+msgstr ""
+
+#: framework/includes/classes/widget-posts.php:107
+msgctxt "posts widget"
+msgid "Category"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-posts.php:116
+msgctxt "posts widget"
+msgid "All Categories"
+msgstr ""
+
+#: framework/includes/classes/widget-posts.php:133
+msgctxt "posts widget"
+msgid "Order By"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-posts.php:142
+msgctxt "posts widget order by"
+msgid "Title"
+msgstr ""
+
+#: framework/includes/classes/widget-posts.php:143
+msgctxt "posts widget order by"
+msgid "Date"
+msgstr ""
+
+#: framework/includes/classes/widget-posts.php:144
+msgctxt "posts widget order by"
+msgid "Comment Count"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-posts.php:170
+msgctxt "posts widget order"
+msgid "Low to High"
+msgstr ""
+
+#: framework/includes/classes/widget-posts.php:171
+msgctxt "posts widget order"
+msgid "High to Low"
+msgstr ""
+
+#: framework/includes/classes/widget-posts.php:188
+msgctxt "posts widget"
+msgid "Limit"
+msgstr ""
+
+#: framework/includes/classes/widget-posts.php:216
+msgctxt "posts widget"
+msgid "Show image"
+msgstr ""
+
+#: framework/includes/classes/widget-posts.php:243
+msgctxt "posts widget"
+msgid "Show date"
+msgstr ""
+
+#: framework/includes/classes/widget-posts.php:267
+msgctxt "posts widget"
+msgid "Show author"
+msgstr ""
+
+#: framework/includes/classes/widget-sermons.php:32
+msgctxt "widget"
+msgid "CT Sermons"
+msgstr ""
+
+#: framework/includes/classes/widget-sermons.php:34
+msgid "Shows sermons according to options"
+msgstr ""
+
+#: framework/includes/classes/widget-sermons.php:81
+msgctxt "sermons widget"
+msgid "Title"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-sermons.php:90
+msgctxt "sermons widget title default"
+msgid "Sermons"
+msgstr ""
+
+#: framework/includes/classes/widget-sermons.php:105
+msgctxt "sermons widget"
+msgid "Topic"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-sermons.php:114
+msgctxt "sermons widget"
+msgid "All Topics"
+msgstr ""
+
+#: framework/includes/classes/widget-sermons.php:131
+msgctxt "sermons widget"
+msgid "Book"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-sermons.php:140
+msgctxt "sermons widget"
+msgid "All Books"
+msgstr ""
+
+#: framework/includes/classes/widget-sermons.php:157
+msgctxt "sermons widget"
+msgid "Series"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-sermons.php:166
+msgctxt "sermons widget"
+msgid "All Series"
+msgstr ""
+
+#: framework/includes/classes/widget-sermons.php:183
+msgctxt "sermons widget"
+msgid "Speaker"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-sermons.php:192
+msgctxt "sermons widget"
+msgid "All Speakers"
+msgstr ""
+
+#: framework/includes/classes/widget-sermons.php:209
+msgctxt "sermons widget"
+msgid "Order By"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-sermons.php:218
+msgctxt "sermons widget order by"
+msgid "Title"
+msgstr ""
+
+#: framework/includes/classes/widget-sermons.php:219
+msgctxt "sermons widget order by"
+msgid "Date"
+msgstr ""
+
+#: framework/includes/classes/widget-sermons.php:220
+msgctxt "sermons widget order by"
+msgid "Comment Count"
+msgstr ""
+
+#. /values for radio or select
+#: framework/includes/classes/widget-sermons.php:246
+msgctxt "sermons widget order"
+msgid "Low to High"
+msgstr ""
+
+#: framework/includes/classes/widget-sermons.php:247
+msgctxt "sermons widget order"
+msgid "High to Low"
+msgstr ""
+
+#: framework/includes/classes/widget-sermons.php:264
+msgctxt "sermons widget"
+msgid "Limit"
+msgstr ""
+
+#: framework/includes/classes/widget-sermons.php:292
+msgctxt "sermons widget"
+msgid "Show image"
+msgstr ""
+
+#: framework/includes/classes/widget-sermons.php:319
+msgctxt "sermons widget"
+msgid "Show date"
+msgstr ""
+
+#: framework/includes/classes/widget-sermons.php:343
+msgctxt "sermons widget"
+msgid "Show topic"
+msgstr ""
+
+#: framework/includes/classes/widget-sermons.php:367
+msgctxt "sermons widget"
+msgid "Show book"
+msgstr ""
+
+#: framework/includes/classes/widget-sermons.php:391
+msgctxt "sermons widget"
+msgid "Show series"
+msgstr ""
+
+#: framework/includes/classes/widget-sermons.php:415
+msgctxt "sermons widget"
+msgid "Show speaker"
+msgstr ""
+
+#: framework/includes/classes/widget-sermons.php:436
+msgctxt "sermons widget"
+msgid "Show media types"
+msgstr ""
+
+#: framework/includes/classes/widget-sermons.php:460
+msgctxt "sermons widget"
+msgid "Show excerpt"
+msgstr ""
+
+#: framework/includes/classes/widget-slide.php:33
+msgctxt "widget"
+msgid "CT Slide"
+msgstr ""
+
+#: framework/includes/classes/widget-slide.php:35
+msgid "A slide to be shown in a slider"
+msgstr ""
+
+#: framework/includes/classes/widget-slide.php:81
+msgctxt "slide widget"
+msgid "Title"
+msgstr ""
+
+#: framework/includes/classes/widget-slide.php:105
+msgctxt "slide widget"
+msgid "Description"
+msgstr ""
+
+#: framework/includes/classes/widget-slide.php:129
+msgctxt "slide widget"
+msgid "Click URL"
+msgstr ""
+
+#: framework/includes/classes/widget-slide.php:157
+msgctxt "slide widget"
+msgid "Open in new tab"
+msgstr ""
+
+#: framework/includes/classes/widget-slide.php:177
+msgctxt "slide widget"
+msgid "Image"
+msgstr ""
+
+#: framework/includes/classes/widget-slide.php:201
+msgctxt "slide widget"
+msgid "Video URL"
+msgstr ""
+
+#: framework/includes/classes/widget.php:297
+msgctxt "widget image field"
+msgid "Choose Image"
+msgstr ""
+
+#: framework/includes/classes/widget.php:300
+msgctxt "widget image field"
+msgid "Remove Image"
+msgstr ""
+
+#: framework/includes/compatibility.php:61
+#, php-format
+msgid ""
+"<b>Activation Failed:</b> %s requires a newer version of WordPress. Please "
+"update and try again."
+msgstr ""
+
+#: framework/includes/compatibility.php:126
+msgid "Go back."
+msgstr ""
+
+#: framework/includes/compatibility.php:223
+#, php-format
+msgid ""
+"<b>Plugin Required:</b> Please install and activate the <a href=\"%s\" class="
+"\"thickbox\">Church Theme Content</a> plugin to use with the current theme."
+msgstr ""
+
+#: framework/includes/compatibility.php:233
+#, php-format
+msgid ""
+"Please <a href=\"%s\">activate</a> the <b>Church Theme Content</b> plugin "
+"required by the current theme."
+msgstr ""
+
+#: framework/includes/compatibility.php:301
+msgid ""
+"You are using an outdated version of Internet Explorer. Please upgrade your "
+"browser to use this site."
+msgstr ""
+
+#: framework/includes/events.php:146
+#, php-format
+msgctxt "dates"
+msgid "%1$s &ndash; %2$s"
+msgstr ""
+
+#: framework/includes/events.php:174
+#, php-format
+msgctxt "times"
+msgid "%1$s &ndash; %2$s"
+msgstr ""
+
+#: framework/includes/events.php:201
+#, php-format
+msgid "%1$s <span>(%2$s)</span>"
+msgstr ""
+
+#: framework/includes/head.php:49
+#, php-format
+msgctxt "head title"
+msgid " (Page %d)"
+msgstr ""
+
+#: framework/includes/head.php:70
+msgctxt "head title"
+msgid " - "
+msgstr ""
+
+#: framework/includes/helpers.php:282 framework/includes/helpers.php:303
+msgctxt "shortened text"
+msgid "&hellip;"
+msgstr ""
+
+#: framework/includes/images.php:80
+#, php-format
+msgid "The target image size is %s."
+msgstr ""
+
+#: framework/includes/maps.php:73
+msgid ""
+"<p><b>Google Map Error:</b> <i>latitude</i> and <i>longitude</i> attributes "
+"are required. See documentation for help.</p>"
+msgstr ""
+
+#: framework/includes/mime-types.php:32
+msgctxt "mime type"
+msgid "File"
+msgstr ""
+
+#: framework/includes/template-tags.php:49
+msgid "Today"
+msgstr ""
+
+#: framework/includes/template-tags.php:54
+msgid "Yesterday"
 msgstr ""
 
 #: functions.php:100
@@ -218,11 +1373,6 @@ msgstr ""
 msgid "We suggest using images that are at least 800px wide."
 msgstr ""
 
-#: inc/support-framework.php:368
-msgctxt "archives widget"
-msgid "Blog"
-msgstr ""
-
 #: inc/support-framework.php:369
 msgctxt "archives widget"
 msgid "Sermons"
@@ -268,107 +1418,107 @@ msgctxt "Next post link"
 msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/template-tags.php:198
+#: inc/template-tags.php:224
 #, php-format
 msgid "Category: %s"
 msgstr ""
 
-#: inc/template-tags.php:200
+#: inc/template-tags.php:226
 #, php-format
 msgid "Tag: %s"
 msgstr ""
 
-#: inc/template-tags.php:202
+#: inc/template-tags.php:228
 #, php-format
 msgid "Author: %s"
 msgstr ""
 
-#: inc/template-tags.php:204
+#: inc/template-tags.php:230
 #, php-format
 msgid "Year: %s"
 msgstr ""
 
-#: inc/template-tags.php:204
+#: inc/template-tags.php:230
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: inc/template-tags.php:206
+#: inc/template-tags.php:232
 #, php-format
 msgid "Month: %s"
 msgstr ""
 
-#: inc/template-tags.php:206
+#: inc/template-tags.php:232
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: inc/template-tags.php:208
+#: inc/template-tags.php:234
 #, php-format
 msgid "Day: %s"
 msgstr ""
 
-#: inc/template-tags.php:208
+#: inc/template-tags.php:234
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr ""
 
-#: inc/template-tags.php:211
+#: inc/template-tags.php:237
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr ""
 
-#: inc/template-tags.php:213
+#: inc/template-tags.php:239
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr ""
 
-#: inc/template-tags.php:215
+#: inc/template-tags.php:241
 msgctxt "post format archive title"
 msgid "Images"
 msgstr ""
 
-#: inc/template-tags.php:217
+#: inc/template-tags.php:243
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr ""
 
-#: inc/template-tags.php:219
+#: inc/template-tags.php:245
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr ""
 
-#: inc/template-tags.php:221
+#: inc/template-tags.php:247
 msgctxt "post format archive title"
 msgid "Links"
 msgstr ""
 
-#: inc/template-tags.php:223
+#: inc/template-tags.php:249
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr ""
 
-#: inc/template-tags.php:225
+#: inc/template-tags.php:251
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr ""
 
-#: inc/template-tags.php:227
+#: inc/template-tags.php:253
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr ""
 
-#: inc/template-tags.php:230
+#: inc/template-tags.php:256
 #, php-format
 msgid "%s"
 msgstr ""
 
-#: inc/template-tags.php:234
+#: inc/template-tags.php:260
 #, php-format
 msgid "%1$s: %2$s"
 msgstr ""
 
-#: inc/template-tags.php:236
+#: inc/template-tags.php:262
 msgid "Archives"
 msgstr ""
 
@@ -417,6 +1567,10 @@ msgctxt "event"
 msgid "Get Directions"
 msgstr ""
 
+#. //codex.wordpress.org/Template_Hierarchy
+#. *
+#. * @package rock
+#.
 #: templates/parts/loop/event-content.php:42
 #: templates/parts/loop/location-content.php:43
 #: templates/parts/loop/person-content.php:42
@@ -434,6 +1588,10 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
+#. //codex.wordpress.org/Template_Hierarchy
+#. *
+#. * @package rock
+#.
 #: templates/parts/loop/event-footer.php:13
 #: templates/parts/loop/location-footer.php:13
 #: templates/parts/loop/person-footer.php:13
@@ -471,6 +1629,10 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
+#. //codex.wordpress.org/Template_Hierarchy
+#. *
+#. * @package rock
+#.
 #: templates/parts/loop/event-footer.php:22
 #: templates/parts/loop/event-footer.php:32
 #: templates/parts/loop/location-footer.php:22
