@@ -16,12 +16,12 @@ get_header(); ?>
 
 			<header class="archive-header">
 				<h1 class="archive-title">
-					<?php the_archive_title(); ?>
+					<?php echo rock_get_the_archive_title(); ?>
 				</h1>
 
 				<?php if( get_the_archive_description() ): ?>
 				<div class="archive-description">
-					<?php the_archive_description(); ?>
+					<?php get_the_archive_description(); ?>
 				</div>
 				<?php endif; ?>
 
