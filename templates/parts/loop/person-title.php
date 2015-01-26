@@ -7,9 +7,12 @@
  * @package rock
  */
 
-// Get data
-// $position, $phone, $email, $urls
-extract( ctfw_person_data() );
+// Get person data
+$position = ctfw_person_data()['position'];
+$phone = ctfw_person_data()['phone'];
+$email = ctfw_person_data()['email'];
+$urls = ctfw_person_data()['urls'];
+
 ?>
 <header class="entry-header">
 	<div class="entry-header-row">
