@@ -7,9 +7,19 @@
  * @package rock
  */
 
-// Get data
-// $date (localized range), $start_date, $end_date, $time, $venue, $address, $show_directions_link, $directions_url, $map_lat, $map_lng, $map_type, $map_zoom
-extract( ctfw_event_data() );
+// Get event data
+$date = ctfw_event_data()['date'];
+$start_date = ctfw_event_data()['start_date'];
+$end_date = ctfw_event_data()['end_date'];
+$time = ctfw_event_data()['time'];
+$venue = ctfw_event_data()['venue'];
+$address = ctfw_event_data()['address'];
+$show_directions_link = ctfw_event_data()['show_directions_link'];
+$directions_url = ctfw_event_data()['directions_url'];
+$map_lat = ctfw_event_data()['map_lat'];
+$map_lng = ctfw_event_data()['map_lng'];
+$map_type = ctfw_event_data()['map_type'];
+$map_zoom = ctfw_event_data()['map_zoom'];
 ?>
 <header class="entry-header">
 	<div class="entry-header-row">
