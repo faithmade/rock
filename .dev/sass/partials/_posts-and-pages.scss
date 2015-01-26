@@ -158,7 +158,6 @@
 	font-size: rem-calc(14);
 	border-top: 1px solid rgba(0,0,0,.1);
 	padding-top: 1em;
-	overflow: hidden;
 
 	a{
 		color: $primary-color;
@@ -245,4 +244,10 @@ article.format-link {
 		font-weight: bold;
 		font-size: rem-calc(28);
 	}
+}
+
+.event-map {
+	width: 100%;
+	height: 400px;
+	position: relative;
 }

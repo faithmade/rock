@@ -1802,8 +1802,7 @@ a {
   font-family: "PT Serif", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  padding-top: 1em;
-  overflow: hidden; }
+  padding-top: 1em; }
   .entry-footer a {
     color: #e91f2e; }
   .entry-footer .entry-footer-right {
@@ -1866,6 +1865,11 @@ article.format-link {
     font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     font-weight: bold;
     font-size: 1.75rem; }
+
+.event-map {
+  width: 100%;
+  height: 400px;
+  position: relative; }
 
 .blog .format-aside .entry-title, .archive .format-aside .entry-title {
   display: none; }

@@ -7,23 +7,13 @@
  * @package rock
  */
 
-// Get data
-// $date (localized range), $start_date, $end_date, $time, $venue, $address, $show_directions_link, $directions_url, $map_lat, $map_lng, $map_type, $map_zoom
-extract( ctfw_event_data() );
-
-$google_map = ctfw_google_map( array(
-    'latitude'  => $map_lat,
-    'longitude' => $map_lng,
-    'type'    => $map_type,
-    'zoom'    => $map_zoom
-  ) );
-
+$address = ctfw_event_data()['address'];
+$directions_url = ctfw_event_data()['directions_url'];
 ?>
-<?php if ( $google_map ) : ?>
-  <div class="rock-event-full-map">
-    <?php echo $google_map; ?>
-  </div>
-<?php endif; ?>
+
+<div class="rock-event-full-map">
+  <iframe class="event-map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.it/maps?q=<?php echo urlencode( $address ); ?>&output=embed"></iframe>
+</div>
 
 <div class="entry-event-meta">
 
