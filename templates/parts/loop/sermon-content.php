@@ -54,19 +54,19 @@ endif;
 if ( $video_download_url )
   $video_download = '<a href="' . $video_download_url . '" class="button">
                        <i class="genericon genericon-cloud-download"></i>
-                       Save Video
+                       ' . _x( 'Save Video', 'Text for the video download link for sermons.', 'rock' ) . '
                      </a>';
 
 if ( $audio_download_url )
   $audio_download = '<a href="' . $audio_download_url . '" class="button">
                        <i class="genericon genericon-cloud-download"></i>
-                       Save Audio
+                       ' . _x( 'Save Audio', 'Text for the audio download link for sermons', 'rock' ) . '
                      </a>';
 
 if ( $pdf_download_url )
   $pdf_download = '<a href="' . $pdf_download_url . '" class="button">
                      <i class="genericon genericon-cloud-download"></i>
-                     PDF
+                     ' . _x( 'PDF', 'Text for the PDF download link for sermons.', 'rock' ) . '
                    </a>';
 
 ?>
