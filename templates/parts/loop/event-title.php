@@ -47,7 +47,7 @@ $map_zoom = ctfw_event_data()['map_zoom'];
 					<?php echo nl2br( wptexturize( $address ) ); ?>
 				</span>
 				</span>
-			</div><!-- .sermon-meta -->
+     </div><!-- .event-meta -->
 		</div><!-- .entry-header-column -->
 	</div><!-- .entry-header-row -->
 </header><!-- .entry-header -->
