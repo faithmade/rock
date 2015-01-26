@@ -7,9 +7,16 @@
  * @package rock
  */
 
-// Get data
-// $address, $show_directions_link, $directions_url, $phone, $times, $map_lat, $map_lng, $map_type, $map_zoom
-extract( ctfw_location_data() );
+// Get location data
+$address = ctfw_location_data()['address'];
+$show_directions_link = ctfw_location_data()['show_directions_link'];
+$directions_url = ctfw_location_data()['directions_url'];
+$phone = ctfw_location_data()['phone'];
+$times = ctfw_location_data()['times'];
+$map_lat = ctfw_location_data()['map_lat'];
+$map_lng = ctfw_location_data()['map_lng'];
+$map_type = ctfw_location_data()['map_type'];
+$map_zoom = ctfw_location_data()['map_zoom'];
 ?>
 <header class="entry-header">
 	<div class="entry-header-row">
