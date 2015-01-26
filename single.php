@@ -28,7 +28,7 @@ get_header(); ?>
 					get_template_part( 'content', 'location' );
 				break;
 				default:
-					get_template_part( 'content' );
+					get_template_part( 'content', get_post_format() );
 				break;
 			}
 

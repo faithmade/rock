@@ -9,10 +9,12 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-  <?php get_template_part( 'templates/parts/loop/person', 'title' ); ?>
+	<?php get_template_part( 'templates/parts/loop/post', 'thumbnail' ); ?>
 
-  <?php get_template_part( 'templates/parts/loop/person', 'content' ); ?>
+	<?php get_template_part( 'templates/parts/loop/person', 'title' ); ?>
 
-  <?php get_template_part( 'templates/parts/loop/person', 'footer' ); ?>
+	<?php get_template_part( 'templates/parts/loop/person', 'content' ); ?>
+
+	<?php get_template_part( 'templates/parts/loop/person', 'footer' ); ?>
 
 </article><!-- #post-## -->
