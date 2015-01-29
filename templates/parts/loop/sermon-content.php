@@ -71,7 +71,7 @@ if ( $pdf_download_url )
 
 ?>
 <?php if ( isset( $player ) ): ?>
-<div class="entry-media">
+<div class="entry-media <?php echo $current_player ?>">
   <?php echo $player; ?>
 </div>
 <?php endif; ?>
