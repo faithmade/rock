@@ -1,11 +1,24 @@
 #content{
 	@extend .row;
 	padding: 40px 0;
+
+	body.layout-one-column-full & {
+		max-width: 100%;
+		margin: 0;
+		padding: 0;
+	}
 }
 
 #primary{
 	@extend .columns;
 	@extend .large-8;
+
+	body.layout-one-column-full & {
+		margin: 0;
+		padding: 0;
+		max-width: none;
+		width: 100%;
+	}
 
 	body.layout-two-column-reversed &{
 		@extend .large-push-4;

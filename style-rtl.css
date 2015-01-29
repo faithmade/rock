@@ -2086,6 +2086,16 @@ embed, iframe, object {
 
 #content {
   padding: 40px 0; }
+  body.layout-one-column-full #content {
+    max-width: 100%;
+    margin: 0;
+    padding: 0; }
+
+body.layout-one-column-full #primary {
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  width: 100%; }
 
 body.layout-one-column-narrow .row, body.layout-one-column-narrow .main-navigation, body.layout-one-column-narrow .navigation, body.layout-one-column-narrow #content, body.layout-one-column-narrow .site-branding-container, body.layout-one-column-narrow .main-navigation, body.layout-one-column-narrow .site-footer .site-footer-inner, .site-footer body.layout-one-column-narrow .site-footer-inner, body.layout-one-column-narrow .site-title-wrapper, body.layout-one-column-narrow .featured-content .entry-header .entry-header-row, .featured-content .entry-header body.layout-one-column-narrow .entry-header-row, body.layout-one-column-narrow .site-info-wrapper .site-info, .site-info-wrapper body.layout-one-column-narrow .site-info, body.layout-one-column-narrow .featured-content .featured-content-inner, .featured-content body.layout-one-column-narrow .featured-content-inner, body.layout-one-column-narrow .navigation, body.layout-one-column-narrow #content, body.layout-one-column-narrow .site-branding-container, body.layout-one-column-narrow .main-navigation, body.layout-one-column-narrow .site-footer .site-footer-inner, body.layout-one-column-narrow .site-title-wrapper, body.layout-one-column-narrow .featured-content .entry-header .entry-header-row, body.layout-one-column-narrow .site-info .site-info-inner, body.layout-one-column-narrow .featured-content .featured-content-inner {
   max-width: 50em; }

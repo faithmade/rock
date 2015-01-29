@@ -105,6 +105,7 @@ function rock_setup() {
 	add_theme_support(
 		'theme-layouts',
 		array(
+			'one-column-full'       => __( '1 Column Full',                          'rock' ),
 			'one-column-wide'       => __( '1 Column Wide',                          'rock' ),
 			'one-column-narrow'     => __( '1 Column Narrow',                        'rock' ),
 			'two-column-default'    => __( '2 Columns: Content / Sidebar',           'rock' ),
