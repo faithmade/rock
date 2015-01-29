@@ -117,7 +117,7 @@ $widget-bg: #fff !default;
 	}
 }
 
-/* Calendar Widget */
+/* Recent Comments Widget */
 
 .widget_recent_comments {
 	li {
@@ -148,8 +148,6 @@ $widget-bg: #fff !default;
 	}
 
 	#calendar_wrap {
-		padding-right: 1.25em;
-		padding-right: 1.25rem;
 
 		#wp-calendar {
 			width: 100%;
@@ -158,6 +156,7 @@ $widget-bg: #fff !default;
 			font-size: .9em;
 			border-radius: 0 0 2px 2px;
 			overflow: hidden;
+			margin-bottom: 0;
 
 			td,th{
 				width: 14.285714286%;
