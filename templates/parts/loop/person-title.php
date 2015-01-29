@@ -17,11 +17,6 @@ $urls = ctfw_person_data()['urls'];
 <header class="entry-header">
 	<div class="entry-header-row">
 		<div class="entry-header-column">
-			<?php if ( has_post_thumbnail() ) : ?>
-				<div class="rock-entry-image">
-					<?php rock_post_image(); ?>
-				</div>
-			<?php endif; ?>
 			<a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
 			<div class="event-meta">
 
