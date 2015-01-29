@@ -82,7 +82,7 @@ module.exports = function(grunt) {
 				]
 			},
 			options: {
-				proxy: "rock.dev",
+				// proxy: "local.demos.upthemes.com",
 				watchTask: true,
 				notify: false,
 				ghostMode: false
