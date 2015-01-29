@@ -18,28 +18,32 @@ $urls = ctfw_person_data()['urls'];
 	<div class="entry-header-row">
 		<div class="entry-header-column">
 			<a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
-			<div class="event-meta">
-
+			<div class="person-meta">
 				<?php if ( $position ) : ?>
-					<i class="genericon genericon-user"></i>
-					<?php echo esc_html( $position ); ?>
+					<span>
+						<i class="genericon genericon-user"></i>
+						<?php echo esc_html( $position ); ?>
+					</span>
 				<?php endif; ?>
 
 				<?php if ( $phone ) : ?>
-					<i class="genericon genericon-phone"></i>
-					<?php echo esc_html( $phone ); ?>
+					<span>
+						<i class="genericon genericon-phone"></i>
+						<?php echo esc_html( $phone ); ?>
+					</span>
 				<?php endif; ?>
-
 
 				<?php if ( $email || $urls ) : ?>
 
 					<?php if ( $email ) : ?>
-						<i class="genericon genericon-mail"></i>
-						<a href="mailto:<?php echo antispambot( $email, true ); ?>"><?php echo antispambot( $email ); ?></a>
+						<span>
+							<i class="genericon genericon-mail"></i>
+							<a href="mailto:<?php echo antispambot( $email, true ); ?>"><?php echo antispambot( $email ); ?></a>
+						</span>
 					<?php endif; ?>
 
 				<?php endif; ?>
-			</div><!-- .sermon-meta -->
+			</div><!-- .person-meta -->
 		</div><!-- .entry-header-column -->
 	</div><!-- .entry-header-row -->
 </header><!-- .entry-header -->

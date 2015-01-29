@@ -1849,17 +1849,18 @@ a {
   margin-left: 1em;
   margin-left: 1rem; }
 
-.event-meta, .sermon-meta {
+.event-meta, .sermon-meta, .person-meta {
   margin-bottom: 1em;
   margin-bottom: 1rem; }
-  .event-meta .genericon, .event-meta .social-menu ul li a, .social-menu ul li .event-meta a, .sermon-meta .genericon, .sermon-meta .social-menu ul li a, .social-menu ul li .sermon-meta a {
-    font-size: 1.4em;
-    font-size: 1.4rem;
+  .event-meta .genericon, .event-meta .social-menu ul li a, .social-menu ul li .event-meta a, .sermon-meta .genericon, .sermon-meta .social-menu ul li a, .social-menu ul li .sermon-meta a, .person-meta .genericon, .person-meta .social-menu ul li a, .social-menu ul li .person-meta a {
+    line-height: 2; }
+  .event-meta span, .sermon-meta span, .person-meta span {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    white-space: nowrap;
     margin-right: 0.5em;
-    margin-right: 0.5rem; }
-  .event-meta span + span, .sermon-meta span + span {
-    margin-left: 0.5em;
-    margin-left: 0.5rem; }
+    margin-right: 0.5rem;
+    line-height: 2; }
 
 .entry-date {
   font-style: italic; }

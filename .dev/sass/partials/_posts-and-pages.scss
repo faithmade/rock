@@ -224,20 +224,23 @@
 }
 
 .event-meta,
-.sermon-meta {
+.sermon-meta,
+.person-meta {
 	margin-bottom: 1em;
 	margin-bottom: 1rem;
 
 	.genericon {
-		font-size: 1.4em;
-		font-size: 1.4rem;
-		margin-right: .5em;
-		margin-right: .5rem;
+		line-height: 2;
 	}
 
-	span + span {
-		margin-left: .5em;
-		margin-left: .5rem;
+
+	span {
+		-ms-word-wrap: break-word;
+		word-wrap: break-word;
+		white-space: nowrap;
+		margin-right: .5em;
+		margin-right: .5rem;
+		line-height: 2;
 	}
 }
 
