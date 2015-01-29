@@ -8,7 +8,6 @@
  */
 
 $address = ctfw_event_data()['address'];
-$directions_url = ctfw_event_data()['directions_url'];
 ?>
 
 <?php if ( $address ) : ?>
