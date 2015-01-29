@@ -431,6 +431,7 @@ $align-class-breakpoints:
 			border-#{$default-float}: $blockquote-border;
 			overflow: hidden;
 			font-family: $header-font-family;
+			font-style: italic;
 
 			cite {
 				display: block;

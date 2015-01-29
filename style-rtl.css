@@ -1162,7 +1162,8 @@ blockquote {
   padding: 1.25rem 1.25rem 0 1.25rem;
   border-right: 2px solid #ddd;
   overflow: hidden;
-  font-family: "PT Serif", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+  font-family: "PT Serif", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-style: italic; }
   blockquote cite {
     display: block;
     font-size: 0.8125rem;
