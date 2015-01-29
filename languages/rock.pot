@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rock-pro 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-28 21:48-0600\n"
+"POT-Creation-Date: 2015-01-28 22:08-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,18 +23,7 @@ msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
 #: 404.php:19
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-
-#: 404.php:27
-msgid "Most Used Categories"
-msgstr ""
-
-#: 404.php:44
-#, php-format
-msgid "Try looking in the monthly archives. %1$s"
+msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
 #: comments.php:28
