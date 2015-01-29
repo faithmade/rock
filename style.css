@@ -1724,7 +1724,6 @@ a {
   margin: 0 0 1.5rem;
   padding: 2.5em 3.5em;
   padding: 2.5rem 3.5rem;
-  border-bottom: 2px solid #eee;
   background-color: #fff; }
   @media screen and (max-width: 600px) {
     .panel {
