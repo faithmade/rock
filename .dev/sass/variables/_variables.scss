@@ -101,7 +101,7 @@ $body-bg: #e7e7e7;
 $heading-font-color: #222;
 $body-font-color: #444;
 $body-font-subtle-color: #aaa;
-$body-font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: $sans-font-family;
 $sans-font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $font-weight-normal:normal;
 $body-font-weight: $font-weight-normal;
@@ -168,7 +168,7 @@ $cursor-text-value: text;
 $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-$header-font-family: "PT Serif", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-family: "PT Serif", Georgia, serif;
 $header-font-weight: normal;
 $header-font-style: bold;
 $header-font-color: #222;
