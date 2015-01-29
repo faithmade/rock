@@ -1825,10 +1825,6 @@ a {
   .entry-footer .post-edit-link {
     font-family: "PT Serif", Georgia, serif;
     font-weight: normal;
-    border-radius: 3px;
-    border: 1px solid #e91f2e;
-    padding: 0.5em 1em;
-    padding: 0.5rem 1rem;
     margin-left: 1rem;
     text-align: center;
     display: inline-block; }
@@ -1894,7 +1890,10 @@ article.format-link {
     font-weight: bold;
     font-size: 1.75rem; }
 
-.rock-event-full-map, .entry-media {
+.entry-media.audio {
+  margin-bottom: 1.5em; }
+
+.rock-event-full-map, .entry-media.video {
   height: 0;
   margin-left: -3.5rem;
   margin-right: -3.5rem;
@@ -1902,10 +1901,7 @@ article.format-link {
   margin-top: 2em;
   margin-bottom: 2em;
   padding-bottom: 66%; }
-  .rock-event-full-map.audio, .entry-media.audio {
-    padding-bottom: 0;
-    height: 30px; }
-  .rock-event-full-map > *, .entry-media > * {
+  .rock-event-full-map > *, .entry-media.video > * {
     position: absolute;
     top: 0;
     left: 0;
@@ -1913,7 +1909,7 @@ article.format-link {
     bottom: 0;
     width: 100% !important;
     height: 100% !important; }
-  .rock-event-full-map .mejs-container, .entry-media .mejs-container {
+  .rock-event-full-map .mejs-container, .entry-media.video .mejs-container {
     width: 100% !important;
     height: 100% !important; }
 
@@ -1991,9 +1987,9 @@ article.format-link {
   #respond h3#reply-title {
     font-size: 1.5em !important; }
   #respond .logged-in-as {
-    border-radius: 4px;
-    background-color: #ddd;
-    padding: 10px 15px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
     font-size: 0.85em; }
   #respond .comment-notes {
     font-size: 0.87em;
