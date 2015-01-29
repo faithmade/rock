@@ -1738,6 +1738,9 @@ a {
   height: auto; }
 .hentry .entry-header {
   color: #222; }
+.hentry .entry-media {
+  margin-bottom: 1em;
+  margin-bottom: 1rem; }
 .hentry.has-featured-image {
   padding: 0; }
   .hentry.has-featured-image .entry-header {
@@ -1829,6 +1832,22 @@ a {
   margin-bottom: 2rem; }
   .has-featured-image .entry-meta {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+
+.entry-media-meta .button + .button {
+  margin-right: 1em;
+  margin-right: 1rem; }
+
+.sermon-meta {
+  margin-bottom: 1em;
+  margin-bottom: 1rem; }
+  .sermon-meta .genericon, .sermon-meta .social-menu ul li a, .social-menu ul li .sermon-meta a {
+    font-size: 1.4em;
+    font-size: 1.4rem;
+    margin-left: 0.5em;
+    margin-left: 0.5rem; }
+  .sermon-meta span + span {
+    margin-right: 0.5em;
+    margin-right: 0.5rem; }
 
 .entry-date {
   font-style: italic; }

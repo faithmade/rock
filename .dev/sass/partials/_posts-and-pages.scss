@@ -64,6 +64,11 @@
 		color: $heading-font-color;
 	}
 
+	.entry-media {
+		margin-bottom: 1em;
+		margin-bottom: 1rem;
+	}
+
 	&.has-featured-image {
 		padding: 0;
 
@@ -189,7 +194,7 @@
 	}
 }
 
-.entry-meta{
+.entry-meta {
 	border-bottom: 1px solid rgba(0,0,0,.1);
 	line-height: 3em;
 	line-height: 3rem;
@@ -199,6 +204,32 @@
 
 	.has-featured-image & {
 		border-bottom: 1px solid rgba(255,255,255,.2);
+	}
+}
+
+.entry-media-meta {
+	.button {
+		& + .button {
+			margin-left: 1em;
+			margin-left: 1rem;
+		}
+	}
+}
+
+.sermon-meta {
+	margin-bottom: 1em;
+	margin-bottom: 1rem;
+
+	.genericon {
+		font-size: 1.4em;
+		font-size: 1.4rem;
+		margin-right: .5em;
+		margin-right: .5rem;
+	}
+
+	span + span {
+		margin-left: .5em;
+		margin-left: .5rem;
 	}
 }
 
