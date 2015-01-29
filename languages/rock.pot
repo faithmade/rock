@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rock-pro 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-28 19:46-0600\n"
+"POT-Creation-Date: 2015-01-28 20:35-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -415,17 +415,11 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: templates/parts/loop/event-content.php:24
-#: templates/parts/loop/person-content.php:34
-msgctxt "event"
-msgid "Get Directions"
-msgstr ""
-
 #. //codex.wordpress.org/Template_Hierarchy
 #. *
 #. * @package rock
 #.
-#: templates/parts/loop/event-content.php:32
+#: templates/parts/loop/event-content.php:21
 #: templates/parts/loop/location-content.php:43
 #: templates/parts/loop/person-content.php:42
 #: templates/parts/loop/post-content.php:11
@@ -433,7 +427,7 @@ msgstr ""
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: templates/parts/loop/event-content.php:35
+#: templates/parts/loop/event-content.php:24
 #: templates/parts/loop/location-content.php:46
 #: templates/parts/loop/page-content.php:12
 #: templates/parts/loop/person-content.php:45
@@ -527,6 +521,11 @@ msgstr ""
 
 #: templates/parts/loop/location-content.php:35
 msgctxt "location"
+msgid "Get Directions"
+msgstr ""
+
+#: templates/parts/loop/person-content.php:34
+msgctxt "event"
 msgid "Get Directions"
 msgstr ""
 

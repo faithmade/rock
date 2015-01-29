@@ -51,7 +51,7 @@ body {
   color: #444;
   padding: 0;
   margin: 0;
-  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 150%;
@@ -1258,7 +1258,7 @@ button, a.button, input, select, textarea {
   /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
   vertical-align: baseline;
   /* Improves appearance and consistency in all browsers */
-  font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
 
 button, a.button, a.button:visited, input[type="button"], input[type="reset"], input[type="submit"] {
   background: #e91f2e;
@@ -1363,7 +1363,7 @@ a {
       background-color: #222; }
       .main-navigation li a, .main-navigation li a:link {
         display: block;
-        font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+        font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
         line-height: 3.5rem;
         font-weight: normal;
         color: #c8c8c8;
@@ -1579,7 +1579,7 @@ a {
     display: none; }
 
 .widget-title {
-  font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   padding: 1em 1.25em 1em 0em;
   padding: 1rem 1.25rem 1rem 0rem;
   margin: -20px -20px 1em;
@@ -1846,15 +1846,15 @@ a {
   margin-right: 1em;
   margin-right: 1rem; }
 
-.sermon-meta {
+.event-meta, .sermon-meta {
   margin-bottom: 1em;
   margin-bottom: 1rem; }
-  .sermon-meta .genericon, .sermon-meta .social-menu ul li a, .social-menu ul li .sermon-meta a {
+  .event-meta .genericon, .event-meta .social-menu ul li a, .social-menu ul li .event-meta a, .sermon-meta .genericon, .sermon-meta .social-menu ul li a, .social-menu ul li .sermon-meta a {
     font-size: 1.4em;
     font-size: 1.4rem;
     margin-left: 0.5em;
     margin-left: 0.5rem; }
-  .sermon-meta span + span {
+  .event-meta span + span, .sermon-meta span + span {
     margin-right: 0.5em;
     margin-right: 0.5rem; }
 
@@ -1864,13 +1864,13 @@ a {
 .post-format {
   color: #e91f2e;
   text-transform: uppercase;
-  font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 0.8125rem;
   font-weight: bold; }
 
 .posted-on {
   float: left;
-  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-size: 0.8125rem; }
   .posted-on a {
@@ -1889,14 +1889,26 @@ a {
 article.format-link {
   background: #f5f5f5; }
   article.format-link .entry-title {
-    font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     font-weight: bold;
     font-size: 1.75rem; }
 
+.rock-event-full-map {
+  height: 380px;
+  margin-right: -3.5rem;
+  margin-left: -3.5rem;
+  position: relative;
+  margin-top: 2em;
+  margin-bottom: 2em; }
+
 .event-map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   width: 100%;
-  height: 400px;
-  position: relative; }
+  height: 100%; }
 
 .blog .format-aside .entry-title, .archive .format-aside .entry-title {
   display: none; }
@@ -1938,7 +1950,7 @@ article.format-link {
       font-style: normal;
       font-weight: bold; }
     .comment-list li .comment-author, .comment-list li .comment-metadata {
-      font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+      font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
     .comment-list li .comment-metadata {
       margin-bottom: 1em;
       font-size: 0.8125rem;
@@ -1968,7 +1980,7 @@ article.format-link {
 
 #respond {
   margin-top: 10px;
-  font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
   #respond h3#reply-title {
     font-size: 1.5em !important; }
   #respond .logged-in-as {
@@ -2080,7 +2092,7 @@ body.layout-one-column-narrow .row, body.layout-one-column-narrow .main-navigati
   margin-bottom: 40px; }
 
 .site-title {
-  font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 2.25rem;
   font-size: 2.25rem;
   font-weight: normal;
@@ -2126,7 +2138,7 @@ body.layout-one-column-narrow .row, body.layout-one-column-narrow .main-navigati
   .featured-content .entry-header .entry-title {
     font-size: 2.625rem;
     line-height: 1.2;
-    font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     font-weight: bold; }
   .featured-content .entry-header .entry-excerpt p {
     font-style: italic;
@@ -2141,7 +2153,7 @@ body.layout-one-column-narrow .row, body.layout-one-column-narrow .main-navigati
     background-color: #e91f2e;
     color: #fff;
     display: inline-block;
-    font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 0.8125rem;
@@ -2238,7 +2250,7 @@ body.layout-one-column-narrow .row, body.layout-one-column-narrow .main-navigati
   .featured-content .entry-title {
     font-size: 2.625rem;
     line-height: 1.2;
-    font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     font-weight: bold; }
   .featured-content .entry-excerpt p {
     font-style: italic;
@@ -2253,7 +2265,7 @@ body.layout-one-column-narrow .row, body.layout-one-column-narrow .main-navigati
     background-color: #e91f2e;
     color: #fff;
     display: inline-block;
-    font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 0.8125rem;

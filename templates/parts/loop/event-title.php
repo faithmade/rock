@@ -30,22 +30,30 @@ $map_zoom = ctfw_event_data()['map_zoom'];
 			</div><!-- .entry-meta -->
 			<a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
 			<div class="event-meta">
-				<span>
-					<i class="genericon genericon-month"></i>
-					<?php echo esc_html( $date ); ?>
-				</span>
-				<span>
-					<i class="genericon genericon-time"></i>
-					<?php echo nl2br( wptexturize( $time ) ); ?>
-				</span>
-				<span>
-					<i class="genericon genericon-home"></i>
-					<?php echo esc_html( $venue ); ?>
-				</span>
-				<span>
-					<i class="genericon genericon-location"></i>
-					<?php echo nl2br( wptexturize( $address ) ); ?>
-				</span>
+				<?php if ( $date ) : ?>
+					<span>
+						<i class="genericon genericon-month"></i>
+						<?php echo esc_html( $date ); ?>
+					</span>
+				<?php endif; ?>
+				<?php if ( $time ) : ?>
+					<span>
+						<i class="genericon genericon-time"></i>
+						<?php echo nl2br( wptexturize( $time ) ); ?>
+					</span>
+				<?php endif; ?>
+				<?php if ( $venue ) : ?>
+					<span>
+						<i class="genericon genericon-home"></i>
+						<?php echo esc_html( $venue ); ?>
+					</span>
+				<?php endif; ?>
+				<?php if ( $address ) : ?>
+					<span>
+						<i class="genericon genericon-location"></i>
+						<?php echo nl2br( wptexturize( $address ) ); ?>
+					</span>
+				<?php endif; ?>
 				</span>
      </div><!-- .event-meta -->
 		</div><!-- .entry-header-column -->
