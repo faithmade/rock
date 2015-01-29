@@ -186,10 +186,6 @@
 	.post-edit-link {
 		font-family: $header-font-family;
 		font-weight: normal;
-		border-radius: $global-radius;
-		border: 1px solid $primary-color;
-		padding: .5em 1em;
-		padding: .5rem 1rem;
 		margin-left: 1rem;
 		text-align: center;
 		display: inline-block;
@@ -283,8 +279,12 @@ article.format-link {
 	}
 }
 
+.entry-media.audio {
+	margin-bottom: 1.5em;
+}
+
 .rock-event-full-map,
-.entry-media {
+.entry-media.video {
 	height: 0;
 	margin-left: -3.5rem;
 	margin-right: -3.5rem;
@@ -292,11 +292,6 @@ article.format-link {
 	margin-top: 2em;
 	margin-bottom: 2em;
 	padding-bottom: 66%;
-
-	&.audio {
-		padding-bottom: 0;
-		height: 30px;
-	}
 
 	> * {
 		position: absolute;
