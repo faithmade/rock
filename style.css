@@ -1161,11 +1161,16 @@ blockquote {
   margin: 0 0 1.25rem;
   padding: 1.25rem 1.25rem 0 1.25rem;
   border-left: 2px solid #ddd;
-  overflow: hidden; }
+  overflow: hidden;
+  font-family: "PT Serif", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
   blockquote cite {
     display: block;
     font-size: 0.8125rem;
-    color: #555555; }
+    color: #555555;
+    margin-top: 0.5em;
+    margin-top: 0.5rem;
+    font-size: 1.1em;
+    font-size: 1.1rem; }
     blockquote cite:before {
       content: "\2014 \0020"; }
     blockquote cite a, blockquote cite a:visited {
@@ -1173,7 +1178,10 @@ blockquote {
 
 blockquote, blockquote p {
   line-height: 1.6;
-  color: #6f6f6f; }
+  color: #6f6f6f;
+  font-size: 1.4em;
+  font-size: 1.4rem;
+  line-height: 1.4; }
 
 @media only screen and (min-width:40.063em) {
   h1, h2, h3, h4, h5, h6 {

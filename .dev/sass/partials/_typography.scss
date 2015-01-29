@@ -430,11 +430,17 @@ $align-class-breakpoints:
 			padding: $blockquote-padding;
 			border-#{$default-float}: $blockquote-border;
 			overflow: hidden;
+			font-family: $header-font-family;
 
 			cite {
 				display: block;
 				font-size: $blockquote-cite-font-size;
 				color: $blockquote-cite-font-color;
+				margin-top: .5em;
+				margin-top: .5rem;
+				font-size: 1.1em;
+				font-size: 1.1rem;
+
 				&:before {
 					content: "\2014 \0020";
 				}
@@ -449,6 +455,9 @@ $align-class-breakpoints:
 		blockquote p {
 			line-height: $paragraph-line-height;
 			color: $blockquote-font-color;
+			font-size: 1.4em;
+			font-size: 1.4rem;
+			line-height: 1.4;
 		}
 
 		@media #{$medium-up} {
