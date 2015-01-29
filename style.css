@@ -1842,12 +1842,12 @@ a {
   margin-left: 1em;
   margin-left: 1rem; }
 
-.event-meta, .sermon-meta, .person-meta {
+.event-meta, .sermon-meta, .location-meta, .person-meta {
   margin-bottom: 1em;
   margin-bottom: 1rem; }
-  .event-meta .genericon, .event-meta .social-menu ul li a, .social-menu ul li .event-meta a, .sermon-meta .genericon, .sermon-meta .social-menu ul li a, .social-menu ul li .sermon-meta a, .person-meta .genericon, .person-meta .social-menu ul li a, .social-menu ul li .person-meta a {
+  .event-meta .genericon, .event-meta .social-menu ul li a, .social-menu ul li .event-meta a, .sermon-meta .genericon, .sermon-meta .social-menu ul li a, .social-menu ul li .sermon-meta a, .location-meta .genericon, .location-meta .social-menu ul li a, .social-menu ul li .location-meta a, .person-meta .genericon, .person-meta .social-menu ul li a, .social-menu ul li .person-meta a {
     line-height: 2; }
-  .event-meta span, .sermon-meta span, .person-meta span {
+  .event-meta span, .sermon-meta span, .location-meta span, .person-meta span {
     -ms-word-wrap: break-word;
     word-wrap: break-word;
     white-space: nowrap;

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rock-pro 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-28 21:30-0600\n"
+"POT-Creation-Date: 2015-01-28 21:43-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -419,16 +419,16 @@ msgstr ""
 #. *
 #. * @package rock
 #.
-#: templates/parts/loop/event-content.php:21
-#: templates/parts/loop/location-content.php:43
+#: templates/parts/loop/event-content.php:20
+#: templates/parts/loop/location-content.php:25
 #: templates/parts/loop/person-content.php:42
 #: templates/parts/loop/post-content.php:11
 #: templates/parts/loop/sermon-content.php:107
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: templates/parts/loop/event-content.php:24
-#: templates/parts/loop/location-content.php:46
+#: templates/parts/loop/event-content.php:23
+#: templates/parts/loop/location-content.php:28
 #: templates/parts/loop/page-content.php:12
 #: templates/parts/loop/person-content.php:45
 #: templates/parts/loop/post-content.php:14
@@ -517,11 +517,6 @@ msgstr ""
 #: templates/parts/loop/sermon-footer.php:36
 #, php-format
 msgid "Filed under: %1$s"
-msgstr ""
-
-#: templates/parts/loop/location-content.php:35
-msgctxt "location"
-msgid "Get Directions"
 msgstr ""
 
 #: templates/parts/loop/person-content.php:34
