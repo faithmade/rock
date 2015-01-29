@@ -22,18 +22,24 @@ $ctc_sermon_tag = get_the_term_list( $post->ID, 'ctc_sermon_tag', '', __( ', ', 
 			</div><!-- .entry-meta -->
 			<a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
 			<div class="sermon-meta">
+				<?php if ( $ctc_sermon_speaker ) : ?>
 				<span>
 					<i class="genericon genericon-user"></i>
 					<?php echo $ctc_sermon_speaker; ?>
 				</span>
+				<?php endif; ?>
+				<?php if ( $ctc_sermon_topic ) : ?>
 				<span>
 					<i class="genericon genericon-category"></i>
 					<?php echo $ctc_sermon_topic; ?>
 				</span>
+				<?php endif; ?>
+				<?php if ( $ctc_sermon_book ) : ?>
 				<span>
 					<i class="genericon genericon-book"></i>
 					<?php echo $ctc_sermon_book; ?>
 				</span>
+				<?php endif; ?>
 			</div><!-- .sermon-meta -->
 		</div><!-- .entry-header-column -->
 	</div><!-- .entry-header-row -->
