@@ -1632,7 +1632,8 @@ a {
     border-bottom: 0;
     padding-bottom: 0; }
   .widget_recent_comments li a {
-    border: 0; }
+    border: 0;
+    display: inline; }
 
 /* Calendar Widget */
 .widget_calendar {
