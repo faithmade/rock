@@ -1750,6 +1750,9 @@ a {
 .hentry .entry-media {
   margin-bottom: 1em;
   margin-bottom: 1rem; }
+.hentry.has-post-thumbnail .entry-header {
+  padding-top: 2.5em;
+  padding-top: 2.5rem; }
 .hentry.has-featured-image {
   padding: 0; }
   .hentry.has-featured-image .entry-header {

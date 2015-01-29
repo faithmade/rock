@@ -69,6 +69,13 @@
 		margin-bottom: 1rem;
 	}
 
+	&.has-post-thumbnail {
+		.entry-header {
+			padding-top: 2.5em;
+			padding-top: 2.5rem;
+		}
+	}
+
 	&.has-featured-image {
 		padding: 0;
 
