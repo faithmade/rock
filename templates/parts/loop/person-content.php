@@ -9,9 +9,9 @@
 
 // Get data
 // $date (localized range), $start_date, $end_date, $time, $venue, $address, $show_directions_link, $directions_url, $map_lat, $map_lng, $map_type, $map_zoom
-extract( ctfw_event_data() );
+extract( ctc_event_data() );
 
-$google_map = ctfw_google_map( array(
+$google_map = ctc_google_map( array(
     'latitude'  => $map_lat,
     'longitude' => $map_lng,
     'type'    => $map_type,

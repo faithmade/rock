@@ -7,11 +7,11 @@
  * @package rock
  */
 
-$ctc_sermon_topic = get_the_term_list( $post->ID, 'ctc_sermon_topic', '', __( ', ', 'rock' ) );
-$ctc_sermon_book = get_the_term_list( $post->ID, 'ctc_sermon_book', '', __( ', ', 'rock' ) );
-$ctc_sermon_series = get_the_term_list( $post->ID, 'ctc_sermon_series', '', __( ', ', 'rock' ) );
-$ctc_sermon_speaker = get_the_term_list( $post->ID, 'ctc_sermon_speaker', '', __( ', ', 'rock' ) );
-$ctc_sermon_tag = get_the_term_list( $post->ID, 'ctc_sermon_tag', '', __( ', ', 'rock' ) );
+$ctc_sermon_topic    = get_the_term_list( $post->ID, 'ctc_sermon_topic', '', __( ', ', 'rock' ) );
+$ctc_sermon_book     = get_the_term_list( $post->ID, 'ctc_sermon_book', '', __( ', ', 'rock' ) );
+$ctc_sermon_series   = get_the_term_list( $post->ID, 'ctc_sermon_series', '', __( ', ', 'rock' ) );
+$ctc_sermon_speaker  = get_the_term_list( $post->ID, 'ctc_sermon_speaker', '', __( ', ', 'rock' ) );
+$ctc_sermon_tag      = get_the_term_list( $post->ID, 'ctc_sermon_tag', '', __( ', ', 'rock' ) );
 ?>
 <header class="entry-header">
 	<div class="entry-header-row">

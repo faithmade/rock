@@ -10,9 +10,9 @@
 
 // Get data
 // $address, $show_directions_link, $directions_url, $phone, $times, $map_lat, $map_lng, $map_type, $map_zoom
-extract( ctfw_location_data() );
+extract( ctc_location_data() );
 
-$address = ctfw_location_data()['address'];
+$address = ctc_location_data()['address'];
 ?>
 
 <?php if ( $address ) : ?>

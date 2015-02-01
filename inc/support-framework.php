@@ -31,10 +31,10 @@ function rock_add_theme_support_framework() {
 
   // Require minimum version of WordPress
   // An admin notice is shown if old version is used
-  add_theme_support( 'ctfw-wordpress-version', '3.6' );
+  add_theme_support( 'ctc-wordpress-version', '3.6' );
 
   // Theme activation tasks
-  add_theme_support( 'ctfw-after-activation', array(
+  add_theme_support( 'ctc-after-activation', array(
     'flush_rewrite_rules' => true, // make sure friendly URL's work
     'notice'        => sprintf( __( '<b>Next Steps:</b> Please continue reading the <a href="%s" target="_blank">Getting Started</a> guide for the next steps after theme activation.', 'rock' ), 'https://upthemes.com/knowledgebase/getting-started-rock/' ),
     'hide_default_notice' => true // no need to be redundant
@@ -42,55 +42,55 @@ function rock_add_theme_support_framework() {
 
   // Load language file from wp-content/languages/themes/textdomain-locale.mo
   // It is absolutely best to keep it outside of theme to prevent loss during update
-  add_theme_support( 'ctfw-load-translation' );
+  add_theme_support( 'ctc-load-translation' );
 
   /**
    * Design
    */
 
   // Prompt outdated Internet Explorer users to upgrade to a modern browser
-  add_theme_support( 'ctfw-ie-unsupported', 7 ); // version 7 and earlier
+  add_theme_support( 'ctc-ie-unsupported', 7 ); // version 7 and earlier
 
   // Automatically form <title>
-  add_theme_support( 'ctfw-auto-title' );
+  add_theme_support( 'ctc-auto-title' );
 
   // Enable non-content shortcodes
   // Handy for Customizer: [ctcom_site_name], [ctcom_rss_url], [ctcom_current_year]
-  add_theme_support( 'ctfw-non-content-shortcodes' );
+  add_theme_support( 'ctc-non-content-shortcodes' );
 
   /**
    * Posts
    */
 
   // Add additional classes to post_class()
-  // This will add useful classes like ctfw-has-image
-  add_theme_support( 'ctfw-post-classes' );
+  // This will add useful classes like ctc-has-image
+  add_theme_support( 'ctc-post-classes' );
 
   // Shorten comment author to keep long trackback titles in check
-  add_theme_support( 'ctfw-shorten-comment-author', 50 );
+  add_theme_support( 'ctc-shorten-comment-author', 50 );
 
   // Redirect post type archives to pages using specific page templates
-  // Page templates must be specified with ctfw_content_types filter. See rock_update_content_types().
-  add_theme_support( 'ctfw-archive-redirection' );
+  // Page templates must be specified with ctc_content_types filter. See rock_update_content_types().
+  add_theme_support( 'ctc-archive-redirection' );
 
   // Enable date archives for sermon posts
   // Flush rewrite rules (re-save permalinks) to take effect
-  add_theme_support( 'ctfw-sermon-date-archive' );
+  add_theme_support( 'ctc-sermon-date-archive' );
 
   // Make group taxonomy archive order manually (like People template)
-  add_theme_support( 'ctfw-people-group-manual-order' );
+  add_theme_support( 'ctc-people-group-manual-order' );
 
   // Prev/Next Event Sorting
   // This makes get_previous_post() and get_next_post() sort by event Start Date instead of Publish Date
-  add_theme_support( 'ctfw-event-navigation' );
+  add_theme_support( 'ctc-event-navigation' );
 
   // Prev/Next Person Sorting
   // This makes get_previous_post() and get_next_post() sort by manual order instead of Publish Date
-  add_theme_support( 'ctfw-person-navigation' );
+  add_theme_support( 'ctc-person-navigation' );
 
   // Prev/Next Location Sorting
   // This makes get_previous_post() and get_next_post() sort by manual order instead of Publish Date
-  add_theme_support( 'ctfw-location-navigation' );
+  add_theme_support( 'ctc-location-navigation' );
 
   /**
    * Media
@@ -100,7 +100,7 @@ function rock_add_theme_support_framework() {
   // Provide third argument to override the default message: 'The target image size is %s.'
   // Provide each item as array( 'size', 'message' ) instead of 'size' for post type-specific messages
   add_theme_support(
-    'ctfw-featured-image-notes',
+    'ctc-featured-image-notes',
     array(
       'post'      => 'post-thumbnail',
       'ctc_sermon'  => 'post-thumbnail',
@@ -113,11 +113,11 @@ function rock_add_theme_support_framework() {
 
   // Enable image upscaling (helpful for responsive themes)
   // Resized images will be made for all uploads, even if source is smaller than target
-  add_theme_support( 'ctfw-image-upscaling' );
+  add_theme_support( 'ctc-image-upscaling' );
 
   // Use custom size for gallery thumbnails
   // This will be used when size attribute not specifically set on shortcode
-  add_theme_support( 'ctfw-gallery-thumb-size', array(
+  add_theme_support( 'ctc-gallery-thumb-size', array(
     '3' => 'rock-rect-large',     // when 1 to 3 columns used
     '5' => 'rock-rect-medium',  // when 4 to 5 columns used
     '9' => 'rock-rect-small',   // when 6 to 9 columns used
@@ -125,20 +125,20 @@ function rock_add_theme_support_framework() {
 
   // Remove default gallery styles
   // It is better to do all styling in style.css and not rely on <style> that WordPress injects
-  add_theme_support( 'ctfw-remove-gallery-styles' );
+  add_theme_support( 'ctc-remove-gallery-styles' );
 
   // Automatically make video and audio embeds responsive
   // Uses FitVid.js and custom styles to assist WordPress core embeds, [video] and [audio]
-  add_theme_support( 'ctfw-responsive-embeds' );
+  add_theme_support( 'ctc-responsive-embeds' );
 
   // Generic embeds
   // This helps make embeds more generic by setting parameters to remove
   // related videos, set neutral colors, reduce branding, etc.
-  add_theme_support( 'ctfw-generic-embeds' );
+  add_theme_support( 'ctc-generic-embeds' );
 
   // Force download of certain file types via ?download=path/filename.type
   // This prompts "Save As" -- handy for MP3, PDF, etc. Only works on local files.
-  add_theme_support( 'ctfw-force-downloads' );
+  add_theme_support( 'ctc-force-downloads' );
 
   /**
    * Attachments
@@ -146,11 +146,11 @@ function rock_add_theme_support_framework() {
 
   // Prevent WordPress from adding attachment image, link, etc. to the_content()
   // We show it manually using content-attachment.php
-  add_theme_support( 'ctfw-remove-prepend-attachment' );
+  add_theme_support( 'ctc-remove-prepend-attachment' );
 
   // Attachment inherit discussion status
   // Inherit comment and ping statuses from parent post. If not attached to a post, discussion is disabled.
-  add_theme_support( 'ctfw-attachment-inherit-discussion' );
+  add_theme_support( 'ctc-attachment-inherit-discussion' );
 
   /**
    * Admin
@@ -158,16 +158,16 @@ function rock_add_theme_support_framework() {
 
   // Remove and redirect Custom Background page to Customizer
   // Additional options are added for custom background there
-  add_theme_support( 'ctfw-force-customizer-background' );
+  add_theme_support( 'ctc-force-customizer-background' );
 
   // Enable sidebar/widget restrictions
   // Useful for keeping widgts in appropriate widget areas (e.g. Slide widgets)
   // See includes/sidebars.php for configuration
-  add_theme_support( 'ctfw-sidebar-widget-restrictions' );
+  add_theme_support( 'ctc-sidebar-widget-restrictions' );
 
   // Show custom ordering tip under taxonomies list (very handy for People Groups)
   // Provide URL as second parameter to override the default recommended plugin
-  add_theme_support( 'ctfw-taxonomy-order-note' );
+  add_theme_support( 'ctc-taxonomy-order-note' );
 
   /**
    * Import
@@ -175,17 +175,17 @@ function rock_add_theme_support_framework() {
 
   // Correct imported URL's in menu, content, widgets, etc.
   // Sample import files may have URLs from the dev site in menu, content, meta fields, etc.
-  add_theme_support( 'ctfw-import-correct-urls', 'http://local.demos.upthemes.com/' . CTFW_THEME_SLUG );
+  add_theme_support( 'ctc-import-correct-urls', 'http://local.demos.upthemes.com/' . CTFW_THEME_SLUG );
 
   // Set homepage as static front page after import
   // If no static front and page using homepage template doesn't exist before import, set it
   // Page using blog template is set as Posts Page if nothing already set
-  add_theme_support( 'ctfw-import-set-static-front', 'homepage.php' ); // homepage template
+  add_theme_support( 'ctc-import-set-static-front', 'homepage.php' ); // homepage template
 
   // Set menu locations after import
   // If zero locations already set, sample menus (if exist) are set to appropriate location.
   // If at least one location is set, assume admin is done configuring.
-  add_theme_support( 'ctfw-import-set-menu-locations', array(
+  add_theme_support( 'ctc-import-set-menu-locations', array(
        'top'    => 'top-menu', // menu slug from sample content file
        'header' => 'header-menu',
        'footer' => 'footer-menu'
@@ -193,7 +193,7 @@ function rock_add_theme_support_framework() {
 
   // Delete WordPress sample content before import
   // Move the sample post, page and comment that fresh WordPress installs have into Trash.
-  add_theme_support( 'ctfw-import-delete-wp-content' );
+  add_theme_support( 'ctc-import-delete-wp-content' );
 
 }
 
@@ -217,7 +217,7 @@ add_action( 'after_setup_theme', 'rock_add_theme_support_framework' );
 function rock_add_theme_support_framework_widgets() {
 
   // Categories Widget
-  add_theme_support( 'ctfw-widget-categories', array(
+  add_theme_support( 'ctc-widget-categories', array(
     'fields' => array(
       'title',
       'taxonomy',
@@ -232,7 +232,7 @@ function rock_add_theme_support_framework_widgets() {
   ) );
 
   // Posts Widget
-  add_theme_support( 'ctfw-widget-posts', array(
+  add_theme_support( 'ctc-widget-posts', array(
     'fields' => array(
       'title',
       'category',
@@ -248,7 +248,7 @@ function rock_add_theme_support_framework_widgets() {
   ) );
 
   // Sermons Widget
-  add_theme_support( 'ctfw-widget-sermons', array(
+  add_theme_support( 'ctc-widget-sermons', array(
     'fields' => array(
       'title',
       'topic',
@@ -272,7 +272,7 @@ function rock_add_theme_support_framework_widgets() {
 
   // Events Widget
   if( ! class_exists('TribeEvents') ) {
-    add_theme_support( 'ctfw-widget-events', array(
+    add_theme_support( 'ctc-widget-events', array(
       'fields' => array(
         'title',
         'timeframe',
@@ -287,7 +287,7 @@ function rock_add_theme_support_framework_widgets() {
   }
 
   // Gallery Widget
-  add_theme_support( 'ctfw-widget-gallery', array(
+  add_theme_support( 'ctc-widget-gallery', array(
     'fields' => array(
       'title',
       'post_id', // post/page with gallery
@@ -301,7 +301,7 @@ function rock_add_theme_support_framework_widgets() {
   ) );
 
   // Galleries Widget
-  add_theme_support( 'ctfw-widget-galleries', array(
+  add_theme_support( 'ctc-widget-galleries', array(
     'fields' => array(
       'title',
       'orderby',
@@ -313,7 +313,7 @@ function rock_add_theme_support_framework_widgets() {
   ) );
 
   // People Widget
-  add_theme_support( 'ctfw-widget-people', array(
+  add_theme_support( 'ctc-widget-people', array(
     'fields' => array(
       'title',
       'group',
@@ -331,7 +331,7 @@ function rock_add_theme_support_framework_widgets() {
   ) );
 
   // Locations Widget
-  add_theme_support( 'ctfw-widget-locations', array(
+  add_theme_support( 'ctc-widget-locations', array(
     'fields' => array(
       'title',
       'orderby',
@@ -354,7 +354,7 @@ function rock_add_theme_support_framework_widgets() {
   ) );
 
   // Archives Widget
-  add_theme_support( 'ctfw-widget-archives', array(
+  add_theme_support( 'ctc-widget-archives', array(
     'fields' => array(
       'title',
       'post_type',
@@ -373,7 +373,7 @@ function rock_add_theme_support_framework_widgets() {
   ) );
 
   // Giving Widget
-  add_theme_support( 'ctfw-widget-giving', array(
+  add_theme_support( 'ctc-widget-giving', array(
     'fields' => array(
       'title',
       'text',
@@ -384,7 +384,7 @@ function rock_add_theme_support_framework_widgets() {
   ) );
 
   // Slide Widget
-  add_theme_support( 'ctfw-widget-slide', array(
+  add_theme_support( 'ctc-widget-slide', array(
     'fields' => array(
       'title',
       'description',
@@ -396,7 +396,7 @@ function rock_add_theme_support_framework_widgets() {
     'field_overrides' => array(
       'image_id' => array( // tell user image is required with this theme
         'after_name' => _x( '(Required)', 'slide widget image', 'rock' ),
-        'desc' => sprintf( __( 'Image cropped to %s.', 'rock' ), ctfw_image_size_dimensions( 'rock-slide' ) ),
+        'desc' => sprintf( __( 'Image cropped to %s.', 'rock' ), ctc_image_size_dimensions( 'rock-slide' ) ),
       ),
       'video' => array( // tell user which video URLs to use
         'desc' => __( 'To make this a video slide, enter a YouTube or Vimeo video page URL.', 'rock' ),
@@ -405,7 +405,7 @@ function rock_add_theme_support_framework_widgets() {
   ) );
 
   // Highlight Widget
-  add_theme_support( 'ctfw-widget-highlight', array(
+  add_theme_support( 'ctc-widget-highlight', array(
     'fields' => array(
       'title',
       'description',
@@ -415,7 +415,7 @@ function rock_add_theme_support_framework_widgets() {
     ),
     'field_overrides' => array(
       'image_id' => array(
-        'desc' => sprintf( __( 'Image cropped to %s.', 'rock' ), ctfw_image_size_dimensions( 'rock-rect-large' ) ),
+        'desc' => sprintf( __( 'Image cropped to %s.', 'rock' ), ctc_image_size_dimensions( 'rock-rect-large' ) ),
       ),
     ),
   ) );

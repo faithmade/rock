@@ -7,7 +7,7 @@
  * @package rock
  */
 
-$address = ctfw_event_data()['address'];
+$address = ctc_event_data()['address'];
 ?>
 
 <?php if ( $address ) : ?>

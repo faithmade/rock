@@ -14,7 +14,7 @@
 // $audio_player    Same as video
 // $audio_download_url  Same as video
 // $pdf_download_url  URL for download link (local or externally hosted, but "Save As" forced only if local)
-extract( ctfw_sermon_data() );
+extract( ctc_sermon_data() );
 
 // Show buttons if need to switch between video and audio players or have at least one download link
 $show_buttons = false;

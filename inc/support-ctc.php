@@ -35,7 +35,7 @@ function rock_add_theme_support_ctc() {
    * This also removes the plugin's "not using compatible theme" message.
    */
 
-  add_theme_support( 'church-theme-content' );
+  add_theme_support( 'churchthemes-framework' );
 
   /**
    * Plugin Features

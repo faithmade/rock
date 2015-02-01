@@ -6,11 +6,10 @@
  */
 
 /**
- * Church Framework
+ * ChurchThemes Framework
  */
-// require get_template_directory() . '/framework/framework.php';
 require get_template_directory() . '/inc/support-ctc.php';
-// require get_template_directory() . '/inc/support-framework.php';
+require get_template_directory() . '/inc/compatibility.php';
 
 /**
  * Custom template tags for this theme.
