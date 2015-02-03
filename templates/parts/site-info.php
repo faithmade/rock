@@ -13,11 +13,15 @@
 			<div class="site-info-text">
 				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'rock' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'rock' ), 'WordPress' ); ?></a>
 				<span class="sep"> | </span>
-				<?php printf( __( 'Theme: %1$s by %2$s.', 'rock' ), 'rock', '<a href="https://upthemes.com/" rel="designer">UpThemes</a>' ); ?>
+				<?php printf( __( 'Theme: %1$s by %2$s.', 'rock' ), 'rock', '<a href="https://churchthemes.net/" rel="designer">ChurchThemes</a>' ); ?>
 			</div><!-- .site-info-text -->
 
 			<div class="social-menu">
-				<?php wp_nav_menu( array( 'theme_location' => 'social' ) ); ?>
+				<?php wp_nav_menu(
+					array(
+						'theme_location' => 'social',
+						'depth'          => 1,
+					) ); ?>
 			</div><!-- .social-menu -->
 
 		</div><!-- .site-info-inner -->

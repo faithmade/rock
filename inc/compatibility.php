@@ -220,7 +220,7 @@ function ctc_plugin_notice() {
 	if ( ! ctc_plugin_installed() && current_user_can( 'install_plugins' ) ) {
 
 		$notice = sprintf(
-			__( '<b>Plugin Required:</b> Please install and activate the <a href="%s" class="thickbox">ChurchThemes</a> plugin to use with the current theme.', 'church-theme-framework' ),
+			__( '<b>Plugin Required:</b> Please install and activate the <a href="%s" class="thickbox">ChurchThemes plugin</a> to use with the current theme.', 'church-theme-framework' ),
 			network_admin_url( 'plugin-install.php?tab=plugin-information&plugin=' . ctc_plugin_slug() . '&TB_iframe=true&width=700&height=450' )
 		);
 

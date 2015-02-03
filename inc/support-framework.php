@@ -69,10 +69,6 @@ function rock_add_theme_support_framework() {
   // Shorten comment author to keep long trackback titles in check
   add_theme_support( 'ctc-shorten-comment-author', 50 );
 
-  // Redirect post type archives to pages using specific page templates
-  // Page templates must be specified with ctc_content_types filter. See rock_update_content_types().
-  add_theme_support( 'ctc-archive-redirection' );
-
   // Enable date archives for sermon posts
   // Flush rewrite rules (re-save permalinks) to take effect
   add_theme_support( 'ctc-sermon-date-archive' );
@@ -102,10 +98,10 @@ function rock_add_theme_support_framework() {
   add_theme_support(
     'ctc-featured-image-notes',
     array(
-      'post'      => 'post-thumbnail',
-      'ctc_sermon'  => 'post-thumbnail',
-      'ctc_event'   => 'post-thumbnail',
-      'ctc_person'  => 'post-thumbnail',
+      'post'          => 'post-thumbnail',
+      'ctc_sermon'    => 'post-thumbnail',
+      'ctc_event'     => 'post-thumbnail',
+      'ctc_person'    => 'post-thumbnail',
       'ctc_location'  => 'post-thumbnail'
     ),
     __( 'We suggest using images that are at least 800px wide.', 'rock' )

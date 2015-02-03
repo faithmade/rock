@@ -9,10 +9,6 @@
 ?>
 <footer class="entry-footer">
 	<div class="entry-footer-right">
-		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'rock' ), __( '1 Comment', 'rock' ), __( '% Comments', 'rock' ) ); ?></span>
-		<?php endif; ?>
-
 		<?php edit_post_link( __( 'Edit', 'rock' ), '<span class="edit-link">', '</span>' ); ?>
 	</div>
 

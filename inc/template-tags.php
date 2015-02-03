@@ -78,9 +78,9 @@ function rock_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
+	$posted_on = $time_string;
 
-	echo '<span class="posted-on">' . $posted_on . '</span>';
+	return '<span class="posted-on">' . $posted_on . '</span>';
 
 }
 endif;

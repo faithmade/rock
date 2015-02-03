@@ -10,20 +10,15 @@
 <header class="entry-header">
 	<div class="entry-header-row">
 		<div class="entry-header-column">
-			<?php if ( 'post' == get_post_type() ) : ?>
-			<div class="entry-meta">
-				<?php
-				$format = get_post_format( get_the_ID() );
-				if ( false === $format ) {
-					$format = 'standard';
-				}
-				echo '<span class="post-format">' . $format . '</span>';
-				?>
-				<?php rock_posted_on(); ?>
-			</div><!-- .entry-meta -->
-			<?php endif; ?>
 
-			<a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
+			<?php do_action( 'rock_before_post_title' ); ?>
+
+			<h1 class="entry-title">
+				<a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title(); ?></a>
+			</h1>
+
+			<?php do_action( 'rock_after_post_title' ); ?>
+
 		</div><!-- .entry-header-column -->
 	</div><!-- .entry-header-row -->
 </header><!-- .entry-header -->

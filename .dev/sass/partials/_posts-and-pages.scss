@@ -48,12 +48,6 @@
 .hentry {
 	@extend .panel;
 
-	.featured-image{
-		margin-top: -2.5rem;
-		margin-right: -3.5rem;
-		margin-left: -3.5rem;
-	}
-
 	.attachment-rock-featured{
 		width: 100%;
 		height: auto;
@@ -61,54 +55,6 @@
 
 	.entry-header {
 		color: $heading-font-color;
-	}
-
-	&.has-post-thumbnail {
-		.entry-header {
-			padding-top: 2.5em;
-			padding-top: 2.5rem;
-		}
-	}
-
-	&.has-featured-image {
-		padding: 0;
-
-		.entry-header {
-			padding: 3em;
-			padding: 3rem;
-			background-size: cover;
-			position: relative;
-
-			&:before {
-				content: "";
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				background: rgba(0,0,0,.5);
-			}
-
-			* {
-				position: relative;
-				z-index: 1;
-			}
-		}
-
-		.entry-title,
-		.entry-title a {
-			color: #fff;
-		}
-
-		.entry-content {
-			margin: 3em;
-			margin: 3rem;
-		}
-
-		.entry-footer {
-			margin: 3em;
-			margin: 3rem;
-		}
 	}
 }
 
@@ -146,6 +92,7 @@
 
 .entry-title{
 	line-height: 1.2;
+	margin-bottom: .5em;
 
 	a{
 		color: $heading-font-color;
@@ -156,6 +103,12 @@
 		font-weight: 100;
 		line-height: 1.2;
 	}
+}
+
+.single .entry-title,
+.archive-title{
+	margin-bottom: 1em;
+	margin-bottom: 2rem;
 }
 
 .entry-footer{
@@ -193,14 +146,22 @@
 
 .entry-meta {
 	border-bottom: 1px solid rgba(0,0,0,.1);
-	line-height: 3em;
-	line-height: 3rem;
-	margin-bottom: 2em;
-	margin-bottom: 2rem;
+	line-height: 1.4em;
+	line-height: 1.4rem;
+	margin-bottom: 1em;
+	margin-bottom: 1rem;
+	padding-bottom: 1em;
+	padding-bottom: 1rem;
+	font-size: .9em;
 	@extend .clearfix;
 
-	.has-featured-image & {
-		border-bottom: 1px solid rgba(255,255,255,.2);
+	i{
+		vertical-align: middle;
+		line-height: .8;
+	}
+
+	.has-post-thumbnail &{
+		border-bottom-width: 0;
 	}
 }
 
@@ -235,29 +196,12 @@
 	}
 }
 
-.entry-date {
-	font-style: italic;
-}
-
 .post-format{
 	color: $primary-color;
 	text-transform: uppercase;
 	font-family: $sans-font-family;
 	font-size: rem-calc(13);
 	font-weight: bold;
-}
-
-.posted-on{
-	float: right;
-	font-family: $body-font-family;
-	font-style: italic;
-	font-size: rem-calc(13);
-
-	a{
-		color: $small-font-color;
-
-		.has-featured-image & { color: #fff; }
-	}
 }
 
 .more-link{
@@ -286,8 +230,6 @@ article.format-link {
 .rock-event-full-map,
 .entry-media.video {
 	height: 0;
-	margin-left: -3.5rem;
-	margin-right: -3.5rem;
 	position: relative;
 	margin-top: 2em;
 	margin-bottom: 2em;

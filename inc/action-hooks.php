@@ -63,3 +63,11 @@ function rock_add_site_info(){
 
 add_action( 'rock_after_footer', 'rock_add_site_info', 20 );
 
+/**
+ * Adds post meta below the post title.
+ */
+function rock_add_post_meta(){
+	get_template_part( 'templates/parts/loop/post-meta' );
+}
+
+add_action( 'rock_after_post_title', 'rock_add_post_meta' );

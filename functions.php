@@ -9,6 +9,7 @@
  * ChurchThemes Framework
  */
 require get_template_directory() . '/inc/support-ctc.php';
+require get_template_directory() . '/inc/support-framework.php';
 require get_template_directory() . '/inc/compatibility.php';
 
 /**
@@ -83,6 +84,9 @@ function rock_setup() {
 
 	// Add image size for featured images
 	add_image_size( 'rock-featured', 1600, 900, 1 );
+	add_image_size( 'rock-rect-large', 900, 900, 1 );
+	add_image_size( 'rock-rect-medium', 500, 500, 1 );
+	add_image_size( 'rock-rect-small', 300, 300, 1 );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
