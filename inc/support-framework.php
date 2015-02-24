@@ -171,7 +171,7 @@ function rock_add_theme_support_framework() {
 
   // Correct imported URL's in menu, content, widgets, etc.
   // Sample import files may have URLs from the dev site in menu, content, meta fields, etc.
-  add_theme_support( 'ctc-import-correct-urls', 'http://local.demos.upthemes.com/' . CTFW_THEME_SLUG );
+  add_theme_support( 'ctc-import-correct-urls', 'http://local.demos.upthemes.com/' . CTC_THEME_SLUG );
 
   // Set homepage as static front page after import
   // If no static front and page using homepage template doesn't exist before import, set it

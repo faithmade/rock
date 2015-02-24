@@ -5,6 +5,9 @@
  * @package rock
  */
 
+define( 'CTC_THEME_SLUG', 'rock' );
+define( 'CTC_THEME_VERSION', '0.0.1' );
+
 /**
  * ChurchThemes Framework
  */

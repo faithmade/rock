@@ -58,7 +58,7 @@ function ctc_old_wp() {
  * @return string Message saying version is old
  */
 function ctc_old_wp_message() {
-	return sprintf( __( '<b>Activation Failed:</b> %s requires a newer version of WordPress. Please update and try again.', 'church-theme-framework' ), CTFW_THEME_NAME );
+	return sprintf( __( '<b>Activation Failed:</b> %s requires a newer version of WordPress. Please update and try again.', 'church-theme-framework' ), CTC_THEME_NAME );
 }
 
 /**
@@ -75,9 +75,9 @@ function ctc_old_wp_switch_theme( $theme_name, $theme ) {
 	// Is WordPress version too old for theme?
 	if ( ctc_old_wp() ) {
 
-		if ( CTFW_THEME_SLUG != $theme->get_template() ) {
+		if ( CTC_THEME_SLUG != $theme->get_template() ) {
 			switch_theme( $theme->get_template(), $theme->get_stylesheet() );
-		} elseif ( CTFW_THEME_SLUG != WP_DEFAULT_THEME ) {
+		} elseif ( CTC_THEME_SLUG != WP_DEFAULT_THEME ) {
 			switch_theme( WP_DEFAULT_THEME );
 		}
 
@@ -290,7 +290,7 @@ function ctc_enqueue_ie_unsupported() {
 		}
 
 		// Client-side JS to compare versions, alert and redirect
-		wp_enqueue_script( 'ctc-ie-unsupported', ctc_theme_url( CTFW_JS_DIR . '/ie-unsupported.js' ), array( 'jquery' ), CTFW_THEME_VERSION ); // bust cache on theme update
+		wp_enqueue_script( 'ctc-ie-unsupported', ctc_theme_url( CTC_JS_DIR . '/ie-unsupported.js' ), array( 'jquery' ), CTC_THEME_VERSION ); // bust cache on theme update
 
 		// Pass data
 		wp_localize_script( 'ctc-ie-unsupported', 'ctc_ie_unsupported', array( // pass WP data into JS from this point on
