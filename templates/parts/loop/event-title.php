@@ -24,11 +24,7 @@ $map_zoom             = ctc_event_data()['map_zoom'];
 <header class="entry-header">
 	<div class="entry-header-row">
 		<div class="entry-header-column">
-			<div class="entry-meta">
-				<span class="post-format">Event</span>
-				<?php rock_posted_on(); ?>
-			</div><!-- .entry-meta -->
-			<a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
+			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title(); ?></a></h1>
 			<div class="event-meta">
 				<?php if ( $date ) : ?>
 					<span>

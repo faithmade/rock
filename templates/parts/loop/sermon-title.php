@@ -17,8 +17,7 @@ $ctc_sermon_tag      = get_the_term_list( $post->ID, 'ctc_sermon_tag', '', __( '
 	<div class="entry-header-row">
 		<div class="entry-header-column">
 			<div class="entry-meta">
-				<span class="post-format">Sermon</span>
-				<?php rock_posted_on(); ?>
+				<?php echo rock_posted_on(); ?>
 			</div><!-- .entry-meta -->
 			<a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
 			<div class="sermon-meta">

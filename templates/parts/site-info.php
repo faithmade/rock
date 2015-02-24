@@ -11,9 +11,7 @@
 		<div class="site-info-inner">
 
 			<div class="site-info-text">
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'rock' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'rock' ), 'WordPress' ); ?></a>
-				<span class="sep"> | </span>
-				<?php printf( __( 'Theme: %1$s by %2$s.', 'rock' ), 'rock', '<a href="https://churchthemes.net/" rel="designer">ChurchThemes</a>' ); ?>
+				<?php printf( __( 'Built on %1$s by %2$s.', 'rock' ), 'the <a href="https://rock.churchthemes.net/" rel="designer">Rock Framework</a>', '<a href="https://churchthemes.net/" rel="designer">ChurchThemes</a>' ); ?>
 			</div><!-- .site-info-text -->
 
 			<div class="social-menu">

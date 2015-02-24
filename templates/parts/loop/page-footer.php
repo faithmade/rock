@@ -5,6 +5,4 @@
  * @package rock
  */
 ?>
-<footer class="entry-footer">
-	<?php edit_post_link( __( 'Edit', 'rock' ), '<span class="edit-link">', '</span>' ); ?>
-</footer><!-- .entry-footer -->
+<?php edit_post_link( __( 'Edit', 'rock' ), '<span class="edit-link">', '</span>' ); ?>

@@ -17,7 +17,7 @@ $times = ctc_location_data()['times'];
 <header class="entry-header">
 	<div class="entry-header-row">
 		<div class="entry-header-column">
-			<a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
+			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title(); ?></a></h1>
 			<div class="location-meta">
 				<?php if ( $address ) : ?>
 				<span>
