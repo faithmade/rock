@@ -48,11 +48,18 @@ function rock_register_required_plugins() {
             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
             'external_url'       => 'https://github.com/ChurchThemes-WP/churchthemes-plugin', // If set, overrides default API URL and points to an external URL.
         ),
-        // This is an example of how to include a plugin from the WordPress Plugin Repository.
+        // Recommend support for Jetpack
         array(
             'name'      => 'JetPack',
             'slug'      => 'jetpack',
             'required'  => false,
+        ),
+        // This is an example of how to include a plugin from the WordPress Plugin Repository.
+        array(
+            'name'               => 'Post Type Archive Link',
+            'slug'               => 'post-type-archive-links',
+            'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+            'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
         ),
     );
 

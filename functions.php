@@ -94,6 +94,9 @@ function rock_setup() {
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
+	// Add support for new title tag.
+	add_theme_support( 'title-tag' );
+
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
