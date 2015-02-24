@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rock-pro 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-02 23:30-0600\n"
+"POT-Creation-Date: 2015-02-24 14:20-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -80,107 +80,107 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: functions.php:103
+#: functions.php:109
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:104
+#: functions.php:110
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:111
+#: functions.php:117
 msgid "1 Column Full"
 msgstr ""
 
-#: functions.php:112
+#: functions.php:118
 msgid "1 Column Wide"
 msgstr ""
 
-#: functions.php:113
+#: functions.php:119
 msgid "1 Column Narrow"
 msgstr ""
 
-#: functions.php:114
+#: functions.php:120
 msgid "2 Columns: Content / Sidebar"
 msgstr ""
 
-#: functions.php:115
+#: functions.php:121
 msgid "2 Columns: Sidebar / Content"
 msgstr ""
 
-#: functions.php:116
+#: functions.php:122
 msgid "3 Columns: Content / Sidebar / Sidebar"
 msgstr ""
 
-#: functions.php:117
+#: functions.php:123
 msgid "3 Columns: Sidebar / Content / Sidebar"
 msgstr ""
 
-#: functions.php:118
+#: functions.php:124
 msgid "3 Columns: Sidebar / Sidebar / Content"
 msgstr ""
 
-#: functions.php:163
+#: functions.php:169
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:165
+#: functions.php:171
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
 msgstr ""
 
-#: functions.php:173
+#: functions.php:179
 msgid "Secondary Sidebar"
 msgstr ""
 
-#: functions.php:175
+#: functions.php:181
 msgid ""
 "The secondary sidebar will only appear when you have selected a three-column "
 "layout."
 msgstr ""
 
-#: functions.php:183
+#: functions.php:189
 msgid "Footer Left"
 msgstr ""
 
-#: functions.php:185
+#: functions.php:191
 msgid ""
 "The footer left sidebar appears in the first column of the footer widget "
 "area."
 msgstr ""
 
-#: functions.php:193
+#: functions.php:199
 msgid "Footer Center"
 msgstr ""
 
-#: functions.php:195
+#: functions.php:201
 msgid ""
 "The footer center sidebar appears in the second column of the footer widget "
 "area."
 msgstr ""
 
-#: functions.php:203
+#: functions.php:209
 msgid "Footer Right"
 msgstr ""
 
-#: functions.php:205
+#: functions.php:211
 msgid ""
 "The footer right sidebar appears in the third column of the footer widget "
 "area."
 msgstr ""
 
-#: functions.php:248
+#: functions.php:254
 msgctxt "Lato font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:254
+#: functions.php:260
 msgctxt "Merriweather font: on or off"
 msgid "on"
 msgstr ""
 
-#: header.php:26
+#: header.php:25
 msgid "Skip to content"
 msgstr ""
 
@@ -188,15 +188,15 @@ msgstr ""
 msgid "Blog"
 msgstr ""
 
-#: inc/class-tgm-plugin-activation.php:161 inc/integrations.php:75
+#: inc/class-tgm-plugin-activation.php:161 inc/integrations.php:82
 msgid "Install Required Plugins"
 msgstr ""
 
-#: inc/class-tgm-plugin-activation.php:162 inc/integrations.php:76
+#: inc/class-tgm-plugin-activation.php:162 inc/integrations.php:83
 msgid "Install Plugins"
 msgstr ""
 
-#: inc/class-tgm-plugin-activation.php:163 inc/integrations.php:77
+#: inc/class-tgm-plugin-activation.php:163 inc/integrations.php:84
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr ""
@@ -205,21 +205,21 @@ msgstr ""
 msgid "Something went wrong."
 msgstr ""
 
-#: inc/class-tgm-plugin-activation.php:165 inc/integrations.php:79
+#: inc/class-tgm-plugin-activation.php:165 inc/integrations.php:86
 #, php-format
 msgid "This theme requires the following plugin: %1$s."
 msgid_plural "This theme requires the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-tgm-plugin-activation.php:166 inc/integrations.php:80
+#: inc/class-tgm-plugin-activation.php:166 inc/integrations.php:87
 #, php-format
 msgid "This theme recommends the following plugin: %1$s."
 msgid_plural "This theme recommends the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-tgm-plugin-activation.php:167 inc/integrations.php:81
+#: inc/class-tgm-plugin-activation.php:167 inc/integrations.php:88
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to install the %s plugin. "
@@ -232,21 +232,21 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-tgm-plugin-activation.php:168 inc/integrations.php:82
+#: inc/class-tgm-plugin-activation.php:168 inc/integrations.php:89
 #, php-format
 msgid "The following required plugin is currently inactive: %1$s."
 msgid_plural "The following required plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-tgm-plugin-activation.php:169 inc/integrations.php:83
+#: inc/class-tgm-plugin-activation.php:169 inc/integrations.php:90
 #, php-format
 msgid "The following recommended plugin is currently inactive: %1$s."
 msgid_plural "The following recommended plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-tgm-plugin-activation.php:170 inc/integrations.php:84
+#: inc/class-tgm-plugin-activation.php:170 inc/integrations.php:91
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to activate the %s "
@@ -259,7 +259,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-tgm-plugin-activation.php:171 inc/integrations.php:85
+#: inc/class-tgm-plugin-activation.php:171 inc/integrations.php:92
 #, php-format
 msgid ""
 "The following plugin needs to be updated to its latest version to ensure "
@@ -270,7 +270,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-tgm-plugin-activation.php:172 inc/integrations.php:86
+#: inc/class-tgm-plugin-activation.php:172 inc/integrations.php:93
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to update the %s plugin. "
@@ -283,19 +283,19 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-tgm-plugin-activation.php:173 inc/integrations.php:87
+#: inc/class-tgm-plugin-activation.php:173 inc/integrations.php:94
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-tgm-plugin-activation.php:174 inc/integrations.php:88
+#: inc/class-tgm-plugin-activation.php:174 inc/integrations.php:95
 msgid "Begin activating plugin"
 msgid_plural "Begin activating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-tgm-plugin-activation.php:175 inc/integrations.php:89
+#: inc/class-tgm-plugin-activation.php:175 inc/integrations.php:96
 msgid "Return to Required Plugins Installer"
 msgstr ""
 
@@ -304,7 +304,7 @@ msgid "Return to the dashboard"
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:177
-#: inc/class-tgm-plugin-activation.php:1939 inc/integrations.php:90
+#: inc/class-tgm-plugin-activation.php:1939 inc/integrations.php:97
 msgid "Plugin activated successfully."
 msgstr ""
 
@@ -515,11 +515,11 @@ msgstr ""
 msgid "Page %s"
 msgstr ""
 
-#: inc/integrations.php:78
+#: inc/integrations.php:85
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
-#: inc/integrations.php:91
+#: inc/integrations.php:98
 #, php-format
 msgid "All plugins installed and activated successfully. %s"
 msgstr ""
@@ -781,7 +781,7 @@ msgstr ""
 
 #: templates/parts/loop/event-footer.php:16
 #: templates/parts/loop/location-footer.php:16
-#: templates/parts/loop/page-footer.php:9
+#: templates/parts/loop/page-footer.php:8
 #: templates/parts/loop/person-footer.php:16
 #: templates/parts/loop/post-footer.php:12
 #: templates/parts/loop/post-search-footer.php:37
@@ -871,15 +871,6 @@ msgid "Show Audio Player"
 msgstr ""
 
 #: templates/parts/site-info.php:14
-msgid "http://wordpress.org/"
-msgstr ""
-
-#: templates/parts/site-info.php:14
 #, php-format
-msgid "Proudly powered by %s"
-msgstr ""
-
-#: templates/parts/site-info.php:16
-#, php-format
-msgid "Theme: %1$s by %2$s."
+msgid "Built on %1$s by %2$s."
 msgstr ""

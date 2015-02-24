@@ -1,6 +1,7 @@
 $menu-font-family: Helvetica, Arial, sans-serif !default;
 $menu-background-color: #222 !default;
-$menu-height: 3.5rem !default;
+$menu-height: 4rem !default;
+$menu-sub-item-height: $menu-height*.75 !default;
 
 .main-navigation-container{
 	background-color: $menu-background-color;
@@ -17,8 +18,8 @@ $menu-height: 3.5rem !default;
 	}
 
 	ul {
-		font-size: emCalc(14);
-		font-size: rem-calc(14);
+		font-size: emCalc(15);
+		font-size: rem-calc(15);
 		position:relative;
 		display: block;
 		z-index:1;
@@ -26,8 +27,7 @@ $menu-height: 3.5rem !default;
 		padding: 0;
 	}
 
-	a,
-	a:link{
+	a{
 		color: contrast-color($menu-background-color, #000, #fff, 50%);
 	}
 
@@ -42,17 +42,15 @@ $menu-height: 3.5rem !default;
 		a {
 			background-color: $menu-background-color;
 
-			&,
-			&:link{
+			&{
 				display: block;
 				font-family: $menu-font-family;
 				line-height: $menu-height;
 				font-weight: normal;
 				color: contrast-color($menu-background-color,darken($menu-background-color,65%),lighten($menu-background-color,65%),50%);
-				padding: 0 .8em;
-				padding: 0 .8rem;
+				padding: 0 1em;
+				padding: 0 1rem;
 				position: relative;
-				text-transform: uppercase;
 			}
 
 			&:hover {
@@ -63,8 +61,8 @@ $menu-height: 3.5rem !default;
 	}
 
 	.menu-item-has-children{
-		a{
-			line-height: $menu-height;
+		li > a{
+			line-height: $menu-sub-item-height;
 		}
 	}
 
@@ -109,34 +107,6 @@ $menu-height: 3.5rem !default;
 					}
 				}
 
-				&.menu-item-has-children {
-					> a:after {
-						border-top-color: contrast-color($menu-background-color,#000,#fff,50%);
-					}
-				}
-
-			}
-
-			&.menu-item-has-children {
-				a {
-					padding-right: 2em;
-					padding-right: 2rem;
-				}
-
-				> a:after {
-					content:"";
-					display:block;
-					position:absolute;
-					top:50%;
-					right:.6em;
-					right:.6rem;
-					margin-top: -3px;
-					border:5px solid transparent;
-					border-top-color: contrast-color($menu-background-color,darken($menu-background-color,65%),lighten($menu-background-color,65%),50%);
-					height:0;
-					width:0;
-					margin-left:10px;
-				}
 			}
 
 			.sub-menu .menu-item-has-children {
