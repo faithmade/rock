@@ -58,7 +58,7 @@ function ctc_old_wp() {
  * @return string Message saying version is old
  */
 function ctc_old_wp_message() {
-	return sprintf( __( '<b>Activation Failed:</b> %s requires a newer version of WordPress. Please update and try again.', 'church-theme-framework' ), CTC_THEME_NAME );
+	return sprintf( __( '<b>Activation Failed:</b> %s requires a newer version of WordPress. Please update and try again.', 'rock' ), CTC_THEME_NAME );
 }
 
 /**
@@ -123,7 +123,7 @@ function ctc_old_wp_customizer_notice() {
 	if ( ctc_old_wp() ) {
 
 		// Show message
-		wp_die( ctc_old_wp_message() . sprintf( ' <a href="javascript:history.go(-1);">%s</a>', __( 'Go back.', 'church-theme-framework' ) ) );
+		wp_die( ctc_old_wp_message() . sprintf( ' <a href="javascript:history.go(-1);">%s</a>', __( 'Go back.', 'rock' ) ) );
 
 	}
 
@@ -220,7 +220,7 @@ function ctc_plugin_notice() {
 	if ( ! ctc_plugin_installed() && current_user_can( 'install_plugins' ) ) {
 
 		$notice = sprintf(
-			__( '<b>Plugin Required:</b> Please install and activate the <a href="%s" class="thickbox">ChurchThemes plugin</a> to use with the current theme.', 'church-theme-framework' ),
+			__( '<b>Plugin Required:</b> Please install and activate the <a href="%s" class="thickbox">ChurchThemes plugin</a> to use with the current theme.', 'rock' ),
 			network_admin_url( 'plugin-install.php?tab=plugin-information&plugin=' . ctc_plugin_slug() . '&TB_iframe=true&width=700&height=450' )
 		);
 
@@ -230,7 +230,7 @@ function ctc_plugin_notice() {
 	elseif ( ! ctc_plugin_active() && current_user_can( 'activate_plugins' ) ) {
 
 		$notice = sprintf(
-			__( 'Please <a href="%s">activate</a> the <b>ChurchThemes</b> plugin required by the current theme.', 'church-theme-framework' ),
+			__( 'Please <a href="%s">activate</a> the <b>ChurchThemes</b> plugin required by the current theme.', 'rock' ),
 			wp_nonce_url( self_admin_url( 'plugins.php?action=activate&plugin=' . ctc_plugin_file() ), 'activate-plugin_' . ctc_plugin_file() )
 		);
 
@@ -298,7 +298,7 @@ function ctc_enqueue_ie_unsupported() {
 			'min_version' => $min_version,
 			'max_version' => $max_version,
 			'version' => $version,
-			'message' => __( 'You are using an outdated version of Internet Explorer. Please upgrade your browser to use this site.', 'church-theme-framework' ),
+			'message' => __( 'You are using an outdated version of Internet Explorer. Please upgrade your browser to use this site.', 'rock' ),
 			'redirect_url' => apply_filters( 'ctc_upgrade_browser_url', 'http://browsehappy.com/' )
 		) );
 

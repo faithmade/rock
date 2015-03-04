@@ -41,7 +41,7 @@ function rock_register_required_plugins() {
         array(
             'name'               => 'ChurchThemes Framework', // The plugin name.
             'slug'               => 'churchthemes-framework', // The plugin slug (typically the folder name).
-            'source'             => 'https://churchthemes.net/content/ct_downloads/churchthemes-framework.zip', // The plugin source.
+            'source'             => 'https://github.com/ChurchThemes-WP/churchthemes-plugin/archive/master.zip', // The plugin source.
             'required'           => true, // If false, the plugin is only 'recommended' instead of required.
             'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher.
             'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
