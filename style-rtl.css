@@ -51,7 +51,7 @@ body {
   color: #444;
   padding: 0;
   margin: 0;
-  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: Merriweather, Georgia, "Times New Roman", serif;
   font-weight: normal;
   font-style: normal;
   line-height: 150%;
@@ -989,12 +989,12 @@ a {
 p {
   font-family: inherit;
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.6;
   margin-bottom: 1.25rem;
   text-rendering: optimizeLegibility; }
   p.lead {
-    font-size: 1.21875rem;
+    font-size: 1.34375rem;
     line-height: 1.6; }
   p aside {
     font-size: 0.875rem;
@@ -1003,13 +1003,13 @@ p {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "PT Serif", Georgia, serif;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: bold;
   color: #222;
   text-rendering: optimizeLegibility;
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   line-height: 1.4; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-size: 60%;
@@ -1098,7 +1098,7 @@ table {
 
 /* Lists */
 ul, ol, dl {
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.6;
   margin-bottom: 1.25rem;
   list-style-position: outside;
@@ -1162,7 +1162,7 @@ blockquote {
   padding: 1.25rem 1.25rem 0 1.25rem;
   border-right: 2px solid #ddd;
   overflow: hidden;
-  font-family: "PT Serif", Georgia, serif;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-style: italic; }
   blockquote cite {
     display: block;
@@ -1319,7 +1319,7 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
   padding: 0.75rem; }
 
 label {
-  font-family: "PT Serif", Georgia, serif;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: bold; }
 
 textarea {
@@ -1533,6 +1533,9 @@ a {
 .widget {
   margin: 0 0 1.5em;
   padding: 20px; }
+  .widget, .widget p, .widget ul, .widget ol {
+    font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 0.875rem; }
 
 /* Make sure select elements fit in widgets */
 .widget select {
@@ -1757,7 +1760,7 @@ a {
 
 .entry-footer {
   color: #6f6f6f;
-  font-family: "PT Serif", Georgia, serif;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
   padding-top: 1em; }
   .entry-footer:before, .entry-footer:after {
@@ -1795,7 +1798,8 @@ a {
 
 .event-meta, .sermon-meta, .location-meta, .person-meta {
   margin-bottom: 1em;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
   .event-meta .genericon, .event-meta .social-menu a, .social-menu .event-meta a, .sermon-meta .genericon, .sermon-meta .social-menu a, .social-menu .sermon-meta a, .location-meta .genericon, .location-meta .social-menu a, .social-menu .location-meta a, .person-meta .genericon, .person-meta .social-menu a, .social-menu .person-meta a {
     line-height: 2; }
   .event-meta span, .sermon-meta span, .location-meta span, .person-meta span {
@@ -1814,7 +1818,7 @@ a {
   font-weight: bold; }
 
 .more-link {
-  font-family: "PT Serif", Georgia, serif;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   border-radius: 3px;
   border: 1px solid #e91f2e;
@@ -2121,7 +2125,8 @@ body.layout-one-column-narrow .row, body.layout-one-column-narrow .main-navigati
 .site-description {
   font-size: 1rem;
   font-size: 1rem;
-  color: #777777; }
+  color: #777777;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
 
 .site-header {
   padding: 40px 0 0;

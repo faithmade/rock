@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rock-pro 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-24 14:20-0600\n"
+"POT-Creation-Date: 2015-03-04 16:45-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -168,16 +168,6 @@ msgstr ""
 msgid ""
 "The footer right sidebar appears in the third column of the footer widget "
 "area."
-msgstr ""
-
-#: functions.php:254
-msgctxt "Lato font: on or off"
-msgid "on"
-msgstr ""
-
-#: functions.php:260
-msgctxt "Merriweather font: on or off"
-msgid "on"
 msgstr ""
 
 #: header.php:25
@@ -510,9 +500,14 @@ msgid ""
 "browser to use this site."
 msgstr ""
 
-#: inc/extras.php:63
-#, php-format
-msgid "Page %s"
+#: inc/extras.php:74
+msgctxt "Lato font: on or off"
+msgid "on"
+msgstr ""
+
+#: inc/extras.php:80
+msgctxt "Merriweather font: on or off"
+msgid "on"
 msgstr ""
 
 #: inc/integrations.php:85
@@ -538,31 +533,31 @@ msgid ""
 "\">Getting Started</a> guide for the next steps after theme activation."
 msgstr ""
 
-#: inc/support-framework.php:107
+#: inc/support-framework.php:103
 msgid "We suggest using images that are at least 800px wide."
 msgstr ""
 
-#: inc/support-framework.php:364
+#: inc/support-framework.php:356
 msgctxt "archives widget"
 msgid "Blog"
 msgstr ""
 
-#: inc/support-framework.php:365
+#: inc/support-framework.php:357
 msgctxt "archives widget"
 msgid "Sermons"
 msgstr ""
 
-#: inc/support-framework.php:394
+#: inc/support-framework.php:386
 msgctxt "slide widget image"
 msgid "(Required)"
 msgstr ""
 
-#: inc/support-framework.php:395 inc/support-framework.php:414
+#: inc/support-framework.php:387 inc/support-framework.php:406
 #, php-format
 msgid "Image cropped to %s."
 msgstr ""
 
-#: inc/support-framework.php:398
+#: inc/support-framework.php:390
 msgid "To make this a video slide, enter a YouTube or Vimeo video page URL."
 msgstr ""
 

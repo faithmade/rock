@@ -3,6 +3,11 @@ $widget-bg: #fff !default;
 .widget {
 	margin: 0 0 1.5em;
 	padding: 20px;
+
+	&,p,ul,ol{
+		font-family: $widget-font-family;
+		font-size: $widget-font-size;
+	}
 }
 
 /* Make sure select elements fit in widgets */

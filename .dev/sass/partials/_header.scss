@@ -29,6 +29,7 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 	font-size: emCalc(16);
 	font-size: rem-calc(16);
 	color: lighten($body-font-color,20%);
+	font-family: $sans-font-family;
 }
 
 .site-header {
