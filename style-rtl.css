@@ -1785,7 +1785,8 @@ a {
   margin-bottom: 1rem;
   padding-bottom: 1em;
   padding-bottom: 1rem;
-  font-size: 0.9em; }
+  font-size: 0.9em;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
   .entry-meta i {
     vertical-align: middle;
     line-height: 0.8; }
