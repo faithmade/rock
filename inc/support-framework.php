@@ -54,10 +54,6 @@ function rock_add_theme_support_framework() {
   // Automatically form <title>
   add_theme_support( 'ctc-auto-title' );
 
-  // Enable non-content shortcodes
-  // Handy for Customizer: [ctcom_site_name], [ctcom_rss_url], [ctcom_current_year]
-  add_theme_support( 'ctc-non-content-shortcodes' );
-
   /**
    * Posts
    */
@@ -140,10 +136,6 @@ function rock_add_theme_support_framework() {
    * Attachments
    */
 
-  // Prevent WordPress from adding attachment image, link, etc. to the_content()
-  // We show it manually using content-attachment.php
-  add_theme_support( 'ctc-remove-prepend-attachment' );
-
   // Attachment inherit discussion status
   // Inherit comment and ping statuses from parent post. If not attached to a post, discussion is disabled.
   add_theme_support( 'ctc-attachment-inherit-discussion' );
@@ -171,7 +163,7 @@ function rock_add_theme_support_framework() {
 
   // Correct imported URL's in menu, content, widgets, etc.
   // Sample import files may have URLs from the dev site in menu, content, meta fields, etc.
-  add_theme_support( 'ctc-import-correct-urls', 'http://local.demos.upthemes.com/' . CTC_THEME_SLUG );
+  add_theme_support( 'ctc-import-correct-urls', 'http://demo.churchthemes.net/' . CTC_THEME_SLUG );
 
   // Set homepage as static front page after import
   // If no static front and page using homepage template doesn't exist before import, set it
@@ -417,5 +409,3 @@ function rock_add_theme_support_framework_widgets() {
   ) );
 
 }
-
-// add_action( 'after_setup_theme', 'rock_add_theme_support_framework_widgets' );

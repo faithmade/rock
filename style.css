@@ -1,10 +1,10 @@
 /*
 Theme Name: Rock Framework
-Theme URI: https://rock.churchthemes.net/
+Theme URI: http://rock.churchthemes.net/
 Author: ChurchThemes.net
 Author URI: https://churchthemes.net/
-Description: Rock is a theme framework for churches and ministries.
-Version: 0.0.1
+Description: Rock is a theme framework for churches and ministries with support for sermons, people, locations, and events.
+Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: rock
@@ -1715,6 +1715,10 @@ a {
 .hentry .entry-header {
   color: #222; }
 
+.featured-image {
+  margin-bottom: 1em;
+  margin-bottom: 1.5rem; }
+
 .byline, .updated {
   display: none; }
 
@@ -1756,6 +1760,11 @@ a {
   font-family: "PT Serif", Georgia, serif;
   font-size: 0.875rem;
   padding-top: 1em; }
+  .entry-footer:before, .entry-footer:after {
+    content: " ";
+    display: table; }
+  .entry-footer:after {
+    clear: both; }
   .entry-footer a {
     color: #e91f2e; }
   .entry-footer .entry-footer-right {

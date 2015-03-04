@@ -58,6 +58,11 @@
 	}
 }
 
+.featured-image{
+	margin-bottom: 1em;
+	margin-bottom: 1.5rem;
+}
+
 .byline,
 .updated {
 	display: none;
@@ -116,6 +121,7 @@
 	font-family: $header-font-family;
 	font-size: rem-calc(14);
 	padding-top: 1em;
+	@include clearfix;
 
 	a{
 		color: $primary-color;

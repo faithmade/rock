@@ -94,7 +94,7 @@ function rock_setup() {
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
-	// Add support for new title tag.
+	// Add support for automatic title tag creation.
 	add_theme_support( 'title-tag' );
 
 	/*
@@ -235,62 +235,3 @@ function rock_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'rock_scripts' );
-
-/**
- * Returns the Google font stylesheet URL, if available.
- *
- * The use of Lato and Merriweather by default is localized. For languages
- * that use characters not supported by the font, the font can be disabled.
- *
- * @return string	$fonts_url 	Font stylesheet or empty string if disabled.
- */
-function rock_fonts_url() {
-	$fonts_url = '';
-
-	/* Translators: If there are characters in your language that are not
-	 * supported by Lato, translate this to 'off'. Do not translate
-	 * into your own language.
-	 */
-	$lato = _x( 'on', 'Lato font: on or off', 'rock' );
-
-	/* Translators: If there are characters in your language that are not
-	 * supported by Merriweather, translate this to 'off'. Do not translate into your
-	 * own language.
-	 */
-	$poly = _x( 'on', 'Merriweather font: on or off', 'rock' );
-
-	if ( 'off' !== $lato || 'off' !== $poly ) {
-		$font_families = array();
-
-		if ( 'off' !== $lato )
-			$font_families[] = 'Lato:300,700';
-
-		if ( 'off' !== $poly )
-			$font_families[] = 'Merriweather:400,400italic';
-
-		$query_args = array(
-			'family' => urlencode( implode( '|', $font_families ) ),
-			'subset' => urlencode( 'latin,latin-ext' ),
-		);
-		$fonts_url = add_query_arg( $query_args, "//fonts.googleapis.com/css" );
-	}
-
-	return $fonts_url;
-}
-
-/**
- * Define a custom excerpt length.
- */
-function custom_excerpt_length( $length ) {
-	return 20;
-}
-
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-
-/**
- * Define custom excerpt more.
- */
-function new_excerpt_more( $more ) {
-	return '&hellip;';
-}
-add_filter('excerpt_more', 'new_excerpt_more');
