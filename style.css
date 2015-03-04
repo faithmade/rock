@@ -1360,21 +1360,23 @@ a {
     list-style: none;
     text-align: center; }
     .main-navigation li a {
-      background-color: #222; }
-      .main-navigation li a {
-        display: block;
-        font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-        line-height: 4rem;
-        font-weight: normal;
-        color: #c8c8c8;
-        padding: 0 1em;
-        padding: 0 1rem;
-        position: relative; }
+      background-color: #222;
+      display: block;
+      font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      line-height: 1.2;
+      font-weight: normal;
+      color: #c8c8c8;
+      padding: 1.5em 1em;
+      padding: 1.5rem 1rem;
+      position: relative; }
       .main-navigation li a:hover {
         background-color: #3c3c3c;
         text-decoration: none; }
   .main-navigation .menu-item-has-children li > a {
-    line-height: 1.2; }
+    padding-top: 1em;
+    padding-top: 1rem;
+    padding-bottom: 1em;
+    padding-bottom: 1rem; }
   @media all and (min-width: 480px) {
     .main-navigation {
       clear: both; }
@@ -2119,7 +2121,8 @@ body.layout-one-column-narrow .row, body.layout-one-column-narrow .main-navigati
   color: #000;
   line-height: 1;
   letter-spacing: -0.03em;
-  font-weight: 700; }
+  font-weight: 700;
+  margin-bottom: 0.25em; }
   .site-title a {
     color: #444; }
 

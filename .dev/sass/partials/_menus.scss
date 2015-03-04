@@ -41,17 +41,15 @@ $menu-sub-item-height: $menu-height*.75 !default;
 
 		a {
 			background-color: $menu-background-color;
+			display: block;
+			font-family: $menu-font-family;
+			line-height: 1.2;
+			font-weight: normal;
+			color: contrast-color($menu-background-color,darken($menu-background-color,65%),lighten($menu-background-color,65%),50%);
+			padding: 1.5em 1em;
+			padding: 1.5rem 1rem;
+			position: relative;
 
-			&{
-				display: block;
-				font-family: $menu-font-family;
-				line-height: $menu-height;
-				font-weight: normal;
-				color: contrast-color($menu-background-color,darken($menu-background-color,65%),lighten($menu-background-color,65%),50%);
-				padding: 0 1em;
-				padding: 0 1rem;
-				position: relative;
-			}
 
 			&:hover {
 				background-color: contrast-color($menu-background-color,darken($menu-background-color,10%),lighten($menu-background-color,10%),50%);
@@ -62,7 +60,10 @@ $menu-sub-item-height: $menu-height*.75 !default;
 
 	.menu-item-has-children{
 		li > a{
-			line-height: 1.2;
+			padding-top: 1em;
+			padding-top: 1rem;
+			padding-bottom: 1em;
+			padding-bottom: 1rem;
 		}
 	}
 
