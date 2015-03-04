@@ -13,9 +13,10 @@
 
 			<?php do_action( 'rock_before_post_title' ); ?>
 
-			<h1 class="entry-title">
+			<?php $tag = is_single() ? 'h1' : 'h2'; ?>
+			<<?php echo $tag; ?> class="entry-title">
 				<a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title(); ?></a>
-			</h1>
+			</<?php echo $tag; ?>>
 
 			<?php do_action( 'rock_after_post_title' ); ?>
 
