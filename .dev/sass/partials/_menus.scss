@@ -62,7 +62,7 @@ $menu-sub-item-height: $menu-height*.75 !default;
 
 	.menu-item-has-children{
 		li > a{
-			line-height: $menu-sub-item-height;
+			line-height: 1.2;
 		}
 	}
 

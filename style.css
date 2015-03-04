@@ -1374,7 +1374,7 @@ a {
         background-color: #3c3c3c;
         text-decoration: none; }
   .main-navigation .menu-item-has-children li > a {
-    line-height: 3rem; }
+    line-height: 1.2; }
   @media all and (min-width: 480px) {
     .main-navigation {
       clear: both; }
