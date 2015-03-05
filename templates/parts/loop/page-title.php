@@ -6,5 +6,8 @@
  */
 ?>
 <header class="entry-header">
-	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	<?php $tag = is_single() ? 'h1' : 'h2'; ?>
+	<<?php echo $tag; ?> class="entry-title">
+		<a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title(); ?></a>
+	</<?php echo $tag; ?>>
 </header><!-- .entry-header -->

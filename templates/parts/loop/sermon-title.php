@@ -19,7 +19,12 @@ $ctc_sermon_tag      = get_the_term_list( $post->ID, 'ctc_sermon_tag', '', __( '
 			<div class="entry-meta">
 				<?php echo rock_posted_on(); ?>
 			</div><!-- .entry-meta -->
-			<a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
+
+			<?php $tag = is_single() ? 'h1' : 'h2'; ?>
+			<<?php echo $tag; ?> class="entry-title">
+				<a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title(); ?></a>
+			</<?php echo $tag; ?>>
+
 			<div class="sermon-meta">
 				<?php if ( $ctc_sermon_speaker ) : ?>
 				<span>

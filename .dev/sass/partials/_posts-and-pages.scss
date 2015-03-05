@@ -96,21 +96,19 @@
 }
 
 .entry-title{
-	line-height: 1.2;
-	margin-bottom: .5em;
+	margin-bottom: .25em;
+	font-size: rem-calc(28);
 
 	a{
 		color: $heading-font-color;
 	}
 
 	.single &{
-		font-size: rem-calc(48);
 		font-weight: 100;
-		line-height: 1.2;
+		font-size: rem-calc(36);
 	}
 }
 
-.single .entry-title,
 .archive-title{
 	margin-bottom: 1em;
 	margin-bottom: 2rem;

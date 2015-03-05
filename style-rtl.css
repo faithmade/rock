@@ -1017,7 +1017,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 0; }
 
 h1 {
-  font-size: 2.3125rem; }
+  font-size: 2.375rem; }
 
 h2 {
   font-size: 1rem; }
@@ -1188,7 +1188,7 @@ blockquote, blockquote p {
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4; }
   h1 {
-    font-size: 2.9375rem; }
+    font-size: 3rem; }
   h2 {
     font-size: 1.625rem; }
   h3 {
@@ -1747,16 +1747,15 @@ a {
   margin: 0 0 1.5em; }
 
 .entry-title {
-  line-height: 1.2;
-  margin-bottom: 0.5em; }
+  margin-bottom: 0.25em;
+  font-size: 1.75rem; }
   .entry-title a {
     color: #222; }
   .single .entry-title {
-    font-size: 3rem;
     font-weight: 100;
-    line-height: 1.2; }
+    font-size: 2.25rem; }
 
-.single .entry-title, .archive-title {
+.archive-title {
   margin-bottom: 1em;
   margin-bottom: 2rem; }
 

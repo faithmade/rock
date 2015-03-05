@@ -24,7 +24,12 @@ $map_zoom             = ctc_event_data()['map_zoom'];
 <header class="entry-header">
 	<div class="entry-header-row">
 		<div class="entry-header-column">
-			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title(); ?></a></h1>
+
+			<?php $tag = is_single() ? 'h1' : 'h2'; ?>
+			<<?php echo $tag; ?> class="entry-title">
+				<a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title(); ?></a>
+			</<?php echo $tag; ?>>
+
 			<div class="event-meta">
 				<?php if ( $date ) : ?>
 					<span>
@@ -51,7 +56,7 @@ $map_zoom             = ctc_event_data()['map_zoom'];
 					</span>
 				<?php endif; ?>
 				</span>
-     </div><!-- .event-meta -->
+			</div><!-- .event-meta -->
 		</div><!-- .entry-header-column -->
 	</div><!-- .entry-header-row -->
 </header><!-- .entry-header -->
