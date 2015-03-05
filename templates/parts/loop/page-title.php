@@ -5,9 +5,19 @@
  * @package rock
  */
 ?>
-<header class="entry-header">
-	<?php $tag = is_single() ? 'h1' : 'h2'; ?>
-	<<?php echo $tag; ?> class="entry-title">
-		<a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title(); ?></a>
+<header class="page-header">
+	<?php $tag = is_singular() ? 'h1' : 'h2'; ?>
+	<<?php echo $tag; ?> class="page-title">
+
+		<?php if( ! is_singular() ): ?>
+			<a href="<?php the_permalink(); ?>" rel="permalink">
+		<?php endif; ?>
+
+		<?php the_title(); ?>
+
+		<?php if( ! is_singular() ): ?>
+			</a>
+		<?php endif; ?>
+
 	</<?php echo $tag; ?>>
 </header><!-- .entry-header -->

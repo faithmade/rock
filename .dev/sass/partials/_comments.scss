@@ -7,7 +7,7 @@
 }
 
 .comments-area {
-	@extend .panel;
+	@include panel;
 }
 
 /* Comments */

@@ -1020,7 +1020,7 @@ h1 {
   font-size: 2.375rem; }
 
 h2 {
-  font-size: 1rem; }
+  font-size: 1.125rem; }
 
 h3 {
   font-size: 1.1875rem; }
@@ -1685,40 +1685,34 @@ a {
         .widget_calendar #calendar_wrap #wp-calendar tfoot td#next {
           text-align: left; }
 
-.content-area .page-header {
-  padding: 1.5em 3.5em;
-  padding: 1.5rem 3.5rem;
-  border-bottom: 2px solid #eee; }
-  .content-area .page-header .page-title {
-    font-size: 2rem; }
-  @media screen and (max-width: 600px) {
-    .content-area .page-header {
-      padding: 0em 1em 0.5em 1em;
-      padding: 0rem 1rem 0.5rem 1rem; } }
-
-.panel, .no-results, .not-found, .hentry, .comments-area {
+.no-results, .not-found {
+  padding: 1.5em;
+  padding: 1.5rem;
   margin: 0 0 1.5em;
   margin: 0 0 1.5rem;
-  padding: 2.5em 3.5em;
-  padding: 2.5rem 3.5rem;
   background-color: #fff; }
-  @media screen and (max-width: 600px) {
-    .panel {
-      padding: 0em 1em 0.5em 1em;
-      padding: 0rem 1rem 0.5rem 1rem; } }
+  @media only screen and (min-width:40.063em) {
+    .no-results, .not-found {
+      padding: 2.5em 3.5em;
+      padding: 2.5rem 3.5rem; } }
+  .no-results .page-header, .not-found .page-header {
+    margin-bottom: 1em; }
 
-.no-results .page-header, .not-found .page-header {
-  padding: 0;
-  border-bottom: 0;
-  margin-bottom: 1em; }
-.no-results .page-content, .not-found .page-content {
-  padding: 0; }
-
-.hentry .attachment-rock-featured {
-  width: 100%;
-  height: auto; }
-.hentry .entry-header {
-  color: #222; }
+.hentry {
+  padding: 1.5em;
+  padding: 1.5rem;
+  margin: 0 0 1.5em;
+  margin: 0 0 1.5rem;
+  background-color: #fff; }
+  @media only screen and (min-width:40.063em) {
+    .hentry {
+      padding: 2.5em 3.5em;
+      padding: 2.5rem 3.5rem; } }
+  .hentry .attachment-rock-featured {
+    width: 100%;
+    height: auto; }
+  .hentry .entry-header {
+    color: #222; }
 
 .featured-image {
   margin-bottom: 1em;
@@ -1730,17 +1724,8 @@ a {
 .single .byline, .group-blog .byline {
   display: inline; }
 
-.page-content, .entry-content, .entry-summary {
+.entry-content, .entry-summary {
   margin: 1.5em 0; }
-
-.page-content {
-  margin-top: 0;
-  padding: 3em;
-  padding: 3rem; }
-  @media screen and (max-width: 600px) {
-    .page-content {
-      padding: 0em 1em 0.5em 1em;
-      padding: 0rem 1rem 0.5rem 1rem; } }
 
 .page-links {
   clear: both;
@@ -1752,7 +1737,7 @@ a {
   .entry-title a {
     color: #222; }
   .single .entry-title {
-    font-weight: 100;
+    font-weight: 300;
     font-size: 2.25rem; }
 
 .archive-title {
@@ -1794,9 +1779,12 @@ a {
   .has-post-thumbnail .entry-meta {
     border-bottom-width: 0; }
 
-.entry-media-meta .button + .button {
-  margin-right: 1em;
-  margin-right: 1rem; }
+.entry-media-meta .button {
+  margin-left: 1em;
+  margin-left: 1rem; }
+  @media only screen and (max-width: 40em) {
+    .entry-media-meta .button {
+      margin-bottom: 10px; } }
 
 .event-meta, .sermon-meta, .location-meta, .person-meta {
   margin-bottom: 1em;
@@ -1860,6 +1848,17 @@ article.format-link {
 
 .comment-content a {
   word-wrap: break-word; }
+
+.comments-area {
+  padding: 1.5em;
+  padding: 1.5rem;
+  margin: 0 0 1.5em;
+  margin: 0 0 1.5rem;
+  background-color: #fff; }
+  @media only screen and (min-width:40.063em) {
+    .comments-area {
+      padding: 2.5em 3.5em;
+      padding: 2.5rem 3.5rem; } }
 
 /* Comments */
 /*
@@ -2106,7 +2105,7 @@ body.layout-one-column-full #primary {
   max-width: none;
   width: 100%; }
 
-body.layout-one-column-narrow .row, body.layout-one-column-narrow .main-navigation, body.layout-one-column-narrow .navigation, body.layout-one-column-narrow #content, body.layout-one-column-narrow .site-branding-container, body.layout-one-column-narrow .main-navigation, body.layout-one-column-narrow .site-footer .site-footer-inner, .site-footer body.layout-one-column-narrow .site-footer-inner, body.layout-one-column-narrow .site-title-wrapper, body.layout-one-column-narrow .featured-content .entry-header .entry-header-row, .featured-content .entry-header body.layout-one-column-narrow .entry-header-row, body.layout-one-column-narrow .site-info-wrapper .site-info, .site-info-wrapper body.layout-one-column-narrow .site-info, body.layout-one-column-narrow .featured-content .featured-content-inner, .featured-content body.layout-one-column-narrow .featured-content-inner, body.layout-one-column-narrow .navigation, body.layout-one-column-narrow #content, body.layout-one-column-narrow .site-branding-container, body.layout-one-column-narrow .main-navigation, body.layout-one-column-narrow .site-footer .site-footer-inner, body.layout-one-column-narrow .site-title-wrapper, body.layout-one-column-narrow .featured-content .entry-header .entry-header-row, body.layout-one-column-narrow .site-info .site-info-inner, body.layout-one-column-narrow .featured-content .featured-content-inner {
+body.layout-one-column-narrow #content {
   max-width: 50em; }
 
 .site-title-wrapper {

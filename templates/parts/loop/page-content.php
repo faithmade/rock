@@ -5,7 +5,7 @@
  * @package rock
  */
 ?>
-<div class="entry-content">
+<div class="page-content">
 	<?php the_content(); ?>
 	<?php
 		wp_link_pages( array(
@@ -13,4 +13,4 @@
 			'after'  => '</div>',
 		) );
 	?>
-</div><!-- .entry-content -->
+</div><!-- .page-content -->

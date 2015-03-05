@@ -104,15 +104,7 @@
 }
 
 body.layout-one-column-narrow &{
-	.row,
-	.navigation,
-	#content, .site-branding-container,
-	.main-navigation,
-	.site-footer .site-footer-inner,
-	.site-title-wrapper,
-	.featured-content .entry-header .entry-header-row,
-	.site-info .site-info-inner,
-	.featured-content .featured-content-inner{
+	#content{
 		max-width: 50em;
 	}
 }

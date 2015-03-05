@@ -1,52 +1,16 @@
-.content-area {
-	.page-header {
-		padding: 1.5em 3.5em;
-		padding: 1.5rem 3.5rem;
-		border-bottom: 2px solid #eee;
-
-		.page-title {
-			font-size: rem-calc(32);
-		}
-
-		@media screen and (max-width: 600px) {
-			padding: 0em 1em .5em 1em;
-			padding: 0rem 1rem .5rem 1rem;
-		}
-	}
-}
-
 .sticky {}
-
-.panel{
-	margin: 0 0 1.5em;
-	margin: 0 0 1.5rem;
-	padding: 2.5em 3.5em;
-	padding: 2.5rem 3.5rem;
-	background-color: $widget-bg;
-
-	@media screen and (max-width: 600px) {
-		padding: 0em 1em .5em 1em;
-		padding: 0rem 1rem .5rem 1rem;
-	}
-}
 
 .no-results,
 .not-found{
-	@extend .panel;
+	@include panel;
 
 	.page-header{
-		padding: 0;
-		border-bottom: 0;
 		margin-bottom: 1em;
-	}
-
-	.page-content{
-		padding: 0;
 	}
 }
 
 .hentry {
-	@extend .panel;
+	@include panel;
 
 	.attachment-rock-featured{
 		width: 100%;
@@ -73,21 +37,9 @@
 	display: inline;
 }
 
-.page-content,
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0;
-}
-
-.page-content {
-	margin-top: 0;
-	padding: 3em;
-	padding: 3rem;
-
-	@media screen and (max-width: 600px) {
-		padding: 0em 1em .5em 1em;
-		padding: 0rem 1rem .5rem 1rem;
-	}
 }
 
 .page-links {
@@ -104,7 +56,7 @@
 	}
 
 	.single &{
-		font-weight: 100;
+		font-weight: 300;
 		font-size: rem-calc(36);
 	}
 }
@@ -164,9 +116,11 @@
 
 .entry-media-meta {
 	.button {
-		& + .button {
-			margin-left: 1em;
-			margin-left: 1rem;
+		margin-right: 1em;
+		margin-right: 1rem;
+
+		@media #{$small-only}{
+			margin-bottom: 10px;
 		}
 	}
 }
