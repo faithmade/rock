@@ -9,31 +9,41 @@ define( 'CTC_THEME_SLUG', 'rock' );
 define( 'CTC_THEME_VERSION', '1.0' );
 
 /**
+ * Load composer dependencies.
+ */
+require_once get_template_directory() . '/vendor/autoload.php';
+
+/**
+ * Load integrations file.
+ */
+require_once get_template_directory() . '/inc/integrations.php';
+
+/**
  * ChurchThemes Framework
  */
-require get_template_directory() . '/inc/support-ctc.php';
-require get_template_directory() . '/inc/support-framework.php';
-require get_template_directory() . '/inc/compatibility.php';
+require_once get_template_directory() . '/inc/support-ctc.php';
+require_once get_template_directory() . '/inc/support-framework.php';
+require_once get_template_directory() . '/inc/compatibility.php';
 
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/template-tags.php';
+require_once get_template_directory() . '/inc/template-tags.php';
 
 /**
  * Custom functions that act independently of the theme templates.
  */
-require get_template_directory() . '/inc/extras.php';
+require_once get_template_directory() . '/inc/extras.php';
 
 /**
  * Includes template parts within the theme.
  */
-require get_template_directory() . '/inc/action-hooks.php';
+require_once get_template_directory() . '/inc/action-hooks.php';
 
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+require_once get_template_directory() . '/inc/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
@@ -43,7 +53,7 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Load custom theme layout functionality.
  */
-require get_template_directory() . '/inc/theme-layouts.php';
+require_once get_template_directory() . '/inc/theme-layouts.php';
 
 /**
  * Set the content width based on the theme's design and stylesheet.

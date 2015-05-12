@@ -36,7 +36,6 @@ function rock_add_theme_support_framework() {
   // Theme activation tasks
   add_theme_support( 'ctc-after-activation', array(
     'flush_rewrite_rules' => true, // make sure friendly URL's work
-    'notice'        => sprintf( __( '<b>Next Steps:</b> Please continue reading the <a href="%s" target="_blank">Getting Started</a> guide for the next steps after theme activation.', 'rock' ), 'https://upthemes.com/knowledgebase/getting-started-rock/' ),
     'hide_default_notice' => true // no need to be redundant
   ) );
 
@@ -258,21 +257,18 @@ function rock_add_theme_support_framework_widgets() {
     'field_overrides' => array(),
   ) );
 
-  // Events Widget
-  if( ! class_exists('TribeEvents') ) {
-    add_theme_support( 'ctc-widget-events', array(
-      'fields' => array(
-        'title',
-        'timeframe',
-        'limit',
-        'show_image',
-        'show_date',
-        'show_time',
-        'show_excerpt',
-      ),
-      'field_overrides' => array(),
-    ) );
-  }
+  add_theme_support( 'ctc-widget-events', array(
+    'fields' => array(
+      'title',
+      'timeframe',
+      'limit',
+      'show_image',
+      'show_date',
+      'show_time',
+      'show_excerpt',
+    ),
+    'field_overrides' => array(),
+  ) );
 
   // Gallery Widget
   add_theme_support( 'ctc-widget-gallery', array(
