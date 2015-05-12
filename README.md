@@ -1,6 +1,6 @@
-## rock Framework
+## Rock Framework
 
-rock is a theme framework that embraces modern development workflows.
+Rock is a theme framework that embraces modern development workflows.
 
 What it offers:
 
@@ -22,7 +22,7 @@ What it offers:
 1. We don't minify and concatenate JavaScript files. Why? Because you shouldn't do this in themes you distribute. Let caching plugins handle it.
 2. We use the standard `wp_enqueue_script()` system to declare JavaScript dependencies for the theme. This is a second reason why we don't do #1.
 3. All front-end development pre-compiled scripts and styles are stored in a .dev folder which is hidden to
-4. rock supports the following features from Jetpack: infinite scroll, featured content.
+4. Rock supports the following features from Jetpack: infinite scroll, featured content.
 
 ### Getting Started with Development
 
