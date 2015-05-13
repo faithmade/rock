@@ -6,14 +6,22 @@
  * It is expected that theme authors would copy and paste this code into their
  * functions.php file, and amend to suit.
  *
- * @package    Rock
- * @subpackage Includes
- * @author     Chris Wallace <chris@liftux.com>
- * @copyright  Copyright (c) 2014, ChurchThemes
+ * @package    TGM-Plugin-Activation
+ * @subpackage Example
+ * @version    2.4.2
+ * @author     Thomas Griffin <thomasgriffinmedia.com>
+ * @author     Gary Jones <gamajo.com>
+ * @copyright  Copyright (c) 2014, Thomas Griffin
  * @license    http://opensource.org/licenses/gpl-2.0.php GPL v2 or later
+ * @link       https://github.com/thomasgriffin/TGM-Plugin-Activation
  */
 
-add_action( 'tgmpa_register', 'rock_register_required_plugins' );
+/**
+ * Include the TGM_Plugin_Activation class.
+ */
+require_once dirname( __FILE__ ) . '/class-tgm-plugin-activation.php';
+
+add_action( 'tgmpa_register', 'my_theme_register_required_plugins' );
 /**
  * Register the required plugins for this theme.
  *
@@ -26,36 +34,42 @@ add_action( 'tgmpa_register', 'rock_register_required_plugins' );
  * This function is hooked into tgmpa_init, which is fired within the
  * TGM_Plugin_Activation class constructor.
  */
-function rock_register_required_plugins() {
+function my_theme_register_required_plugins() {
+
     /**
      * Array of plugin arrays. Required keys are name and slug.
      * If the source is NOT from the .org repo, then source is also required.
      */
     $plugins = array(
+
         // This is an example of how to include a plugin pre-packaged with a theme.
         array(
-            'name'               => 'ChurchThemes', // The plugin name.
-            'slug'               => 'churchthemes-plugin', // The plugin slug (typically the folder name).
-            'source'             => 'https://github.com/ChurchThemes-WP/churchthemes-plugin/archive/master.zip', // The plugin source.
+            'name'               => 'TGM Example Plugin', // The plugin name.
+            'slug'               => 'tgm-example-plugin', // The plugin slug (typically the folder name).
+            'source'             => get_stylesheet_directory() . '/lib/plugins/tgm-example-plugin.zip', // The plugin source.
             'required'           => true, // If false, the plugin is only 'recommended' instead of required.
             'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher.
-            'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+            'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-            'external_url'       => 'https://github.com/ChurchThemes-WP/churchthemes-plugin', // If set, overrides default API URL and points to an external URL.
+            'external_url'       => '', // If set, overrides default API URL and points to an external URL.
         ),
-        // Recommend support for Jetpack
+
+        // This is an example of how to include a plugin from a private repo in your theme.
         array(
-            'name'      => 'JetPack',
-            'slug'      => 'jetpack',
-            'required'  => false,
+            'name'               => 'TGM New Media Plugin', // The plugin name.
+            'slug'               => 'tgm-new-media-plugin', // The plugin slug (typically the folder name).
+            'source'             => 'https://s3.amazonaws.com/tgm/tgm-new-media-plugin.zip', // The plugin source.
+            'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+            'external_url'       => 'https://github.com/thomasgriffin/New-Media-Image-Uploader', // If set, overrides default API URL and points to an external URL.
         ),
+
         // This is an example of how to include a plugin from the WordPress Plugin Repository.
         array(
-            'name'               => 'Post Type Archive Link',
-            'slug'               => 'post-type-archive-links',
-            'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-            'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+            'name'      => 'BuddyPress',
+            'slug'      => 'buddypress',
+            'required'  => false,
         ),
+
     );
 
     /**
@@ -94,5 +108,7 @@ function rock_register_required_plugins() {
             'nag_type'                        => 'updated' // Determines admin notice type - can only be 'updated', 'update-nag' or 'error'.
         )
     );
+
     tgmpa( $plugins, $config );
+
 }

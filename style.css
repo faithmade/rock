@@ -2098,12 +2098,22 @@ embed, iframe, object {
     max-width: 100%;
     margin: 0;
     padding: 0; }
+  body.page-template-full-width #content {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0; }
 
 body.layout-one-column-full #primary {
   margin: 0;
   padding: 0;
   max-width: none;
   width: 100%; }
+body.page-template-full-width #primary {
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  padding: 0; }
 
 body.layout-one-column-narrow #content {
   max-width: 50em; }
