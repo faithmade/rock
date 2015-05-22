@@ -46,6 +46,11 @@ require_once get_template_directory() . '/inc/action-hooks.php';
 require_once get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Colorcase support
+ */
+require_once get_template_directory() . '/inc/colorcase.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';

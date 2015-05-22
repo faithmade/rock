@@ -1360,7 +1360,6 @@ a {
     list-style: none;
     text-align: center; }
     .main-navigation li a {
-      background-color: #222;
       display: block;
       font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
       line-height: 1.2;
