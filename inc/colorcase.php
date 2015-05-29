@@ -91,34 +91,77 @@ $color_locations = array(
             ),
         ),
 
-        'Sidebar' => array(
+        'Comments' => array(
             'Background' => array(
-                'selector' => '#secondary .widget',
+                'selector' => '.comments-area',
                 'attribute' => 'background-color',
                 'default' => '#fff',
             ),
-            'Title Color' => array(
-                'selector' => '#secondary .widget-title',
-                'attribute' => 'color',
-                'default' => '#222',
-            ),
             'Text Color' => array(
-                'selector' => '#secondary, #secondary abbr',
+                'selector' => '.comments-area, .comments-title, .comment-reply-title, .form-allowed-tags, .form-allowed-tags abbr, .form-allowed-tags code',
                 'attribute' => 'color',
                 'default' => '#444',
             ),
-            'List Divider' => array(
-                'selector' => '#secondary .widget li',
-                'attribute' => 'border-bottom-color',
-                'default' => '#e7e7e7',
-            ),
             'Link Color' => array(
-                'selector' => '#secondary a',
+                'selector' => '.comments-area a',
                 'attribute' => 'color',
                 'default' => '#e91f2e',
             ),
             'Link Hover Color' => array(
-                'selector' => '#secondary a:hover, #secondary a:focus',
+                'selector' => '.comments-area a:hover, .comments-area a:focus',
+                'attribute' => 'color',
+                'default' => '#c21322',
+            ),
+            'Button Background' => array(
+                'selector' => '.comments-area input[type="submit"]',
+                'attribute' => 'background-color',
+                'default' => '#e91f2e',
+            ),
+            'Button Background Hover' => array(
+                'selector' => '.comments-area input[type="submit"]:hover',
+                'attribute' => 'background-color',
+                'default' => '#c21322',
+            ),
+            'Button Text' => array(
+                'selector' => '.comments-area input[type="submit"]',
+                'attribute' => 'color',
+                'default' => '#fff',
+            ),
+            'Button Text Hover' => array(
+                'selector' => '.comments-area input[type="submit"]:hover',
+                'attribute' => 'color',
+                'default' => '#fff',
+            ),
+        ),
+
+        'Sidebar' => array(
+            'Background' => array(
+                'selector' => '#secondary .widget, #tertiary .widget',
+                'attribute' => 'background-color',
+                'default' => '#fff',
+            ),
+            'Title Color' => array(
+                'selector' => '#secondary .widget-title, #tertiary .widget-title',
+                'attribute' => 'color',
+                'default' => '#222',
+            ),
+            'Text Color' => array(
+                'selector' => '#secondary, #secondary abbr, #tertiary, #tertiary abbr',
+                'attribute' => 'color',
+                'default' => '#444',
+            ),
+            'List Divider' => array(
+                'selector' => '#secondary .widget li, #tertiary .widget li',
+                'attribute' => 'border-bottom-color',
+                'default' => '#e7e7e7',
+            ),
+            'Link Color' => array(
+                'selector' => '#secondary a, #tertiary a',
+                'attribute' => 'color',
+                'default' => '#e91f2e',
+            ),
+            'Link Hover Color' => array(
+                'selector' => '#secondary a:hover, #secondary a:focus, #tertiary a:hover, #tertiary a:focus',
                 'attribute' => 'color',
                 'default' => '#c21322',
             ),
