@@ -32,7 +32,7 @@ $color_locations = array(
 
         'Navigation' => array(
             'Background' => array(
-                'selector' => '.main-navigation-container',
+                'selector' => '.main-navigation-container, .main-navigation li.menu-item-has-children:hover > ul',
                 'attribute' => 'background-color',
                 'default' => '#222',
             ),
