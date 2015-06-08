@@ -35,7 +35,7 @@ function rock_register_required_plugins() {
         // This is an example of how to include a plugin pre-packaged with a theme.
         array(
             'name'               => 'ChurchThemes', // The plugin name.
-            'slug'               => 'churchthemes-plugin', // The plugin slug (typically the folder name).
+            'slug'               => 'churchthemes-plugin-master', // The plugin slug (typically the folder name).
             'source'             => 'https://github.com/ChurchThemes-WP/churchthemes-plugin/archive/master.zip', // The plugin source.
             'required'           => true, // If false, the plugin is only 'recommended' instead of required.
             'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher.
