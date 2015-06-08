@@ -2130,8 +2130,11 @@ body.layout-one-column-narrow #content {
   max-width: 50em; }
 
 .single-fl-builder-template .type-fl-builder-template {
-  padding: 0; }
+  padding: 0;
+  margin-bottom: 0; }
 .single-fl-builder-template .page-title {
+  display: none; }
+.single-fl-builder-template #secondary {
   display: none; }
 
 .site-title-wrapper {

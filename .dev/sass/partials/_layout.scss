@@ -127,9 +127,14 @@ body.layout-one-column-narrow &{
 
 	.type-fl-builder-template{
 		padding: 0;
+		margin-bottom: 0;
 	}
 
 	.page-title{
+		display: none;
+	}
+
+	#secondary{
 		display: none;
 	}
 }
