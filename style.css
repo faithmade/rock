@@ -1534,6 +1534,8 @@ a {
 .widget {
   margin: 0 0 1.5em;
   padding: 20px; }
+  .widget .hentry {
+    background-color: transparent; }
   .widget, .widget p, .widget ul, .widget ol {
     font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     font-size: 0.875rem; }
