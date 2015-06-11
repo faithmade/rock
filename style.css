@@ -2246,7 +2246,9 @@ body.layout-one-column-narrow #content {
       background: transparent;
       font-weight: bold;
       border-bottom: 2px solid #373737;
-      border-radius: 0; }
+      border-radius: 0;
+      padding-bottom: 0.5em;
+      padding-bottom: 0.5rem; }
     .footer-widget-area .footer-widget .widget {
       margin-bottom: 2.25em;
       margin-bottom: 2.25rem; }
