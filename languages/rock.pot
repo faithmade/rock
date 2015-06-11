@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rock-pro 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-22 15:53-0400\n"
+"POT-Creation-Date: 2015-06-11 10:30-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -203,30 +203,30 @@ msgctxt "Merriweather font: on or off"
 msgid "on"
 msgstr ""
 
-#: inc/integrations.php:77
+#: inc/integrations.php:71
 #: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:161
 #: vendor/tgmpa/tgm-plugin-activation/example.php:91
 msgid "Install Required Plugins"
 msgstr ""
 
-#: inc/integrations.php:78
+#: inc/integrations.php:72
 #: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:162
 #: vendor/tgmpa/tgm-plugin-activation/example.php:92
 msgid "Install Plugins"
 msgstr ""
 
-#: inc/integrations.php:79
+#: inc/integrations.php:73
 #: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:163
 #: vendor/tgmpa/tgm-plugin-activation/example.php:93
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr ""
 
-#: inc/integrations.php:80 vendor/tgmpa/tgm-plugin-activation/example.php:94
+#: inc/integrations.php:74 vendor/tgmpa/tgm-plugin-activation/example.php:94
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
-#: inc/integrations.php:81
+#: inc/integrations.php:75
 #: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:165
 #: vendor/tgmpa/tgm-plugin-activation/example.php:95
 #, php-format
@@ -235,7 +235,7 @@ msgid_plural "This theme requires the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/integrations.php:82
+#: inc/integrations.php:76
 #: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:166
 #: vendor/tgmpa/tgm-plugin-activation/example.php:96
 #, php-format
@@ -244,7 +244,7 @@ msgid_plural "This theme recommends the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/integrations.php:83
+#: inc/integrations.php:77
 #: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:167
 #: vendor/tgmpa/tgm-plugin-activation/example.php:97
 #, php-format
@@ -259,7 +259,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/integrations.php:84
+#: inc/integrations.php:78
 #: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:168
 #: vendor/tgmpa/tgm-plugin-activation/example.php:98
 #, php-format
@@ -268,7 +268,7 @@ msgid_plural "The following required plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/integrations.php:85
+#: inc/integrations.php:79
 #: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:169
 #: vendor/tgmpa/tgm-plugin-activation/example.php:99
 #, php-format
@@ -277,7 +277,7 @@ msgid_plural "The following recommended plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/integrations.php:86
+#: inc/integrations.php:80
 #: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:170
 #: vendor/tgmpa/tgm-plugin-activation/example.php:100
 #, php-format
@@ -292,7 +292,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/integrations.php:87
+#: inc/integrations.php:81
 #: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:171
 #: vendor/tgmpa/tgm-plugin-activation/example.php:101
 #, php-format
@@ -305,7 +305,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/integrations.php:88
+#: inc/integrations.php:82
 #: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:172
 #: vendor/tgmpa/tgm-plugin-activation/example.php:102
 #, php-format
@@ -320,7 +320,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/integrations.php:89
+#: inc/integrations.php:83
 #: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:173
 #: vendor/tgmpa/tgm-plugin-activation/example.php:103
 msgid "Begin installing plugin"
@@ -328,7 +328,7 @@ msgid_plural "Begin installing plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/integrations.php:90
+#: inc/integrations.php:84
 #: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:174
 #: vendor/tgmpa/tgm-plugin-activation/example.php:104
 msgid "Begin activating plugin"
@@ -336,20 +336,20 @@ msgid_plural "Begin activating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/integrations.php:91
+#: inc/integrations.php:85
 #: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:175
 #: vendor/tgmpa/tgm-plugin-activation/example.php:105
 msgid "Return to Required Plugins Installer"
 msgstr ""
 
-#: inc/integrations.php:92
+#: inc/integrations.php:86
 #: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:177
 #: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:1956
 #: vendor/tgmpa/tgm-plugin-activation/example.php:106
 msgid "Plugin activated successfully."
 msgstr ""
 
-#: inc/integrations.php:93 vendor/tgmpa/tgm-plugin-activation/example.php:107
+#: inc/integrations.php:87 vendor/tgmpa/tgm-plugin-activation/example.php:107
 #, php-format
 msgid "All plugins installed and activated successfully. %s"
 msgstr ""

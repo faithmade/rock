@@ -44,6 +44,12 @@ $ctc_sermon_tag      = get_the_term_list( $post->ID, 'ctc_sermon_tag', '', __( '
 					<?php echo $ctc_sermon_book; ?>
 				</span>
 				<?php endif; ?>
+				<?php if ( $ctc_sermon_tag ) : ?>
+				<span>
+					<i class="genericon genericon-tag"></i>
+					<?php echo $ctc_sermon_tag; ?>
+				</span>
+				<?php endif; ?>
 			</div><!-- .sermon-meta -->
 		</div><!-- .entry-header-column -->
 	</div><!-- .entry-header-row -->
