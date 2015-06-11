@@ -20,6 +20,13 @@ $widget-bg: #fff !default;
 	padding-right: 1.25em;
 	padding-right: 1.25rem;
 
+	.widget-title {
+		padding: 2em 2em 0 2em;
+		padding: 2rem 2rem 0 2em;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+
 	#secondary &{
 		padding-top: 0;
 		padding-left: 0;
@@ -35,6 +42,8 @@ $widget-bg: #fff !default;
 		background: #fff;
 		border-radius: 2px;
 		box-sizing: border-box;
+		padding: 2em;
+		padding: 2rem;
 
 		&:focus {
 			background: #fff;

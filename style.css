@@ -1546,6 +1546,11 @@ a {
 .widget_search {
   padding-right: 1.25em;
   padding-right: 1.25rem; }
+  .widget_search .widget-title {
+    padding: 2em 2em 0 2em;
+    padding: 2rem 2rem 0 2em;
+    padding-bottom: 0;
+    margin-bottom: 0; }
   #secondary .widget_search {
     padding-top: 0;
     padding-left: 0;
@@ -1557,7 +1562,9 @@ a {
     width: 100%;
     background: #fff;
     border-radius: 2px;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    padding: 2em;
+    padding: 2rem; }
     .widget_search .search-field:focus {
       background: #fff; }
   .widget_search .search-submit {
