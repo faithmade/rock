@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rock-pro 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-11 10:30-0400\n"
+"POT-Creation-Date: 2015-06-11 10:43-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,7 +54,7 @@ msgstr ""
 msgid "Featured"
 msgstr ""
 
-#: content-featured.php:35
+#: content-featured.php:35 inc/extras.php:114
 msgid "Read More"
 msgstr ""
 
@@ -566,7 +566,7 @@ msgstr ""
 #: templates/parts/loop/location-content.php:25
 #: templates/parts/loop/person-content.php:42
 #: templates/parts/loop/post-content.php:11
-#: templates/parts/loop/sermon-content.php:107
+#: templates/parts/loop/sermon-content.php:113
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
@@ -575,7 +575,7 @@ msgstr ""
 #: templates/parts/loop/page-content.php:12
 #: templates/parts/loop/person-content.php:45
 #: templates/parts/loop/post-content.php:14
-#: templates/parts/loop/sermon-content.php:110
+#: templates/parts/loop/sermon-content.php:119
 msgid "Pages:"
 msgstr ""
 

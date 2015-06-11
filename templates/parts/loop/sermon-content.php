@@ -104,7 +104,16 @@ if ( $pdf_download_url )
 </div>
 
 <div class="entry-content">
-	<?php the_content( __( 'Read More <span class="meta-nav">&rarr;</span>', 'rock' ) ); ?>
+	<?php
+
+    if ( is_category() || is_archive() ) {
+      the_excerpt();
+    }
+    else {
+      the_content( __( 'Read More <span class="meta-nav">&rarr;</span>', 'rock' ) );
+    }
+
+  ?>
 	<?php
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . __( 'Pages:', 'rock' ),
