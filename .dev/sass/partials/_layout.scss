@@ -122,3 +122,19 @@ body.layout-one-column-narrow &{
 		max-width: 50em;
 	}
 }
+
+.single-fl-builder-template {
+
+	.type-fl-builder-template{
+		padding: 0;
+		margin-bottom: 0;
+	}
+
+	.page-title{
+		display: none;
+	}
+
+	#secondary{
+		display: none;
+	}
+}
