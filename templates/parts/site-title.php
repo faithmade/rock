@@ -21,4 +21,12 @@
 
 	</div><!-- .site-info-inner -->
 
+  <?php if( is_active_sidebar( 'header' ) ): ?>
+
+    <div class="header-widget-area">
+      <?php dynamic_sidebar( 'header' ); ?>
+    </div>
+
+  <?php endif; ?>
+
 </div><!-- .site-title-wrapper -->

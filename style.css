@@ -2137,6 +2137,11 @@ body.layout-one-column-narrow #content {
 .site-title-wrapper {
   margin-bottom: 40px; }
 
+.site-title-wrapper-inner {
+  width: 66.6666666667%;
+  display: inline-block;
+  vertical-align: middle; }
+
 .site-logo {
   display: inline-block;
   vertical-align: middle;
@@ -2170,6 +2175,17 @@ body.layout-one-column-narrow #content {
   padding: 40px 0 0;
   background-color: #fff;
   letter-spacing: -0.01em; }
+
+.header-widget-area {
+  width: 33.3333333333%;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 1.25em;
+  padding: 0 1.25rem; }
+  .header-widget-area .widget {
+    padding: 0; }
+    .header-widget-area .widget:last-child {
+      margin-bottom: 0; }
 
 .featured-content .entry-header {
   background-size: cover; }

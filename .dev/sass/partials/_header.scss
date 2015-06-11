@@ -8,6 +8,9 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 .site-title-wrapper-inner{
 	@extend .large-12;
 	@extend .columns;
+	width: 66.6666666667%;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .site-logo {
@@ -49,6 +52,22 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 	padding: 40px 0 0;
 	background-color: $header-bg;
 	letter-spacing: -.01em;
+}
+
+.header-widget-area {
+	width: 33.3333333333%;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 1.25em;
+	padding: 0 1.25rem;
+
+	.widget {
+		padding: 0;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 }
 
 .featured-content{

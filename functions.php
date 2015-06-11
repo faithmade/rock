@@ -204,6 +204,16 @@ function rock_widgets_init() {
 	) );
 
 	register_sidebar( array(
+		'name'          => __( 'Header Right', 'rock' ),
+		'id'            => 'header',
+		'description'   => __( 'The header sidebar appears on the right side of the header of the page.', 'rock' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h6 class="widget-title">',
+		'after_title'   => '</h6>',
+	) );
+
+	register_sidebar( array(
 		'name'          => __( 'Footer Left', 'rock' ),
 		'id'            => 'footer-1',
 		'description'   => __( 'The footer left sidebar appears in the first column of the footer widget area.', 'rock' ),

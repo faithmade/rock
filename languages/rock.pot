@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rock-pro 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-11 11:19-0400\n"
+"POT-Creation-Date: 2015-06-11 11:34-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -145,30 +145,38 @@ msgid ""
 msgstr ""
 
 #: functions.php:207
-msgid "Footer Left"
+msgid "Header Right"
 msgstr ""
 
 #: functions.php:209
+msgid "The header sidebar appears on the right side of the header of the page."
+msgstr ""
+
+#: functions.php:217
+msgid "Footer Left"
+msgstr ""
+
+#: functions.php:219
 msgid ""
 "The footer left sidebar appears in the first column of the footer widget "
 "area."
 msgstr ""
 
-#: functions.php:217
+#: functions.php:227
 msgid "Footer Center"
 msgstr ""
 
-#: functions.php:219
+#: functions.php:229
 msgid ""
 "The footer center sidebar appears in the second column of the footer widget "
 "area."
 msgstr ""
 
-#: functions.php:227
+#: functions.php:237
 msgid "Footer Right"
 msgstr ""
 
-#: functions.php:229
+#: functions.php:239
 msgid ""
 "The footer right sidebar appears in the third column of the footer widget "
 "area."
