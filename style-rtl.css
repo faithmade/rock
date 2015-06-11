@@ -2223,25 +2223,24 @@ body.layout-one-column-narrow #content {
 
 .footer-widget-area {
   overflow: hidden;
-  padding: 20px 0; }
+  padding: 2.5em 0;
+  padding: 2.5rem 0; }
   .footer-widget-area .footer-widget {
-    padding: 0 20px; }
+    padding: 0 20px;
+    min-height: 1px; }
     .footer-widget-area .footer-widget .widget {
       background-color: #2b2b2b;
       color: #fff; }
+      .footer-widget-area .footer-widget .widget:last-child {
+        margin-bottom: 0; }
     @media only screen and (min-width:64.063em) {
       .footer-widget-area .footer-widget {
         width: 33.3333333333%;
-        padding: 0 15px;
+        padding: 0 1.25em;
+        padding: 0 1.25rem;
         float: right; } }
-    @media only screen and (min-width:64.063em) {
-      .footer-widget-area .footer-widget:first-child {
-        padding-left: 30px;
-        padding-right: 0; } }
-    @media only screen and (min-width:64.063em) {
-      .footer-widget-area .footer-widget:last-child {
-        padding-right: 30px;
-        padding-left: 0; } }
+    @media only screen and (min-width:64.063em) { }
+    @media only screen and (min-width:64.063em) { }
     .footer-widget-area .footer-widget .widget-title {
       color: #fff;
       background: transparent;

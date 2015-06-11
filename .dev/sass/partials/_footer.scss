@@ -26,33 +26,38 @@ $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-backgroun
 
 .footer-widget-area {
 	overflow: hidden;
-	padding: 20px 0;
+	padding: 2.5em 0;
+	padding: 2.5rem 0;
 
 	.footer-widget {
 		padding: 0 20px;
+		min-height: 1px;
 
 		.widget{
 			background-color: lighten($site-footer-background,10%);
 			color: $site-footer-text-color;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 
 		@media #{$large-up} {
 			width: 33.3333333333%;
-			padding: 0 15px;
+			padding: 0 1.25em;
+			padding: 0 1.25rem;
 			float: left;
 		}
 
 		&:first-child {
 			@media #{$large-up} {
-				padding-right: 30px;
-				padding-left: 0;
+
 			}
 		}
 
 		&:last-child {
 			@media #{$large-up} {
-				padding-left: 30px;
-				padding-right: 0;
+
 			}
 		}
 
