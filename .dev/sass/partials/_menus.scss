@@ -42,7 +42,7 @@ $menu-sub-item-height: $menu-height*.75 !default;
 		a {
 			display: block;
 			font-family: $menu-font-family;
-			line-height: 1.2;
+			line-height: 1.6;
 			font-weight: normal;
 			color: contrast-color($menu-background-color,darken($menu-background-color,65%),lighten($menu-background-color,65%),50%);
 			padding: 1.5em 1em;
