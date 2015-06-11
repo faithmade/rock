@@ -10,6 +10,18 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 	@extend .columns;
 }
 
+.site-logo {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: .5em;
+	margin-right: .5rem;
+}
+
+.site-header-text {
+	display: inline-block;
+	vertical-align: middle;
+}
+
 .site-title {
 	font-family: $sans-font-family;
 	font-size: emCalc(32);

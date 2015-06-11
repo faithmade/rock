@@ -112,6 +112,9 @@ function rock_setup() {
 	// Add support for automatic title tag creation.
 	add_theme_support( 'title-tag' );
 
+	// Add support for site logo.
+	add_theme_support( 'site-logo' );
+
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
