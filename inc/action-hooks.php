@@ -35,7 +35,7 @@ function rock_add_primary_navigation(){
 
 }
 
-add_action( 'rock_header_after', 'rock_add_primary_navigation', 20 );
+add_action( 'rock_header', 'rock_add_primary_navigation', 20 );
 
 /**
  * Adds the footer widgets to the footer.
