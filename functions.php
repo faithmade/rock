@@ -51,6 +51,11 @@ require_once get_template_directory() . '/inc/customizer.php';
 require_once get_template_directory() . '/inc/colorcase.php';
 
 /**
+ * Typecase support
+ */
+require_once get_template_directory() . '/inc/typecase.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
