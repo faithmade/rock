@@ -1,4 +1,6 @@
-## Rock Framework
+# Rock
+##### WordPress Theme Framework for [Faithmade](http://faithmade.com)
+<img src='screenshot.png' width='440'>
 
 Rock is a theme framework that embraces modern development workflows.
 
