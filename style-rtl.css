@@ -1556,19 +1556,20 @@ a {
   #secondary .widget_search {
     padding-top: 0;
     padding-right: 0;
+    padding-left: 0;
     padding-bottom: 0; }
   @media screen and (max-width: 600px) {
     .widget_search {
       padding-left: 0; } }
   .widget_search .search-field {
     width: 100%;
-    background: #fff;
+    background: transparent;
     border-radius: 2px;
     box-sizing: border-box;
     padding: 2em;
     padding: 2rem; }
     .widget_search .search-field:focus {
-      background: #fff; }
+      background: transparent; }
   .widget_search .search-submit {
     display: none; }
 

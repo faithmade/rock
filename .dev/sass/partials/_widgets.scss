@@ -34,6 +34,7 @@ $widget-bg: #fff !default;
 	#secondary &{
 		padding-top: 0;
 		padding-left: 0;
+		padding-right: 0;
 		padding-bottom: 0;
 	}
 
@@ -43,14 +44,14 @@ $widget-bg: #fff !default;
 
 	.search-field {
 		width: 100%;
-		background: #fff;
+		background: transparent;
 		border-radius: 2px;
 		box-sizing: border-box;
 		padding: 2em;
 		padding: 2rem;
 
 		&:focus {
-			background: #fff;
+			background: transparent;
 		}
 	}
 
