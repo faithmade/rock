@@ -46,3 +46,12 @@ function rock_customize_preview_js() {
 	wp_enqueue_script( 'rock_customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
 add_action( 'customize_preview_init', 'rock_customize_preview_js' );
+
+/**
+ * Add custom CSS to the customizer page
+ */
+function rock_customizer_style() {
+  wp_register_style( 'customizer_style', get_template_directory_uri() . '/assets/css/customizer.css' );
+  wp_enqueue_style( 'customizer_style' );
+}
+add_action( 'customize_controls_print_styles', 'rock_customizer_style' );
