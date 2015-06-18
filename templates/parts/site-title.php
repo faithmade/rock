@@ -8,7 +8,7 @@
 
 <div class="site-title-wrapper">
 
-	<div class="site-title-wrapper-inner">
+	<div class="site-title-wrapper-inner site-logo-align-<?php echo get_option('logo_position','left') ?>">
 
     <div class="site-logo">
       <?php if ( function_exists( 'jetpack_the_site_logo' ) ) jetpack_the_site_logo(); ?>

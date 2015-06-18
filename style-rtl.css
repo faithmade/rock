@@ -2139,9 +2139,19 @@ body.layout-one-column-narrow #content {
   margin-bottom: 40px; }
 
 .site-title-wrapper-inner {
-  width: 66.6666666667%;
   display: inline-block;
   vertical-align: middle; }
+  .site-title-wrapper-inner.site-logo-align-left {
+    width: 33.333333333%;
+    margin-left: 33.333333333%; }
+  .site-title-wrapper-inner.site-logo-align-center {
+    margin-right: 33.333333333%;
+    width: 33.333333333%;
+    text-align: center; }
+  .site-title-wrapper-inner.site-logo-align-right {
+    margin-right: 33.333333333%;
+    width: 33.333333333%;
+    float: left; }
 
 .site-logo {
   display: inline-block;

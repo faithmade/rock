@@ -8,9 +8,25 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 .site-title-wrapper-inner{
 	@extend .large-12;
 	@extend .columns;
-	width: 66.6666666667%;
 	display: inline-block;
 	vertical-align: middle;
+
+	&.site-logo-align-left {
+		width: 33.333333333%;
+		margin-right: 33.333333333%;
+	}
+
+	&.site-logo-align-center {
+		margin-left: 33.333333333%;
+		width: 33.333333333%;
+		text-align: center;
+	}
+
+	&.site-logo-align-right {
+		margin-left: 33.333333333%;
+		width: 33.333333333%;
+		float: right;
+	}
 }
 
 .site-logo {
