@@ -10,7 +10,7 @@
   ],
   "require": {
     "tgmpa/tgm-plugin-activation": "*",
-    "wpackagist-theme/post-type-archive-links": "*",
+    "wpackagist-plugin/post-type-archive-links": "*",
     "composer/installers": "v1.0.21"
   }
 }
