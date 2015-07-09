@@ -268,3 +268,12 @@ function rock_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'rock_scripts' );
+
+/**
+ * Remove page template dropdown
+ */
+function remove_page_template_metabox() {
+  remove_meta_box( 'pageparentdiv', null, 'side' );
+}
+
+add_action( 'dbx_post_advanced', 'remove_page_template_metabox' );
