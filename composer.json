@@ -2,15 +2,8 @@
   "name": "faithmade/rock",
   "type": "wordpress-theme",
   "description": "WordPress theme framework for Faithmade",
-  "repositories":[
-    {
-      "type":"composer",
-      "url":"http://wpackagist.org"
-    }
-  ],
   "require": {
     "tgmpa/tgm-plugin-activation": "*",
-    "wpackagist-plugin/post-type-archive-links": "*",
     "composer/installers": "v1.0.21"
   }
 }
