@@ -1,5 +1,9 @@
 {
-    "require": {
-        "tgmpa/tgm-plugin-activation": "*"
-    }
+  "name": "faithmade/rock",
+  "type": "wordpress-theme",
+  "description": "WordPress theme framework for Faithmade",
+  "require": {
+    "tgmpa/tgm-plugin-activation": "*",
+    "composer/installers": "v1.0.21"
+  }
 }
