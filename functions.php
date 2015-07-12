@@ -189,9 +189,9 @@ add_action( 'after_setup_theme', 'rock_setup' );
  */
 function rock_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'rock' ),
+		'name'          => __( 'Left Sidebar', 'rock' ),
 		'id'            => 'sidebar-1',
-		'description'   => __( 'The primary sidebar appears alongside the content of every page, post, archive, and search template.', 'rock' ),
+		'description'   => __( 'The left sidebar appears alongside the content of every page, post, archive, and search template.', 'rock' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h6 class="widget-title">',
@@ -199,9 +199,9 @@ function rock_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Secondary Sidebar', 'rock' ),
+		'name'          => __( 'Right Sidebar', 'rock' ),
 		'id'            => 'sidebar-2',
-		'description'   => __( 'The secondary sidebar will only appear when you have selected a three-column layout.', 'rock' ),
+		'description'   => __( 'The right sidebar will only appear when you have selected a three-column layout.', 'rock' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h6 class="widget-title">',
