@@ -92,6 +92,15 @@ $widget-bg: #fff !default;
 		border-bottom: 0;
 		padding-bottom: 0;
 	}
+
+	p {
+		margin-bottom: 0;
+
+		& + p {
+			margin-top: 1em;
+			margin-top: 1rem;
+		}
+	}
 }
 
 /* Author Widget */
@@ -245,5 +254,12 @@ $widget-bg: #fff !default;
 				}
 			}
 		}
+	}
+}
+
+/* Default Widget */
+.widget_default {
+	a.button {
+		display: block;
 	}
 }
