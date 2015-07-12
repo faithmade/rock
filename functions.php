@@ -277,3 +277,22 @@ function remove_page_template_metabox() {
 }
 
 add_action( 'dbx_post_advanced', 'remove_page_template_metabox' );
+
+/**
+ * Force full width template if Beaver Builder is active
+ */
+function faithmade_bb_check(){
+	global $post;
+	setup_postdata($post);
+
+  if ( is_page($post->ID) ) {
+  	if ( get_post_meta($post->ID, '_fl_builder_enabled', true) == 1 || FLBuilderModel::is_builder_active() ) {
+    	update_post_meta( $post->ID, '_wp_page_template', 'templates/full-width.php' );
+    }
+    else {
+    	update_post_meta( $post->ID, '_wp_page_template', 'default' );
+    }
+  }
+}
+
+add_action( 'wp', 'faithmade_bb_check', 15 );
