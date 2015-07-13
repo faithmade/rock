@@ -137,7 +137,6 @@ function rock_setup() {
 	add_theme_support(
 		'theme-layouts',
 		array(
-			'one-column-full'       => __( '1 Column Full',                          'rock' ),
 			'one-column-wide'       => __( '1 Column Wide',                          'rock' ),
 			'one-column-narrow'     => __( '1 Column Narrow',                        'rock' ),
 			'two-column-default'    => __( '2 Columns: Content / Sidebar',           'rock' ),
@@ -296,3 +295,9 @@ function faithmade_bb_check(){
 }
 
 add_action( 'wp', 'faithmade_bb_check', 15 );
+
+function admin_css() {
+	wp_register_style( 'admin', get_template_directory_uri() . '/admin.css' );
+	wp_enqueue_style( 'admin' );
+}
+add_action('admin_enqueue_scripts', 'admin_css');

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rock-pro 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-11 21:47-0400\n"
+"POT-Creation-Date: 2015-07-13 15:42-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -93,90 +93,86 @@ msgid "Social Menu"
 msgstr ""
 
 #: functions.php:140
-msgid "1 Column Full"
-msgstr ""
-
-#: functions.php:141
 msgid "1 Column Wide"
 msgstr ""
 
-#: functions.php:142
+#: functions.php:141
 msgid "1 Column Narrow"
 msgstr ""
 
-#: functions.php:143
+#: functions.php:142
 msgid "2 Columns: Content / Sidebar"
 msgstr ""
 
-#: functions.php:144
+#: functions.php:143
 msgid "2 Columns: Sidebar / Content"
 msgstr ""
 
-#: functions.php:145
+#: functions.php:144
 msgid "3 Columns: Content / Sidebar / Sidebar"
 msgstr ""
 
-#: functions.php:146
+#: functions.php:145
 msgid "3 Columns: Sidebar / Content / Sidebar"
 msgstr ""
 
-#: functions.php:147
+#: functions.php:146
 msgid "3 Columns: Sidebar / Sidebar / Content"
 msgstr ""
 
-#: functions.php:192
+#: functions.php:191
 msgid "Left Sidebar"
 msgstr ""
 
-#: functions.php:194
+#: functions.php:193
 msgid ""
 "The left sidebar appears alongside the content of every page, post, archive, "
 "and search template."
 msgstr ""
 
-#: functions.php:202
+#: functions.php:201
 msgid "Right Sidebar"
 msgstr ""
 
-#: functions.php:204
+#: functions.php:203
 msgid ""
 "The right sidebar will only appear when you have selected a three-column "
 "layout."
 msgstr ""
 
-#: functions.php:212
+#: functions.php:211
 msgid "Header Right"
 msgstr ""
 
-#: functions.php:214
+#: functions.php:213
 msgid "The header sidebar appears on the right side of the header of the page."
 msgstr ""
 
-#: functions.php:222
+#: functions.php:221
 msgid "Footer Left"
 msgstr ""
 
-#: functions.php:224
+#: functions.php:223
 msgid ""
 "The footer left sidebar appears in the first column of the footer widget "
 "area."
 msgstr ""
 
-#: functions.php:232
+#: functions.php:231
 msgid "Footer Center"
 msgstr ""
 
-#: functions.php:234
+#: functions.php:233
 msgid ""
 "The footer center sidebar appears in the second column of the footer widget "
 "area."
 msgstr ""
 
-#: functions.php:242
+#: functions.php:241
 msgid "Footer Right"
 msgstr ""
 
-#: functions.php:244
+#: functions.php:243
 msgid ""
 "The footer right sidebar appears in the third column of the footer widget "
 "area."
