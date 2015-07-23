@@ -1,7 +1,7 @@
 	<div class="entry-meta">
 
 		<span class="posted-meta">
-			<?php printf( __( '%s by %s' , 'rock' ), rock_posted_on(), get_the_author_link() ); ?>
+			<?php printf( __( '%s by <a href="%s">%s</a>' , 'rock' ), rock_posted_on(), get_author_posts_url( get_the_author_meta( 'ID' ) ), get_the_author() ); ?>
 		</span>
 
 		<span class="comments-number">
