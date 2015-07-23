@@ -11,7 +11,14 @@
 		<div class="site-info-inner">
 
 			<div class="site-info-text">
-				<?php printf( __( 'Built on %1$s by %2$s.', 'rock' ), 'the <a href="https://rock.churchthemes.net/" rel="designer">Rock Framework</a>', '<a href="https://churchthemes.net/" rel="designer">ChurchThemes</a>' ); ?>
+				<?php
+					if ( get_theme_mod('footer_text') !== "" ) {
+						echo get_theme_mod('footer_text');
+					}
+					else {
+						echo 'Made by <a href="http://faithmade.com">Faithmade</a>.';
+					}
+				?>
 			</div><!-- .site-info-text -->
 
 			<div class="social-menu">

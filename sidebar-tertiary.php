@@ -10,13 +10,21 @@
  */
 $layout = theme_layouts_get_layout();
 
-if ( ! is_active_sidebar( 'sidebar-2' ) || ( $layout !== 'layout-three-column-default' && $layout !== 'layout-three-column-center' && $layout !== 'layout-three-column-reversed' ) ) {
+if ( $layout !== 'layout-three-column-default' && $layout !== 'layout-three-column-center' && $layout !== 'layout-three-column-reversed' ) {
 	return;
 }
 ?>
 
 <div id="tertiary" class="widget-area" role="complementary">
 
-	<?php dynamic_sidebar( 'sidebar-2' ); ?>
+	<?php
+    if ( is_active_sidebar( 'sidebar-2' ) ) {
+      dynamic_sidebar( 'sidebar-2' );
+    }
+    else {
+      $sidebar_name = "Right Sidebar";
+      include 'default-widget.php';
+    }
+  ?>
 
 </div><!-- #tertiary -->

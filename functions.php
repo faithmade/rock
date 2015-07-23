@@ -137,7 +137,6 @@ function rock_setup() {
 	add_theme_support(
 		'theme-layouts',
 		array(
-			'one-column-full'       => __( '1 Column Full',                          'rock' ),
 			'one-column-wide'       => __( '1 Column Wide',                          'rock' ),
 			'one-column-narrow'     => __( '1 Column Narrow',                        'rock' ),
 			'two-column-default'    => __( '2 Columns: Content / Sidebar',           'rock' ),
@@ -189,9 +188,9 @@ add_action( 'after_setup_theme', 'rock_setup' );
  */
 function rock_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'rock' ),
+		'name'          => __( 'Left Sidebar', 'rock' ),
 		'id'            => 'sidebar-1',
-		'description'   => __( 'The primary sidebar appears alongside the content of every page, post, archive, and search template.', 'rock' ),
+		'description'   => __( 'The left sidebar appears alongside the content of every page, post, archive, and search template.', 'rock' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h6 class="widget-title">',
@@ -199,9 +198,9 @@ function rock_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Secondary Sidebar', 'rock' ),
+		'name'          => __( 'Right Sidebar', 'rock' ),
 		'id'            => 'sidebar-2',
-		'description'   => __( 'The secondary sidebar will only appear when you have selected a three-column layout.', 'rock' ),
+		'description'   => __( 'The right sidebar will only appear when you have selected a three-column layout.', 'rock' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h6 class="widget-title">',
@@ -268,3 +267,37 @@ function rock_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'rock_scripts' );
+
+/**
+ * Remove page template dropdown
+ */
+function remove_page_template_metabox() {
+  remove_meta_box( 'pageparentdiv', null, 'side' );
+}
+
+add_action( 'dbx_post_advanced', 'remove_page_template_metabox' );
+
+/**
+ * Force full width template if Beaver Builder is active
+ */
+function faithmade_bb_check(){
+	global $post;
+	setup_postdata($post);
+
+  if ( is_page($post->ID) ) {
+  	if ( get_post_meta($post->ID, '_fl_builder_enabled', true) == 1 || FLBuilderModel::is_builder_active() ) {
+    	update_post_meta( $post->ID, '_wp_page_template', 'templates/full-width.php' );
+    }
+    else {
+    	update_post_meta( $post->ID, '_wp_page_template', 'default' );
+    }
+  }
+}
+
+add_action( 'wp', 'faithmade_bb_check', 15 );
+
+function admin_css() {
+	wp_register_style( 'admin', get_template_directory_uri() . '/admin.css' );
+	wp_enqueue_style( 'admin' );
+}
+add_action('admin_enqueue_scripts', 'admin_css');

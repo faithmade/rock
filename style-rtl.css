@@ -1262,6 +1262,7 @@ button, a.button, input, select, textarea {
 
 button, a.button, a.button:visited, input[type="button"], input[type="reset"], input[type="submit"] {
   background: #e91f2e;
+  text-align: center;
   border: none;
   color: #fff;
   cursor: pointer;
@@ -1595,6 +1596,11 @@ a {
   .widget > ul:last-child > li:last-child > a, .widget > div > ul:last-child > li:last-child > a {
     border-bottom: 0;
     padding-bottom: 0; }
+  .widget p {
+    margin-bottom: 0; }
+    .widget p + p {
+      margin-top: 1em;
+      margin-top: 1rem; }
 
 /* Author Widget */
 .widget_author .widget-title {
@@ -1693,6 +1699,10 @@ a {
           text-align: right; }
         .widget_calendar #calendar_wrap #wp-calendar tfoot td#next {
           text-align: left; }
+
+/* Default Widget */
+.widget_default a.button {
+  display: block; }
 
 .no-results, .not-found {
   padding: 1.5em;
