@@ -1704,6 +1704,10 @@ a {
 .widget_default a.button {
   display: block; }
 
+/* Menu Widget */
+.widget_nav_menu ul ul {
+  border-top: 1px solid #e7e7e7; }
+
 .no-results, .not-found {
   padding: 1.5em;
   padding: 1.5rem;

@@ -263,3 +263,10 @@ $widget-bg: #fff !default;
 		display: block;
 	}
 }
+
+/* Menu Widget */
+.widget_nav_menu {
+	ul ul {
+		border-top: 1px solid $body-bg;
+	}
+}
