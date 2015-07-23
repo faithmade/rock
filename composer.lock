@@ -103,16 +103,16 @@
         },
         {
             "name": "tgmpa/tgm-plugin-activation",
-            "version": "2.5.0",
+            "version": "2.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TGMPA/TGM-Plugin-Activation.git",
-                "reference": "0904ac2073c64aa453170de77dcb6a365b103d6d"
+                "reference": "ba41c10e821a10d3d6c3b8e468a16716bb03f125"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TGMPA/TGM-Plugin-Activation/zipball/0904ac2073c64aa453170de77dcb6a365b103d6d",
-                "reference": "0904ac2073c64aa453170de77dcb6a365b103d6d",
+                "url": "https://api.github.com/repos/TGMPA/TGM-Plugin-Activation/zipball/ba41c10e821a10d3d6c3b8e468a16716bb03f125",
+                "reference": "ba41c10e821a10d3d6c3b8e468a16716bb03f125",
                 "shasum": ""
             },
             "require": {
@@ -154,7 +154,7 @@
                 "theme",
                 "wordpress"
             ],
-            "time": "2015-07-03 21:08:04"
+            "time": "2015-07-16 08:59:11"
         }
     ],
     "packages-dev": [],
