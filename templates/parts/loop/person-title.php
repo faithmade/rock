@@ -33,16 +33,32 @@ $urls = ctc_person_data()['urls'];
 					</span>
 				<?php endif; ?>
 
-				<?php if ( $email || $urls ) : ?>
-
-					<?php if ( $email ) : ?>
-						<span>
-							<i class="genericon genericon-mail"></i>
-							<a href="mailto:<?php echo antispambot( $email, true ); ?>"><?php echo antispambot( $email ); ?></a>
-						</span>
-					<?php endif; ?>
-
+				<?php if ( $email ) : ?>
+					<span>
+						<i class="genericon genericon-mail"></i>
+						<a href="mailto:<?php echo antispambot( $email, true ); ?>"><?php echo antispambot( $email ); ?></a>
+					</span>
 				<?php endif; ?>
+
+				<?php
+
+				if ( $urls ) :
+
+					$urls = explode("\n", $urls);
+
+					foreach ($urls as $url) {
+						?>
+						<span>
+							<i class="genericon genericon-link"></i>
+							<a href="<?php echo $url; ?>"><?php echo $url; ?></a>
+						</span>
+						<?php
+					}
+
+				endif;
+
+				?>
+
 			</div><!-- .person-meta -->
 		</div><!-- .entry-header-column -->
 	</div><!-- .entry-header-row -->
