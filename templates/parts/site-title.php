@@ -11,7 +11,7 @@
 	<div class="site-title-wrapper-inner site-logo-align-<?php echo get_option('logo_position','left') ?>">
 
     <div class="site-logo">
-      <?php if ( function_exists( 'jetpack_the_site_logo' ) ) jetpack_the_site_logo(); ?>
+      <?php if ( function_exists( 'the_site_logo' ) ) the_site_logo(); ?>
     </div>
 
     <div class="site-header-text">
