@@ -4,7 +4,7 @@ Theme URI: http://rock.churchthemes.net/
 Author: ChurchThemes.net
 Author URI: https://churchthemes.net/
 Description: Rock is a theme framework for churches and ministries with support for sermons, people, locations, and events.
-Version: 1.0.1
+Version: 1.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: rock
@@ -107,7 +107,7 @@ select {
   margin-left: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 73.75rem; }
+  max-width: 1100px; }
   .row:before, .main-navigation:before, .navigation:before, #content:before, .site-branding-container:before, .main-navigation:before, .site-footer .site-footer-inner:before, .site-title-wrapper:before, .featured-content .entry-header .entry-header-row:before, .site-info-wrapper .site-info:before, .featured-content .featured-content-inner:before, .row:after, .main-navigation:after, .navigation:after, #content:after, .site-branding-container:after, .main-navigation:after, .site-footer .site-footer-inner:after, .site-title-wrapper:after, .featured-content .entry-header .entry-header-row:after, .site-info-wrapper .site-info:after, .featured-content .featured-content-inner:after {
     content: " ";
     display: table; }

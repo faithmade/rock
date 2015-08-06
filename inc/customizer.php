@@ -36,21 +36,23 @@ function rock_customize_register( $wp_customize ) {
       ),
   ));
 
-  $wp_customize->add_section( 'rock_footer' , array(
-    'title'      => __( 'Footer', 'rock' ),
-    'priority'   => 150,
-  ));
+  // Custom Footer Text
 
-  $wp_customize->add_setting( 'footer_text' , array(
-    'default'     => '',
-    'transport'   => 'refresh',
-  ));
+  // $wp_customize->add_section( 'rock_footer' , array(
+  //   'title'      => __( 'Footer', 'rock' ),
+  //   'priority'   => 150,
+  // ));
 
-  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'footer_text_control', array(
-      'label'      => __( 'Footer Text', 'rock' ),
-      'section'    => 'rock_footer',
-      'settings'   => 'footer_text',
-  )));
+  // $wp_customize->add_setting( 'footer_text' , array(
+  //   'default'     => '',
+  //   'transport'   => 'refresh',
+  // ));
+
+  // $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'footer_text_control', array(
+  //     'label'      => __( 'Footer Text', 'rock' ),
+  //     'section'    => 'rock_footer',
+  //     'settings'   => 'footer_text',
+  // )));
 
 }
 add_action( 'customize_register', 'rock_customize_register' );
