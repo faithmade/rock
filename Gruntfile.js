@@ -73,24 +73,6 @@ module.exports = function(grunt) {
 			all: ['**/*.php']
 		},
 
-		browserSync: {
-		    dev: {
-			bsFiles: {
-				src: [
-					"*.css",
-					"**/*.php",
-					"*.js"
-				]
-			},
-			options: {
-				proxy: "local.demos.upthemes.com",
-				watchTask: true,
-				notify: false,
-				ghostMode: false
-			}
-		    }
-		},
-
 		watch: {
 			css: {
 				files: '.dev/**/*.scss',
@@ -113,12 +95,11 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-sass');
-	grunt.loadNpmTasks('grunt-browser-sync');
 	grunt.loadNpmTasks('grunt-cssjanus');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-pot');
-	grunt.registerTask('default',['browserSync', 'watch']);
+	grunt.registerTask('default',['watch']);
 	grunt.registerTask('lint',['jshint']);
 	grunt.registerTask('translate',['pot']);
 
