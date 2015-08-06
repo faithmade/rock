@@ -51,7 +51,7 @@ body {
   color: #444;
   padding: 0;
   margin: 0;
-  font-family: Merriweather, Georgia, "Times New Roman", serif;
+  font-family: sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 150%;
@@ -1003,7 +1003,7 @@ p {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
   font-weight: normal;
   font-style: bold;
   color: #222;
@@ -1162,7 +1162,7 @@ blockquote {
   padding: 1.25rem 1.25rem 0 1.25rem;
   border-left: 2px solid #ddd;
   overflow: hidden;
-  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
   font-style: italic; }
   blockquote cite {
     display: block;
@@ -1252,13 +1252,13 @@ blockquote, blockquote p {
     display: inherit !important; } }
 
 button, a.button, input, select, textarea {
+  font-family: inherit;
   font-size: 100%;
   /* Corrects font size not being inherited in all browsers */
   margin: 0;
   /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
   vertical-align: baseline;
-  /* Improves appearance and consistency in all browsers */
-  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+  /* Improves appearance and consistency in all browsers */ }
 
 button, a.button, a.button:visited, input[type="button"], input[type="reset"], input[type="submit"] {
   background: #e91f2e;
@@ -1320,7 +1320,6 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
   padding: 0.75rem; }
 
 label {
-  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: bold; }
 
 textarea {
@@ -1362,7 +1361,6 @@ a {
     text-align: center; }
     .main-navigation li a {
       display: block;
-      font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
       line-height: 1.6;
       font-weight: normal;
       color: #c8c8c8;
@@ -1538,7 +1536,6 @@ a {
   .widget .hentry {
     background-color: transparent; }
   .widget, .widget p, .widget ul, .widget ol {
-    font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     font-size: 0.875rem; }
 
 /* Make sure select elements fit in widgets */
@@ -1575,7 +1572,6 @@ a {
     display: none; }
 
 .widget-title {
-  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   position: relative;
   box-sizing: content-box;
   font-weight: bold; }
@@ -1769,7 +1765,6 @@ a {
 
 .entry-footer {
   color: #6f6f6f;
-  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
   padding-top: 1em; }
   .entry-footer:before, .entry-footer:after {
@@ -1794,8 +1789,7 @@ a {
   margin-bottom: 1rem;
   padding-bottom: 1em;
   padding-bottom: 1rem;
-  font-size: 0.9em;
-  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+  font-size: 0.9em; }
   .entry-meta i {
     vertical-align: middle;
     line-height: 0.8; }
@@ -1811,8 +1805,7 @@ a {
 
 .event-meta, .sermon-meta, .location-meta, .person-meta {
   margin-bottom: 1em;
-  margin-bottom: 1rem;
-  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+  margin-bottom: 1rem; }
   .event-meta .genericon, .event-meta .social-menu a, .social-menu .event-meta a, .sermon-meta .genericon, .sermon-meta .social-menu a, .social-menu .sermon-meta a, .location-meta .genericon, .location-meta .social-menu a, .social-menu .location-meta a, .person-meta .genericon, .person-meta .social-menu a, .social-menu .person-meta a {
     line-height: 2; }
   .event-meta span, .sermon-meta span, .location-meta span, .person-meta span {
@@ -1826,12 +1819,10 @@ a {
 .post-format {
   color: #e91f2e;
   text-transform: uppercase;
-  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 0.8125rem;
   font-weight: bold; }
 
 .more-link {
-  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   border-radius: 3px;
   border: 1px solid #e91f2e;
@@ -1841,7 +1832,6 @@ a {
 article.format-link {
   background: #f5f5f5; }
   article.format-link .entry-title {
-    font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     font-weight: bold;
     font-size: 1.75rem; }
 
@@ -1916,8 +1906,6 @@ article.format-link {
       font-size: 1.1em;
       font-style: normal;
       font-weight: bold; }
-    .comment-list li .comment-author, .comment-list li .comment-metadata {
-      font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
     .comment-list li .comment-metadata {
       margin-bottom: 1em;
       font-size: 0.8125rem;
@@ -1946,8 +1934,7 @@ article.format-link {
   width: 100%; }
 
 #respond {
-  margin-top: 10px;
-  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+  margin-top: 10px; }
   #respond h3#reply-title {
     font-size: 1.5em !important; }
   #respond .logged-in-as {
@@ -2178,7 +2165,6 @@ body.layout-one-column-narrow #content {
   vertical-align: middle; }
 
 .site-title {
-  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 2rem;
   font-size: 2rem;
   font-weight: normal;
@@ -2193,8 +2179,7 @@ body.layout-one-column-narrow #content {
 .site-description {
   font-size: 1rem;
   font-size: 1rem;
-  color: #777777;
-  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+  color: #777777; }
 
 .site-header {
   padding: 40px 0 0;
@@ -2240,7 +2225,6 @@ body.layout-one-column-narrow #content {
   .featured-content .entry-header .entry-title {
     font-size: 2.625rem;
     line-height: 1.2;
-    font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     font-weight: bold; }
   .featured-content .entry-header .entry-excerpt p {
     font-style: italic;
@@ -2255,7 +2239,6 @@ body.layout-one-column-narrow #content {
     background-color: #e91f2e;
     color: #fff;
     display: inline-block;
-    font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 0.8125rem;
@@ -2354,7 +2337,6 @@ body.layout-one-column-narrow #content {
   .featured-content .entry-title {
     font-size: 2.625rem;
     line-height: 1.2;
-    font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     font-weight: bold; }
   .featured-content .entry-excerpt p {
     font-style: italic;
@@ -2367,7 +2349,6 @@ body.layout-one-column-narrow #content {
     background-color: #e91f2e;
     color: #fff;
     display: inline-block;
-    font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 0.8125rem;

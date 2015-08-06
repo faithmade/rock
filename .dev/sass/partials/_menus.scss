@@ -1,4 +1,3 @@
-$menu-font-family: Helvetica, Arial, sans-serif !default;
 $menu-background-color: #222 !default;
 $menu-height: 4rem !default;
 $menu-sub-item-height: $menu-height*.75 !default;
@@ -41,7 +40,6 @@ $menu-sub-item-height: $menu-height*.75 !default;
 
 		a {
 			display: block;
-			font-family: $menu-font-family;
 			line-height: 1.6;
 			font-weight: normal;
 			color: contrast-color($menu-background-color,darken($menu-background-color,65%),lighten($menu-background-color,65%),50%);

@@ -97,13 +97,11 @@ $total-columns: 12;
 $column-gutter: rem-calc(40);
 
 // We use these to control various global styles
+$body-font-family: sans-serif;
 $body-bg: #e7e7e7;
 $heading-font-color: #222;
 $body-font-color: #444;
 $body-font-subtle-color: #aaa;
-$sans-font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$serif-font-family: Merriweather, Georgia, "Times New Roman", serif;
-$body-font-family: $serif-font-family;
 $font-weight-normal:normal;
 $body-font-weight: $font-weight-normal;
 $body-font-style: normal;
@@ -169,7 +167,6 @@ $cursor-text-value: text;
 $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-$header-font-family: $sans-font-family;
 $header-font-weight: normal;
 $header-font-style: bold;
 $header-font-color: #222;
@@ -206,7 +203,6 @@ $small-font-size: 60%;
 $small-font-color: scale-color($header-font-color, $lightness: 35%);
 
 // We use these to style paragraphs
-$paragraph-font-family: inherit;
 $paragraph-font-weight: $font-weight-normal;
 $paragraph-font-size: rem-calc(18);
 $paragraph-line-height: 1.6;
@@ -218,7 +214,6 @@ $paragraph-text-rendering: optimizeLegibility;
 
 // We use these to style <code> tags
 $code-color: #333;
-$code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
 $code-font-weight: $font-weight-normal;
 $code-font-size: 1em;
 $code-background-color: contrast-color($code-color,rgba(255,255,255,.1),rgba(0,0,0,0.1));
@@ -241,7 +236,6 @@ $hr-border-color: #ddd;
 $hr-margin: rem-calc(20);
 
 // We use these to style lists
-$list-font-family: $paragraph-font-family;
 $list-font-size: $paragraph-font-size;
 $list-line-height: $paragraph-line-height;
 $list-margin-bottom: $paragraph-margin-bottom;
@@ -264,7 +258,6 @@ $blockquote-cite-link-color: $blockquote-cite-font-color;
 
 // We use these to style widgets
 $widget-font-size: rem-calc(14);
-$widget-font-family: $sans-font-family;
 
 // Acronym styles
 $acronym-underline: 1px dotted #ddd;
@@ -291,6 +284,3 @@ $microformat-abbr-padding: rem-calc(0 1);
 // We use this to control abbr font styles
 $microformat-abbr-font-weight: $font-weight-bold;
 $microformat-abbr-font-decoration: none;
-
-// Menu font
-$menu-font-family: $sans-font-family;

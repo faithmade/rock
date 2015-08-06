@@ -42,7 +42,6 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 }
 
 .site-title {
-	font-family: $sans-font-family;
 	font-size: emCalc(32);
 	font-size: rem-calc(32);
 	font-weight: normal;
@@ -61,7 +60,6 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 	font-size: emCalc(16);
 	font-size: rem-calc(16);
 	color: lighten($body-font-color,20%);
-	font-family: $sans-font-family;
 }
 
 .site-header {
@@ -140,7 +138,6 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 		.entry-title{
 			font-size: rem-calc(42);
 			line-height: 1.2;
-			font-family: $sans-font-family;
 			font-weight: bold;
 		}
 
@@ -163,7 +160,6 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 			background-color: $primary-color;
 			color: contrast-color($primary-color,#fff,#000,50%);
 			display: inline-block;
-			font-family: $sans-font-family;
 			text-transform: uppercase;
 			font-weight: bold;
 			font-size: emCalc(13);

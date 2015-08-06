@@ -9,7 +9,6 @@ $widget-bg: #fff !default;
 	}
 
 	&,p,ul,ol{
-		font-family: $widget-font-family;
 		font-size: $widget-font-size;
 	}
 }
@@ -61,7 +60,6 @@ $widget-bg: #fff !default;
 }
 
 .widget-title {
-	font-family: $sans-font-family;
 	position: relative;
 	box-sizing: content-box;
 	font-weight: bold;
