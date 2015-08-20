@@ -1,5 +1,6 @@
 // Allows the use of rem-calc() or lower-bound() in your settings
 @import "../mixins/functions";
+@import url(http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic);
 
 // Left-to-Right language support by default
 $text-direction: ltr;
@@ -97,7 +98,7 @@ $total-columns: 12;
 $column-gutter: rem-calc(40);
 
 // We use these to control various global styles
-$body-font-family: sans-serif;
+$body-font-family: 'Lato', sans-serif;
 $body-bg: #e7e7e7;
 $heading-font-color: #222;
 $body-font-color: #444;

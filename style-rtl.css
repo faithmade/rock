@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic);
 /*
 Theme Name: Rock Framework
 Theme URI: http://rock.churchthemes.net/
@@ -51,7 +52,7 @@ body {
   color: #444;
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 150%;
@@ -1003,7 +1004,7 @@ p {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: normal;
   font-style: bold;
   color: #222;
@@ -1162,7 +1163,7 @@ blockquote {
   padding: 1.25rem 1.25rem 0 1.25rem;
   border-right: 2px solid #ddd;
   overflow: hidden;
-  font-family: sans-serif;
+  font-family: 'Lato', sans-serif;
   font-style: italic; }
   blockquote cite {
     display: block;
