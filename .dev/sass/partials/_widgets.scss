@@ -57,6 +57,10 @@ $widget-bg: #fff !default;
 	.search-submit {
 		display: none;
 	}
+
+	footer & {
+		padding: 0;
+	}
 }
 
 .widget-title {
@@ -250,6 +254,21 @@ $widget-bg: #fff !default;
 						text-align: right;
 					}
 				}
+			}
+		}
+	}
+
+	footer & {
+		padding: 0;
+
+		.widget-title {
+			border-bottom: 0!important;
+			padding: 1em 2em!important;
+			padding: 1rem 2rem!important;
+			margin: 0;
+
+			& + #calendar_wrap caption {
+				border-radius: 0!important;
 			}
 		}
 	}

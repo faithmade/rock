@@ -1573,6 +1573,8 @@ a {
       background: transparent; }
   .widget_search .search-submit {
     display: none; }
+  footer .widget_search {
+    padding: 0; }
 
 .widget-title {
   position: relative;
@@ -1698,6 +1700,15 @@ a {
           text-align: left; }
         .widget_calendar #calendar_wrap #wp-calendar tfoot td#next {
           text-align: right; }
+  footer .widget_calendar {
+    padding: 0; }
+    footer .widget_calendar .widget-title {
+      border-bottom: 0 !important;
+      padding: 1em 2em !important;
+      padding: 1rem 2rem !important;
+      margin: 0; }
+      footer .widget_calendar .widget-title + #calendar_wrap caption {
+        border-radius: 0 !important; }
 
 /* Default Widget */
 .widget_default a.button {
