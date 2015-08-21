@@ -3,6 +3,10 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 .site-title-wrapper{
 	@extend .row;
 	margin-bottom: 40px;
+
+	.header-constraint-full & {
+		max-width: none;
+	}
 }
 
 .site-title-wrapper-inner{

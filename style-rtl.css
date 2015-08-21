@@ -1343,6 +1343,8 @@ a {
 .main-navigation {
   position: relative;
   z-index: 100; }
+  .header-constraint-full .main-navigation {
+    max-width: none; }
   .main-navigation ul {
     font-size: 0.9375rem;
     font-size: 0.9375rem;
@@ -2139,6 +2141,8 @@ body.layout-one-column-narrow #content {
 
 .site-title-wrapper {
   margin-bottom: 40px; }
+  .header-constraint-full .site-title-wrapper {
+    max-width: none; }
 
 .site-title-wrapper-inner {
   display: inline-block;

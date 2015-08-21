@@ -26,7 +26,7 @@
 
 	<?php do_action( 'rock_header_before' ); ?>
 
-	<header id="masthead" class="site-header" role="banner">
+	<header id="masthead" class="site-header header-constraint-<?php echo get_option('header_constraint','default') ?>" role="banner">
 
 		<?php do_action( 'rock_header' ); ?>
 

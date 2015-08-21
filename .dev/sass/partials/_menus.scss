@@ -11,6 +11,10 @@ $menu-sub-item-height: $menu-height*.75 !default;
 	z-index: 100;
 	@extend .row;
 
+	.header-constraint-full & {
+		max-width: none;
+	}
+
 	.menu{
 		@extend .large-12;
 		@extend .columns;

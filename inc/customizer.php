@@ -16,23 +16,47 @@ function rock_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
-  $wp_customize->add_setting('logo_position', array(
-    'default'        => 'left',
+
+  if ( is_plugin_active( 'site-logo/site-logo.php' ) ) {
+    $wp_customize->add_setting('logo_position', array(
+      'default'        => 'left',
+      'capability'     => 'edit_theme_options',
+      'type'           => 'option',
+      'theme_supports' => 'site-logo'
+    ));
+
+    $wp_customize->add_control('logo_position_control',
+      array(
+        'label'    => __( 'Logo Position', 'rock' ),
+        'section'  => 'title_tagline',
+        'settings' => 'logo_position',
+        'type'     => 'radio',
+        'choices'  => array(
+          'left'     => 'Left',
+          'center'   => 'Center',
+          'right'    => 'Right',
+        ),
+    ));
+  }
+
+  // Toggle header max width
+
+  $wp_customize->add_setting('header_constraint', array(
+    'default'        => 'default',
     'capability'     => 'edit_theme_options',
-    'type'           => 'option',
-    'theme_supports' => 'site-logo'
+    'type'           => 'option'
   ));
 
-  $wp_customize->add_control('logo_position_control',
+  $wp_customize->add_control('header_constraint_control',
     array(
-      'label'    => __( 'Logo Position', 'rock' ),
-      'section'  => 'title_tagline',
-      'settings' => 'logo_position',
-      'type'     => 'radio',
+      'label'    => __( 'Header Constraint', 'rock' ),
+      'description' => 'Set how wide the header and navigation should be.',
+      'section'  => 'layout',
+      'settings' => 'header_constraint',
+      'type'     => 'select',
       'choices'  => array(
-        'left'     => 'Left',
-        'center'   => 'Center',
-        'right'    => 'Right',
+        'default'     => 'Default',
+        'full'   => 'Full',
       ),
   ));
 
