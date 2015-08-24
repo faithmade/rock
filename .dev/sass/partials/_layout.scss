@@ -125,6 +125,14 @@ body.layout-one-column-narrow &{
 
 .single-fl-builder-template {
 
+	#content,
+	#primary{
+		width: 100%;
+		float: none;
+		margin: 0;
+		max-width: none;
+	}
+
 	.type-fl-builder-template{
 		padding: 0;
 		margin-bottom: 0;
