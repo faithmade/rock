@@ -279,9 +279,6 @@ function faithmade_bb_check(){
   	if ( get_post_meta($post->ID, '_fl_builder_enabled', true) == 1 || FLBuilderModel::is_builder_active() ) {
     	update_post_meta( $post->ID, '_wp_page_template', 'templates/full-width.php' );
     }
-    else {
-    	update_post_meta( $post->ID, '_wp_page_template', 'default' );
-    }
   }
 }
 
