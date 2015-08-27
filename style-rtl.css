@@ -2316,14 +2316,29 @@ body.layout-one-column-narrow #content {
   overflow: hidden;
   padding: 2.5em 0;
   padding: 2.5rem 0; }
+  @media screen and (max-width: 600px) {
+    .footer-widget-area {
+      padding: 10px 10px 0 10px; } }
   .footer-widget-area .footer-widget {
     padding: 0 20px;
     min-height: 1px; }
+    @media screen and (max-width: 600px) {
+      .footer-widget-area .footer-widget {
+        padding: 0; } }
     .footer-widget-area .footer-widget .widget {
       background-color: #2b2b2b;
       color: #fff; }
+      @media screen and (max-width: 1024px) {
+        .footer-widget-area .footer-widget .widget {
+          margin-bottom: 20px; } }
       .footer-widget-area .footer-widget .widget:last-child {
         margin-bottom: 0; }
+        @media screen and (max-width: 1024px) {
+          .footer-widget-area .footer-widget .widget:last-child {
+            margin-bottom: 20px; } }
+        @media screen and (max-width: 600px) {
+          .footer-widget-area .footer-widget .widget:last-child {
+            margin-bottom: 10px; } }
     @media only screen and (min-width:64.063em) {
       .footer-widget-area .footer-widget {
         width: 33.3333333333%;
@@ -2343,6 +2358,9 @@ body.layout-one-column-narrow #content {
     .footer-widget-area .footer-widget .widget {
       margin-bottom: 2.25em;
       margin-bottom: 2.25rem; }
+      @media screen and (max-width: 600px) {
+        .footer-widget-area .footer-widget .widget {
+          margin-bottom: 10px; } }
       .footer-widget-area .footer-widget .widget li, .footer-widget-area .footer-widget .widget a {
         border-color: #373737; }
     .footer-widget-area .footer-widget .widget_calendar #calendar_wrap {
