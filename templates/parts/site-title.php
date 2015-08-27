@@ -10,9 +10,11 @@
 
 	<div class="site-title-wrapper-inner site-logo-align-<?php echo get_option('logo_position','left') ?>">
 
-    <div class="site-logo">
-      <?php if ( function_exists( 'the_site_logo' ) ) the_site_logo(); ?>
-    </div>
+    <?php if ( has_site_logo() ): ?>
+      <div class="site-logo">
+        <?php if ( function_exists( 'the_site_logo' ) ) the_site_logo(); ?>
+      </div>
+    <?php endif; ?>
 
     <div class="site-header-text">
   		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
