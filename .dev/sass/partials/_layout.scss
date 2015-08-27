@@ -2,6 +2,10 @@
 	@extend .row;
 	padding: 40px 0;
 
+	@media screen and (max-width: 600px) {
+		padding: 10px 0 0 0;
+	}
+
 	body.layout-one-column-full & {
 		max-width: 100%;
 		margin: 0;
@@ -19,6 +23,11 @@
 #primary{
 	@extend .columns;
 	@extend .large-8;
+
+	@media screen and (max-width: 600px) {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 
 	body.layout-one-column-full & {
 		margin: 0;
@@ -61,6 +70,11 @@
 #secondary{
 	@extend .large-4;
 	@extend .columns;
+
+	@media screen and (max-width: 600px) {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 
 	body.layout-two-column-reversed &{
 		@extend .large-pull-8;

@@ -8,6 +8,10 @@
 
 .comments-area {
 	@include panel;
+
+	@media screen and (max-width: 600px) {
+		padding: 20px;
+	}
 }
 
 /* Comments */
@@ -27,6 +31,11 @@
 .comment-list{
 	padding: 0 1.5em;
 	padding: 0 1.5rem;
+
+	@media screen and (max-width: 600px) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 
 	&,
 	li {

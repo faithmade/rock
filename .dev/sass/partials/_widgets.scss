@@ -4,6 +4,10 @@ $widget-bg: #fff !default;
 	margin: 0 0 1.5em;
 	padding: 20px;
 
+	@media screen and (max-width: 600px) {
+		margin-bottom: 10px;
+	}
+
 	.hentry {
 		background-color: transparent;
 	}
