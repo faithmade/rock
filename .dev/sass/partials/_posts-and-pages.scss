@@ -12,6 +12,11 @@
 .hentry {
 	@include panel;
 
+	@media screen and (max-width: 600px) {
+		margin-bottom: 10px;
+		padding: 20px;
+	}
+
 	.attachment-rock-featured{
 		width: 100%;
 		height: auto;

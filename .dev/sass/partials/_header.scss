@@ -4,6 +4,10 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 	@extend .row;
 	margin-bottom: 40px;
 
+	@media screen and (max-width: 600px) {
+		margin-bottom: 20px;
+	}
+
 	.header-constraint-full & {
 		max-width: none;
 	}
@@ -16,8 +20,7 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 	vertical-align: middle;
 
 	&.site-logo-align-left {
-		width: 33.333333333%;
-		margin-right: 33.333333333%;
+		width: 66.666666666%;
 	}
 
 	&.site-logo-align-center {
@@ -27,9 +30,14 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 	}
 
 	&.site-logo-align-right {
-		margin-left: 33.333333333%;
-		width: 33.333333333%;
+		width: 66.666666666%;
 		float: right;
+	}
+
+	@media screen and (max-width: 600px) {
+		width: 100%!important;
+		float: none;
+		text-align: left;
 	}
 }
 
@@ -70,6 +78,10 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 	padding: 40px 0 0;
 	background-color: $header-bg;
 	letter-spacing: -.01em;
+
+	@media screen and (max-width: 600px) {
+		padding-top: 20px;
+	}
 }
 
 .header-widget-area {
