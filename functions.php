@@ -257,6 +257,8 @@ function rock_scripts() {
 
 	wp_style_add_data( 'rock', 'rtl', 'replace' );
 
+	wp_enqueue_style( 'rock-fonts', rock_fonts_url(), array( 'rock' ), '20150830' );
+
 	wp_enqueue_script( 'rock-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'rock-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20130115', true );

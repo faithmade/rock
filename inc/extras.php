@@ -73,26 +73,17 @@ function rock_fonts_url() {
 	 */
 	$lato = _x( 'on', 'Lato font: on or off', 'rock' );
 
-	/* Translators: If there are characters in your language that are not
-	 * supported by Merriweather, translate this to 'off'. Do not translate into your
-	 * own language.
-	 */
-	$poly = _x( 'on', 'Merriweather font: on or off', 'rock' );
-
 	if ( 'off' !== $lato || 'off' !== $poly ) {
 		$font_families = array();
 
 		if ( 'off' !== $lato )
-			$font_families[] = 'Lato:300,700';
-
-		if ( 'off' !== $poly )
-			$font_families[] = 'Merriweather:400,400italic';
+			$font_families[] = '100,100italic,300,300italic,400,400italic,700,700italic,900,900italic';
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),
 			'subset' => urlencode( 'latin,latin-ext' ),
 		);
-		$fonts_url = add_query_arg( $query_args, "//fonts.googleapis.com/css" );
+		$fonts_url = add_query_arg( $query_args, "https://fonts.googleapis.com/css" );
 	}
 
 	return $fonts_url;
