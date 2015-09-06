@@ -118,7 +118,7 @@ function rock_setup() {
 	add_theme_support( 'title-tag' );
 
 	// Add support for site logo.
-	add_theme_support( 'site-logo' );
+	add_theme_support( 'site-logo', array( 'size' => 'full' ) );
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.

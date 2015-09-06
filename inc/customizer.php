@@ -21,7 +21,6 @@ function rock_customize_register( $wp_customize ) {
     $wp_customize->add_setting('logo_position', array(
       'default'        => 'left',
       'capability'     => 'edit_theme_options',
-      'type'           => 'option',
       'theme_supports' => 'site-logo'
     ));
 
@@ -44,7 +43,6 @@ function rock_customize_register( $wp_customize ) {
   $wp_customize->add_setting('header_constraint', array(
     'default'        => 'default',
     'capability'     => 'edit_theme_options',
-    'type'           => 'option'
   ));
 
   $wp_customize->add_control('header_constraint_control',

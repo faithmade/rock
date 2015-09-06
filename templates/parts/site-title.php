@@ -8,7 +8,7 @@
 
 <div class="site-title-wrapper">
 
-	<div class="site-title-wrapper-inner site-logo-align-<?php echo get_option('logo_position','left') ?>">
+	<div class="site-title-wrapper-inner site-logo-align-<?php echo get_theme_mod( 'logo_position' , 'left' ); ?>">
 
     <?php if ( has_site_logo() ): ?>
       <div class="site-logo">
