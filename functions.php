@@ -284,7 +284,7 @@ function faithmade_bb_check(){
   }
 }
 
-add_action( 'wp', 'faithmade_bb_check', 15 );
+//add_action( 'wp', 'faithmade_bb_check', 15 );
 
 function admin_css() {
 	wp_register_style( 'admin', get_template_directory_uri() . '/admin.css' );
