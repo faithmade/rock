@@ -13,13 +13,9 @@
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
-    <div id="content" class="site-content">
-      <div id="primary" class="content-area">
-        <?php while( have_posts() ): the_post(); ?>
-          <?php the_content(); ?>
-        <?php endwhile; ?>
-      </div>
-    </div>
+    <?php while( have_posts() ): the_post(); ?>
+      <?php the_content(); ?>
+    <?php endwhile; ?>
     <?php wp_footer(); ?>
   </body>
 </html>
