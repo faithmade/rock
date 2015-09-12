@@ -278,13 +278,14 @@ function faithmade_bb_check(){
 	setup_postdata($post);
 
   if ( is_page($post->ID) ) {
-  	if ( get_post_meta($post->ID, '_fl_builder_enabled', true) == 1 || FLBuilderModel::is_builder_active() ) {
+  	if ( get_post_meta($post->ID, '_fl_builder_enabled', true) == 1 || FLBuilderModel::is_builder_active() || if( get_post_meta( $post->ID, '_page_created' ) == true ) ) {
     	update_post_meta( $post->ID, '_wp_page_template', 'templates/full-width.php' );
+    	update_post_meta( $post->ID, '_page_created', true );
     }
   }
 }
 
-//add_action( 'wp', 'faithmade_bb_check', 15 );
+add_action( 'wp', 'faithmade_bb_check', 15 );
 
 function admin_css() {
 	wp_register_style( 'admin', get_template_directory_uri() . '/admin.css' );
