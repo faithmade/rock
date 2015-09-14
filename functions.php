@@ -279,7 +279,7 @@ function faithmade_bb_check(){
 	setup_postdata($post);
 
   if ( is_page($post->ID) ) {
-  	if ( get_post_meta($post->ID, '_fl_builder_enabled', true) == 1 || FLBuilderModel::is_builder_active() || if( get_post_meta( $post->ID, '_page_created' ) !== true ) ) {
+  	if ( get_post_meta($post->ID, '_fl_builder_enabled', true) == 1 || FLBuilderModel::is_builder_active() || get_post_meta( $post->ID, '_page_created' ) !== true ) {
     	update_post_meta( $post->ID, '_wp_page_template', 'templates/full-width.php' );
     	update_post_meta( $post->ID, '_page_created', true );
     }
