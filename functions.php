@@ -24,6 +24,7 @@ require_once get_template_directory() . '/inc/integrations.php';
 require_once get_template_directory() . '/inc/support-ctc.php';
 require_once get_template_directory() . '/inc/support-framework.php';
 require_once get_template_directory() . '/inc/support-cpt-archives.php';
+require_once get_template_directory() . '/inc/support-podcasts.php';
 require_once get_template_directory() . '/inc/compatibility.php';
 
 /**
