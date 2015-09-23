@@ -273,21 +273,36 @@ function rock_scripts() {
 add_action( 'wp_enqueue_scripts', 'rock_scripts' );
 
 /**
- * Force full width template if Beaver Builder is active
+ * Force Full Width Template if Beaver Builder is active
+ *
+ * This function is only called once, when a new post object is created.  It checks to see
+ * if Beaver Builder is enabled for the post type of the new post object, and if it is,
+ * sets the full-width template as the default template. User can then change templates if
+ * desired.
+ *
+ * @uses FLBuilderModel::get_post_types
+ * @return  void
  */
-function faithmade_bb_check(){
-	global $post;
-	setup_postdata($post);
+function force_full_width_for_BB( $post = array() ) {
+	// Bail if we can't verify our post type or Beaver Builder enabled post types
+	if( empty( $post ) || is_wp_error( $post ) || ! class_exists( 'FLBuilderModel' ) ) {
+		return;
+	}
 
-  if ( is_page($post->ID) ) {
-  	if ( get_post_meta($post->ID, '_fl_builder_enabled', true) == 1 || FLBuilderModel::is_builder_active() ) {
-    	update_post_meta( $post->ID, '_wp_page_template', 'templates/full-width.php' );
-    }
-  }
+	// Bail if our post type isn't using Beaver Builder
+	if( ! in_array( get_post_type( $post->ID ), FLBuilderModel::get_post_types() ) ){
+		return;
+	}
+
+	// Set our page template to the Full Width Template
+	update_post_meta( $post->ID, '_wp_page_template', 'templates/full-width.php' );
 }
+add_action( 'new_to_auto-draft', 'force_full_width_for_BB', 15 );
 
-add_action( 'wp', 'faithmade_bb_check', 15 );
-
+/**
+ * Registers admin styles
+ * @return void
+ */
 function admin_css() {
 	wp_register_style( 'admin', get_template_directory_uri() . '/admin.css' );
 	wp_enqueue_style( 'admin' );
