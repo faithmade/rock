@@ -73,11 +73,11 @@ function rock_fonts_url() {
 	 */
 	$lato = _x( 'on', 'Lato font: on or off', 'rock' );
 
-	if ( 'off' !== $lato || 'off' !== $poly ) {
+	if ( 'off' !== $lato ) {
 		$font_families = array();
 
 		if ( 'off' !== $lato )
-			$font_families[] = '100,100italic,300,300italic,400,400italic,700,700italic,900,900italic';
+			$font_families[] = 'Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic';
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),
