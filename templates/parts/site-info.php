@@ -16,7 +16,7 @@
 					// 	echo get_theme_mod('footer_text');
 					// }
 					// else {
-						echo '<a href="https://faithmade.com">Church website</a> by Faithmade. Copyright ' . date('Y') . ' ' . get_bloginfo( 'title' ) . '.';
+						echo 'Copyright &copy; ' . date('Y') . ' ' . get_bloginfo( 'title' ) . '. <a href="https://faithmade.com">Church websites</a> by Faithmade.';
 					// }
 				?>
 			</div><!-- .site-info-text -->
