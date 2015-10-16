@@ -232,9 +232,61 @@ $color_locations = array(
 
         ),
 
+        'Winter Sky' => array(
+
+            'Sidebar' => array(
+                'Background Color' => '#FFF6C6',
+                'Text Color' => '#543900',
+                'Link Color' => '#543900',
+                'Link Hover Color' => '#333333',
+            ),
+
+            'Content' => array(
+                'Background Color' => '#543900',
+                'Text Color' => '#EBF5FF',
+                'Link Color' => '#EBF5FF',
+                'Link Hover Color' => '#FFF6C6',
+            ),
+
+        ),
+
+        'Mirkwood' => array(
+
+            'Sidebar' => array(
+                'Background Color' => '#C7C095',
+                'Text Color' => '#302A20',
+                'Link Color' => '#382F22',
+                'Link Hover Color' => '#D8F536',
+            ),
+
+            'Content' => array(
+                'Background Color' => '#302A20',
+                'Text Color' => '#C7C095',
+                'Link Color' => '#D8F536',
+                'Link Hover Color' => '#615F3C',
+            ),
+
+        ),
+
+        'Crooked Crown' => array(
+
+            'Sidebar' => array(
+                'Background Color' => '#332C0B',
+                'Text Color' => '#F0A50E',
+                'Link Color' => '#A34212',
+                'Link Hover Color' => '#6B091C',
+            ),
+
+            'Content' => array(
+                'Background Color' => '#9E970B',
+                'Text Color' => '#332C0B',
+                'Link Color' => '#A34212',
+                'Link Hover Color' => '#6B091C',
+            ),
+
+        ),
+
     ),
-
-
 
 );
 
