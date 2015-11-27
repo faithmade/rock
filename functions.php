@@ -58,6 +58,11 @@ require_once get_template_directory() . '/inc/colorcase.php';
 require_once get_template_directory() . '/inc/typecase.php';
 
 /**
+ * Onboarding Font Support
+ */
+require_once get_template_directory() . '/inc/onboarding-fonts.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
