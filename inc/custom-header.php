@@ -29,6 +29,7 @@ function rock_custom_header_setup() {
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
+		'display-text'			 => true,
 		'wp-head-callback'       => 'rock_header_style',
 		'admin-head-callback'    => 'rock_admin_header_style',
 		'admin-preview-callback' => 'rock_admin_header_image',

@@ -43,6 +43,11 @@ require_once get_template_directory() . '/inc/extras.php';
 require_once get_template_directory() . '/inc/action-hooks.php';
 
 /**
+ * Load custom header functionality.
+ */
+require_once get_template_directory() . '/inc/custom-header.php';
+
+/**
  * Customizer additions.
  */
 require_once get_template_directory() . '/inc/customizer.php';
