@@ -39,7 +39,7 @@ get_header(); ?>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
-			<?php $posts = query_posts($query_string . '&orderby=menu_order&order=asc&posts_per_page=-1'); while ( have_posts() ) : the_post(); ?>
+			<?php $posts = query_posts($query_string . '&orderby=date&order=desc&posts_per_page=25'); while ( have_posts() ) : the_post(); ?>
 
 				<?php rock_get_content_template() ?>
 
