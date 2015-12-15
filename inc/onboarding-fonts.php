@@ -1,96 +1,58 @@
 <?php
-
 $onboarding_font_pairs = array(
-  // Open Sans
+  // Montserrat and Merriweather props @imbradmiller
   array(
     'heading' => array(
-      'font_name' => 'Open Sans',
-      'font_location' => 'entry-title',
-      'font_weight' => 'normal',
-      'font_load' => array(
-        'Open Sans', 
-        '|.open-sans', 
-        '|.regular&1|400&1|800&1', 
-        '|latin&1|latin-ext&1'
-        ),
-      ),
-    'body' => array(
-      'font_name' => 'Open Sans',
-      'font_location' => 'entry-content',
-      'font_weight' => 'normal',
-      'font_load' => null // already loaded
-      ),
-    ),
-  
-  // Neuton
-  array(
-    'heading' => array(
-      'font_name' => 'Neuton',
+      'font_name' => 'Merriweather',
       'font_location' => 'entry-title',
       'font_weight' => '800',
       'font_load' => array(
-        'Neuton', 
-        '|.neuton', 
+        'Merriweather', 
+        '|.merriweather', 
         '|.regular&1|400&1|800&1', 
         '|latin&1|latin-ext&1'
         ),
       ),
     'body' => array(
-      'font_name' => 'Neuton',
-      'font_location' => 'entry-content',
+      'font_name' => 'Montserrat',
+      'font_location' => 'entry-title',
       'font_weight' => 'normal',
-      'font_load' => null // already loaded
+      'font_load' => array(
+        'Montserrat', 
+        '|.montserrat', 
+        '|.regular&1|400&1|800&1', 
+        '|latin&1|latin-ext&1'
+        ),
       ),
     ),
   
-  // Playfair
+  // Oswald & Quattrocento props @imbradmiller
   array(
     'heading' => array(
-      'font_name' => 'Playfair Display SC',
+      'font_name' => 'Oswald',
       'font_location' => 'entry-title',
-      'font_weight' => 'normal',
+      'font_weight' => '800',
       'font_load' => array(
-        'Playfair Display SC', 
-        '|.playfair-display-sc', 
+        'Oswald', 
+        '|.oswald', 
         '|.regular&1|400&1|800&1', 
         '|latin&1|latin-ext&1'
         ),
       ),
     'body' => array(
-      'font_name' => 'Playfair Display',
-      'font_location' => 'entry-content',
-      'font_weight' => 'normal',
+      'font_name' => 'Quattrocento',
+      'font_location' => 'entry-title',
+      'font_weight' => '400',
       'font_load' => array(
-        'Playfair Display', 
-        '|.playfair-display', 
+        'Quattrocento', 
+        '|.quattrocento', 
         '|.regular&1|400&1|800&1', 
         '|latin&1|latin-ext&1'
         ),
       ),
     ),
-
-  // Dosis
-  array(
-    'heading' => array(
-      'font_name' => 'Dosis',
-      'font_location' => 'entry-title',
-      'font_weight' => '700',
-      'font_load' => array(
-        'Dosis', 
-        '|.dosis', 
-        '|.regular&1|300&1|400&1|700&1', 
-        '|latin&1|latin-ext&1'
-        ),
-      ),
-    'body' => array(
-      'font_name' => 'Dosis',
-      'font_location' => 'entry-content',
-      'font_weight' => '300',
-      'font_load' => null
-      ),
-    ),
-
-  // Lora & Lato
+  
+  // Lora & Open Sans Condensed props @imbradmiller
   array(
     'heading' => array(
       'font_name' => 'Lora',
@@ -104,12 +66,59 @@ $onboarding_font_pairs = array(
         ),
       ),
     'body' => array(
-      'font_name' => 'Lato',
+      'font_name' => 'Open Sans Condensed',
+      'font_location' => 'entry-content',
+      'font_weight' => 'normal',
+      'font_load' => array(
+        'Open Sans Condensed', 
+        '|.open-sans-condensed', 
+        '|.regular&1|300&1|700&1', 
+        '|latin&1|latin-ext&1'
+        ),
+      ),
+    ),
+
+  // Playfair and Fauna One props @imbradmiller
+  array(
+    'heading' => array(
+      'font_name' => 'Playfair Display',
+      'font_location' => 'entry-content',
+      'font_weight' => 'normal',
+      'font_load' => array(
+        'Playfair Display', 
+        '|.playfair-display', 
+        '|.regular&1|400&1|800&1', 
+        '|latin&1|latin-ext&1'
+        ),
+      ),
+    'body' => array(
+      'font_name' => 'Fauna One',
+      'font_location' => 'entry-content',
+      'font_weight' => 'normal',
+      'font_load' => array(
+        'Fauna One', 
+        '|.fauna-one', 
+        '|.regular&1|400&1', 
+        '|latin&1|latin-ext&1'
+        ),
+      ),
+    ),
+
+  // Merriweather and Raleway props @imbradmiller
+  array(
+     'heading' => array(
+      'font_name' => 'Merriweather',
+      'font_location' => 'entry-content',
+      'font_weight' => 'normal',
+      'font_load' => null
+      ),
+    'body' => array(
+      'font_name' => 'Raleway',
       'font_location' => 'entry-content',
       'font_weight' => '300',
       'font_load' => array(
-        'Lato', 
-        '|.lato', 
+        'Raleway', 
+        '|.raleway', 
         '|.regular&1|300&1|400&1|700&1', 
         '|latin&1|latin-ext&1'
         ),
@@ -117,4 +126,7 @@ $onboarding_font_pairs = array(
     ),
   );
 
+/**
+ * Adds Support in Onboarding for Typography Pair Selection
+ */
 add_theme_support( 'onboarding_font_pairs', $onboarding_font_pairs );
