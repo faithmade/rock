@@ -232,56 +232,74 @@ $color_locations = array(
 
         ),
 
-        'Winter Sky' => array(
+        'Dreamy' => array(
 
             'Sidebar' => array(
-                'Background Color' => '#FFF6C6',
-                'Text Color' => '#543900',
-                'Link Color' => '#543900',
-                'Link Hover Color' => '#333333',
+                'Background Color' => 'C9C9C9',
+                'Text Color' => '#222',
+                'Link Color' => '#9ad3de',
+                'Link Hover Color' => '#89bdd3',
             ),
 
             'Content' => array(
-                'Background Color' => '#543900',
-                'Text Color' => '#EBF5FF',
-                'Link Color' => '#EBF5FF',
-                'Link Hover Color' => '#FFF6C6',
+                'Background Color' => '#e3e3e3',
+                'Text Color' => '#222',
+                'Link Color' => '#9ad3de',
+                'Link Hover Color' => '#89bdd3',
             ),
 
         ),
 
-        'Mirkwood' => array(
+        'Aquatic' => array(
 
             'Sidebar' => array(
-                'Background Color' => '#C7C095',
-                'Text Color' => '#302A20',
-                'Link Color' => '#382F22',
-                'Link Hover Color' => '#D8F536',
+                'Background Color' => 'fae596',
+                'Text Color' => '#173e43',
+                'Link Color' => '#3fb0ac',
+                'Link Hover Color' => '#fae596',
             ),
 
             'Content' => array(
-                'Background Color' => '#302A20',
-                'Text Color' => '#C7C095',
-                'Link Color' => '#D8F536',
-                'Link Hover Color' => '#615F3C',
+                'Background Color' => '#dddfd4',
+                'Text Color' => '#173e43',
+                'Link Color' => '#3fb0ac',
+                'Link Hover Color' => '#fae596',
             ),
 
         ),
 
-        'Crooked Crown' => array(
+        'Humanity' => array(
 
             'Sidebar' => array(
-                'Background Color' => '#332C0B',
-                'Text Color' => '#F0A50E',
-                'Link Color' => '#A34212',
-                'Link Hover Color' => '#6B091C',
+                'Background Color' => '#ede9ce',
+                'Text Color' => '#64706c',
+                'Link Color' => '#935347',
+                'Link Hover Color' => '#c7ad88',
             ),
 
             'Content' => array(
-                'Background Color' => '#9E970B',
-                'Text Color' => '#332C0B',
-                'Link Color' => '#A34212',
-                'Link Hover Color' => '#6B091C',
+                'Background Color' => '#ede9ce',
+                'Text Color' => '#64706c',
+                'Link Color' => '#935347',
+                'Link Hover Color' => '#c7ad88',
+            ),
+
+        ),
+
+        'Wood Grain' => array(
+
+            'Sidebar' => array(
+                'Background Color' => '#feffff',
+                'Text Color' => '#312c32',
+                'Link Color' => '#daad86',
+                'Link Hover Color' => '#98dafc',
+            ),
+
+            'Content' => array(
+                'Background Color' => '#feffff',
+                'Text Color' => '#312c32',
+                'Link Color' => '#daad86',
+                'Link Hover Color' => '#98dafc',
             ),
 
         ),
