@@ -2,7 +2,7 @@
 $onboarding_font_pairs = array(
   // Montserrat and Merriweather props @imbradmiller
   array(
-    'heading' => array(
+    'body' => array(
       'font_name' => 'Merriweather',
       'font_location' => 'entry-title',
       'font_weight' => '800',
@@ -13,7 +13,7 @@ $onboarding_font_pairs = array(
         '|latin&1|latin-ext&1'
         ),
       ),
-    'body' => array(
+    'heading' => array(
       'font_name' => 'Montserrat',
       'font_location' => 'entry-title',
       'font_weight' => 'normal',
@@ -54,7 +54,7 @@ $onboarding_font_pairs = array(
   
   // Lora & Open Sans Condensed props @imbradmiller
   array(
-    'heading' => array(
+    'body' => array(
       'font_name' => 'Lora',
       'font_location' => 'entry-title',
       'font_weight' => '700',
@@ -65,7 +65,7 @@ $onboarding_font_pairs = array(
         '|latin&1|latin-ext&1'
         ),
       ),
-    'body' => array(
+    'heading' => array(
       'font_name' => 'Open Sans Condensed',
       'font_location' => 'entry-content',
       'font_weight' => 'normal',
@@ -106,13 +106,13 @@ $onboarding_font_pairs = array(
 
   // Merriweather and Raleway props @imbradmiller
   array(
-     'heading' => array(
+     'body' => array(
       'font_name' => 'Merriweather',
       'font_location' => 'entry-content',
       'font_weight' => 'normal',
       'font_load' => null
       ),
-    'body' => array(
+    'heading' => array(
       'font_name' => 'Raleway',
       'font_location' => 'entry-content',
       'font_weight' => '300',
