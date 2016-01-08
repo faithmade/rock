@@ -216,6 +216,10 @@ $color_locations = array(
 
         'Default' => array(
 
+            'General' => array(
+              'Background' => '#e7e7e7',
+            ),
+
             'Sidebar' => array(
                 'Background Color' => '#FFFFFF',
                 'Text Color' => '#333333',
@@ -234,11 +238,19 @@ $color_locations = array(
 
         'Dreamy' => array(
 
-            'Sidebar' => array(
-                'Background Color' => 'C9C9C9',
-                'Text Color' => '#222',
-                'Link Color' => '#9ad3de',
-                'Link Hover Color' => '#89bdd3',
+            'General' => array(
+              'Background' => '#e7e7e7',
+            ),
+
+            'Header' => array(
+                'Background' => '#89bdd3',
+                'Site Title' => '#fff',
+                'Site Description' => '#fff'
+            ),
+
+            'Navigation' => array(
+                'Background' => '#222',
+                'Link Text' => '#fff'
             ),
 
             'Content' => array(
@@ -248,37 +260,126 @@ $color_locations = array(
                 'Link Hover Color' => '#89bdd3',
             ),
 
+            'Comments' => array(
+                'Button Background' => '#9ad3de',
+                'Button Background Hover' => '#89bdd3',
+                'Button Text' => '#fff',
+                'Button Text Hover' => '#fff',
+            ),
+
+            'Footer' => array(
+                'Background' => '#89bdd3',
+                'Text Color' => '#fff',
+                'Link Color' => '#fff',
+                'Link Hover Color' => '#fff',
+                'Social Link Background' => '#222',
+                'Social Link Background Hover' => '#fff',
+                'Social Link Icon' => '#fff',
+                'Social Link Icon Hover' => '#222'
+            ),
+
         ),
 
         'Aquatic' => array(
 
-            'Sidebar' => array(
-                'Background Color' => 'fae596',
-                'Text Color' => '#173e43',
-                'Link Color' => '#3fb0ac',
-                'Link Hover Color' => '#fae596',
-            ),
+          'General' => array(
+            'Background' => '#e7e7e7',
+          ),
 
-            'Content' => array(
-                'Background Color' => '#dddfd4',
-                'Text Color' => '#173e43',
-                'Link Color' => '#3fb0ac',
-                'Link Hover Color' => '#fae596',
-            ),
+          'Header' => array(
+              'Background' => '#fae596',
+              'Site Title' => '#173e43',
+              'Site Description' => '#173e43'
+          ),
+
+          'Navigation' => array(
+              'Background' => '#173e43',
+              'Hover Link Background' => '#3fb0ac',
+              'Link Text' => '#fff'
+          ),
+
+          'Content' => array(
+              'Background' => '#dddfd4',
+              'Text Color' => '#173e43',
+              'Link Color' => '#3fb0ac',
+              'Link Hover Color' => '#173e43',
+          ),
+
+          'Comments' => array(
+              'Background' => '#dddfd4',
+              'Button Background' => '#173e43',
+              'Button Background Hover' => '#3fb0ac',
+              'Button Text' => '#fff',
+              'Button Text Hover' => '#fff',
+          ),
+
+          'Footer' => array(
+              'Background' => '#173e43',
+              'Text Color' => '#fff',
+              'Link Color' => '#fff',
+              'Link Hover Color' => '#fff',
+              'Social Link Background' => '#3fb0ac',
+              'Social Link Background Hover' => '#3fb0ac',
+              'Social Link Icon' => '#fff',
+              'Social Link Icon Hover' => '#173e43'
+          ),
+
+          'Sidebar' => array(
+              'Background' => '#dddfd4',
+              'Title Color' => '#173e43',
+              'Text Color' => '#173e43',
+              'Link Color' => '#3fb0ac',
+              'Link Hover Color' => '#173e43',
+          ),
 
         ),
 
         'Humanity' => array(
 
-            'Sidebar' => array(
-                'Background Color' => '#ede9ce',
+            'General' => array(
+              'Background' => '#ede9ce',
+            ),
+
+            'Header' => array(
+                'Background' => '#ede9ce',
+                'Site Title' => '#935347',
+                'Site Description' => '#64706c'
+            ),
+
+            'Navigation' => array(
+                'Background' => '#935347',
+                'Hover Link Background' => '#c7ad88',
+                'Link Text' => '#fff'
+            ),
+
+            'Content' => array(
+                'Background' => '#fff',
                 'Text Color' => '#64706c',
                 'Link Color' => '#935347',
                 'Link Hover Color' => '#c7ad88',
             ),
 
-            'Content' => array(
-                'Background Color' => '#ede9ce',
+            'Comments' => array(
+                'Background' => '#fff',
+                'Button Background' => '#935347',
+                'Button Background Hover' => '#c7ad88',
+                'Button Text' => '#fff',
+                'Button Text Hover' => '#fff',
+            ),
+
+            'Footer' => array(
+                'Background' => '#935347',
+                'Text Color' => '#fff',
+                'Link Color' => '#fff',
+                'Link Hover Color' => '#fff',
+                'Social Link Background' => '#c7ad88',
+                'Social Link Background Hover' => '#fff',
+                'Social Link Icon' => '#935347',
+                'Social Link Icon Hover' => '#935347'
+            ),
+
+            'Sidebar' => array(
+                'Background' => '#fff',
                 'Text Color' => '#64706c',
                 'Link Color' => '#935347',
                 'Link Hover Color' => '#c7ad88',
@@ -287,6 +388,48 @@ $color_locations = array(
         ),
 
         'Wood Grain' => array(
+
+            'General' => array(
+              'Background' => '#e7e7e7',
+            ),
+
+            'Header' => array(
+                'Background' => '#feffff',
+                'Site Title' => '#312c32',
+                'Site Description' => '#daad86'
+            ),
+
+            'Navigation' => array(
+                'Background' => '#daad86',
+                'Hover Link Background' => '#98dafc',
+                'Link Text' => '#fff'
+            ),
+
+            'Content' => array(
+                'Background' => '#feffff',
+                'Text Color' => '#312c32',
+                'Link Color' => '#daad86',
+                'Link Hover Color' => '#98dafc',
+            ),
+
+            'Comments' => array(
+                'Background' => '#fff',
+                'Button Background' => '#daad86',
+                'Button Background Hover' => '#98dafc',
+                'Button Text' => '#fff',
+                'Button Text Hover' => '#fff',
+            ),
+
+            'Footer' => array(
+                'Background' => '#daad86',
+                'Text Color' => '#fff',
+                'Link Color' => '#fff',
+                'Link Hover Color' => '#fff',
+                'Social Link Background' => '#98dafc',
+                'Social Link Background Hover' => '#98dafc',
+                'Social Link Icon' => '#312c32',
+                'Social Link Icon Hover' => '#312c32'
+            ),
 
             'Sidebar' => array(
                 'Background Color' => '#feffff',
