@@ -64,6 +64,7 @@ input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly i
 }
 
 input[type="text"],
+input[type="number"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
@@ -84,6 +85,7 @@ textarea {
 }
 
 input[type="text"],
+input[type="number"],
 input[type="email"],
 input[type="url"],
 input[type="password"],

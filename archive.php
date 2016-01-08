@@ -14,6 +14,17 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
+			<?php 
+				global $cptarchives;
+				if( isset( $cptarchives ) && ! empty( $cptarchives ) && has_post_thumbnail( $cptarchives->get_archive_id() ) ) :
+			?>
+			
+			<div class="featured-image">
+				<?php echo get_the_post_thumbnail( $cptarchives->get_archive_id(), 'rock-featured' ); ?>
+			</div><!-- .featured-image -->
+			
+			<?php endif; ?>
+
 			<header class="archive-header">
 				<h1 class="archive-title">
 					<?php echo rock_get_the_archive_title(); ?>
@@ -21,14 +32,14 @@ get_header(); ?>
 
 				<?php if( get_the_archive_description() ): ?>
 				<div class="archive-description">
-					<?php get_the_archive_description(); ?>
+					<?php the_archive_description(); ?>
 				</div>
 				<?php endif; ?>
 
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
-			<?php $posts = query_posts($query_string . '&orderby=menu_order&order=asc&posts_per_page=-1'); while ( have_posts() ) : the_post(); ?>
+			<?php $posts = query_posts($query_string . '&orderby=date&order=desc&posts_per_page=25'); while ( have_posts() ) : the_post(); ?>
 
 				<?php rock_get_content_template() ?>
 
