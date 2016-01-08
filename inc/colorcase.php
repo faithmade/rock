@@ -234,11 +234,19 @@ $color_locations = array(
 
         'Dreamy' => array(
 
-            'Sidebar' => array(
-                'Background Color' => 'C9C9C9',
-                'Text Color' => '#222',
-                'Link Color' => '#9ad3de',
-                'Link Hover Color' => '#89bdd3',
+            // 'General' => array(
+            //     'Background' => '#fff',
+            // ),
+
+            'Header' => array(
+                'Background' => '#89bdd3',
+                'Site Title' => '#fff',
+                'Site Description' => '#fff'
+            ),
+
+            'Navigation' => array(
+                'Background' => '#222',
+                'Link Text' => '#fff'
             ),
 
             'Content' => array(
@@ -246,6 +254,24 @@ $color_locations = array(
                 'Text Color' => '#222',
                 'Link Color' => '#9ad3de',
                 'Link Hover Color' => '#89bdd3',
+            ),
+
+            'Comments' => array(
+                'Button Background' => '#9ad3de',
+                'Button Background Hover' => '#89bdd3',
+                'Button Text' => '#fff',
+                'Button Text Hover' => '#fff',
+            ),
+
+            'Footer' => array(
+                'Background' => '#89bdd3',
+                'Text Color' => '#fff',
+                'Link Color' => '#fff',
+                'Link Hover Color' => '#fff',
+                'Social Link Background' => '#222',
+                'Social Link Background Hover' => '#fff',
+                'Social Link Icon' => '#fff',
+                'Social Link Icon Hover' => '#222'
             ),
 
         ),
