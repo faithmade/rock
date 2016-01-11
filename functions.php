@@ -23,8 +23,6 @@ require_once get_template_directory() . '/inc/integrations.php';
  */
 require_once get_template_directory() . '/inc/support-ctc.php';
 require_once get_template_directory() . '/inc/support-framework.php';
-require_once get_template_directory() . '/inc/support-cpt-archives.php';
-require_once get_template_directory() . '/inc/support-podcasts.php';
 require_once get_template_directory() . '/inc/compatibility.php';
 
 /**
@@ -43,11 +41,6 @@ require_once get_template_directory() . '/inc/extras.php';
 require_once get_template_directory() . '/inc/action-hooks.php';
 
 /**
- * Load custom header functionality.
- */
-require_once get_template_directory() . '/inc/custom-header.php';
-
-/**
  * Customizer additions.
  */
 require_once get_template_directory() . '/inc/customizer.php';
@@ -61,11 +54,6 @@ require_once get_template_directory() . '/inc/colorcase.php';
  * Typecase support
  */
 require_once get_template_directory() . '/inc/typecase.php';
-
-/**
- * Onboarding Font Support
- */
-require_once get_template_directory() . '/inc/onboarding-fonts.php';
 
 /**
  * Load Jetpack compatibility file.
@@ -283,36 +271,21 @@ function rock_scripts() {
 add_action( 'wp_enqueue_scripts', 'rock_scripts' );
 
 /**
- * Force Full Width Template if Beaver Builder is active
- *
- * This function is only called once, when a new post object is created.  It checks to see
- * if Beaver Builder is enabled for the post type of the new post object, and if it is,
- * sets the full-width template as the default template. User can then change templates if
- * desired.
- *
- * @uses FLBuilderModel::get_post_types
- * @return  void
+ * Force full width template if Beaver Builder is active
  */
-function force_full_width_for_BB( $post = array() ) {
-	// Bail if we can't verify our post type or Beaver Builder enabled post types
-	if( empty( $post ) || is_wp_error( $post ) || ! class_exists( 'FLBuilderModel' ) ) {
-		return;
-	}
+function faithmade_bb_check(){
+	global $post;
+	setup_postdata($post);
 
-	// Bail if our post type isn't using Beaver Builder
-	if( ! in_array( get_post_type( $post->ID ), FLBuilderModel::get_post_types() ) ){
-		return;
-	}
-
-	// Set our page template to the Full Width Template
-	update_post_meta( $post->ID, '_wp_page_template', 'templates/full-width.php' );
+  if ( is_page($post->ID) ) {
+  	if ( get_post_meta($post->ID, '_fl_builder_enabled', true) == 1 || FLBuilderModel::is_builder_active() ) {
+    	update_post_meta( $post->ID, '_wp_page_template', 'templates/full-width.php' );
+    }
+  }
 }
-add_action( 'new_to_auto-draft', 'force_full_width_for_BB', 15 );
 
-/**
- * Registers admin styles
- * @return void
- */
+add_action( 'wp', 'faithmade_bb_check', 15 );
+
 function admin_css() {
 	wp_register_style( 'admin', get_template_directory_uri() . '/admin.css' );
 	wp_enqueue_style( 'admin' );

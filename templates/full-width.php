@@ -1,9 +1,5 @@
 <?php
-/**
- * Template Name: Full Width Page
- *
- * @package  Rock
- */
+
 get_header(); ?>
 
 	<div id="primary" class="content-area">

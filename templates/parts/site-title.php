@@ -10,12 +10,10 @@
 
 	<div class="site-title-wrapper-inner site-logo-align-<?php echo get_theme_mod( 'logo_position' , 'left' ); ?>">
 
-    <?php if ( function_exists( 'has_site_logo' ) ): ?>
-      <?php if ( has_site_logo() ): ?>
-        <div class="site-logo">
-          <?php if ( function_exists( 'the_site_logo' ) ) the_site_logo(); ?>
-        </div>
-      <?php endif; ?>
+    <?php if ( has_site_logo() ): ?>
+      <div class="site-logo">
+        <?php if ( function_exists( 'the_site_logo' ) ) the_site_logo(); ?>
+      </div>
     <?php endif; ?>
 
     <div class="site-header-text">

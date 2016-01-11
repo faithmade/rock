@@ -3,7 +3,7 @@
 $font_locations = array(
   array(
     'label' => 'Main Title',
-    'selector' => 'h2.entry-title',
+    'selector' => 'h1.entry-title',
     'default' => 'Lato, sans-serif',
   ),
   array(
