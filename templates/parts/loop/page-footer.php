@@ -1,8 +1,8 @@
 <?php
 /**
- * The template used for displaying page footer within the loop.
+ * Template part for displaying the page footer inside The Loop.
  *
- * @package rock
+ * @package Rock
  */
-?>
-<?php edit_post_link( __( 'Edit', 'rock' ), '<span class="edit-link">', '</span>' ); ?>
+
+edit_post_link( esc_html__( 'Edit', 'rock' ), '<span class="edit-link">', '</span>' );

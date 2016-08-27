@@ -1,37 +1,88 @@
 <?php
 /**
- * The header for our theme.
+ * The template for displaying the header.
  *
- * Displays all of the <head> section and everything up till <div id="content">
+ * Displays all of the head element and everything up until the "site-content" div.
  *
- * @package rock
+ * @package Rock
+ * @since 1.0.0
  */
-?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-<?php wp_head(); ?>
+?><!DOCTYPE html>
+
+<html <?php language_attributes(); ?>>
+
+<head>
+
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+
+	<?php wp_head(); ?>
 
 </head>
+
 <body <?php body_class(); ?>>
 
-<?php do_action( 'rock_body_inside' ); ?>
+	<?php
+	/**
+	 * Fires inside the `<body>` element.
+	 *
+	 * @since 1.0.0
+	 */
+	do_action( 'rock_body' );
+	?>
 
-<div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'rock' ); ?></a>
+	<div id="page" class="hfeed site">
 
-	<?php do_action( 'rock_header_before' ); ?>
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'rock' ); ?></a>
 
-	<header id="masthead" class="site-header header-constraint-<?php echo get_theme_mod( 'header_constraint', 'default' ); ?>" role="banner">
+		<?php
+		/**
+		 * Fires before the `<header>` element.
+		 *
+		 * @since 1.0.0
+		 */
+		do_action( 'rock_before_header' );
+		?>
 
-		<?php do_action( 'rock_header' ); ?>
+		<header id="masthead" class="site-header" role="banner">
 
-	</header><!-- #masthead -->
+			<div class="site-header-wrapper">
 
-	<?php do_action( 'rock_header_after' ); ?>
+				<?php
+				/**
+				 * Fires inside the `<header>` element.
+				 *
+				 * @since 1.0.0
+				 */
+				do_action( 'rock_header' );
+				?>
 
-	<div id="content" class="site-content">
+			</div><!-- .site-header-wrapper -->
+
+			<?php
+			/**
+			 * Fires inside the `<div class="site-header-wrapper">` element.
+			 *
+			 * @since 1.0.0
+			 */
+			do_action( 'rock_after_site_header_wrapper' );
+			?>
+
+		</header><!-- #masthead -->
+
+		<?php
+		/**
+		 * Fires after the `<header>` element.
+		 *
+		 * @since 1.0.0
+		 */
+		do_action( 'rock_after_header' );
+		?>
+
+		<div id="content" class="site-content">

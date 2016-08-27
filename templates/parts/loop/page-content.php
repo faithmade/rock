@@ -1,16 +1,24 @@
 <?php
 /**
- * The template used for displaying page content within the loop.
+ * Template part for displaying the page content inside The Loop.
  *
- * @package rock
+ * @package Rock
  */
 ?>
+
 <div class="page-content">
-	<?php the_content(); ?>
+
 	<?php
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'rock' ),
+
+	the_content();
+
+	wp_link_pages(
+		array(
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'rock' ),
 			'after'  => '</div>',
-		) );
+		)
+	);
+
 	?>
+
 </div><!-- .page-content -->

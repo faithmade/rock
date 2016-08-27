@@ -1,16 +1,29 @@
-	<div class="entry-meta">
+<?php
+/**
+ * Template part for displaying the post meta inside The Loop.
+ *
+ * @package Rock
+ */
+?>
 
-		<span class="posted-meta">
-			<?php printf( __( '%s by <a href="%s">%s</a>' , 'rock' ), rock_posted_on(), get_author_posts_url( get_the_author_meta( 'ID' ) ), get_the_author() ); ?>
-		</span>
+<div class="entry-meta">
 
-		<span class="comments-number">
-			<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-				 &mdash;
-				<a href="<?php the_permalink(); ?>#comments">
-					<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'rock' ), __( '1 Comment', 'rock' ), __( '% Comments', 'rock' ) ); ?></span>
-				</a>
-			<?php endif; ?>
-		</span>
+	<span class="posted-date"><?php the_date(); ?></span>
 
-	</div><!-- .entry-meta -->
+	<span class="posted-author"><?php the_author_posts_link(); ?></span>
+
+	<span class="comments-number">
+
+		<?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
+
+			<a href="<?php echo get_comments_link(); ?>">
+
+				<span class="comments-link"><?php comments_popup_link( esc_html__( 'Leave a comment', 'rock' ), esc_html__( '1 Comment', 'rock' ), esc_html_x( '% Comments', 'number of comments', 'rock' ) ); ?></span>
+
+			</a>
+
+		<?php endif; ?>
+
+	</span>
+
+</div><!-- .entry-meta -->

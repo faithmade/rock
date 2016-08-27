@@ -1,28 +1,29 @@
-module.exports = function(grunt) {
+/* global module, require */
+
+module.exports = function( grunt ) {
+
+	var pkg = grunt.file.readJSON( 'package.json' );
 
 	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json'),
 
-		sass: {
-			dist: {
-				files: {
-					'style.css' : '.dev/sass/style.scss',
-					'admin.css' : '.dev/sass/admin.scss'
-				}
-			}
-		},
-
-		jshint: {
-			all: ['js/**/*.js', 'Gruntfile.js']
-		},
+		pkg: pkg,
 
 		autoprefixer: {
 			options: {
-				// Task-specific options go here.
+				browsers: [
+					'Android >= 2.1',
+					'Chrome >= 21',
+					'Edge >= 12',
+					'Explorer >= 7',
+					'Firefox >= 17',
+					'Opera >= 12.1',
+					'Safari >= 6.0'
+				],
+				cascade: false
 			},
-			your_target: {
-				src: '*.css'
-			},
+			dist: {
+				src: [ '*.css', 'assets/css/**/*.css' ]
+			}
 		},
 
 		cssjanus: {
@@ -34,73 +35,193 @@ module.exports = function(grunt) {
 					{
 						src: 'style.css',
 						dest: 'style-rtl.css'
+					},
+					{
+						src: 'editor-style.css',
+						dest: 'editor-style-rtl.css'
+					},
+					{
+						expand: true,
+						cwd: 'assets/css/admin',
+						src: [ '*.css','!*-rtl.css','!*.min.css','!*-rtl.min.css' ],
+						dest: 'assets/css/admin',
+						ext: '-rtl.css'
 					}
 				]
 			}
 		},
 
-		pot: {
-				options:{
-					text_domain: 'rock', //Your text domain. Produces my-text-domain.pot
-					dest: 'languages/', //directory to place the pot file
-					keywords: [ //WordPress localisation functions
-						'__:1',
-						'_e:1',
-						'_x:1,2c',
-						'esc_html__:1',
-						'esc_html_e:1',
-						'esc_html_x:1,2c',
-						'esc_attr__:1',
-						'esc_attr_e:1',
-						'esc_attr_x:1,2c',
-						'_ex:1,2c',
-						'_n:1,2',
-						'_nx:1,2,4c',
-						'_n_noop:1,2',
-						'_nx_noop:1,2,3c'
-					],
-				},
-				files:{
-					src:  [ '**/*.php' ], //Parse all php files
+		cssmin: {
+			options: {
+				shorthandCompacting: false,
+				roundingPrecision: 5,
+				processImport: false
+			},
+			dist: {
+				files: [{
 					expand: true,
-				}
+					cwd: 'assets/css',
+					src: [ '*.css', '!*.min.css' ],
+					dest: 'assets/css',
+					ext: '.min.css'
+				},
+				{
+					expand: true,
+					cwd: 'assets/css/admin',
+					src: [ '*.css', '!*.min.css' ],
+					dest: 'assets/css/admin',
+					ext: '.min.css'
+				}]
+			}
 		},
 
-		phplint: {
-			options: {
-				swapPath: '/.phplint'
+		devUpdate: {
+			main: {
+				options: {
+					updateType: 'force', //just report outdated packages
+					reportUpdated: false, //don't report up-to-date packages
+					semver: true, //stay within semver when updating
+					packages: {
+						devDependencies: true, //only check for devDependencies
+						dependencies: false
+					},
+					packageJson: null, //use matchdep default findup to locate package.json
+					reportOnlyPkgs: [] //use updateType action on all packages
+				}
+			}
+		},
+
+		jshint: {
+			all: [ 'Gruntfile.js', 'assets/js/**/*.js', '!assets/js/**/*.min.js', '!assets/js/jquery.backgroundSize.js' ]
+		},
+
+		po2mo: {
+			files: {
+				src: 'languages/*.po',
+				expand: true
+			}
+		},
+
+		pot: {
+			files:{
+				expand: true,
+				src: [ '**/*.php', '!node_modules/**' ]
 			},
-			all: ['**/*.php']
+			options:{
+				text_domain: pkg.name,
+				msgmerge: true,
+				dest: 'languages/',
+				encoding: 'UTF-8',
+				keywords: [
+					'__',
+					'_e',
+					'__ngettext:1,2',
+					'_n:1,2',
+					'__ngettext_noop:1,2',
+					'_n_noop:1,2',
+					'_c',
+					'_nc:4c,1,2',
+					'_x:1,2c',
+					'_nx:4c,1,2',
+					'_nx_noop:4c,1,2',
+					'_ex:1,2c',
+					'esc_attr__',
+					'esc_attr_e',
+					'esc_attr_x:1,2c',
+					'esc_html__',
+					'esc_html_e',
+					'esc_html_x:1,2c'
+				]
+			}
+		},
+
+		replace: {
+			pot: {
+				src: 'languages/*.po*',
+				overwrite: true,
+				replacements: [
+					{
+						from: 'SOME DESCRIPTIVE TITLE.',
+						to: pkg.title
+					},
+					{
+						from: "YEAR THE PACKAGE'S COPYRIGHT HOLDER",
+						to: new Date().getFullYear()
+					},
+					{
+						from: 'FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.',
+						to: 'Walmedia, LLC.'
+					},
+					{
+						from: 'charset=CHARSET',
+						to: 'charset=UTF-8'
+					}
+				]
+			}
+		},
+
+		sass: {
+			options: {
+				precision: 5,
+				sourceMap: false
+			},
+			dist: {
+				files: [
+					{
+						'style.css': '.dev/sass/style.scss',
+						'editor-style.css': '.dev/sass/editor-style.scss'
+					},
+					{
+						expand: true,
+						cwd: '.dev/sass/admin',
+						src: ['*.scss'],
+						dest: 'assets/css/admin',
+						ext: '.css'
+					}
+				]
+			}
+		},
+
+		uglify: {
+			options: {
+				ASCIIOnly: true
+			},
+			dist: {
+				expand: true,
+				cwd: 'assets/js',
+				src: ['*.js', '!*.min.js'],
+				dest: 'assets/js',
+				ext: '.min.js'
+			},
+			admin: {
+				expand: true,
+				cwd: 'assets/js/admin',
+				src: ['*.js', '!*.min.js'],
+				dest: 'assets/js/admin',
+				ext: '.min.js'
+			}
 		},
 
 		watch: {
 			css: {
-				files: '.dev/**/*.scss',
-				tasks: ['sass','autoprefixer','cssjanus']
+				files: '.dev/sass/**/*.scss',
+				tasks: [ 'sass','autoprefixer','cssjanus' ]
 			},
 			scripts: {
-				files: ['js/**/*.js', 'Gruntfile.js' ],
-				tasks: ['jshint'],
+				files: [ 'Gruntfile.js', 'assets/js/**/*.js', '!assets/js/**/*.min.js' ],
+				tasks: [ 'jshint', 'uglify' ],
 				options: {
-					interrupt: true,
+					interrupt: true
 				}
-			},
-			pot: {
-				files: [ '**/*.php' ],
-				tasks: ['pot'],
-			},
+			}
 		}
+
 	});
 
+	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
-	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-sass');
-	grunt.loadNpmTasks('grunt-cssjanus');
-	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-pot');
-	grunt.registerTask('default',['watch']);
-	grunt.registerTask('lint',['jshint']);
-	grunt.registerTask('translate',['pot']);
+	grunt.registerTask( 'default', [ 'sass', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint', 'uglify' ] );
+	grunt.registerTask( 'lint', [ 'jshint' ] );
+	grunt.registerTask( 'update-pot', [ 'pot', 'replace:pot' ] );
 
 };

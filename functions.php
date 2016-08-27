@@ -1,293 +1,504 @@
 <?php
 /**
- * rock functions and definitions
+ * Rock functions and definitions.
  *
- * @package rock
+ * Set up the theme and provide some helper functions, which are used in the
+ * theme as custom template tags. Others are attached to action and filter
+ * hooks in WordPress to change core functionality.
+ *
+ * @link https://codex.wordpress.org/Theme_Development
+ * @link https://codex.wordpress.org/Child_Themes
+ *
+ * For more information on hooks, actions, and filters,
+ * {@link https://codex.wordpress.org/Plugin_API}
+ *
+ * @package Rock
+ * @since   1.0.0
  */
 
-define( 'CTC_THEME_SLUG', 'rock' );
-define( 'CTC_THEME_VERSION', '1.0' );
-
 /**
- * Load composer dependencies.
+ * Rock theme version.
+ *
+ * @since 1.0.0
+ *
+ * @var string
  */
-require_once get_template_directory() . '/vendor/autoload.php';
+define( 'ROCK_VERSION', '1.0.0' );
 
 /**
- * Load integrations file.
+ * Minimum WordPress version required for Rock.
+ *
+ * @since 1.0.0
+ *
+ * @var string
  */
-require_once get_template_directory() . '/inc/integrations.php';
+if ( ! defined( 'ROCK_MIN_WP_VERSION' ) ) {
+
+	define( 'ROCK_MIN_WP_VERSION', '4.4' );
+
+}
 
 /**
- * ChurchThemes Framework
+ * Enforce the minimum WordPress version requirement.
+ *
+ * @since 1.0.0
+ */
+if ( version_compare( get_bloginfo( 'version' ), ROCK_MIN_WP_VERSION, '<' ) ) {
+
+	require_once get_template_directory() . '/inc/back-compat.php';
+
+}
+
+/**
+ * Load custom helper functions for this theme.
+ *
+ * @since 1.0.0
+ */
+require_once get_template_directory() . '/inc/helpers.php';
+
+/**
+ * Load ChurchThemes Content support.
+ *
+ * @since 1.0.0
  */
 require_once get_template_directory() . '/inc/support-ctc.php';
-require_once get_template_directory() . '/inc/support-framework.php';
-require_once get_template_directory() . '/inc/compatibility.php';
 
 /**
- * Custom template tags for this theme.
+ * Load ChurchThemes Framework support.
+ *
+ * @since 1.0.0
+ */
+require_once get_template_directory() . '/inc/support-framework.php';
+
+/**
+ * Load custom template tags for this theme.
+ *
+ * @since 1.0.0
  */
 require_once get_template_directory() . '/inc/template-tags.php';
 
 /**
- * Custom functions that act independently of the theme templates.
+ * Load custom primary nav menu walker.
+ *
+ * @since 1.0.0
  */
-require_once get_template_directory() . '/inc/extras.php';
+require_once get_template_directory() . '/inc/walker-nav-menu.php';
 
 /**
- * Includes template parts within the theme.
+ * Load template parts and override some WordPress defaults.
+ *
+ * @since 1.0.0
  */
-require_once get_template_directory() . '/inc/action-hooks.php';
+require_once get_template_directory() . '/inc/hooks.php';
 
 /**
- * Customizer additions.
+ * Load Customizer class.
+ *
+ * @since 1.0.0
  */
 require_once get_template_directory() . '/inc/customizer.php';
 
 /**
- * Colorcase support
+ * Load WooCommerce compatibility file.
+ *
+ * @since 1.0.0
  */
-require_once get_template_directory() . '/inc/colorcase.php';
-
-/**
- * Typecase support
- */
-require_once get_template_directory() . '/inc/typecase.php';
+require_once get_template_directory() . '/inc/woocommerce.php';
 
 /**
  * Load Jetpack compatibility file.
+ *
+ * @since 1.0.0
  */
-require get_template_directory() . '/inc/jetpack.php';
+require_once get_template_directory() . '/inc/jetpack.php';
 
-/**
- * Load custom theme layout functionality.
- */
-require_once get_template_directory() . '/inc/theme-layouts.php';
-
-/**
- * Set the content width based on the theme's design and stylesheet.
- */
-if ( ! isset( $content_width ) ) {
-
-	global $content_width;
-
-	$layout = theme_layouts_get_layout();
-
-	switch( $layout ):
-		case 'one-column-wide':
-			$content_width = 1068;
-		case 'one-column-narrow':
-			$content_width = 688;
-		default:
-		$content_width = 688;
-	endswitch;
-
-}
-
-if ( ! function_exists( 'rock_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
- * Note that this function is hooked into the after_setup_theme hook, which
+ * Note that this function is hooked into the 'after_setup_theme' hook, which
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
+ *
+ * @since 1.0.0
  */
 function rock_setup() {
 
-	global $post;
-
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on rock, use a find and replace
-	 * to change 'rock' to the name of your theme in all the template files
+	/**
+	 * Load theme translations.
+	 *
+	 * Translations can be filed in the /languages/ directory. If you're
+	 * building a theme based on Rock, use a find and replace to change
+	 * 'rock' to the name of your theme in all the template files.
+	 *
+	 * @link  https://codex.wordpress.org/Function_Reference/load_theme_textdomain
+	 * @since 1.0.0
 	 */
 	load_theme_textdomain( 'rock', get_template_directory() . '/languages' );
 
-	// Add image size for featured images
-	add_image_size( 'rock-featured', 1600, 900, 1 );
-	add_image_size( 'rock-rect-large', 900, 900, 1 );
-	add_image_size( 'rock-rect-medium', 500, 500, 1 );
-	add_image_size( 'rock-rect-small', 300, 300, 1 );
+	/**
+	 * Filter registered image sizes.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var array
+	 */
+	$images_sizes = (array) apply_filters( 'rock_image_sizes',
+		array(
+			'rock-featured' => array(
+				'width'  => 1600,
+				'height' => 9999,
+				'crop'   => false,
+			),
+			'rock-hero' => array(
+				'width'  => 2400,
+				'height' => 1300,
+				'crop'   => array( 'center', 'center' ),
+			),
+		)
+	);
 
-	// Add default posts and comments RSS feed links to head.
+	foreach ( $images_sizes as $name => $args ) {
+
+		if (
+			! empty( $name )
+			&&
+			! empty( $args['width'] )
+			&&
+			! empty( $args['height'] )
+			&&
+			! empty( $args['crop'] )
+		) {
+
+			add_image_size(
+				sanitize_key( $name ),
+				absint( $args['width'] ),
+				absint( $args['height'] ),
+				$args['crop']
+			);
+
+		}
+
+	}
+
+	/**
+	 * Enable support for Automatic Feed Links.
+	 *
+	 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#Feed_Links
+	 * @since 1.0.0
+	 */
 	add_theme_support( 'automatic-feed-links' );
 
-	// Add support for automatic title tag creation.
+	/**
+	 * Enable support for plugins and themes to manage the document title tag.
+	 *
+	 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
+	 * @since 1.0.0
+	 */
 	add_theme_support( 'title-tag' );
 
-	// Add support for site logo.
-	add_theme_support( 'site-logo', array( 'size' => 'full' ) );
-
-	/*
+	/**
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
-	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+	 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+	 * @since 1.0.0
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'rock' ),
-		'social' => __( 'Social Menu', 'rock' ),
-	) );
+	/**
+	 * Enable support for customizer selective refresh
+	 *
+	 * https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets
+	 * @since 1.0.0
+	 */
+	add_theme_support( 'customize-selective-refresh-widgets' );
 
-	// Hybrid Core Theme Layouts
-	add_theme_support(
-		'theme-layouts',
-		array(
-			'one-column-wide'       => __( '1 Column Wide',                          'rock' ),
-			'one-column-narrow'     => __( '1 Column Narrow',                        'rock' ),
-			'two-column-default'    => __( '2 Columns: Content / Sidebar',           'rock' ),
-			'two-column-reversed'   => __( '2 Columns: Sidebar / Content',           'rock' ),
-			'three-column-default'  => __( '3 Columns: Content / Sidebar / Sidebar', 'rock' ),
-			'three-column-center'   => __( '3 Columns: Sidebar / Content / Sidebar', 'rock' ),
-			'three-column-reversed' => __( '3 Columns: Sidebar / Sidebar / Content', 'rock' ),
-		),
-		array( 'default' => 'two-column-default' )
+	/**
+	 * Register custom Custom Navigation Menus.
+	 *
+	 * @link  https://codex.wordpress.org/Function_Reference/register_nav_menus
+	 * @since 1.0.0
+	 */
+	register_nav_menus(
+		/**
+		 * Filter registered nav menus.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var array
+		 */
+		(array) apply_filters( 'rock_nav_menus',
+			array(
+				'primary' => esc_html__( 'Primary Menu', 'rock' ),
+				'social'  => esc_html__( 'Social Menu', 'rock' ),
+				'footer'  => esc_html__( 'Footer Menu', 'rock' ),
+			)
+		)
 	);
 
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
+	/**
+	 * Enable support for HTML5 markup.
+	 *
+	 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
+	 * @since 1.0.0
 	 */
-	add_theme_support( 'html5', array(
-		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
-	) );
+	add_theme_support(
+		'html5',
+		array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		)
+	);
 
-	/*
+	/**
 	 * Enable support for Post Formats.
-	 * See http://codex.wordpress.org/Post_Formats
+	 *
+	 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Formats
+	 * @since 1.0.0
 	 */
-	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link'
-	) );
-
-	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'rock_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
-
-	// Add support for Jetpack featured content
-	add_theme_support( 'featured-content', array(
-		'filter'     => 'rock_get_featured_posts',
-		'max_posts'  => 1,
-		'post_types' => array( 'post', 'page' ),
-	) );
+	add_theme_support(
+		'post-formats',
+		array(
+			'aside',
+			'image',
+			'video',
+			'quote',
+			'link',
+		)
+	);
 
 }
-endif; // rock_setup
 add_action( 'after_setup_theme', 'rock_setup' );
 
 /**
- * Register widget area.
+ * Sets the content width in pixels, based on the theme layout.
  *
- * @link http://codex.wordpress.org/Function_Reference/register_sidebar
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @action after_setup_theme
+ * @global int $content_width
+ * @since  1.0.0
  */
-function rock_widgets_init() {
-	register_sidebar( array(
-		'name'          => __( 'Left Sidebar', 'rock' ),
-		'id'            => 'sidebar-1',
-		'description'   => __( 'The left sidebar appears alongside the content of every page, post, archive, and search template.', 'rock' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h6 class="widget-title">',
-		'after_title'   => '</h6>',
-	) );
+function rock_content_width() {
 
-	register_sidebar( array(
-		'name'          => __( 'Right Sidebar', 'rock' ),
-		'id'            => 'sidebar-2',
-		'description'   => __( 'The right sidebar will only appear when you have selected a three-column layout.', 'rock' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h6 class="widget-title">',
-		'after_title'   => '</h6>',
-	) );
+	$layout        = rock_get_layout();
+	$content_width = ( 'one-column-wide' === $layout ) ? 1068 : 688;
 
-	register_sidebar( array(
-		'name'          => __( 'Header Right', 'rock' ),
-		'id'            => 'header',
-		'description'   => __( 'The header sidebar appears on the right side of the header of the page.', 'rock' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h6 class="widget-title">',
-		'after_title'   => '</h6>',
-	) );
+	/**
+	 * Filter the content width in pixels.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param string $layout
+	 *
+	 * @var int
+	 */
+	$GLOBALS['content_width'] = (int) apply_filters( 'rock_content_width', $content_width, $layout );
 
-	register_sidebar( array(
-		'name'          => __( 'Footer Left', 'rock' ),
-		'id'            => 'footer-1',
-		'description'   => __( 'The footer left sidebar appears in the first column of the footer widget area.', 'rock' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h6 class="widget-title">',
-		'after_title'   => '</h6>',
-	) );
-
-	register_sidebar( array(
-		'name'          => __( 'Footer Center', 'rock' ),
-		'id'            => 'footer-2',
-		'description'   => __( 'The footer center sidebar appears in the second column of the footer widget area.', 'rock' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h6 class="widget-title">',
-		'after_title'   => '</h6>',
-	) );
-
-	register_sidebar( array(
-		'name'          => __( 'Footer Right', 'rock' ),
-		'id'            => 'footer-3',
-		'description'   => __( 'The footer right sidebar appears in the third column of the footer widget area.', 'rock' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h6 class="widget-title">',
-		'after_title'   => '</h6>',
-	) );
 }
-add_action( 'widgets_init', 'rock_widgets_init' );
+add_action( 'after_setup_theme', 'rock_content_width', 0 );
 
 /**
- * Enqueue scripts and styles.
+ * Enable support for custom editor style.
+ *
+ * @link  https://developer.wordpress.org/reference/functions/add_editor_style/
+ * @since 1.0.0
+ */
+add_action( 'admin_init', 'add_editor_style', 10, 0 );
+
+/**
+ * Register sidebar areas.
+ *
+ * @link  http://codex.wordpress.org/Function_Reference/register_sidebar
+ * @since 1.0.0
+ */
+function rock_register_sidebars() {
+
+	/**
+	 * Filter registered sidebars areas.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var array
+	 */
+	$sidebars = (array) apply_filters( 'rock_sidebars',
+		array(
+			'sidebar-1' => array(
+				'name'          => esc_html__( 'Sidebar', 'rock' ),
+				'description'   => esc_html__( 'The primary sidebar appears alongside the content of every page, post, archive, and search template.', 'rock' ),
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</aside>',
+				'before_title'  => '<h4 class="widget-title">',
+				'after_title'   => '</h4>',
+			),
+			'sidebar-2' => array(
+				'name'          => esc_html__( 'Secondary Sidebar', 'rock' ),
+				'description'   => esc_html__( 'The secondary sidebar will only appear when you have selected a three-column layout.', 'rock' ),
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</aside>',
+				'before_title'  => '<h4 class="widget-title">',
+				'after_title'   => '</h4>',
+			),
+			'footer-1' => array(
+				'name'          => esc_html__( 'Footer 1', 'rock' ),
+				'description'   => esc_html__( 'This sidebar is the first column of the footer widget area.', 'rock' ),
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</aside>',
+				'before_title'  => '<h4 class="widget-title">',
+				'after_title'   => '</h4>',
+			),
+			'footer-2' => array(
+				'name'          => esc_html__( 'Footer 2', 'rock' ),
+				'description'   => esc_html__( 'This sidebar is the second column of the footer widget area.', 'rock' ),
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</aside>',
+				'before_title'  => '<h4 class="widget-title">',
+				'after_title'   => '</h4>',
+			),
+			'footer-3' => array(
+				'name'          => esc_html__( 'Footer 3', 'rock' ),
+				'description'   => esc_html__( 'This sidebar is the third column of the footer widget area.', 'rock' ),
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</aside>',
+				'before_title'  => '<h4 class="widget-title">',
+				'after_title'   => '</h4>',
+			),
+			'hero' => array(
+				'name'          => esc_html__( 'Hero', 'rock' ),
+				'description'   => esc_html__( 'Hero widgets appear over the header image on the front page.', 'rock' ),
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</aside>',
+				'before_title'  => '<h2 class="widget-title">',
+				'after_title'   => '</h2>',
+			),
+		)
+	);
+
+	foreach ( $sidebars as $id => $args ) {
+
+		register_sidebar( array_merge( array( 'id' => $id ), $args ) );
+
+	}
+
+}
+add_action( 'widgets_init', 'rock_register_sidebars' );
+
+/**
+ * Enqueue theme scripts and styles.
+ *
+ * @link  https://codex.wordpress.org/Function_Reference/wp_enqueue_style
+ * @link  https://codex.wordpress.org/Function_Reference/wp_enqueue_script
+ * @since 1.0.0
  */
 function rock_scripts() {
-	wp_enqueue_style( 'rock', get_stylesheet_uri() );
+
+	$suffix = SCRIPT_DEBUG ? '' : '.min';
+
+	wp_enqueue_style( 'rock', get_stylesheet_uri(), false, ROCK_VERSION );
 
 	wp_style_add_data( 'rock', 'rtl', 'replace' );
 
-	wp_enqueue_style( 'rock-fonts', rock_fonts_url(), array( 'rock' ), '20150830' );
-
-	wp_enqueue_script( 'rock-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20120206', true );
-
-	wp_enqueue_script( 'rock-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'rock-navigation', get_template_directory_uri() . "/assets/js/navigation{$suffix}.js", array( 'jquery' ), ROCK_VERSION, true );
+	wp_enqueue_script( 'rock-skip-link-focus-fix', get_template_directory_uri() . "/assets/js/skip-link-focus-fix{$suffix}.js", array(), ROCK_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+
 		wp_enqueue_script( 'comment-reply' );
+
 	}
+
+	if ( rock_has_hero_image() ) {
+
+		wp_add_inline_style(
+			'rock',
+			sprintf(
+				'%s { background-image: url(%s); }',
+				rock_get_hero_image_selector(),
+				esc_url( rock_get_hero_image() )
+			)
+		);
+
+	}
+
+	/**
+	 * Enqueue lt IE 9 Conditional
+	 */
+	wp_enqueue_style( 'rock-lt-ie9-style', get_template_directory_uri() . '/assets/css/ie.css', array(), ROCK_VERSION );
+	wp_style_add_data( 'rock-lt-ie9-style', 'conditional', 'lt IE 9' );
+
+	wp_enqueue_script( 'rock-respond', get_template_directory_uri() . '/assets/js/respond.min.js', array(), ROCK_VERSION );
+	wp_script_add_data( 'rock-respond', 'conditional', 'lt IE 9' );
+
+	wp_enqueue_script( 'rock-nwmatcher', get_template_directory_uri() . '/assets/js/nwmatcher.min.js', array(), ROCK_VERSION );
+	wp_script_add_data( 'rock-nwmatcher', 'conditional', 'lt IE 9' );
+
+	wp_enqueue_script( 'rock-jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), ROCK_VERSION );
+	wp_script_add_data( 'rock-jquery', 'conditional', 'lt IE 9' );
+
+	wp_enqueue_script( 'rock-html5shiv', get_template_directory_uri() . '/assets/js/html5shiv.min.js', array(), ROCK_VERSION );
+	wp_script_add_data( 'rock-html5shiv', 'conditional', 'lt IE 9' );
+
+	wp_enqueue_script( 'rock-selectivizr', get_template_directory_uri() . '/assets/js/selectivizr.min.js', array(), ROCK_VERSION );
+	wp_script_add_data( 'rock-selectivizr', 'conditional', 'lt IE 9' );
+
+	wp_enqueue_script( 'rock-rem', get_template_directory_uri() . '/assets/js/rem.min.js', array(), ROCK_VERSION );
+	wp_script_add_data( 'rock-rem', 'conditional', 'lt IE 9' );
+
+	wp_enqueue_script( 'rock-jquery-backgroundSize', get_template_directory_uri() . '/assets/js/jquery.backgroundSize.min.js', array( 'rock-jquery' ), ROCK_VERSION );
+	wp_script_add_data( 'rock-jquery-backgroundSize', 'conditional', 'lt IE 9' );
+
+	wp_enqueue_script( 'rock-lt-ie9-script', get_template_directory_uri() . "/assets/js/lt-ie9$suffix.js", array( 'rock-jquery' ), ROCK_VERSION );
+	wp_script_add_data( 'rock-lt-ie9-script', 'conditional', 'lt IE 9' );
 
 }
 add_action( 'wp_enqueue_scripts', 'rock_scripts' );
 
 /**
- * Force full width template if Beaver Builder is active
+ * Sets the authordata global when viewing an author archive.
+ *
+ * This provides backwards compatibility with
+ * http://core.trac.wordpress.org/changeset/25574
+ *
+ * It removes the need to call the_post() and rewind_posts() in an author
+ * template to print information about the author.
+ *
+ * @action wp
+ * @global WP_Query $wp_query
+ * @global WP_User  $authordata
+ * @since  1.0.0
  */
-function faithmade_bb_check(){
-	global $post;
-	setup_postdata($post);
+function rock_setup_author() {
 
-  if ( is_page($post->ID) ) {
-  	if ( get_post_meta($post->ID, '_fl_builder_enabled', true) == 1 || FLBuilderModel::is_builder_active() ) {
-    	update_post_meta( $post->ID, '_wp_page_template', 'templates/full-width.php' );
-    }
-  }
+	global $wp_query, $authordata;
+
+	if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
+
+		$authordata = get_userdata( $wp_query->post->post_author );
+
+	}
+
 }
+add_action( 'wp', 'rock_setup_author' );
 
-add_action( 'wp', 'faithmade_bb_check', 15 );
+/**
+ * Reset the transient for the active categories check.
+ *
+ * @action create_category
+ * @action edit_category
+ * @action delete_category
+ * @action save_post
+ * @see    rock_has_active_categories()
+ * @since  1.0.0
+ */
+function rock_has_active_categories_reset() {
 
-function admin_css() {
-	wp_register_style( 'admin', get_template_directory_uri() . '/admin.css' );
-	wp_enqueue_style( 'admin' );
+	delete_transient( 'rock_has_active_categories' );
+
 }
-add_action('admin_enqueue_scripts', 'admin_css');
+add_action( 'create_category', 'rock_has_active_categories_reset' );
+add_action( 'edit_category',   'rock_has_active_categories_reset' );
+add_action( 'delete_category', 'rock_has_active_categories_reset' );
+add_action( 'save_post',       'rock_has_active_categories_reset' );

@@ -1,25 +1,47 @@
 <?php
 /**
- * The template part for displaying the post title.
+ * Template part for displaying the post title inside The Loop.
  *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- * @package rock
+ * @package Rock
  */
 ?>
+
 <header class="entry-header">
+
 	<div class="entry-header-row">
+
 		<div class="entry-header-column">
 
-			<?php do_action( 'rock_before_post_title' ); ?>
+			<?php
+			/**
+			 * Fires before the post title element.
+			 *
+			 * @since 1.0.0
+			 */
+			do_action( 'rock_before_post_title' );
+			?>
 
-			<?php $tag = is_single() ? 'h1' : 'h2'; ?>
-			<<?php echo $tag; ?> class="entry-title">
-				<a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title(); ?></a>
-			</<?php echo $tag; ?>>
+			<?php if ( is_singular() ) : ?>
 
-			<?php do_action( 'rock_after_post_title' ); ?>
+				<h1 class="entry-title"><?php the_title(); ?></h1>
+
+			<?php else : ?>
+
+				<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title(); ?></a></h2>
+
+			<?php endif; ?>
+
+			<?php
+			/**
+			 * Fires after the post title element.
+			 *
+			 * @since 1.0.0
+			 */
+			do_action( 'rock_after_post_title' );
+			?>
 
 		</div><!-- .entry-header-column -->
+
 	</div><!-- .entry-header-row -->
+
 </header><!-- .entry-header -->

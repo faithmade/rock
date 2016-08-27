@@ -1,27 +1,25 @@
 <?php
 /**
- * Displays the footer widget zones.
+ * Displays the footer widget areas.
  *
- * @package rock
+ * @package Rock
  */
 ?>
 
-<?php if( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) ): ?>
+<?php if ( $sidebars = rock_get_active_footer_sidebars() ) : ?>
 
-<div class="footer-widget-area">
+	<div class="footer-widget-area columns-<?php echo count( $sidebars ); ?>">
 
-	<div class="footer-widget">
-		<?php dynamic_sidebar( 'footer-1' ); ?>
+	<?php foreach ( $sidebars as $sidebar ) : ?>
+
+		<div class="footer-widget">
+
+			<?php dynamic_sidebar( $sidebar ); ?>
+
+		</div>
+
+	<?php endforeach; ?>
+
 	</div>
-
-	<div class="footer-widget">
-		<?php dynamic_sidebar( 'footer-2' ); ?>
-	</div>
-
-	<div class="footer-widget">
-		<?php dynamic_sidebar( 'footer-3' ); ?>
-	</div>
-
-</div>
 
 <?php endif; ?>

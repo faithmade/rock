@@ -3,30 +3,89 @@
  *
  * Handles toggling the navigation menu for small screens.
  */
-( function() {
-	var container, button, menu;
 
-	container = document.getElementById( 'site-navigation' );
-	if ( ! container )
-		return;
+( function( $ ) {
 
-	button = container.getElementsByClassName( 'menu-toggle' )[0];
+	var $nav_menu    = false,
+	    $menu_toggle = false;
 
-	menu = container.getElementsByTagName( 'ul' )[0];
+	function toggle() {
 
-	// Hide menu toggle button if menu is empty and return early.
-	if ( 'undefined' === typeof menu ) {
-		button.style.display = 'none';
-		return;
+		$menu_toggle.add( $nav_menu ).toggleClass( 'open' );
+
+		reset_submenu_toggles();
+
 	}
 
-	if ( -1 === menu.className.indexOf( 'nav-menu' ) )
-		menu.className += ' nav-menu';
+	function reset_submenu_toggles() {
 
-	button.onclick = function() {
-		if ( -1 !== container.className.indexOf( 'toggled' ) )
-			container.className = container.className.replace( ' toggled', '' );
-		else
-			container.className += ' toggled';
-	};
-} )();
+		$nav_menu.find( '.menu-item-has-children' ).removeClass( 'open' );
+
+	}
+
+	function expand( e ) {
+
+		e.preventDefault();
+
+		var $menu_item = $( this ).parent( '.menu-item-has-children' );
+
+		if ( ! $menu_item ) {
+
+			return;
+
+		}
+
+		$menu_item.toggleClass( 'open' );
+
+	}
+
+	function position() {
+
+		var $this    = $( this ),
+		    $submenu = $this.children( '.sub-menu' ).first();
+
+
+		if ( isOffScreen( $submenu ) || $submenu.parents( '.bump' ).length ) {
+
+			$submenu.siblings( 'a' ).andSelf().addClass( 'bump' );
+
+			$submenu.css({
+				'left'  : 'auto',
+				'right' : ( $this.parents( 'ul' ).length > 1 ) ? $submenu.width() : 0
+			});
+
+		}
+
+		$this.off( 'hover', position );
+
+	}
+
+	function isOffScreen( $submenu ) {
+
+		var submenu_position   = $submenu.offset().left,
+		    submenu_width      = $submenu.width();
+
+		return ( submenu_position + submenu_width ) > $( window ).width();
+
+	}
+
+	$( document ).ready( function() {
+
+		$nav_menu    = $( '#site-navigation' );
+		$menu_toggle = $( '#menu-toggle' );
+
+		if ( ! $nav_menu || ! $menu_toggle ) {
+
+			return;
+
+		}
+
+		$menu_toggle.on( 'click', toggle );
+
+		$nav_menu.find( '.menu-item-has-children' ).on( 'hover', position );
+
+		$nav_menu.find( '.expand' ).on( 'click', expand );
+
+	});
+
+})( jQuery );

@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the rock package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: rock-pro 0.0.1\n"
+"Project-Id-Version: rock 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-06 19:06-0400\n"
+"POT-Creation-Date: 2016-08-27 15:35-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,554 +18,578 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: 404.php:15
-msgid "Oops! That page can&rsquo;t be found."
+#. //codex.wordpress.org/Creating_an_Error_404_Page
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#404-php
+#. *
+#. * @package Rock
+#. * @since 1.0.0
+#.
+#: 404.php:22
+msgid "Oops! That page can't be found."
 msgstr ""
 
-#: 404.php:19
-msgid "It looks like nothing was found at this location. Maybe try a search?"
+#: 404.php:28
+msgid ""
+"It looks like nothing was found at this location. Please try searching below:"
 msgstr ""
 
-#: comments.php:28
+#: comments.php:35
 #, php-format
-msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgctxt "1. number of comments, 2. post title"
+msgid "One thought on %2$s"
+msgid_plural "%1$d thoughts on %2$s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:35 comments.php:52
+#: comments.php:54 comments.php:79
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:36 comments.php:53
+#: comments.php:56
+#, php-format
+msgctxt "left arrow (LTR) / right arrow (RTL)"
+msgid "%s Older Comments"
+msgstr ""
+
+#: comments.php:58
+#, php-format
+msgctxt "right arrow (LTR) / left arrow (RTL)"
+msgid "Newer Comments %s"
+msgstr ""
+
+#: comments.php:81
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: comments.php:37 comments.php:54
+#: comments.php:83
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:64
+#: comments.php:93
 msgid "Comments are closed."
 msgstr ""
 
-#: content-featured.php:25
-msgid "Featured"
-msgstr ""
-
-#: content-featured.php:35 inc/extras.php:114
-msgid "Read More"
-msgstr ""
-
-#. //codex.wordpress.org/Template_Hierarchy
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
 #. *
-#. * @package rock
+#. * @package Rock
+#. * @since 1.0.0
 #.
-#: content-none.php:13
+#: content-none.php:16
 msgid "Nothing Found"
 msgstr ""
 
-#: content-none.php:19
+#: content-none.php:27
 #, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgctxt "link to write a new post"
+msgid "Ready to publish your first post? %s."
 msgstr ""
 
-#: content-none.php:23
+#: content-none.php:31
+msgid "Get started here"
+msgstr ""
+
+#: content-none.php:39
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 
-#: content-none.php:28
+#: content-none.php:45
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr ""
-
-#: functions.php:132
-msgid "Primary Menu"
-msgstr ""
-
-#: functions.php:133
-msgid "Social Menu"
-msgstr ""
-
-#: functions.php:140
-msgid "1 Column Wide"
-msgstr ""
-
-#: functions.php:141
-msgid "1 Column Narrow"
-msgstr ""
-
-#: functions.php:142
-msgid "2 Columns: Content / Sidebar"
-msgstr ""
-
-#: functions.php:143
-msgid "2 Columns: Sidebar / Content"
-msgstr ""
-
-#: functions.php:144
-msgid "3 Columns: Content / Sidebar / Sidebar"
-msgstr ""
-
-#: functions.php:145
-msgid "3 Columns: Sidebar / Content / Sidebar"
-msgstr ""
-
-#: functions.php:146
-msgid "3 Columns: Sidebar / Sidebar / Content"
-msgstr ""
-
-#: functions.php:191
-msgid "Left Sidebar"
-msgstr ""
-
-#: functions.php:193
-msgid ""
-"The left sidebar appears alongside the content of every page, post, archive, "
-"and search template."
-msgstr ""
-
-#: functions.php:201
-msgid "Right Sidebar"
-msgstr ""
-
-#: functions.php:203
-msgid ""
-"The right sidebar will only appear when you have selected a three-column "
-"layout."
-msgstr ""
-
-#: functions.php:211
-msgid "Header Right"
-msgstr ""
-
-#: functions.php:213
-msgid "The header sidebar appears on the right side of the header of the page."
-msgstr ""
-
-#: functions.php:221
-msgid "Footer Left"
-msgstr ""
-
-#: functions.php:223
-msgid ""
-"The footer left sidebar appears in the first column of the footer widget "
-"area."
+"It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr ""
 
 #: functions.php:231
-msgid "Footer Center"
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:232
+msgid "Social Menu"
 msgstr ""
 
 #: functions.php:233
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:329
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:330
 msgid ""
-"The footer center sidebar appears in the second column of the footer widget "
-"area."
+"The primary sidebar appears alongside the content of every page, post, "
+"archive, and search template."
 msgstr ""
 
-#: functions.php:241
-msgid "Footer Right"
+#: functions.php:337
+msgid "Secondary Sidebar"
 msgstr ""
 
-#: functions.php:243
+#: functions.php:338
 msgid ""
-"The footer right sidebar appears in the third column of the footer widget "
-"area."
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
 msgstr ""
 
-#: header.php:25
+#: functions.php:345
+msgid "Footer 1"
+msgstr ""
+
+#: functions.php:346
+msgid "This sidebar is the first column of the footer widget area."
+msgstr ""
+
+#: functions.php:353
+msgid "Footer 2"
+msgstr ""
+
+#: functions.php:354
+msgid "This sidebar is the second column of the footer widget area."
+msgstr ""
+
+#: functions.php:361
+msgid "Footer 3"
+msgstr ""
+
+#: functions.php:362
+msgid "This sidebar is the third column of the footer widget area."
+msgstr ""
+
+#: functions.php:369
+msgid "Hero"
+msgstr ""
+
+#: functions.php:370
+msgid "Hero widgets appear over the header image on the front page."
+msgstr ""
+
+#: header.php:42
 msgid "Skip to content"
 msgstr ""
 
-#: inc/breadcrumbs.php:33
-msgid "Blog"
-msgstr ""
-
-#: inc/compatibility.php:61
+#: inc/back-compat.php:49
 #, php-format
 msgid ""
-"<b>Activation Failed:</b> %s requires a newer version of WordPress. Please "
-"update and try again."
+"Rock requires at least WordPress version %s. You are running version %s. "
+"Please upgrade and try again."
 msgstr ""
 
-#: inc/compatibility.php:126
-msgid "Go back."
+#: inc/customizer.php:173
+msgid "Use featured image"
 msgstr ""
 
-#: inc/customizer.php:28
-msgid "Logo Position"
-msgstr ""
-
-#: inc/extras.php:74
-msgctxt "Lato font: on or off"
-msgid "on"
-msgstr ""
-
-#: inc/extras.php:80
-msgctxt "Merriweather font: on or off"
-msgid "on"
-msgstr ""
-
-#: inc/integrations.php:71
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:333
-msgid "Install Required Plugins"
-msgstr ""
-
-#: inc/integrations.php:72
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:334
-msgid "Install Plugins"
-msgstr ""
-
-#: inc/integrations.php:73
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:335
-#, php-format
-msgid "Installing Plugin: %s"
-msgstr ""
-
-#: inc/integrations.php:74
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:336
-msgid "Something went wrong with the plugin API."
-msgstr ""
-
-#: inc/integrations.php:75
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:338
-#, php-format
-msgid "This theme requires the following plugin: %1$s."
-msgid_plural "This theme requires the following plugins: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#: inc/integrations.php:76
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:343
-#, php-format
-msgid "This theme recommends the following plugin: %1$s."
-msgid_plural "This theme recommends the following plugins: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#: inc/integrations.php:77
-#, php-format
+#: inc/customizer.php:174
 msgid ""
-"Sorry, but you do not have the correct permissions to install the %s plugin. "
-"Contact the administrator of this site for help on getting the plugin "
-"installed."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to install the %s "
-"plugins. Contact the administrator of this site for help on getting the "
-"plugins installed."
-msgstr[0] ""
-msgstr[1] ""
-
-#: inc/integrations.php:78
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:368
-#, php-format
-msgid "The following required plugin is currently inactive: %1$s."
-msgid_plural "The following required plugins are currently inactive: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#: inc/integrations.php:79
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:373
-#, php-format
-msgid "The following recommended plugin is currently inactive: %1$s."
-msgid_plural "The following recommended plugins are currently inactive: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#: inc/integrations.php:80
-#, php-format
-msgid ""
-"Sorry, but you do not have the correct permissions to activate the %s "
-"plugin. Contact the administrator of this site for help on getting the "
-"plugin activated."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to activate the %s "
-"plugins. Contact the administrator of this site for help on getting the "
-"plugins activated."
-msgstr[0] ""
-msgstr[1] ""
-
-#: inc/integrations.php:81
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:353
-#, php-format
-msgid ""
-"The following plugin needs to be updated to its latest version to ensure "
-"maximum compatibility with this theme: %1$s."
-msgid_plural ""
-"The following plugins need to be updated to their latest version to ensure "
-"maximum compatibility with this theme: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#: inc/integrations.php:82
-#, php-format
-msgid ""
-"Sorry, but you do not have the correct permissions to update the %s plugin. "
-"Contact the administrator of this site for help on getting the plugin "
-"updated."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to update the %s plugins. "
-"Contact the administrator of this site for help on getting the plugins "
-"updated."
-msgstr[0] ""
-msgstr[1] ""
-
-#: inc/integrations.php:83
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:383
-msgid "Begin installing plugin"
-msgid_plural "Begin installing plugins"
-msgstr[0] ""
-msgstr[1] ""
-
-#: inc/integrations.php:84
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:393
-msgid "Begin activating plugin"
-msgid_plural "Begin activating plugins"
-msgstr[0] ""
-msgstr[1] ""
-
-#: inc/integrations.php:85
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:397
-msgid "Return to Required Plugins Installer"
+"Allow the featured image on the current post to override the hero image."
 msgstr ""
 
-#: inc/integrations.php:86
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:399
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:3029
-msgid "Plugin activated successfully."
+#: inc/customizer/colors.php:41
+msgid "Site Title Text"
 msgstr ""
 
-#: inc/integrations.php:87
+#: inc/customizer/colors.php:57
+msgid "Tagline Text"
+msgstr ""
+
+#: inc/customizer/colors.php:68
+msgid "Hero Text"
+msgstr ""
+
+#: inc/customizer/colors.php:91 inc/customizer/colors.php:284
+msgid "Text"
+msgstr ""
+
+#: inc/customizer/colors.php:113
+msgid "Heading Text"
+msgstr ""
+
+#: inc/customizer/colors.php:114
+msgid "Post titles, widget titles, form labels, table headers and buttons."
+msgstr ""
+
+#: inc/customizer/colors.php:135
+msgid "Primary Text"
+msgstr ""
+
+#: inc/customizer/colors.php:136
+msgid "Paragraphs, lists, menu links, quotes and tables."
+msgstr ""
+
+#: inc/customizer/colors.php:183
+msgid "Secondary Text"
+msgstr ""
+
+#: inc/customizer/colors.php:184
+msgid "Post bylines, comment counts, post footers and quote footers."
+msgstr ""
+
+#: inc/customizer/colors.php:198
+msgid "Widget Heading Text"
+msgstr ""
+
+#: inc/customizer/colors.php:215
+msgid "Widget Text"
+msgstr ""
+
+#: inc/customizer/colors.php:226
+msgid "Menu Text"
+msgstr ""
+
+#: inc/customizer/colors.php:248
+msgid "Copyright Text"
+msgstr ""
+
+#: inc/customizer/colors.php:262
+msgid "Link Text"
+msgstr ""
+
+#: inc/customizer/colors.php:299 inc/customizer/colors.php:368
+msgid "Background"
+msgstr ""
+
+#: inc/customizer/colors.php:329
+msgid "Page Background"
+msgstr ""
+
+#: inc/customizer/colors.php:339
+msgid "Content Background"
+msgstr ""
+
+#: inc/customizer/colors.php:349
+msgid "Hero Background"
+msgstr ""
+
+#: inc/customizer/colors.php:378
+msgid "Widgets Background"
+msgstr ""
+
+#: inc/customizer/colors.php:389
+msgid "Widget Content Background"
+msgstr ""
+
+#: inc/customizer/colors.php:400
+msgid "Footer Background"
+msgstr ""
+
+#: inc/customizer/colors.php:438 inc/customizer/layouts.php:310
+msgid "Custom"
+msgstr ""
+
+#: inc/customizer/colors.php:455 inc/customizer/layouts.php:301
+msgid "Default"
+msgstr ""
+
+#: inc/customizer/colors.php:465
+msgctxt "color scheme name"
+msgid "Blush"
+msgstr ""
+
+#: inc/customizer/colors.php:473
+msgctxt "color scheme name"
+msgid "Bronze"
+msgstr ""
+
+#: inc/customizer/colors.php:481
+msgctxt "color scheme name"
+msgid "Canary"
+msgstr ""
+
+#: inc/customizer/colors.php:489
+msgctxt "color scheme name"
+msgid "Cool"
+msgstr ""
+
+#: inc/customizer/colors.php:497
+msgctxt "color scheme name"
+msgid "Dark"
+msgstr ""
+
+#: inc/customizer/colors.php:524
+msgctxt "color scheme name"
+msgid "Iguana"
+msgstr ""
+
+#: inc/customizer/colors.php:532
+msgctxt "color scheme name"
+msgid "Muted"
+msgstr ""
+
+#: inc/customizer/colors.php:557
+msgctxt "color scheme name"
+msgid "Plum"
+msgstr ""
+
+#: inc/customizer/colors.php:565
+msgctxt "color scheme name"
+msgid "Rose"
+msgstr ""
+
+#: inc/customizer/colors.php:573
+msgctxt "color scheme name"
+msgid "Tangerine"
+msgstr ""
+
+#: inc/customizer/colors.php:581
+msgctxt "color scheme name"
+msgid "Turquoise"
+msgstr ""
+
+#: inc/customizer/colors.php:648
+msgid "Colors"
+msgstr ""
+
+#: inc/customizer/colors.php:657
+msgid "Color Schemes"
+msgstr ""
+
+#: inc/customizer/colors.php:665
+msgid "Header"
+msgstr ""
+
+#: inc/customizer/colors.php:673
+msgid "Menu"
+msgstr ""
+
+#: inc/customizer/colors.php:681
+msgid "Buttons"
+msgstr ""
+
+#: inc/customizer/colors.php:689
+msgid "Content"
+msgstr ""
+
+#: inc/customizer/colors.php:697
+msgid "Footer"
+msgstr ""
+
+#: inc/customizer/colors.php:907
+msgid "Base Color Scheme"
+msgstr ""
+
+#: inc/customizer/colors.php:1216
+msgid "Hero Background Overlay"
+msgstr ""
+
+#: inc/customizer/colors.php:1217
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
+msgstr ""
+
+#: inc/customizer/fonts.php:81
+msgid "Site Title"
+msgstr ""
+
+#: inc/customizer/fonts.php:82
+msgid "Site title text in the header."
+msgstr ""
+
+#: inc/customizer/fonts.php:91
+msgid "Navigation"
+msgstr ""
+
+#: inc/customizer/fonts.php:92
+msgid "Primary menu links and button links."
+msgstr ""
+
+#: inc/customizer/fonts.php:102
+msgid "Headings"
+msgstr ""
+
+#: inc/customizer/fonts.php:103
+msgid "Post titles, widget titles, form labels, and table headers."
+msgstr ""
+
+#: inc/customizer/fonts.php:118
+msgid "Primary"
+msgstr ""
+
+#: inc/customizer/fonts.php:119
+msgid "Paragraphs, lists, links, quotes, and tables."
+msgstr ""
+
+#: inc/customizer/fonts.php:133
+msgid "Secondary"
+msgstr ""
+
+#: inc/customizer/fonts.php:134
+msgid "Bylines, comment counts, reply links, post footers, and quote footers."
+msgstr ""
+
+#: inc/customizer/fonts.php:182
+msgid "Fonts"
+msgstr ""
+
+#: inc/customizer/fonts.php:207
 #, php-format
-msgid "All plugins installed and activated successfully. %s"
+msgctxt "font name"
+msgid "%s (Default)"
 msgstr ""
 
-#: inc/support-ctc.php:108
+#: inc/customizer/layouts.php:47
+msgid "One Column: Wide"
+msgstr ""
+
+#: inc/customizer/layouts.php:48
+msgid "One Column: Narrow"
+msgstr ""
+
+#: inc/customizer/layouts.php:49 inc/customizer/layouts.php:139
+msgid "Two Columns: Content | Sidebar"
+msgstr ""
+
+#: inc/customizer/layouts.php:50 inc/customizer/layouts.php:138
+msgid "Two Columns: Sidebar | Content"
+msgstr ""
+
+#: inc/customizer/layouts.php:51 inc/customizer/layouts.php:141
+msgid "Three Columns: Content | Sidebar | Sidebar"
+msgstr ""
+
+#: inc/customizer/layouts.php:52
+msgid "Three Columns: Sidebar | Content | Sidebar"
+msgstr ""
+
+#: inc/customizer/layouts.php:53 inc/customizer/layouts.php:140
+msgid "Three Columns: Sidebar | Sidebar | Content"
+msgstr ""
+
+#: inc/customizer/layouts.php:91
+msgctxt "fixed-width page layout"
+msgid "Fixed"
+msgstr ""
+
+#: inc/customizer/layouts.php:92
+msgctxt "fluid-width page layout"
+msgid "Fluid"
+msgstr ""
+
+#: inc/customizer/layouts.php:251 inc/customizer/layouts.php:442
+msgid "Layout"
+msgstr ""
+
+#: inc/customizer/layouts.php:283
+#, php-format
+msgctxt "link to the Customizer"
+msgid "The site-wide Default layout setting is located in the %s."
+msgstr ""
+
+#: inc/customizer/layouts.php:287
+msgctxt "title of a component found in WordPress"
+msgid "Customizer"
+msgstr ""
+
+#: inc/customizer/layouts.php:464
+msgid "Default Layout"
+msgstr ""
+
+#: inc/customizer/layouts.php:465
+msgid "All posts and pages on your site will use this layout by default."
+msgstr ""
+
+#: inc/customizer/layouts.php:494
+msgid "Page Width"
+msgstr ""
+
+#: inc/customizer/layouts.php:495
+msgid "Display your site differently on larger screens."
+msgstr ""
+
+#: inc/helpers.php:38
+#, php-format
+msgctxt "search term"
+msgid "Search Results for: %s"
+msgstr ""
+
+#: inc/helpers.php:49
+msgid "404 Page Not Found"
+msgstr ""
+
+#: inc/hooks.php:360
+#, php-format
+msgctxt "page number"
+msgid "Page %d"
+msgstr ""
+
+#: inc/support-ctc.php:100
 #, php-format
 msgid ""
 "The WordPress <a href=\"%s\" target=\"_blank\">antispambot</a> function is "
 "used to help deter automated email harvesting."
 msgstr ""
 
-#: inc/support-framework.php:102
+#: inc/support-framework.php:94
 msgid "We suggest using images that are at least 800px wide."
 msgstr ""
 
-#: inc/support-framework.php:352
+#: inc/support-framework.php:335
 msgctxt "archives widget"
 msgid "Blog"
 msgstr ""
 
-#: inc/support-framework.php:353
+#: inc/support-framework.php:336
 msgctxt "archives widget"
 msgid "Sermons"
 msgstr ""
 
-#: inc/support-framework.php:382
+#: inc/support-framework.php:365
 msgctxt "slide widget image"
 msgid "(Required)"
 msgstr ""
 
-#: inc/support-framework.php:383 inc/support-framework.php:402
+#: inc/support-framework.php:366 inc/support-framework.php:385
 #, php-format
 msgid "Image cropped to %s."
 msgstr ""
 
-#: inc/support-framework.php:386
+#: inc/support-framework.php:369
 msgid "To make this a video slide, enter a YouTube or Vimeo video page URL."
 msgstr ""
 
-#: inc/template-tags.php:21
+#: inc/template-tags.php:132
 msgid "Posts navigation"
 msgstr ""
 
-#: inc/template-tags.php:25
+#: inc/template-tags.php:138
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
-#: inc/template-tags.php:29
+#: inc/template-tags.php:144
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/template-tags.php:52
+#: inc/template-tags.php:177
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:55
-msgctxt "Previous post link"
-msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
+#: inc/template-tags.php:278
+msgid "Blog"
 msgstr ""
 
-#: inc/template-tags.php:56
-msgctxt "Next post link"
-msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: inc/template-tags.php:224
+#: templates/parts/credit.php:13
 #, php-format
-msgid "Category: %s"
+msgctxt "1. copyright symbol, 2. year, 3. site title"
+msgid "Copyright %1$s %2$d %3$s"
 msgstr ""
 
-#: inc/template-tags.php:226
+#: templates/parts/credit.php:24
 #, php-format
-msgid "Tag: %s"
+msgctxt "1. theme name link, 2. theme author link"
+msgid "%1$s theme by %2$s"
 msgstr ""
 
-#: inc/template-tags.php:228
-#, php-format
-msgid "Author: %s"
-msgstr ""
-
-#: inc/template-tags.php:230
-#, php-format
-msgid "Year: %s"
-msgstr ""
-
-#: inc/template-tags.php:230
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr ""
-
-#: inc/template-tags.php:232
-#, php-format
-msgid "Month: %s"
-msgstr ""
-
-#: inc/template-tags.php:232
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr ""
-
-#: inc/template-tags.php:234
-#, php-format
-msgid "Day: %s"
-msgstr ""
-
-#: inc/template-tags.php:234
-msgctxt "daily archives date format"
-msgid "F j, Y"
-msgstr ""
-
-#: inc/template-tags.php:237
-msgctxt "post format archive title"
-msgid "Asides"
-msgstr ""
-
-#: inc/template-tags.php:239
-msgctxt "post format archive title"
-msgid "Galleries"
-msgstr ""
-
-#: inc/template-tags.php:241
-msgctxt "post format archive title"
-msgid "Images"
-msgstr ""
-
-#: inc/template-tags.php:243
-msgctxt "post format archive title"
-msgid "Videos"
-msgstr ""
-
-#: inc/template-tags.php:245
-msgctxt "post format archive title"
-msgid "Quotes"
-msgstr ""
-
-#: inc/template-tags.php:247
-msgctxt "post format archive title"
-msgid "Links"
-msgstr ""
-
-#: inc/template-tags.php:249
-msgctxt "post format archive title"
-msgid "Statuses"
-msgstr ""
-
-#: inc/template-tags.php:251
-msgctxt "post format archive title"
-msgid "Audio"
-msgstr ""
-
-#: inc/template-tags.php:253
-msgctxt "post format archive title"
-msgid "Chats"
-msgstr ""
-
-#: inc/template-tags.php:256
-#, php-format
-msgid "%s"
-msgstr ""
-
-#: inc/template-tags.php:260
-#, php-format
-msgid "%1$s: %2$s"
-msgstr ""
-
-#: inc/template-tags.php:262
-msgid "Archives"
-msgstr ""
-
-#: inc/theme-layouts.php:364
-msgctxt "theme layout"
-msgid "Default"
-msgstr ""
-
-#: inc/theme-layouts.php:459 inc/theme-layouts.php:566
-#: inc/theme-layouts.php:651
-msgid "Layout"
-msgstr ""
-
-#: inc/theme-layouts.php:684
-msgid "Global Layout"
-msgstr ""
-
-#: node_modules/grunt-pot/test/fixtures/some-file.php:3
-msgid "I'm a translatable string."
-msgstr ""
-
-#: node_modules/grunt-pot/test/fixtures/some-other-file.php:4
-msgid "Me too"
-msgstr ""
-
-#: node_modules/grunt-pot/test/fixtures/some-other-file.php:7
-#, php-format
-msgid "I have %d apple"
-msgid_plural "I have %d apples"
-msgstr[0] ""
-msgstr[1] ""
-
-#. / TRANSLATORS: This should be translated as a shorthand for YEAR-MONTH-DAY using 4, 2 and 2 digits.
-#: node_modules/grunt-pot/test/fixtures/some-other-file.php:16
-msgid "yyyy-mm-dd"
-msgstr ""
-
-#: search.php:16
-#, php-format
-msgid "Search Results for: %s"
-msgstr ""
-
-#. //codex.wordpress.org/Template_Hierarchy
-#. *
-#. * @package rock
-#.
 #: templates/parts/loop/event-content.php:26
 #: templates/parts/loop/location-content.php:31
 #: templates/parts/loop/person-content.php:48
-#: templates/parts/loop/post-content.php:11
+#: templates/parts/loop/post-content.php:13
 #: templates/parts/loop/sermon-content.php:113
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: templates/parts/loop/event-content.php:32
 #: templates/parts/loop/location-content.php:37
-#: templates/parts/loop/page-content.php:12
+#: templates/parts/loop/page-content.php:17
 #: templates/parts/loop/person-content.php:54
-#: templates/parts/loop/post-content.php:14
+#: templates/parts/loop/post-content.php:17
 #: templates/parts/loop/sermon-content.php:119
 msgid "Pages:"
 msgstr ""
@@ -577,8 +601,8 @@ msgstr ""
 #: templates/parts/loop/event-footer.php:13
 #: templates/parts/loop/location-footer.php:13
 #: templates/parts/loop/person-footer.php:13
-#: templates/parts/loop/post-meta.php:11
-#: templates/parts/loop/post-search-footer.php:34
+#: templates/parts/loop/post-meta.php:21
+#: templates/parts/loop/post-search-footer.php:41
 #: templates/parts/loop/sermon-footer.php:13
 msgid "Leave a comment"
 msgstr ""
@@ -586,8 +610,8 @@ msgstr ""
 #: templates/parts/loop/event-footer.php:13
 #: templates/parts/loop/location-footer.php:13
 #: templates/parts/loop/person-footer.php:13
-#: templates/parts/loop/post-meta.php:11
-#: templates/parts/loop/post-search-footer.php:34
+#: templates/parts/loop/post-meta.php:21
+#: templates/parts/loop/post-search-footer.php:41
 #: templates/parts/loop/sermon-footer.php:13
 msgid "1 Comment"
 msgstr ""
@@ -595,22 +619,16 @@ msgstr ""
 #: templates/parts/loop/event-footer.php:13
 #: templates/parts/loop/location-footer.php:13
 #: templates/parts/loop/person-footer.php:13
-#: templates/parts/loop/post-meta.php:11
-#: templates/parts/loop/post-search-footer.php:34
 #: templates/parts/loop/sermon-footer.php:13
 msgid "% Comments"
 msgstr ""
 
-#. //codex.wordpress.org/Template_Hierarchy
-#. *
-#. * @package rock
-#.
 #: templates/parts/loop/event-footer.php:16
 #: templates/parts/loop/location-footer.php:16
 #: templates/parts/loop/page-footer.php:8
 #: templates/parts/loop/person-footer.php:16
-#: templates/parts/loop/post-footer.php:12
-#: templates/parts/loop/post-search-footer.php:37
+#: templates/parts/loop/post-footer.php:13
+#: templates/parts/loop/post-search-footer.php:45
 #: templates/parts/loop/sermon-footer.php:16
 msgid "Edit"
 msgstr ""
@@ -625,10 +643,6 @@ msgstr ""
 #: templates/parts/loop/location-footer.php:32
 #: templates/parts/loop/person-footer.php:22
 #: templates/parts/loop/person-footer.php:32
-#: templates/parts/loop/post-footer.php:18
-#: templates/parts/loop/post-footer.php:28
-#: templates/parts/loop/post-search-footer.php:14
-#: templates/parts/loop/post-search-footer.php:24
 #: templates/parts/loop/sermon-footer.php:22
 #: templates/parts/loop/sermon-footer.php:32
 #: templates/parts/loop/sermon-title.php:10
@@ -642,7 +656,6 @@ msgstr ""
 #: templates/parts/loop/event-footer.php:26
 #: templates/parts/loop/location-footer.php:26
 #: templates/parts/loop/person-footer.php:26
-#: templates/parts/loop/post-footer.php:22
 #: templates/parts/loop/sermon-footer.php:26
 #, php-format
 msgid "Posted in: %1$s"
@@ -651,7 +664,6 @@ msgstr ""
 #: templates/parts/loop/event-footer.php:36
 #: templates/parts/loop/location-footer.php:36
 #: templates/parts/loop/person-footer.php:36
-#: templates/parts/loop/post-footer.php:32
 #: templates/parts/loop/sermon-footer.php:36
 #, php-format
 msgid "Filed under: %1$s"
@@ -662,19 +674,38 @@ msgctxt "event"
 msgid "Get Directions"
 msgstr ""
 
-#: templates/parts/loop/post-meta.php:4
+#: templates/parts/loop/post-excerpt.php:13
 #, php-format
-msgid "%s by <a href=\"%s\">%s</a>"
+msgctxt "right arrow (LTR) / left arrow (RTL)"
+msgid "Continue Reading %s"
 msgstr ""
 
-#: templates/parts/loop/post-search-footer.php:18
-#, php-format
-msgid "Posted in %1$s"
+#: templates/parts/loop/post-footer.php:19
+#: templates/parts/loop/post-footer.php:31
+#: templates/parts/loop/post-search-footer.php:13
+#: templates/parts/loop/post-search-footer.php:25
+msgctxt "separator for items in a list"
+msgid ", "
 msgstr ""
 
-#: templates/parts/loop/post-search-footer.php:28
+#: templates/parts/loop/post-footer.php:25
+#: templates/parts/loop/post-search-footer.php:19
 #, php-format
-msgid "Tagged %1$s"
+msgctxt "category list"
+msgid "Posted in: %s"
+msgstr ""
+
+#: templates/parts/loop/post-footer.php:37
+#: templates/parts/loop/post-search-footer.php:31
+#, php-format
+msgctxt "tag list"
+msgid "Filed under: %s"
+msgstr ""
+
+#: templates/parts/loop/post-meta.php:21
+#: templates/parts/loop/post-search-footer.php:41
+msgctxt "number of comments"
+msgid "% Comments"
 msgstr ""
 
 #: templates/parts/loop/sermon-content.php:57
@@ -698,383 +729,4 @@ msgstr ""
 
 #: templates/parts/loop/sermon-content.php:92
 msgid "Show Audio Player"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:348
-#, php-format
-msgid ""
-"Sorry, but you do not have the correct permissions to install the %1$s "
-"plugin."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to install the %1$s "
-"plugins."
-msgstr[0] ""
-msgstr[1] ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:358
-#, php-format
-msgid "There is an update available for: %1$s."
-msgid_plural "There are updates available for the following plugins: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:363
-#, php-format
-msgid ""
-"Sorry, but you do not have the correct permissions to update the %1$s plugin."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to update the %1$s "
-"plugins."
-msgstr[0] ""
-msgstr[1] ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:378
-#, php-format
-msgid ""
-"Sorry, but you do not have the correct permissions to activate the %1$s "
-"plugin."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to activate the %1$s "
-"plugins."
-msgstr[0] ""
-msgstr[1] ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:388
-msgid "Begin updating plugin"
-msgid_plural "Begin updating plugins"
-msgstr[0] ""
-msgstr[1] ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:398
-msgid "Return to the dashboard"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:400
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2832
-msgid "The following plugin was activated successfully:"
-msgid_plural "The following plugins were activated successfully:"
-msgstr[0] ""
-msgstr[1] ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:401
-#, php-format
-msgid "No action taken. Plugin %1$s was already active."
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:402
-#, php-format
-msgid ""
-"Plugin not activated. A higher version of %s is needed for this theme. "
-"Please update the plugin."
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:403
-#, php-format
-msgid "All plugins installed and activated successfully. %1$s"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:404
-msgid "Dismiss this notice"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:405
-msgid "Please contact the administrator of this site for help."
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:520
-msgid "This plugin needs to be updated to be compatible with your theme."
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:521
-msgid "Update Required"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:635
-msgid "Set the parent_slug config variable instead."
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:828
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:3438
-msgid "Return to the Dashboard"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:935
-msgid ""
-"The remote plugin package does not contain a folder with the desired slug "
-"and renaming did not work."
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:935
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:938
-msgid ""
-"Please contact the plugin provider and ask them to package their plugin "
-"according to the WordPress guidelines."
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:938
-msgid ""
-"The remote plugin package consists of more than one file, but the files are "
-"not packaged in a folder."
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:1116
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2828
-msgctxt "plugin A *and* plugin B"
-msgid "and"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:1881
-#, php-format
-msgctxt "%s = version number"
-msgid "TGMPA v%s"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2167
-msgid "Required"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2170
-msgid "Recommended"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2186
-msgid "WordPress Repository"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2189
-msgid "External Source"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2192
-msgid "Pre-Packaged"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2209
-msgid "Not Installed"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2213
-msgid "Installed But Not Activated"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2215
-msgid "Active"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2221
-msgid "Required Update not Available"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2224
-msgid "Requires Update"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2227
-msgid "Update recommended"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2235
-#, php-format
-msgctxt "%1$s = install status, %2$s = update status"
-msgid "%1$s, %2$s"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2280
-#, php-format
-msgctxt "plugins"
-msgid "All <span class=\"count\">(%s)</span>"
-msgid_plural "All <span class=\"count\">(%s)</span>"
-msgstr[0] ""
-msgstr[1] ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2283
-#, php-format
-msgid "To Install <span class=\"count\">(%s)</span>"
-msgid_plural "To Install <span class=\"count\">(%s)</span>"
-msgstr[0] ""
-msgstr[1] ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2286
-#, php-format
-msgid "Update Available <span class=\"count\">(%s)</span>"
-msgid_plural "Update Available <span class=\"count\">(%s)</span>"
-msgstr[0] ""
-msgstr[1] ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2289
-#, php-format
-msgid "To Activate <span class=\"count\">(%s)</span>"
-msgid_plural "To Activate <span class=\"count\">(%s)</span>"
-msgstr[0] ""
-msgstr[1] ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2371
-msgctxt "as in: \"version nr unknown\""
-msgid "unknown"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2379
-msgid "Installed version:"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2387
-msgid "Minimum required version:"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2399
-msgid "Available version:"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2422
-#, php-format
-msgid ""
-"No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
-"Dashboard</a>"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2436
-msgid "Plugin"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2437
-msgid "Source"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2438
-msgid "Type"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2442
-msgid "Version"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2443
-msgid "Status"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2491
-#, php-format
-msgctxt "%2$s = plugin name in screen reader markup"
-msgid "Install %2$s"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2495
-#, php-format
-msgctxt "%2$s = plugin name in screen reader markup"
-msgid "Update %2$s"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2500
-#, php-format
-msgctxt "%2$s = plugin name in screen reader markup"
-msgid "Activate %2$s"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2570
-msgid "Upgrade message from the plugin author:"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2603
-msgid "Install"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2609
-msgid "Update"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2612
-msgid "Activate"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2643
-msgid "No plugins were selected to be installed. No action taken."
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2645
-msgid "No plugins were selected to be updated. No action taken."
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2681
-msgid "No plugins are available to be installed at this time."
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2683
-msgid "No plugins are available to be updated at this time."
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2788
-msgid "No plugins were selected to be activated. No action taken."
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:2814
-msgid "No plugins are available to be activated at this time."
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:3028
-msgid "Plugin activation failed."
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:3362
-#, php-format
-msgid "Updating Plugin %1$s (%2$d/%3$d)"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:3364
-#, php-format
-msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:3365
-#, php-format
-msgid "The installation of %1$s failed."
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:3369
-msgid ""
-"The installation and activation process is starting. This process may take a "
-"while on some hosts, so please be patient."
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:3370
-#, php-format
-msgid "%1$s installed and activated successfully."
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:3370
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:3376
-msgid "Show Details"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:3370
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:3376
-msgid "Hide Details"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:3371
-msgid "All installations and activations have been completed."
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:3372
-#, php-format
-msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:3375
-msgid ""
-"The installation process is starting. This process may take a while on some "
-"hosts, so please be patient."
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:3376
-#, php-format
-msgid "%1$s installed successfully."
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:3377
-msgid "All installations have been completed."
-msgstr ""
-
-#: vendor/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php:3378
-#, php-format
-msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""

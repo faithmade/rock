@@ -1,97 +1,235 @@
 <?php
-/**
- * rock Theme Customizer
- *
- * @package rock
- */
 
-/**
- * Add postMessage support for site title and description for the Theme Customizer.
- *
- * @param WP_Customize_Manager $wp_customize Theme Customizer object.
- */
-function rock_customize_register( $wp_customize ) {
-  $wp_customize->remove_section( 'colors');
-	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+class Rock_Customizer {
 
+	/**
+	 * Class constructor.
+	 */
+	public function __construct() {
 
-  if ( is_plugin_active( 'site-logo/site-logo.php' ) ) {
-    $wp_customize->add_setting('logo_position', array(
-      'default'        => 'left',
-      'capability'     => 'edit_theme_options',
-      'theme_supports' => 'site-logo'
-    ));
+		/**
+		 * Autoload all customizer components.
+		 *
+		 * @since 1.0.0
+		 */
+		foreach( glob( dirname( __FILE__ ) . '/customizer/*.php' ) as $filename ) {
 
-    $wp_customize->add_control('logo_position_control',
-      array(
-        'label'    => __( 'Logo Position', 'rock' ),
-        'section'  => 'title_tagline',
-        'settings' => 'logo_position',
-        'type'     => 'radio',
-        'choices'  => array(
-          'left'     => 'Left',
-          'center'   => 'Center',
-          'right'    => 'Right',
-        ),
-    ));
-  }
+			if ( is_readable( $filename ) ) {
 
-  // Toggle header max width
+				require_once $filename;
 
-  $wp_customize->add_setting('header_constraint', array(
-    'default'        => 'default',
-    'capability'     => 'edit_theme_options',
-  ));
+			}
 
-  $wp_customize->add_control('header_constraint_control',
-    array(
-      'label'    => __( 'Header Constraint', 'rock' ),
-      'description' => 'Set how wide the header and navigation should be.',
-      'section'  => 'layout',
-      'settings' => 'header_constraint',
-      'type'     => 'select',
-      'choices'  => array(
-        'default'     => 'Default',
-        'full'   => 'Full',
-      ),
-  ));
+		}
 
-  // Custom Footer Text
+		add_action( 'after_setup_theme',      array( $this, 'logo' ) );
+		add_action( 'customize_register',     array( $this, 'require_controls' ), 1 );
+		add_action( 'customize_register',     array( $this, 'selective_refresh' ), 11 );
+		add_action( 'customize_register',     array( $this, 'use_featured_hero_image' ) );
+		add_action( 'customize_preview_init', array( $this, 'customize_preview_js' ) );
 
-  // $wp_customize->add_section( 'rock_footer' , array(
-  //   'title'      => __( 'Footer', 'rock' ),
-  //   'priority'   => 150,
-  // ));
+	}
 
-  // $wp_customize->add_setting( 'footer_text' , array(
-  //   'default'     => '',
-  //   'transport'   => 'refresh',
-  // ));
+	/**
+	 * Include controls class required by our sections.
+	 *
+	 * This is hooked her since WP_Customize_Control is not present before.
+	 */
+	public function require_controls() {
 
-  // $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'footer_text_control', array(
-  //     'label'      => __( 'Footer Text', 'rock' ),
-  //     'section'    => 'rock_footer',
-  //     'settings'   => 'footer_text',
-  // )));
+		/**
+		 * Autoload all customizer controls.
+		 *
+		 * @since 1.0.0
+		 */
+		foreach( glob( dirname( __FILE__ ) . '/customizer/controls/*.php' ) as $filename ) {
+
+			if ( is_readable( $filename ) ) {
+
+				require_once $filename;
+
+			}
+
+		}
+
+	}
+
+	/**
+	 * Add custom logo support.
+	 *
+	 * @action after_setup_theme
+	 * @since  1.0.0
+	 */
+	public function logo() {
+
+		/**
+		 * Filter the custom logo args.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var array
+		 */
+		$args = (array) apply_filters( 'rock_custom_logo_args',
+			array(
+				'height'      => 100,
+				'width'       => 400,
+				'flex-height' => true,
+				'flex-width'  => true,
+				'header-text' => array( 'site-title', 'site-description' ),
+			)
+		);
+
+		add_theme_support( 'custom-logo', $args );
+
+	}
+
+	/**
+	 * Adds postMessage support for site title and description for the Customizer.
+	 *
+	 * @action customize_register
+	 * @since  1.0.0
+	 * @uses   $this->blogname()
+	 * @uses   $this->blogdescription()
+	 *
+	 * @param WP_Customize_Manager $wp_customize
+	 */
+	public function selective_refresh( WP_Customize_Manager $wp_customize ) {
+
+		$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
+		$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+		$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
+		if ( ! isset( $wp_customize->selective_refresh ) ) {
+
+			return;
+
+		}
+
+		$wp_customize->selective_refresh->add_partial(
+			'blogname',
+			array(
+				'selector'            => '.site-title a',
+				'container_inclusive' => false,
+				'render_callback'     => array( $this, 'blogname' ),
+			)
+		);
+
+		$wp_customize->selective_refresh->add_partial(
+			'blogdescription',
+			array(
+				'selector'            => '.site-description',
+				'container_inclusive' => false,
+				'render_callback'     => array( $this, 'blogdescription' ),
+			)
+		);
+
+	}
+
+	/**
+	 * Display the blog name.
+	 *
+	 * @since 1.0.0
+	 * @see   $this->selective_refresh()
+	 */
+	public function blogname() {
+
+		bloginfo( 'name' );
+
+	}
+
+	/**
+	 * Display the blog description.
+	 *
+	 * @since 1.0.0
+	 * @see   $this->selective_refresh()
+	 */
+	public function blogdescription() {
+
+		bloginfo( 'description' );
+
+	}
+
+	/**
+	 * Add control to use featured images as the hero image.
+	 *
+	 * @action customize_register
+	 * @since  1.0.0
+	 *
+	 * @param WP_Customize_Manager $wp_customize
+	 */
+	public function use_featured_hero_image( WP_Customize_Manager $wp_customize ) {
+
+		$wp_customize->add_setting(
+			'use_featured_hero_image',
+			array(
+				'default'           => 1,
+				'sanitize_callback' => 'absint',
+			)
+		);
+
+		$wp_customize->add_control(
+			'use_featured_hero_image',
+			array(
+				'label'       => esc_html__( 'Use featured image', 'rock' ),
+				'description' => esc_html__( 'Allow the featured image on the current post to override the hero image.', 'rock' ),
+				'section'     => 'header_image',
+				'priority'    => 5,
+				'type'        => 'checkbox',
+			)
+		);
+
+	}
+
+	/**
+	 * Enqueue preview JS.
+	 *
+	 * @action customize_preview_init
+	 * @since 1.0.0
+	 */
+	public function customize_preview_js() {
+
+		$suffix = SCRIPT_DEBUG ? '' : '.min';
+
+		wp_enqueue_script( 'rock-customize-preview', get_template_directory_uri() . "/assets/js/admin/customizer{$suffix}.js", array( 'customize-preview' ), ROCK_VERSION, true );
+
+		wp_localize_script( 'rock-customize-preview', 'colorsSettings', array( 'hero_background_selector' => rock_get_hero_image_selector() ) );
+
+	}
+
+	/**
+	 * Return an array of CSS rules as plain CSS.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  array $rules
+	 *
+	 * @return string
+	 */
+	public static function parse_css_rules( array $rules ) {
+
+		ob_start();
+
+		foreach ( $rules as $rule => $properties ) {
+
+			printf(
+				"%s {\n",
+				implode( ",\n", array_map( 'trim', explode( ',', $rule ) ) )
+			);
+
+			foreach ( $properties as $property => $value ) {
+
+				printf( "\t%s: %s;\n", $property, $value );
+
+			}
+
+			echo "}\n";
+
+		}
+
+		return ob_get_clean();
+
+	}
 
 }
-add_action( 'customize_register', 'rock_customize_register' );
 
-/**
- * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
- */
-function rock_customize_preview_js() {
-	wp_enqueue_script( 'rock_customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), '20130508', true );
-}
-add_action( 'customize_preview_init', 'rock_customize_preview_js' );
-
-/**
- * Add custom CSS to the customizer page
- */
-function rock_customizer_style() {
-  wp_register_style( 'customizer_style', get_template_directory_uri() . '/assets/css/customizer.css' );
-  wp_enqueue_style( 'customizer_style' );
-}
-add_action( 'customize_controls_print_styles', 'rock_customizer_style' );
+new Rock_Customizer;

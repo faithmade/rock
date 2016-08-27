@@ -2,13 +2,41 @@
 /**
  * Displays the primary navigation.
  *
- * @package rock
+ * @package Rock
  */
 ?>
 
 <div class="main-navigation-container">
+
+	<?php
+	/**
+	 * Fires inside the `<div class="main-navigation-container">` element.
+	 *
+	 * @since 1.0.0
+	 */
+	do_action( 'rock_before_site_navigation' );
+	?>
+
 	<nav id="site-navigation" class="main-navigation" role="navigation">
-		<div class="menu-toggle" id="menu-toggle"><div></div><div></div><div></div></div>
-		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+
+		<?php
+		/**
+		 * Fires inside the `<nav id="site-navigation" class="main-navigation" role="navigation">` element.
+		 *
+		 * @since 1.0.0
+		 */
+		do_action( 'rock_site_navigation' );
+		?>
+
 	</nav><!-- #site-navigation -->
+
+	<?php
+	/**
+	 * Fires after the `<nav id="site-navigation" class="main-navigation" role="navigation">` element.
+	 *
+	 * @since 1.0.0
+	 */
+	do_action( 'rock_after_site_navigation' );
+	?>
+
 </div>

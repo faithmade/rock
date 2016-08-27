@@ -2,272 +2,328 @@
 /**
  * Custom template tags for this theme.
  *
- * Eventually, some of the functionality here could be replaced by core features.
- *
- * @package rock
+ * @package Rock
  */
 
-if ( ! function_exists( 'rock_paging_nav' ) ) :
+/**
+ * Display a custom logo.
+ *
+ * @since 1.0.0
+ */
+function rock_the_custom_logo() {
+
+	/**
+	 * For backwards compatibility prior to WordPress 4.5.
+	 *
+	 * @link  https://developer.wordpress.org/reference/functions/the_custom_logo/
+	 * @since 1.0.0
+	 */
+	if ( function_exists( 'the_custom_logo' ) ) {
+
+		the_custom_logo();
+
+		return;
+
+	}
+
+	$custom_logo_id = get_theme_mod( 'custom_logo' );
+
+	if ( ! $custom_logo_id && ! is_customize_preview() ) {
+
+		return;
+
+	}
+
+	$args = array(
+		'class'    => 'custom-logo',
+		'itemprop' => 'logo',
+	);
+
+	printf(
+		'<a href="%1$s" class="custom-logo-link" %2$s>%3$s</a>',
+		esc_url( home_url( '/' ) ),
+		$custom_logo_id ? 'rel="home" itemprop="url"' : 'style="display:none;"',
+		$custom_logo_id ? wp_get_attachment_image( $custom_logo_id, 'full', false, $args ) : '<img class="custom-logo"/>'
+	);
+
+}
+
+/**
+ * Display the site title.
+ *
+ * @since 1.0.0
+ */
+function rock_the_site_title() {
+
+	$html = sprintf(
+		'<h1 class="site-title"><a href="%s" rel="home">%s</a></h1>',
+		esc_url( home_url( '/' ) ),
+		get_bloginfo( 'name' )
+	);
+
+	/**
+	 * Filter the site title HTML.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var string
+	 */
+	echo (string) apply_filters( 'rock_the_site_title', $html );
+
+}
+
+/**
+ * Display the site description.
+ *
+ * @since 1.0.0
+ */
+function rock_the_site_description() {
+
+	$html = sprintf(
+		'<div class="site-description">%s</a></div>',
+		get_bloginfo( 'description' )
+	);
+
+	/**
+	 * Filter the site description HTML.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var string
+	 */
+	echo (string) apply_filters( 'rock_the_site_description', $html );
+
+}
+
+/**
+ * Display a page title.
+ *
+ * @since 1.0.0
+ */
+function rock_the_page_title() {
+
+	if ( $title = rock_get_the_page_title() ) {
+
+		echo $title; // xss ok
+
+	}
+
+}
+
 /**
  * Display navigation to next/previous set of posts when applicable.
+ *
+ * @global WP_Query $wp_query
+ * @since  1.0.0
  */
 function rock_paging_nav() {
-	// Don't print empty markup if there's only one page.
-	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
+
+	global $wp_query;
+
+	if ( ! isset( $wp_query->max_num_pages ) || $wp_query->max_num_pages < 2 ) {
+
 		return;
+
 	}
+
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'rock' ); ?></h1>
+
+		<h1 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'rock' ); ?></h1>
+
 		<div class="nav-links">
 
-			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'rock' ) ); ?></div>
-			<?php endif; ?>
+		<?php if ( get_next_posts_link() ) : ?>
 
-			<?php if ( get_previous_posts_link() ) : ?>
+			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'rock' ) ); ?></div>
+
+		<?php endif; ?>
+
+		<?php if ( get_previous_posts_link() ) : ?>
+
 			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'rock' ) ); ?></div>
-			<?php endif; ?>
+
+		<?php endif; ?>
 
 		</div><!-- .nav-links -->
+
 	</nav><!-- .navigation -->
 	<?php
-}
-endif;
 
-if ( ! function_exists( 'rock_post_nav' ) ) :
+}
+
 /**
  * Display navigation to next/previous post when applicable.
+ *
+ * @global WP_Post $post
+ * @since  1.0.0
  */
 function rock_post_nav() {
-	// Don't print empty markup if there's nowhere to navigate.
-	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
+
+	global $post;
+
+	$previous = is_attachment() ? get_post( $post->post_parent ) : get_adjacent_post( false, '', true );
 	$next     = get_adjacent_post( false, '', false );
 
 	if ( ! $next && ! $previous ) {
+
 		return;
+
 	}
+
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'rock' ); ?></h1>
+
+		<h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'rock' ); ?></h1>
+
 		<div class="nav-links">
-			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'rock' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'rock' ) );
-			?>
+
+		<?php if ( is_rtl() ) : ?>
+
+			<div class="nav-next"><?php next_post_link( '%link &larr;' ); ?></div>
+
+			<div class="nav-previous"><?php previous_post_link( '&rarr; %link' ); ?></div>
+
+		<?php else : ?>
+
+			<div class="nav-previous"><?php previous_post_link( '&larr; %link' ); ?></div>
+
+			<div class="nav-next"><?php next_post_link( '%link &rarr;' ); ?></div>
+
+		<?php endif; ?>
+
 		</div><!-- .nav-links -->
+
 	</nav><!-- .navigation -->
 	<?php
-}
-endif;
 
-if ( ! function_exists( 'rock_posted_on' ) ) :
+}
+
 /**
  * Prints HTML with meta information for the current post-date/time and author.
+ *
+ * @since 1.0.0
  */
 function rock_posted_on() {
-	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
-	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
-	}
 
-	$time_string = sprintf( $time_string,
+	$time = sprintf(
+		'<time class="entry-date published" datetime="%s">%s</time>',
 		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
-		esc_attr( get_the_modified_date( 'c' ) ),
-		esc_html( get_the_modified_date() )
+		esc_html( get_the_date() )
 	);
 
-	$posted_on = $time_string;
+	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 
-	return '<span class="posted-on">' . $posted_on . '</span>';
+		$time = sprintf(
+			'<time class="updated" datetime="%s">%s</time>',
+			esc_attr( get_the_modified_date( 'c' ) ),
+			esc_html( get_the_modified_date() )
+		);
+
+	}
+
+	printf(
+		'<span class="posted-on"><a href="%s" rel="bookmark">%s</a><span>',
+		get_permalink(),
+		$time // xss ok
+	);
 
 }
-endif;
 
-if( ! function_exists('rock_post_format') ):
 /**
  * Prints the post format for the current post.
+ *
+ * @since 1.0.0
  */
-function rock_post_format(){
+function rock_post_format() {
+
+	$format = get_post_format();
+	$format = empty( $format ) ? 'standard' : $format;
+
+	printf( '<span class="post-format">%s</span>', esc_html( $format ) );
+
+}
+
+/**
+ * Display very simple breadcrumbs.
+ *
+ * Adapted from Christoph Weil's Really Simple Breadcrumb plugin.
+ *
+ * @global WP_Post $post
+ * @link   https://wordpress.org/plugins/really-simple-breadcrumb/
+ * @since  1.0.0
+ */
+function rock_breadcrumbs() {
+
 	global $post;
 
-	$format = get_post_format( get_the_ID() );
+	$separator = ' <span class="sep"></span> ';
 
-	if ( false === $format ) {
-		$format = 'standard';
-	}
+	echo '<div class="breadcrumbs">';
 
-	echo '<span class="post-format">' . $format . '</span>';
-}
+	if ( ! is_front_page() ) {
 
-endif;
+		printf(
+			'<a href="%s">%s</a>%s',
+			esc_url( home_url() ),
+			esc_html( get_bloginfo( 'name' ) ),
+			$separator // xss ok
+		);
 
-/**
- * Returns true if a blog has more than 1 category.
- *
- * @return bool
- */
-function rock_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'rock_categories' ) ) ) {
-		// Create an array of all the categories that are attached to posts.
-		$all_the_cool_cats = get_categories( array(
-			'fields'     => 'ids',
-			'hide_empty' => 1,
+		if ( 'page' === get_option( 'show_on_front' ) ) {
 
-			// We only need to know if there is more than one category.
-			'number'     => 2,
-		) );
+			printf(
+				'<a href="%s">%s</a>%s',
+				esc_url( rock_get_posts_url() ),
+				esc_html__( 'Blog', 'rock' ),
+				$separator // xss ok
+			);
 
-		// Count the number of categories that are attached to the posts.
-		$all_the_cool_cats = count( $all_the_cool_cats );
+		}
 
-		set_transient( 'rock_categories', $all_the_cool_cats );
-	}
+		if ( is_category() || is_single() ) {
 
-	if ( $all_the_cool_cats > 1 ) {
-		// This blog has more than 1 category so rock_categorized_blog should return true.
-		return true;
+			the_category( ', ' );
+
+			if ( is_single() ) {
+
+				echo $separator; // xss ok
+
+				the_title();
+
+			}
+
+		} elseif ( is_page() && $post->post_parent ) {
+
+			$home = get_page( get_option( 'page_on_front' ) );
+
+			for ( $i = count( $post->ancestors )-1; $i >= 0; $i-- ) {
+
+				if ( ( $home->ID ) != ( $post->ancestors[$i] ) ) {
+
+					echo '<a href="' . get_permalink( $post->ancestors[$i] ) . '">' . get_the_title( $post->ancestors[$i] ) . '</a>' . $separator;
+
+				}
+			}
+
+			echo the_title();
+
+		} elseif ( is_page() ) {
+
+			echo the_title();
+
+		} elseif ( is_404() ) {
+
+			echo '404';
+
+		}
+
 	} else {
-		// This blog has only 1 category so rock_categorized_blog should return false.
-		return false;
-	}
-}
 
-/**
- * Returns the URL of the featured image if it exists, otherwise returns false
- *
- * @return bool/string
- */
-function rock_get_featured_image_url() {
-	$featured_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'featured' );
+		bloginfo( 'name' );
 
-	$featured_image_url = $featured_image_url[0];
-
-	if ( $featured_image_url == "" )
-		return false;
-	else
-		return $featured_image_url;
-}
-
-/**
- * Flush out the transients used in rock_categorized_blog.
- */
-function rock_category_transient_flusher() {
-	// Like, beat it. Dig?
-	delete_transient( 'rock_categories' );
-}
-add_action( 'edit_category', 'rock_category_transient_flusher' );
-add_action( 'save_post',     'rock_category_transient_flusher' );
-
-
-/**
- * Post featured image for full or short
- *
- * If short/multiple view (not singular), image is linked.
- *
- * @since 1.0
- * @return string Featured image HTML
- */
-function rock_post_image() {
-
-	// Featured image
-	$image = get_the_post_thumbnail( null, apply_filters('rock_post_image_size', 'rock-post-header'), array('class' => 'rock-image' ) );
-
-	// Link if short / multiple
-	if ( ! is_singular( get_post_type() ) ) {
-		$image = '<a href="' . esc_url( get_permalink() ) . '" title="' . esc_attr( the_title_attribute( array( 'echo' => false ) ) ) . '">' . $image . '</a>';
 	}
 
-	echo apply_filters( 'rock_post_image', $image );
+	echo '</div>';
 
-}
-
-
-/**
- * Gets the content template
- *
- * @since 1.0
- */
-function rock_get_content_template() {
-  switch ( get_post_type() ) {
-    case 'ctc_sermon':
-      get_template_part( 'content', 'sermon' );
-    break;
-    case 'ctc_event':
-      get_template_part( 'content', 'event' );
-    break;
-    case 'ctc_person':
-      get_template_part( 'content', 'person' );
-    break;
-    case 'ctc_location':
-      get_template_part( 'content', 'location' );
-    break;
-    default:
-      get_template_part( 'content', get_post_format() );
-    break;
-  }
-}
-
-/**
- * Outputs a title for archive templates.
- *
- * Exactly the same as the built-in WordPress get_the_archive_title() function
- * but alters the output of custom post type archive titles to remove "Archive:"
- * from the front.
- *
- * @since 1.0
- * @return string Archive title
- */
-function rock_get_the_archive_title() {
-    if ( is_category() ) {
-        $title = sprintf( __( 'Category: %s' ), single_cat_title( '', false ) );
-    } elseif ( is_tag() ) {
-        $title = sprintf( __( 'Tag: %s' ), single_tag_title( '', false ) );
-    } elseif ( is_author() ) {
-        $title = sprintf( __( 'Author: %s' ), '<span class="vcard">' . get_the_author() . '</span>' );
-    } elseif ( is_year() ) {
-        $title = sprintf( __( 'Year: %s' ), get_the_date( _x( 'Y', 'yearly archives date format' ) ) );
-    } elseif ( is_month() ) {
-        $title = sprintf( __( 'Month: %s' ), get_the_date( _x( 'F Y', 'monthly archives date format' ) ) );
-    } elseif ( is_day() ) {
-        $title = sprintf( __( 'Day: %s' ), get_the_date( _x( 'F j, Y', 'daily archives date format' ) ) );
-    } elseif ( is_tax( 'post_format' ) ) {
-        if ( is_tax( 'post_format', 'post-format-aside' ) ) {
-            $title = _x( 'Asides', 'post format archive title' );
-        } elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) {
-            $title = _x( 'Galleries', 'post format archive title' );
-        } elseif ( is_tax( 'post_format', 'post-format-image' ) ) {
-            $title = _x( 'Images', 'post format archive title' );
-        } elseif ( is_tax( 'post_format', 'post-format-video' ) ) {
-            $title = _x( 'Videos', 'post format archive title' );
-        } elseif ( is_tax( 'post_format', 'post-format-quote' ) ) {
-            $title = _x( 'Quotes', 'post format archive title' );
-        } elseif ( is_tax( 'post_format', 'post-format-link' ) ) {
-            $title = _x( 'Links', 'post format archive title' );
-        } elseif ( is_tax( 'post_format', 'post-format-status' ) ) {
-            $title = _x( 'Statuses', 'post format archive title' );
-        } elseif ( is_tax( 'post_format', 'post-format-audio' ) ) {
-            $title = _x( 'Audio', 'post format archive title' );
-        } elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
-            $title = _x( 'Chats', 'post format archive title' );
-        }
-    } elseif ( is_post_type_archive() ) {
-        $title = sprintf( __( '%s' ), post_type_archive_title( '', false ) );
-    } elseif ( is_tax() ) {
-        $tax = get_taxonomy( get_queried_object()->taxonomy );
-        /* translators: 1: Taxonomy singular name, 2: Current taxonomy term */
-        $title = sprintf( __( '%1$s: %2$s' ), $tax->labels->singular_name, single_term_title( '', false ) );
-    } else {
-        $title = __( 'Archives' );
-    }
-
-    /**
-     * Filter the archive title.
-     *
-     * @since 4.1.0
-     *
-     * @param string $title Archive title to be displayed.
-     */
-    return apply_filters( 'rock_get_the_archive_title', $title );
 }

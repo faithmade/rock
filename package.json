@@ -1,30 +1,31 @@
 {
-  "name": "rock-pro",
-  "version": "0.0.1",
-  "description": "A blog theme for pastors.",
-  "main": "index.php",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/UpThemes/rock-pro.git"
-  },
-  "author": "UpThemes",
-  "license": "GPLv2",
+  "name": "rock",
+  "title": "Rock",
+  "description": "Rock is a WordPress theme for churches with powerful layout options, customizable colors, fonts, and more.",
+  "version": "2.0.0",
+  "author": "Lift",
+  "license": "GPL-2.0",
+  "repository": "faithmade/rock",
+  "homepage": "https://rock.churchthemes.net",
   "bugs": {
-    "url": "https://github.com/UpThemes/rock-pro/issues"
+    "url": "https://github.com/faithmade/rock/issues"
   },
-  "homepage": "https://github.com/UpThemes/rock-pro",
   "devDependencies": {
     "grunt": "~0.4.5",
-    "grunt-autoprefixer": "~1.0.0",
-    "grunt-browser-sync": "~1.3.0",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-sass": "^0.7.3",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-pot": "~0.1.2",
-    "grunt-sass": "^0.14.0",
-    "grunt-cssjanus": "~0.2.2"
+    "grunt-autoprefixer": "~3.0.4",
+    "grunt-browser-sync": "~2.2.0",
+    "grunt-contrib-cssmin": "~0.14.0",
+    "grunt-contrib-jshint": "~1.0.0",
+    "grunt-contrib-uglify": "~1.0.1",
+    "grunt-contrib-watch": "~1.0.0",
+    "grunt-cssjanus": "~0.3.2",
+    "grunt-dev-update": "~2.0.0",
+    "grunt-pot": "~0.2.1",
+    "grunt-po2mo": "~0.1.2",
+    "grunt-sass": "1.2.0",
+    "grunt-text-replace": "~0.4.0",
+    "load-grunt-tasks": "~3.5.0",
+    "matchdep": "~1.0.1",
+    "susy": "~2.2.12"
   }
 }

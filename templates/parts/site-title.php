@@ -2,33 +2,16 @@
 /**
  * Displays the site title.
  *
- * @package rock
+ * @package Rock
  */
 ?>
 
 <div class="site-title-wrapper">
 
-	<div class="site-title-wrapper-inner site-logo-align-<?php echo get_theme_mod( 'logo_position' , 'left' ); ?>">
+	<?php rock_the_custom_logo(); ?>
 
-    <?php if ( has_site_logo() ): ?>
-      <div class="site-logo">
-        <?php if ( function_exists( 'the_site_logo' ) ) the_site_logo(); ?>
-      </div>
-    <?php endif; ?>
+	<?php rock_the_site_title(); ?>
 
-    <div class="site-header-text">
-  		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-  		<div class="site-description"><?php bloginfo( 'description' ); ?></div>
-    </div>
-
-	</div><!-- .site-info-inner -->
-
-  <?php if( is_active_sidebar( 'header' ) ): ?>
-
-    <div class="header-widget-area">
-      <?php dynamic_sidebar( 'header' ); ?>
-    </div>
-
-  <?php endif; ?>
+	<?php rock_the_site_description(); ?>
 
 </div><!-- .site-title-wrapper -->
