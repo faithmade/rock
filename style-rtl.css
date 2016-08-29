@@ -570,6 +570,23 @@ a {
     outline: 0; }
 
 /*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0; }
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%; }
+
+/*--------------------------------------------------------------
 # Menus
 --------------------------------------------------------------*/
 .main-navigation-container {
@@ -828,21 +845,30 @@ body.no-max-width .main-navigation {
   width: 50%; }
 
 /*--------------------------------------------------------------
-# Media
+# Post Types
 --------------------------------------------------------------*/
-.page-content .wp-smiley,
-.entry-content .wp-smiley,
-.comment-content .wp-smiley {
-  border: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0; }
+.sermon-meta,
+.person-meta,
+.location-meta,
+.event-meta {
+  margin-bottom: 20px; }
+  .sermon-meta span,
+  .person-meta span,
+  .location-meta span,
+  .event-meta span {
+    margin-left: 5px; }
+  .sermon-meta i,
+  .person-meta i,
+  .location-meta i,
+  .event-meta i {
+    vertical-align: middle; }
 
-/* Make sure embeds and iframes fit their containers. */
-embed,
-iframe,
-object {
-  max-width: 100%; }
+.event-map {
+  width: 100%;
+  height: 280px; }
+
+.entry-media {
+  margin-bottom: 20px; }
 
 /*--------------------------------------------------------------
 # Captions
@@ -1412,6 +1438,26 @@ object {
 body.no-max-width .site-content {
   max-width: none; }
 
+body.fl-builder.layout-one-column-wide .site-content,
+body.fl-builder.layout-one-column-wide.page .hentry,
+body.fl-builder.layout-one-column-wide .page-content,
+body.fl-builder.layout-one-column-wide .content-area {
+  float: none;
+  max-width: none;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  background-color: transparent; }
+
+@media only screen and (min-width: 40.063em) {
+  body.fl-builder.layout-one-column-wide .content-area {
+    float: none;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent; } }
+
 body.layout-one-column-narrow .site-content {
   max-width: 66.66667%;
   margin-right: auto;
@@ -1954,7 +2000,7 @@ body.no-max-width .site-info-wrapper .site-info {
 --------------------------------------------------------------*/
 .hentry {
   margin: 0 0 1.5em;
-  padding: 2.5em 3.375em;
+  padding: 3.375em 3.375em 2.5em;
   background-color: #ffffff; }
   @media only screen and (min-width: 40.063em) and (max-width: 61.063em) {
     .hentry {
@@ -1976,6 +2022,11 @@ body.no-max-width .site-info-wrapper .site-info {
         top: 2px;
         right: -40px;
         opacity: 0.2; } }
+
+.featured-image {
+  margin-bottom: 1.5em; }
+  .featured-image img {
+    display: block; }
 
 .entry-title a,
 .entry-title a:visited,

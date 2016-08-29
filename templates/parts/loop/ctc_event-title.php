@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package rock
+ * @package Rock
  */
 
 // Get event data
@@ -26,15 +26,15 @@ $map_zoom             = ctc_event_data()['map_zoom'];
 		<div class="entry-header-column">
 
 			<?php $tag = is_single() ? 'h1' : 'h2'; ?>
-			<<?php echo $tag; ?> class="entry-title">
+			<<?php esc_attr_e( $tag ); ?> class="entry-title">
 				<a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title(); ?></a>
-			</<?php echo $tag; ?>>
+			</<?php esc_attr_e( $tag ); ?>>
 
 			<div class="event-meta">
 				<?php if ( $date ) : ?>
 					<span>
 						<i class="genericon genericon-month"></i>
-						<?php echo esc_html( $date ); ?>
+						<?php esc_html_e( $date ); ?>
 					</span>
 				<?php endif; ?>
 				<?php if ( $time ) : ?>
@@ -46,7 +46,7 @@ $map_zoom             = ctc_event_data()['map_zoom'];
 				<?php if ( $venue ) : ?>
 					<span>
 						<i class="genericon genericon-home"></i>
-						<?php echo esc_html( $venue ); ?>
+						<?php esc_html_e( $venue ); ?>
 					</span>
 				<?php endif; ?>
 				<?php if ( $address ) : ?>

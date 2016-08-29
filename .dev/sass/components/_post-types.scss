@@ -1,0 +1,23 @@
+.sermon-meta,
+.person-meta,
+.location-meta,
+.event-meta {
+	margin-bottom: 20px;
+
+	span{
+		margin-right: 5px;
+	}
+
+	i {
+    	vertical-align: middle;
+    }
+}
+
+.event-map{
+	width: 100%;
+	height: 280px;
+}
+
+.entry-media{
+	margin-bottom: 20px;
+}

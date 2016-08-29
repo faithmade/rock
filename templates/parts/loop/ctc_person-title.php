@@ -4,32 +4,37 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package rock
+ * @package Rock
  */
 
 // Get person data
 $position = ctc_person_data()['position'];
-$phone = ctc_person_data()['phone'];
-$email = ctc_person_data()['email'];
-$urls = ctc_person_data()['urls'];
+$phone    = ctc_person_data()['phone'];
+$email    = ctc_person_data()['email'];
+$urls     = ctc_person_data()['urls'];
 
 ?>
 <header class="entry-header">
 	<div class="entry-header-row">
 		<div class="entry-header-column">
-			<a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
+
+			<?php $tag = is_single() ? 'h1' : 'h2'; ?>
+			<<?php esc_attr_e( $tag ); ?> class="entry-title">
+				<a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title(); ?></a>
+			</<?php esc_attr_e( $tag ); ?>>
+
 			<div class="person-meta">
 				<?php if ( $position ) : ?>
 					<span>
 						<i class="genericon genericon-user"></i>
-						<?php echo esc_html( $position ); ?>
+						<?php esc_html_e( $position ); ?>
 					</span>
 				<?php endif; ?>
 
 				<?php if ( $phone ) : ?>
 					<span>
 						<i class="genericon genericon-phone"></i>
-						<?php echo esc_html( $phone ); ?>
+						<?php esc_html_e( $phone ); ?>
 					</span>
 				<?php endif; ?>
 
@@ -50,7 +55,7 @@ $urls = ctc_person_data()['urls'];
 						?>
 						<span>
 							<i class="genericon genericon-link"></i>
-							<a href="<?php echo $url; ?>"><?php echo $url; ?></a>
+							<a href="<?php echo esc_url( $url ); ?>"><?php echo esc_url( $url ); ?></a>
 						</span>
 						<?php
 					}

@@ -1,6 +1,6 @@
 .hentry {
 	margin: 0 0 1.5em;
-	padding: 2.5em 3.375em;
+	padding: 3.375em 3.375em 2.5em;
 	background-color: $color__content-bg;
 
 	@media #{$medium-only} {
@@ -30,6 +30,14 @@
 				opacity: 0.2;
 			}
 		}
+	}
+}
+
+.featured-image{
+	margin-bottom: 1.5em;
+
+	img{
+		display: block;
 	}
 }
 

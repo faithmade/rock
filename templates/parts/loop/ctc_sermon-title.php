@@ -4,26 +4,27 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package rock
+ * @package Rock
  */
 
-$ctc_sermon_topic    = get_the_term_list( $post->ID, 'ctc_sermon_topic', '', __( ', ', 'rock' ) );
-$ctc_sermon_book     = get_the_term_list( $post->ID, 'ctc_sermon_book', '', __( ', ', 'rock' ) );
-$ctc_sermon_series   = get_the_term_list( $post->ID, 'ctc_sermon_series', '', __( ', ', 'rock' ) );
-$ctc_sermon_speaker  = get_the_term_list( $post->ID, 'ctc_sermon_speaker', '', __( ', ', 'rock' ) );
-$ctc_sermon_tag      = get_the_term_list( $post->ID, 'ctc_sermon_tag', '', __( ', ', 'rock' ) );
+$ctc_sermon_topic    = get_the_term_list( $post->ID, 'ctc_sermon_topic', '', esc_html__( ', ' ) );
+$ctc_sermon_book     = get_the_term_list( $post->ID, 'ctc_sermon_book', '', esc_html__( ', ' ) );
+$ctc_sermon_series   = get_the_term_list( $post->ID, 'ctc_sermon_series', '', esc_html__( ', ' ) );
+$ctc_sermon_speaker  = get_the_term_list( $post->ID, 'ctc_sermon_speaker', '', esc_html__( ', ' ) );
+$ctc_sermon_tag      = get_the_term_list( $post->ID, 'ctc_sermon_tag', '', esc_html__( ', ' ) );
 ?>
 <header class="entry-header">
 	<div class="entry-header-row">
 		<div class="entry-header-column">
 			<div class="entry-meta">
-				<?php echo rock_posted_on(); ?>
+				<?php esc_html_e( rock_posted_on() ); ?>
 			</div><!-- .entry-meta -->
 
 			<?php $tag = is_single() ? 'h1' : 'h2'; ?>
-			<<?php echo $tag; ?> class="entry-title">
+			<<?php esc_attr_e( $tag ); ?> class="entry-title">
 				<a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title(); ?></a>
-			</<?php echo $tag; ?>>
+			</<?php esc_attr_e( $tag ); ?>>
+
 
 			<div class="sermon-meta">
 				<?php if ( $ctc_sermon_speaker ) : ?>

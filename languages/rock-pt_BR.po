@@ -1,14 +1,14 @@
 # Rock Theme for WordPress
 # Copyright (C) 2016
 # This file is distributed under the same license as the Rock package.
-# GoDaddy Operating Company, LLC.
+# Walmedia, LLC.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: rock 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-27 15:33-0500\n"
+"POT-Creation-Date: 2016-08-28 23:15-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -623,103 +623,126 @@ msgctxt "1. theme name link, 2. theme author link"
 msgid "%1$s theme by %2$s"
 msgstr "%1$s por %2$s"
 
-#: templates/parts/loop/event-content.php:26
-#: templates/parts/loop/location-content.php:31
-#: templates/parts/loop/person-content.php:48
+#: templates/parts/loop/ctc_event-content.php:26
+#: templates/parts/loop/ctc_location-content.php:26
+#: templates/parts/loop/ctc_person-content.php:46
+#: templates/parts/loop/ctc_sermon-content.php:115
 #: templates/parts/loop/post-content.php:13
-#: templates/parts/loop/sermon-content.php:113
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Saiba mais <span class=\"meta-nav\">&rarr;</span>"
 
-#: templates/parts/loop/event-content.php:32
-#: templates/parts/loop/location-content.php:37
+#: templates/parts/loop/ctc_event-content.php:32
+#: templates/parts/loop/ctc_location-content.php:32
+#: templates/parts/loop/ctc_person-content.php:52
+#: templates/parts/loop/ctc_sermon-content.php:121
 #: templates/parts/loop/page-content.php:17
-#: templates/parts/loop/person-content.php:54
 #: templates/parts/loop/post-content.php:17
-#: templates/parts/loop/sermon-content.php:119
 msgid "Pages:"
 msgstr "Páginas:"
 
 #. //codex.wordpress.org/Template_Hierarchy
 #. *
-#. * @package rock
+#. * @package Rock
 #.
-#: templates/parts/loop/event-footer.php:13
-#: templates/parts/loop/location-footer.php:13
-#: templates/parts/loop/person-footer.php:13
+#: templates/parts/loop/ctc_event-footer.php:13
+#: templates/parts/loop/ctc_location-footer.php:13
+#: templates/parts/loop/ctc_person-footer.php:13
+#: templates/parts/loop/ctc_sermon-footer.php:13
 #: templates/parts/loop/post-meta.php:21
 #: templates/parts/loop/post-search-footer.php:41
-#: templates/parts/loop/sermon-footer.php:13
 msgid "Leave a comment"
 msgstr "Deixe um comentário"
 
-#: templates/parts/loop/event-footer.php:13
-#: templates/parts/loop/location-footer.php:13
-#: templates/parts/loop/person-footer.php:13
+#: templates/parts/loop/ctc_event-footer.php:13
+#: templates/parts/loop/ctc_location-footer.php:13
+#: templates/parts/loop/ctc_person-footer.php:13
+#: templates/parts/loop/ctc_sermon-footer.php:13
 #: templates/parts/loop/post-meta.php:21
 #: templates/parts/loop/post-search-footer.php:41
-#: templates/parts/loop/sermon-footer.php:13
 msgid "1 Comment"
 msgstr "1 comentário"
 
-#: templates/parts/loop/event-footer.php:13
-#: templates/parts/loop/location-footer.php:13
-#: templates/parts/loop/person-footer.php:13
-#: templates/parts/loop/sermon-footer.php:13
+#: templates/parts/loop/ctc_event-footer.php:13
+#: templates/parts/loop/ctc_location-footer.php:13
+#: templates/parts/loop/ctc_person-footer.php:13
+#: templates/parts/loop/ctc_sermon-footer.php:13
 #, fuzzy
 msgid "% Comments"
 msgstr "% comentários"
 
-#: templates/parts/loop/event-footer.php:16
-#: templates/parts/loop/location-footer.php:16
+#: templates/parts/loop/ctc_event-footer.php:16
+#: templates/parts/loop/ctc_location-footer.php:16
+#: templates/parts/loop/ctc_person-footer.php:16
+#: templates/parts/loop/ctc_sermon-footer.php:16
 #: templates/parts/loop/page-footer.php:8
-#: templates/parts/loop/person-footer.php:16
 #: templates/parts/loop/post-footer.php:13
 #: templates/parts/loop/post-search-footer.php:45
-#: templates/parts/loop/sermon-footer.php:16
 msgid "Edit"
 msgstr "Editar"
 
 #. //codex.wordpress.org/Template_Hierarchy
 #. *
-#. * @package rock
+#. * @package Rock
 #.
-#: templates/parts/loop/event-footer.php:22
-#: templates/parts/loop/event-footer.php:32
-#: templates/parts/loop/location-footer.php:22
-#: templates/parts/loop/location-footer.php:32
-#: templates/parts/loop/person-footer.php:22
-#: templates/parts/loop/person-footer.php:32
-#: templates/parts/loop/sermon-footer.php:22
-#: templates/parts/loop/sermon-footer.php:32
-#: templates/parts/loop/sermon-title.php:10
-#: templates/parts/loop/sermon-title.php:11
-#: templates/parts/loop/sermon-title.php:12
-#: templates/parts/loop/sermon-title.php:13
-#: templates/parts/loop/sermon-title.php:14
+#: templates/parts/loop/ctc_event-footer.php:22
+#: templates/parts/loop/ctc_event-footer.php:32
+#: templates/parts/loop/ctc_location-footer.php:22
+#: templates/parts/loop/ctc_location-footer.php:32
+#: templates/parts/loop/ctc_person-footer.php:22
+#: templates/parts/loop/ctc_person-footer.php:32
+#: templates/parts/loop/ctc_sermon-footer.php:22
+#: templates/parts/loop/ctc_sermon-footer.php:32
+#: templates/parts/loop/ctc_sermon-title.php:10
+#: templates/parts/loop/ctc_sermon-title.php:11
+#: templates/parts/loop/ctc_sermon-title.php:12
+#: templates/parts/loop/ctc_sermon-title.php:13
+#: templates/parts/loop/ctc_sermon-title.php:14
 #, fuzzy
 msgid ", "
 msgstr ", "
 
-#: templates/parts/loop/event-footer.php:26
-#: templates/parts/loop/location-footer.php:26
-#: templates/parts/loop/person-footer.php:26
-#: templates/parts/loop/sermon-footer.php:26
+#: templates/parts/loop/ctc_event-footer.php:26
+#: templates/parts/loop/ctc_location-footer.php:26
+#: templates/parts/loop/ctc_person-footer.php:26
+#: templates/parts/loop/ctc_sermon-footer.php:26
 #, fuzzy, php-format
 msgid "Posted in: %1$s"
 msgstr "Publicado em %s"
 
-#: templates/parts/loop/event-footer.php:36
-#: templates/parts/loop/location-footer.php:36
-#: templates/parts/loop/person-footer.php:36
-#: templates/parts/loop/sermon-footer.php:36
+#: templates/parts/loop/ctc_event-footer.php:36
+#: templates/parts/loop/ctc_location-footer.php:36
+#: templates/parts/loop/ctc_person-footer.php:36
+#: templates/parts/loop/ctc_sermon-footer.php:36
 #, fuzzy, php-format
 msgid "Filed under: %1$s"
 msgstr "Arquivado em: %s"
 
-#: templates/parts/loop/person-content.php:34
+#: templates/parts/loop/ctc_person-content.php:32
 msgctxt "event"
 msgid "Get Directions"
+msgstr ""
+
+#: templates/parts/loop/ctc_sermon-content.php:56
+msgctxt "Text for the video download link for sermons."
+msgid "Save Video"
+msgstr ""
+
+#: templates/parts/loop/ctc_sermon-content.php:63
+msgctxt "Text for the audio download link for sermons"
+msgid "Save Audio"
+msgstr ""
+
+#: templates/parts/loop/ctc_sermon-content.php:70
+msgctxt "Text for the PDF download link for sermons."
+msgid "PDF"
+msgstr ""
+
+#: templates/parts/loop/ctc_sermon-content.php:88
+msgid "Show Video Player"
+msgstr ""
+
+#: templates/parts/loop/ctc_sermon-content.php:94
+msgid "Show Audio Player"
 msgstr ""
 
 #: templates/parts/loop/post-excerpt.php:13
@@ -755,29 +778,6 @@ msgstr "Arquivado em: %s"
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% comentários"
-
-#: templates/parts/loop/sermon-content.php:57
-msgctxt "Text for the video download link for sermons."
-msgid "Save Video"
-msgstr ""
-
-#: templates/parts/loop/sermon-content.php:63
-msgctxt "Text for the audio download link for sermons"
-msgid "Save Audio"
-msgstr ""
-
-#: templates/parts/loop/sermon-content.php:69
-msgctxt "Text for the PDF download link for sermons."
-msgid "PDF"
-msgstr ""
-
-#: templates/parts/loop/sermon-content.php:86
-msgid "Show Video Player"
-msgstr ""
-
-#: templates/parts/loop/sermon-content.php:92
-msgid "Show Audio Player"
-msgstr ""
 
 #, fuzzy
 #~ msgid "Primary Font"

@@ -4,24 +4,24 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package rock
+ * @package Rock
  */
 
 // Get location data
-$address = ctc_location_data()['address'];
+$address              = ctc_location_data()['address'];
 $show_directions_link = ctc_location_data()['show_directions_link'];
-$directions_url = ctc_location_data()['directions_url'];
-$phone = ctc_location_data()['phone'];
-$times = ctc_location_data()['times'];
+$directions_url       = ctc_location_data()['directions_url'];
+$phone                = ctc_location_data()['phone'];
+$times                = ctc_location_data()['times'];
 ?>
 <header class="entry-header">
 	<div class="entry-header-row">
 		<div class="entry-header-column">
 
 			<?php $tag = is_single() ? 'h1' : 'h2'; ?>
-			<<?php echo $tag; ?> class="entry-title">
+			<<?php esc_attr_e( $tag ); ?> class="entry-title">
 				<a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title(); ?></a>
-			</<?php echo $tag; ?>>
+			</<?php esc_attr_e( $tag ); ?>>
 
 			<div class="location-meta">
 				<?php if ( $address ) : ?>
