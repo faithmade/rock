@@ -14,7 +14,7 @@ $google_map = ctc_google_map( array(
 	'latitude'  => $location_data['map_lat'],
 	'longitude' => $location_data['map_lng'],
 	'type'      => $location_data['map_type'],
-	'zoom'      => $location_data['map_zoom']
+	'zoom'      => $location_data['map_zoom'],
 ) );
 
 ?>
