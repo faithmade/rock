@@ -7,7 +7,8 @@
  * @package Rock
  */
 
-$address = ctc_event_data()['address'];
+$event_data = ctc_event_data();
+$address    = $event_data['address'];
 ?>
 
 <?php if ( $address ) : ?>
@@ -26,10 +27,8 @@ $address = ctc_event_data()['address'];
 			the_content( esc_html__( 'Read More <span class="meta-nav">&rarr;</span>', 'rock' ) );
 		}
 
-	?>
-	<?php
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'rock' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'rock' ),
 			'after'  => '</div>',
 		) );
 	?>

@@ -7,7 +7,8 @@
  * @package Rock
  */
 
-$address = ctc_location_data()['address'];
+$location_data    = ctc_location_data();
+$address          = $location_data['address'];
 ?>
 
 <?php if ( $address ) : ?>

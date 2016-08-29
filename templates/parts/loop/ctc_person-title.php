@@ -8,10 +8,11 @@
  */
 
 // Get person data
-$position = ctc_person_data()['position'];
-$phone    = ctc_person_data()['phone'];
-$email    = ctc_person_data()['email'];
-$urls     = ctc_person_data()['urls'];
+$person_data = ctc_person_data();
+$position    = $person_data['position'];
+$phone       = $person_data['phone'];
+$email       = $person_data['email'];
+$urls        = $person_data['urls'];
 
 ?>
 <header class="entry-header">

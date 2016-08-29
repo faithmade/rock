@@ -8,18 +8,19 @@
  */
 
 // Get event data
-$date                 = ctc_event_data()['date'];
-$start_date           = ctc_event_data()['start_date'];
-$end_date             = ctc_event_data()['end_date'];
-$time                 = ctc_event_data()['time'];
-$venue                = ctc_event_data()['venue'];
-$address              = ctc_event_data()['address'];
-$show_directions_link = ctc_event_data()['show_directions_link'];
-$directions_url       = ctc_event_data()['directions_url'];
-$map_lat              = ctc_event_data()['map_lat'];
-$map_lng              = ctc_event_data()['map_lng'];
-$map_type             = ctc_event_data()['map_type'];
-$map_zoom             = ctc_event_data()['map_zoom'];
+$event_data           = ctc_event_data();
+$date                 = $event_data['date'];
+$start_date           = $event_data['start_date'];
+$end_date             = $event_data['end_date'];
+$time                 = $event_data['time'];
+$venue                = $event_data['venue'];
+$address              = $event_data['address'];
+$show_directions_link = $event_data['show_directions_link'];
+$directions_url       = $event_data['directions_url'];
+$map_lat              = $event_data['map_lat'];
+$map_lng              = $event_data['map_lng'];
+$map_type             = $event_data['map_type'];
+$map_zoom             = $event_data['map_zoom'];
 ?>
 <header class="entry-header">
 	<div class="entry-header-row">

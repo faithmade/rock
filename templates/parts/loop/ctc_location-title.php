@@ -8,11 +8,12 @@
  */
 
 // Get location data
-$address              = ctc_location_data()['address'];
-$show_directions_link = ctc_location_data()['show_directions_link'];
-$directions_url       = ctc_location_data()['directions_url'];
-$phone                = ctc_location_data()['phone'];
-$times                = ctc_location_data()['times'];
+$location_data        = ctc_location_data();
+$address              = $location_data['address'];
+$show_directions_link = $location_data['show_directions_link'];
+$directions_url       = $location_data['directions_url'];
+$phone                = $location_data['phone'];
+$times                = $location_data['times'];
 ?>
 <header class="entry-header">
 	<div class="entry-header-row">

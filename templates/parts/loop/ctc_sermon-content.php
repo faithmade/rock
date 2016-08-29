@@ -8,12 +8,13 @@
  */
 
 // Get sermon data:
-$has_full_text       = ctc_sermon_data()['has_full_text'];
-$video_player        = ctc_sermon_data()['video_player'];
-$video_download_url  = ctc_sermon_data()['video_download_url'];
-$audio_player        = ctc_sermon_data()['audio_player'];
-$audio_download_url  = ctc_sermon_data()['audio_download_url'];
-$pdf_download_url    = ctc_sermon_data()['pdf_download_url'];
+$sermon_data         = ctc_sermon_data();
+$has_full_text       = $sermon_data['has_full_text'];
+$video_player        = $sermon_data['video_player'];
+$video_download_url  = $sermon_data['video_download_url'];
+$audio_player        = $sermon_data['audio_player'];
+$audio_download_url  = $sermon_data['audio_download_url'];
+$pdf_download_url    = $sermon_data['pdf_download_url'];
 
 // Show buttons if need to switch between video and audio players or have at least one download link
 $show_buttons = false;

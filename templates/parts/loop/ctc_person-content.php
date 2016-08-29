@@ -7,13 +7,14 @@
  * @package Rock
  */
 
-$directions_url = ctc_location_data()['directions_url'];
+$location_data  = ctc_location_data();
+$directions_url = $location_data['directions_url'];
 
 $google_map = ctc_google_map( array(
-	'latitude'  => ctc_location_data()['map_lat'],
-	'longitude' => ctc_location_data()['map_lng'],
-	'type'      => ctc_location_data()['map_type'],
-	'zoom'      => ctc_location_data()['map_zoom']
+	'latitude'  => $location_data['map_lat'],
+	'longitude' => $location_data['map_lng'],
+	'type'      => $location_data['map_type'],
+	'zoom'      => $location_data['map_zoom']
 ) );
 
 ?>
