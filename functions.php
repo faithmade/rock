@@ -23,7 +23,7 @@
  *
  * @var string
  */
-define( 'ROCK_VERSION', '1.0.0' );
+define( 'ROCK_VERSION', '2.0.0' );
 
 /**
  * Minimum WordPress version required for Rock.
