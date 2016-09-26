@@ -23,7 +23,11 @@
  *
  * @var string
  */
+<<<<<<< Updated upstream
 define( 'PRIMER_VERSION', '0.9.0' );
+=======
+define( 'ROCK_VERSION', '2.0.0' );
+>>>>>>> Stashed changes
 
 /**
  * Minimum WordPress version required for Primer.

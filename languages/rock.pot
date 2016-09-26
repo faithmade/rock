@@ -1,0 +1,732 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the rock package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: rock 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-28 23:15-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#. //codex.wordpress.org/Creating_an_Error_404_Page
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#404-php
+#. *
+#. * @package Rock
+#. * @since 1.0.0
+#.
+#: 404.php:22
+msgid "Oops! That page can't be found."
+msgstr ""
+
+#: 404.php:28
+msgid ""
+"It looks like nothing was found at this location. Please try searching below:"
+msgstr ""
+
+#: comments.php:35
+#, php-format
+msgctxt "1. number of comments, 2. post title"
+msgid "One thought on %2$s"
+msgid_plural "%1$d thoughts on %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:54 comments.php:79
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:56
+#, php-format
+msgctxt "left arrow (LTR) / right arrow (RTL)"
+msgid "%s Older Comments"
+msgstr ""
+
+#: comments.php:58
+#, php-format
+msgctxt "right arrow (LTR) / left arrow (RTL)"
+msgid "Newer Comments %s"
+msgstr ""
+
+#: comments.php:81
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:83
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:93
+msgid "Comments are closed."
+msgstr ""
+
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
+#. *
+#. * @package Rock
+#. * @since 1.0.0
+#.
+#: content-none.php:16
+msgid "Nothing Found"
+msgstr ""
+
+#: content-none.php:27
+#, php-format
+msgctxt "link to write a new post"
+msgid "Ready to publish your first post? %s."
+msgstr ""
+
+#: content-none.php:31
+msgid "Get started here"
+msgstr ""
+
+#: content-none.php:39
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: content-none.php:45
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+
+#: functions.php:231
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:232
+msgid "Social Menu"
+msgstr ""
+
+#: functions.php:233
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:329
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:330
+msgid ""
+"The primary sidebar appears alongside the content of every page, post, "
+"archive, and search template."
+msgstr ""
+
+#: functions.php:337
+msgid "Secondary Sidebar"
+msgstr ""
+
+#: functions.php:338
+msgid ""
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
+msgstr ""
+
+#: functions.php:345
+msgid "Footer 1"
+msgstr ""
+
+#: functions.php:346
+msgid "This sidebar is the first column of the footer widget area."
+msgstr ""
+
+#: functions.php:353
+msgid "Footer 2"
+msgstr ""
+
+#: functions.php:354
+msgid "This sidebar is the second column of the footer widget area."
+msgstr ""
+
+#: functions.php:361
+msgid "Footer 3"
+msgstr ""
+
+#: functions.php:362
+msgid "This sidebar is the third column of the footer widget area."
+msgstr ""
+
+#: functions.php:369
+msgid "Hero"
+msgstr ""
+
+#: functions.php:370
+msgid "Hero widgets appear over the header image on the front page."
+msgstr ""
+
+#: header.php:42
+msgid "Skip to content"
+msgstr ""
+
+#: inc/back-compat.php:49
+#, php-format
+msgid ""
+"Rock requires at least WordPress version %s. You are running version %s. "
+"Please upgrade and try again."
+msgstr ""
+
+#: inc/customizer.php:173
+msgid "Use featured image"
+msgstr ""
+
+#: inc/customizer.php:174
+msgid ""
+"Allow the featured image on the current post to override the hero image."
+msgstr ""
+
+#: inc/customizer/colors.php:41
+msgid "Site Title Text"
+msgstr ""
+
+#: inc/customizer/colors.php:57
+msgid "Tagline Text"
+msgstr ""
+
+#: inc/customizer/colors.php:68
+msgid "Hero Text"
+msgstr ""
+
+#: inc/customizer/colors.php:91 inc/customizer/colors.php:284
+msgid "Text"
+msgstr ""
+
+#: inc/customizer/colors.php:113
+msgid "Heading Text"
+msgstr ""
+
+#: inc/customizer/colors.php:114
+msgid "Post titles, widget titles, form labels, table headers and buttons."
+msgstr ""
+
+#: inc/customizer/colors.php:135
+msgid "Primary Text"
+msgstr ""
+
+#: inc/customizer/colors.php:136
+msgid "Paragraphs, lists, menu links, quotes and tables."
+msgstr ""
+
+#: inc/customizer/colors.php:183
+msgid "Secondary Text"
+msgstr ""
+
+#: inc/customizer/colors.php:184
+msgid "Post bylines, comment counts, post footers and quote footers."
+msgstr ""
+
+#: inc/customizer/colors.php:198
+msgid "Widget Heading Text"
+msgstr ""
+
+#: inc/customizer/colors.php:215
+msgid "Widget Text"
+msgstr ""
+
+#: inc/customizer/colors.php:226
+msgid "Menu Text"
+msgstr ""
+
+#: inc/customizer/colors.php:248
+msgid "Copyright Text"
+msgstr ""
+
+#: inc/customizer/colors.php:262
+msgid "Link Text"
+msgstr ""
+
+#: inc/customizer/colors.php:299 inc/customizer/colors.php:368
+msgid "Background"
+msgstr ""
+
+#: inc/customizer/colors.php:329
+msgid "Page Background"
+msgstr ""
+
+#: inc/customizer/colors.php:339
+msgid "Content Background"
+msgstr ""
+
+#: inc/customizer/colors.php:349
+msgid "Hero Background"
+msgstr ""
+
+#: inc/customizer/colors.php:378
+msgid "Widgets Background"
+msgstr ""
+
+#: inc/customizer/colors.php:389
+msgid "Widget Content Background"
+msgstr ""
+
+#: inc/customizer/colors.php:400
+msgid "Footer Background"
+msgstr ""
+
+#: inc/customizer/colors.php:438 inc/customizer/layouts.php:310
+msgid "Custom"
+msgstr ""
+
+#: inc/customizer/colors.php:455 inc/customizer/layouts.php:301
+msgid "Default"
+msgstr ""
+
+#: inc/customizer/colors.php:465
+msgctxt "color scheme name"
+msgid "Blush"
+msgstr ""
+
+#: inc/customizer/colors.php:473
+msgctxt "color scheme name"
+msgid "Bronze"
+msgstr ""
+
+#: inc/customizer/colors.php:481
+msgctxt "color scheme name"
+msgid "Canary"
+msgstr ""
+
+#: inc/customizer/colors.php:489
+msgctxt "color scheme name"
+msgid "Cool"
+msgstr ""
+
+#: inc/customizer/colors.php:497
+msgctxt "color scheme name"
+msgid "Dark"
+msgstr ""
+
+#: inc/customizer/colors.php:524
+msgctxt "color scheme name"
+msgid "Iguana"
+msgstr ""
+
+#: inc/customizer/colors.php:532
+msgctxt "color scheme name"
+msgid "Muted"
+msgstr ""
+
+#: inc/customizer/colors.php:557
+msgctxt "color scheme name"
+msgid "Plum"
+msgstr ""
+
+#: inc/customizer/colors.php:565
+msgctxt "color scheme name"
+msgid "Rose"
+msgstr ""
+
+#: inc/customizer/colors.php:573
+msgctxt "color scheme name"
+msgid "Tangerine"
+msgstr ""
+
+#: inc/customizer/colors.php:581
+msgctxt "color scheme name"
+msgid "Turquoise"
+msgstr ""
+
+#: inc/customizer/colors.php:648
+msgid "Colors"
+msgstr ""
+
+#: inc/customizer/colors.php:657
+msgid "Color Schemes"
+msgstr ""
+
+#: inc/customizer/colors.php:665
+msgid "Header"
+msgstr ""
+
+#: inc/customizer/colors.php:673
+msgid "Menu"
+msgstr ""
+
+#: inc/customizer/colors.php:681
+msgid "Buttons"
+msgstr ""
+
+#: inc/customizer/colors.php:689
+msgid "Content"
+msgstr ""
+
+#: inc/customizer/colors.php:697
+msgid "Footer"
+msgstr ""
+
+#: inc/customizer/colors.php:907
+msgid "Base Color Scheme"
+msgstr ""
+
+#: inc/customizer/colors.php:1216
+msgid "Hero Background Overlay"
+msgstr ""
+
+#: inc/customizer/colors.php:1217
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
+msgstr ""
+
+#: inc/customizer/fonts.php:81
+msgid "Site Title"
+msgstr ""
+
+#: inc/customizer/fonts.php:82
+msgid "Site title text in the header."
+msgstr ""
+
+#: inc/customizer/fonts.php:91
+msgid "Navigation"
+msgstr ""
+
+#: inc/customizer/fonts.php:92
+msgid "Primary menu links and button links."
+msgstr ""
+
+#: inc/customizer/fonts.php:102
+msgid "Headings"
+msgstr ""
+
+#: inc/customizer/fonts.php:103
+msgid "Post titles, widget titles, form labels, and table headers."
+msgstr ""
+
+#: inc/customizer/fonts.php:118
+msgid "Primary"
+msgstr ""
+
+#: inc/customizer/fonts.php:119
+msgid "Paragraphs, lists, links, quotes, and tables."
+msgstr ""
+
+#: inc/customizer/fonts.php:133
+msgid "Secondary"
+msgstr ""
+
+#: inc/customizer/fonts.php:134
+msgid "Bylines, comment counts, reply links, post footers, and quote footers."
+msgstr ""
+
+#: inc/customizer/fonts.php:182
+msgid "Fonts"
+msgstr ""
+
+#: inc/customizer/fonts.php:207
+#, php-format
+msgctxt "font name"
+msgid "%s (Default)"
+msgstr ""
+
+#: inc/customizer/layouts.php:47
+msgid "One Column: Wide"
+msgstr ""
+
+#: inc/customizer/layouts.php:48
+msgid "One Column: Narrow"
+msgstr ""
+
+#: inc/customizer/layouts.php:49 inc/customizer/layouts.php:139
+msgid "Two Columns: Content | Sidebar"
+msgstr ""
+
+#: inc/customizer/layouts.php:50 inc/customizer/layouts.php:138
+msgid "Two Columns: Sidebar | Content"
+msgstr ""
+
+#: inc/customizer/layouts.php:51 inc/customizer/layouts.php:141
+msgid "Three Columns: Content | Sidebar | Sidebar"
+msgstr ""
+
+#: inc/customizer/layouts.php:52
+msgid "Three Columns: Sidebar | Content | Sidebar"
+msgstr ""
+
+#: inc/customizer/layouts.php:53 inc/customizer/layouts.php:140
+msgid "Three Columns: Sidebar | Sidebar | Content"
+msgstr ""
+
+#: inc/customizer/layouts.php:91
+msgctxt "fixed-width page layout"
+msgid "Fixed"
+msgstr ""
+
+#: inc/customizer/layouts.php:92
+msgctxt "fluid-width page layout"
+msgid "Fluid"
+msgstr ""
+
+#: inc/customizer/layouts.php:251 inc/customizer/layouts.php:442
+msgid "Layout"
+msgstr ""
+
+#: inc/customizer/layouts.php:283
+#, php-format
+msgctxt "link to the Customizer"
+msgid "The site-wide Default layout setting is located in the %s."
+msgstr ""
+
+#: inc/customizer/layouts.php:287
+msgctxt "title of a component found in WordPress"
+msgid "Customizer"
+msgstr ""
+
+#: inc/customizer/layouts.php:464
+msgid "Default Layout"
+msgstr ""
+
+#: inc/customizer/layouts.php:465
+msgid "All posts and pages on your site will use this layout by default."
+msgstr ""
+
+#: inc/customizer/layouts.php:494
+msgid "Page Width"
+msgstr ""
+
+#: inc/customizer/layouts.php:495
+msgid "Display your site differently on larger screens."
+msgstr ""
+
+#: inc/helpers.php:38
+#, php-format
+msgctxt "search term"
+msgid "Search Results for: %s"
+msgstr ""
+
+#: inc/helpers.php:49
+msgid "404 Page Not Found"
+msgstr ""
+
+#: inc/hooks.php:360
+#, php-format
+msgctxt "page number"
+msgid "Page %d"
+msgstr ""
+
+#: inc/support-ctc.php:100
+#, php-format
+msgid ""
+"The WordPress <a href=\"%s\" target=\"_blank\">antispambot</a> function is "
+"used to help deter automated email harvesting."
+msgstr ""
+
+#: inc/support-framework.php:94
+msgid "We suggest using images that are at least 800px wide."
+msgstr ""
+
+#: inc/support-framework.php:335
+msgctxt "archives widget"
+msgid "Blog"
+msgstr ""
+
+#: inc/support-framework.php:336
+msgctxt "archives widget"
+msgid "Sermons"
+msgstr ""
+
+#: inc/support-framework.php:365
+msgctxt "slide widget image"
+msgid "(Required)"
+msgstr ""
+
+#: inc/support-framework.php:366 inc/support-framework.php:385
+#, php-format
+msgid "Image cropped to %s."
+msgstr ""
+
+#: inc/support-framework.php:369
+msgid "To make this a video slide, enter a YouTube or Vimeo video page URL."
+msgstr ""
+
+#: inc/template-tags.php:132
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/template-tags.php:138
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: inc/template-tags.php:144
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/template-tags.php:177
+msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:278
+msgid "Blog"
+msgstr ""
+
+#: templates/parts/credit.php:13
+#, php-format
+msgctxt "1. copyright symbol, 2. year, 3. site title"
+msgid "Copyright %1$s %2$d %3$s"
+msgstr ""
+
+#: templates/parts/credit.php:24
+#, php-format
+msgctxt "1. theme name link, 2. theme author link"
+msgid "%1$s theme by %2$s"
+msgstr ""
+
+#: templates/parts/loop/ctc_event-content.php:26
+#: templates/parts/loop/ctc_location-content.php:26
+#: templates/parts/loop/ctc_person-content.php:46
+#: templates/parts/loop/ctc_sermon-content.php:115
+#: templates/parts/loop/post-content.php:13
+msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: templates/parts/loop/ctc_event-content.php:32
+#: templates/parts/loop/ctc_location-content.php:32
+#: templates/parts/loop/ctc_person-content.php:52
+#: templates/parts/loop/ctc_sermon-content.php:121
+#: templates/parts/loop/page-content.php:17
+#: templates/parts/loop/post-content.php:17
+msgid "Pages:"
+msgstr ""
+
+#. //codex.wordpress.org/Template_Hierarchy
+#. *
+#. * @package Rock
+#.
+#: templates/parts/loop/ctc_event-footer.php:13
+#: templates/parts/loop/ctc_location-footer.php:13
+#: templates/parts/loop/ctc_person-footer.php:13
+#: templates/parts/loop/ctc_sermon-footer.php:13
+#: templates/parts/loop/post-meta.php:21
+#: templates/parts/loop/post-search-footer.php:41
+msgid "Leave a comment"
+msgstr ""
+
+#: templates/parts/loop/ctc_event-footer.php:13
+#: templates/parts/loop/ctc_location-footer.php:13
+#: templates/parts/loop/ctc_person-footer.php:13
+#: templates/parts/loop/ctc_sermon-footer.php:13
+#: templates/parts/loop/post-meta.php:21
+#: templates/parts/loop/post-search-footer.php:41
+msgid "1 Comment"
+msgstr ""
+
+#: templates/parts/loop/ctc_event-footer.php:13
+#: templates/parts/loop/ctc_location-footer.php:13
+#: templates/parts/loop/ctc_person-footer.php:13
+#: templates/parts/loop/ctc_sermon-footer.php:13
+msgid "% Comments"
+msgstr ""
+
+#: templates/parts/loop/ctc_event-footer.php:16
+#: templates/parts/loop/ctc_location-footer.php:16
+#: templates/parts/loop/ctc_person-footer.php:16
+#: templates/parts/loop/ctc_sermon-footer.php:16
+#: templates/parts/loop/page-footer.php:8
+#: templates/parts/loop/post-footer.php:13
+#: templates/parts/loop/post-search-footer.php:45
+msgid "Edit"
+msgstr ""
+
+#. //codex.wordpress.org/Template_Hierarchy
+#. *
+#. * @package Rock
+#.
+#: templates/parts/loop/ctc_event-footer.php:22
+#: templates/parts/loop/ctc_event-footer.php:32
+#: templates/parts/loop/ctc_location-footer.php:22
+#: templates/parts/loop/ctc_location-footer.php:32
+#: templates/parts/loop/ctc_person-footer.php:22
+#: templates/parts/loop/ctc_person-footer.php:32
+#: templates/parts/loop/ctc_sermon-footer.php:22
+#: templates/parts/loop/ctc_sermon-footer.php:32
+#: templates/parts/loop/ctc_sermon-title.php:10
+#: templates/parts/loop/ctc_sermon-title.php:11
+#: templates/parts/loop/ctc_sermon-title.php:12
+#: templates/parts/loop/ctc_sermon-title.php:13
+#: templates/parts/loop/ctc_sermon-title.php:14
+msgid ", "
+msgstr ""
+
+#: templates/parts/loop/ctc_event-footer.php:26
+#: templates/parts/loop/ctc_location-footer.php:26
+#: templates/parts/loop/ctc_person-footer.php:26
+#: templates/parts/loop/ctc_sermon-footer.php:26
+#, php-format
+msgid "Posted in: %1$s"
+msgstr ""
+
+#: templates/parts/loop/ctc_event-footer.php:36
+#: templates/parts/loop/ctc_location-footer.php:36
+#: templates/parts/loop/ctc_person-footer.php:36
+#: templates/parts/loop/ctc_sermon-footer.php:36
+#, php-format
+msgid "Filed under: %1$s"
+msgstr ""
+
+#: templates/parts/loop/ctc_person-content.php:32
+msgctxt "event"
+msgid "Get Directions"
+msgstr ""
+
+#: templates/parts/loop/ctc_sermon-content.php:56
+msgctxt "Text for the video download link for sermons."
+msgid "Save Video"
+msgstr ""
+
+#: templates/parts/loop/ctc_sermon-content.php:63
+msgctxt "Text for the audio download link for sermons"
+msgid "Save Audio"
+msgstr ""
+
+#: templates/parts/loop/ctc_sermon-content.php:70
+msgctxt "Text for the PDF download link for sermons."
+msgid "PDF"
+msgstr ""
+
+#: templates/parts/loop/ctc_sermon-content.php:88
+msgid "Show Video Player"
+msgstr ""
+
+#: templates/parts/loop/ctc_sermon-content.php:94
+msgid "Show Audio Player"
+msgstr ""
+
+#: templates/parts/loop/post-excerpt.php:13
+#, php-format
+msgctxt "right arrow (LTR) / left arrow (RTL)"
+msgid "Continue Reading %s"
+msgstr ""
+
+#: templates/parts/loop/post-footer.php:19
+#: templates/parts/loop/post-footer.php:31
+#: templates/parts/loop/post-search-footer.php:13
+#: templates/parts/loop/post-search-footer.php:25
+msgctxt "separator for items in a list"
+msgid ", "
+msgstr ""
+
+#: templates/parts/loop/post-footer.php:25
+#: templates/parts/loop/post-search-footer.php:19
+#, php-format
+msgctxt "category list"
+msgid "Posted in: %s"
+msgstr ""
+
+#: templates/parts/loop/post-footer.php:37
+#: templates/parts/loop/post-search-footer.php:31
+#, php-format
+msgctxt "tag list"
+msgid "Filed under: %s"
+msgstr ""
+
+#: templates/parts/loop/post-meta.php:21
+#: templates/parts/loop/post-search-footer.php:41
+msgctxt "number of comments"
+msgid "% Comments"
+msgstr ""

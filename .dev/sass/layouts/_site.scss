@@ -16,6 +16,7 @@ body.no-max-width .site-content {
 	max-width: none;
 }
 
+<<<<<<< Updated upstream
 @media #{$medium-only} {
 
 	body.layout-one-column-narrow .site-content {
@@ -28,6 +29,37 @@ body.no-max-width .site-content {
 	body.layout-one-column-narrow .site-content {
 		@include container(66.66667%);
 	}
+=======
+body.fl-builder.layout-one-column-wide {
+	.site-content,
+	&.page .hentry,
+	.page-content,
+	.content-area{
+		float: none;
+		max-width: none;
+		width: auto;
+		margin: 0;
+		padding: 0;
+		background-color: transparent;
+	}
+
+	@media #{$medium-up} {
+
+		.content-area{
+			float: none;
+			width: auto;
+			max-width: none;
+			margin: 0;
+			padding: 0;
+			background-color: transparent;
+		}
+
+	}
+}
+
+body.layout-one-column-narrow .site-content {
+	@include container(66.66667%);
+>>>>>>> Stashed changes
 }
 
 .content-area {
