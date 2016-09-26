@@ -1,20 +1,20 @@
 /**
- * Theme Name: Rock Framework
- * Theme URI: https://rock.churchthemes.net
- * Author: Lift
- * Author URI: https://liftux.com/
- * Description: Rock is a WordPress theme for churches with powerful layout options, customizable colors, fonts, and more.
- * Version: 2.0.0
+ * Theme Name: Primer
+ * Theme URI: https://github.com/godaddy/wp-primer-theme
+ * Author: GoDaddy
+ * Author URI: https://www.godaddy.com/
+ * Description: Primer is a powerful theme that brings clarity to your content in a fresh design.
+ * Version: 1.0.0
  * License: GPL-2.0
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: rock
+ * Text Domain: primer
  * Domain Path: /languages
  * Tags: custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
  *
  * This theme, like WordPress, is licensed under the GPL.
  * Use it to make something cool, have fun, and share what you've learned with others.
  *
- * Copyright © 2016 Walmedia, LLC. and GoDaddy Operating Company, LLC. All Rights Reserved.
+ * Copyright © 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
  */
 
 /*--------------------------------------------------------------
@@ -81,6 +81,11 @@
 # Links
 --------------------------------------------------------------*/
 @import "components/links";
+
+/*--------------------------------------------------------------
+# Pointers
+--------------------------------------------------------------*/
+@import "components/pointers";
 
 /*--------------------------------------------------------------
 # Menus
@@ -161,3 +166,8 @@
 # Comments
 --------------------------------------------------------------*/
 @import "layouts/comments";
+
+/*--------------------------------------------------------------
+# Compatibility
+--------------------------------------------------------------*/
+@import "compat/woocommerce";

@@ -4,8 +4,8 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package Rock
- * @since 1.0.0
+ * @package Primer
+ * @since   1.0.0
  */
 
 get_header(); ?>
@@ -22,7 +22,7 @@ get_header(); ?>
 
 		<?php endwhile; ?>
 
-		<?php rock_paging_nav(); ?>
+		<?php primer_paging_nav(); ?>
 
 	<?php else : ?>
 

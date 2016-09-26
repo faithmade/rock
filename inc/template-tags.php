@@ -2,7 +2,8 @@
 /**
  * Custom template tags for this theme.
  *
- * @package Rock
+ * @package Primer
+ * @since   1.0.0
  */
 
 /**
@@ -10,7 +11,7 @@
  *
  * @since 1.0.0
  */
-function rock_the_custom_logo() {
+function primer_the_custom_logo() {
 
 	/**
 	 * For backwards compatibility prior to WordPress 4.5.
@@ -53,7 +54,7 @@ function rock_the_custom_logo() {
  *
  * @since 1.0.0
  */
-function rock_the_site_title() {
+function primer_the_site_title() {
 
 	$html = sprintf(
 		'<h1 class="site-title"><a href="%s" rel="home">%s</a></h1>',
@@ -68,7 +69,7 @@ function rock_the_site_title() {
 	 *
 	 * @var string
 	 */
-	echo (string) apply_filters( 'rock_the_site_title', $html );
+	echo (string) apply_filters( 'primer_the_site_title', $html );
 
 }
 
@@ -77,10 +78,10 @@ function rock_the_site_title() {
  *
  * @since 1.0.0
  */
-function rock_the_site_description() {
+function primer_the_site_description() {
 
 	$html = sprintf(
-		'<div class="site-description">%s</a></div>',
+		'<div class="site-description">%s</div>',
 		get_bloginfo( 'description' )
 	);
 
@@ -91,7 +92,7 @@ function rock_the_site_description() {
 	 *
 	 * @var string
 	 */
-	echo (string) apply_filters( 'rock_the_site_description', $html );
+	echo (string) apply_filters( 'primer_the_site_description', $html );
 
 }
 
@@ -100,9 +101,9 @@ function rock_the_site_description() {
  *
  * @since 1.0.0
  */
-function rock_the_page_title() {
+function primer_the_page_title() {
 
-	if ( $title = rock_get_the_page_title() ) {
+	if ( $title = primer_get_the_page_title() ) {
 
 		echo $title; // xss ok
 
@@ -116,7 +117,7 @@ function rock_the_page_title() {
  * @global WP_Query $wp_query
  * @since  1.0.0
  */
-function rock_paging_nav() {
+function primer_paging_nav() {
 
 	global $wp_query;
 
@@ -127,21 +128,21 @@ function rock_paging_nav() {
 	}
 
 	?>
-	<nav class="navigation paging-navigation" role="navigation">
+	<nav class="navigation paging-navigation">
 
-		<h1 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'rock' ); ?></h1>
+		<h2 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'primer' ); ?></h2>
 
 		<div class="nav-links">
 
 		<?php if ( get_next_posts_link() ) : ?>
 
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'rock' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'primer' ) ); ?></div>
 
 		<?php endif; ?>
 
 		<?php if ( get_previous_posts_link() ) : ?>
 
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'rock' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'primer' ) ); ?></div>
 
 		<?php endif; ?>
 
@@ -158,7 +159,7 @@ function rock_paging_nav() {
  * @global WP_Post $post
  * @since  1.0.0
  */
-function rock_post_nav() {
+function primer_post_nav() {
 
 	global $post;
 
@@ -172,9 +173,9 @@ function rock_post_nav() {
 	}
 
 	?>
-	<nav class="navigation post-navigation" role="navigation">
+	<nav class="navigation post-navigation">
 
-		<h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'rock' ); ?></h1>
+		<h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'primer' ); ?></h1>
 
 		<div class="nav-links">
 
@@ -204,7 +205,7 @@ function rock_post_nav() {
  *
  * @since 1.0.0
  */
-function rock_posted_on() {
+function primer_posted_on() {
 
 	$time = sprintf(
 		'<time class="entry-date published" datetime="%s">%s</time>',
@@ -235,7 +236,7 @@ function rock_posted_on() {
  *
  * @since 1.0.0
  */
-function rock_post_format() {
+function primer_post_format() {
 
 	$format = get_post_format();
 	$format = empty( $format ) ? 'standard' : $format;
@@ -253,7 +254,7 @@ function rock_post_format() {
  * @link   https://wordpress.org/plugins/really-simple-breadcrumb/
  * @since  1.0.0
  */
-function rock_breadcrumbs() {
+function primer_breadcrumbs() {
 
 	global $post;
 
@@ -265,7 +266,7 @@ function rock_breadcrumbs() {
 
 		printf(
 			'<a href="%s">%s</a>%s',
-			esc_url( home_url() ),
+			esc_url( home_url( '/' ) ),
 			esc_html( get_bloginfo( 'name' ) ),
 			$separator // xss ok
 		);
@@ -274,8 +275,8 @@ function rock_breadcrumbs() {
 
 			printf(
 				'<a href="%s">%s</a>%s',
-				esc_url( rock_get_posts_url() ),
-				esc_html__( 'Blog', 'rock' ),
+				esc_url( primer_get_posts_url() ),
+				esc_html__( 'Blog', 'primer' ),
 				$separator // xss ok
 			);
 
@@ -295,7 +296,7 @@ function rock_breadcrumbs() {
 
 		} elseif ( is_page() && $post->post_parent ) {
 
-			$home = get_page( get_option( 'page_on_front' ) );
+			$home = get_post( get_option( 'page_on_front' ) );
 
 			for ( $i = count( $post->ancestors )-1; $i >= 0; $i-- ) {
 
@@ -306,11 +307,11 @@ function rock_breadcrumbs() {
 				}
 			}
 
-			echo the_title();
+			the_title();
 
 		} elseif ( is_page() ) {
 
-			echo the_title();
+			the_title();
 
 		} elseif ( is_404() ) {
 

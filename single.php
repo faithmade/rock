@@ -4,8 +4,8 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Rock
- * @since 1.0.0
+ * @package Primer
+ * @since   1.0.0
  */
 
 get_header(); ?>
@@ -18,7 +18,7 @@ get_header(); ?>
 
 		<?php get_template_part( 'content' ); ?>
 
-		<?php rock_post_nav(); ?>
+		<?php primer_post_nav(); ?>
 
 		<?php if ( comments_open() || get_comments_number() ) : ?>
 

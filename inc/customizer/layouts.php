@@ -1,6 +1,12 @@
 <?php
+/**
+ * Customizer Layouts functionality.
+ *
+ * @package Primer
+ * @since   1.0.0
+ */
 
-class Rock_Customizer_Layouts {
+class Primer_Customizer_Layouts {
 
 	/**
 	 * Array of custom layouts.
@@ -42,15 +48,15 @@ class Rock_Customizer_Layouts {
 		 *
 		 * @var array
 		 */
-		$this->layouts = (array) apply_filters( 'rock_layouts',
+		$this->layouts = (array) apply_filters( 'primer_layouts',
 			array(
-				'one-column-wide'       => esc_html__( 'One Column: Wide', 'rock' ),
-				'one-column-narrow'     => esc_html__( 'One Column: Narrow', 'rock' ),
-				'two-column-default'    => esc_html__( 'Two Columns: Content | Sidebar', 'rock' ),
-				'two-column-reversed'   => esc_html__( 'Two Columns: Sidebar | Content', 'rock' ),
-				'three-column-default'  => esc_html__( 'Three Columns: Content | Sidebar | Sidebar', 'rock' ),
-				'three-column-center'   => esc_html__( 'Three Columns: Sidebar | Content | Sidebar', 'rock' ),
-				'three-column-reversed' => esc_html__( 'Three Columns: Sidebar | Sidebar | Content', 'rock' ),
+				'one-column-wide'       => esc_html__( 'One Column: Wide', 'primer' ),
+				'one-column-narrow'     => esc_html__( 'One Column: Narrow', 'primer' ),
+				'two-column-default'    => esc_html__( 'Two Columns: Content | Sidebar', 'primer' ),
+				'two-column-reversed'   => esc_html__( 'Two Columns: Sidebar | Content', 'primer' ),
+				'three-column-default'  => esc_html__( 'Three Columns: Content | Sidebar | Sidebar', 'primer' ),
+				'three-column-center'   => esc_html__( 'Three Columns: Sidebar | Content | Sidebar', 'primer' ),
+				'three-column-reversed' => esc_html__( 'Three Columns: Sidebar | Sidebar | Content', 'primer' ),
 			)
 		);
 
@@ -67,7 +73,7 @@ class Rock_Customizer_Layouts {
 		 *
 		 * @var string
 		 */
-		$default       = (string) apply_filters( 'rock_default_layout', $this->default );
+		$default       = (string) apply_filters( 'primer_default_layout', $this->default );
 		$this->default = $this->layout_exists( $default ) ? $default : ( $this->layout_exists( $this->default ) ? $this->default : key( $this->layouts ) );
 
 		/**
@@ -77,7 +83,7 @@ class Rock_Customizer_Layouts {
 		 *
 		 * @var bool
 		 */
-		$this->meta_box = (bool) apply_filters( 'rock_layouts_meta_box_enabled', $this->meta_box );
+		$this->meta_box = (bool) apply_filters( 'primer_layouts_meta_box_enabled', $this->meta_box );
 
 		/**
 		 * Filter the registered page widths.
@@ -86,10 +92,10 @@ class Rock_Customizer_Layouts {
 		 *
 		 * @var array
 		 */
-		$this->page_widths = (array) apply_filters( 'rock_page_widths',
+		$this->page_widths = (array) apply_filters( 'primer_page_widths',
 			array(
-				'fixed' => esc_html_x( 'Fixed', 'fixed-width page layout', 'rock' ),
-				'fluid' => esc_html_x( 'Fluid', 'fluid-width page layout', 'rock' ),
+				'fixed' => esc_html_x( 'Fixed', 'fixed-width page layout', 'primer' ),
+				'fluid' => esc_html_x( 'Fluid', 'fluid-width page layout', 'primer' ),
 			)
 		);
 
@@ -98,7 +104,6 @@ class Rock_Customizer_Layouts {
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
 		add_action( 'customize_register',    array( $this, 'customize_register' ) );
-		add_action( 'add_post_meta',         array( $this, 'page_builder_layout' ), 10, 3 );
 
 		if ( $this->meta_box ) {
 
@@ -133,12 +138,12 @@ class Rock_Customizer_Layouts {
 		 *
 		 * @var array
 		 */
-		$rtl_layouts = (array) apply_filters( 'rock_layouts_rtl',
+		$rtl_layouts = (array) apply_filters( 'primer_layouts_rtl',
 			array(
-				'two-column-default'    => esc_html__( 'Two Columns: Sidebar | Content', 'rock' ),
-				'two-column-reversed'   => esc_html__( 'Two Columns: Content | Sidebar', 'rock' ),
-				'three-column-default'  => esc_html__( 'Three Columns: Sidebar | Sidebar | Content', 'rock' ),
-				'three-column-reversed' => esc_html__( 'Three Columns: Content | Sidebar | Sidebar', 'rock' ),
+				'two-column-default'    => esc_html__( 'Two Columns: Sidebar | Content', 'primer' ),
+				'two-column-reversed'   => esc_html__( 'Two Columns: Content | Sidebar', 'primer' ),
+				'three-column-default'  => esc_html__( 'Three Columns: Sidebar | Sidebar | Content', 'primer' ),
+				'three-column-reversed' => esc_html__( 'Three Columns: Content | Sidebar | Sidebar', 'primer' ),
 			)
 		);
 
@@ -161,11 +166,11 @@ class Rock_Customizer_Layouts {
 		 *
 		 * @var array
 		 */
-		$post_types = (array) apply_filters( 'rock_layouts_post_types', get_post_types( array( 'public' => true ) ) );
+		$post_types = (array) apply_filters( 'primer_layouts_post_types', get_post_types( array( 'public' => true ) ) );
 
 		foreach ( $post_types as $post_type ) {
 
-			add_post_type_support( $post_type, 'rock-layouts' );
+			add_post_type_support( $post_type, 'primer-layouts' );
 
 		}
 
@@ -191,17 +196,17 @@ class Rock_Customizer_Layouts {
 		$suffix = SCRIPT_DEBUG ? '' : '.min';
 
 		wp_enqueue_script(
-			'rock-layouts',
+			'primer-layouts',
 			get_template_directory_uri() . "/assets/js/admin/layouts{$suffix}.js",
 			array( 'jquery' ),
-			ROCK_VERSION
+			PRIMER_VERSION
 		);
 
 		wp_enqueue_style(
-			'rock-layouts',
+			'primer-layouts',
 			get_template_directory_uri() . "/assets/css/admin/layouts{$rtl}{$suffix}.css",
 			array(),
-			ROCK_VERSION
+			PRIMER_VERSION
 		);
 
 	}
@@ -233,7 +238,7 @@ class Rock_Customizer_Layouts {
 	public function add_meta_box( $post_type, WP_Post $post ) {
 
 		if (
-			! post_type_supports( $post_type, 'rock-layouts' )
+			! post_type_supports( $post_type, 'primer-layouts' )
 			||
 			! current_user_can( 'edit_post_meta', $post->ID )
 			||
@@ -247,8 +252,8 @@ class Rock_Customizer_Layouts {
 		}
 
 		add_meta_box(
-			'rock-layouts-meta-box',
-			esc_html__( 'Layout', 'rock' ),
+			'primer-layouts-meta-box',
+			esc_html__( 'Layout', 'primer' ),
 			array( $this, 'render_meta_box' ),
 			$post_type,
 			'side',
@@ -271,43 +276,30 @@ class Rock_Customizer_Layouts {
 		$cur_layout = $this->get_post_layout( $post->ID );
 		$has_custom = ! empty( $cur_layout );
 
-		wp_nonce_field( basename( __FILE__ ), 'rock-layout-nonce' );
+		wp_nonce_field( basename( __FILE__ ), 'primer-layout-nonce' );
 
 		?>
 
-		<div class="rock-layout">
-
-			<?php
-
-			printf(
-				 '<p>' . esc_html_x( 'The site-wide Default layout setting is located in the %s.', 'link to the Customizer', 'rock' ) . '</p>',
-				sprintf(
-					'<a href="%s">%s</a>',
-					add_query_arg( 'autofocus[section]', 'layout', admin_url( 'customize.php' ) ),
-					esc_html_x( 'Customizer', 'title of a component found in WordPress', 'rock' )
-				)
-			);
-
-			?>
+		<div class="primer-layout">
 
 			<p>
-				<label for="rock-layout-use-default">
+				<label for="primer-layout-use-default">
 					<input type="radio"
-					       name="rock-layout-override"
-					       id="rock-layout-use-default"
+					       name="primer-layout-override"
+					       id="primer-layout-use-default"
 					       value="0"
 					       autocomplete="off"
 						<?php checked( ! $has_custom ); ?>>
-					<?php _e( 'Default', 'rock' ); ?>
+					<?php _e( 'Default', 'primer' ); ?>
 				</label>
-				<label for="rock-layout-use-custom">
+				<label for="primer-layout-use-custom">
 					<input type="radio"
-					       name="rock-layout-override"
-					       id="rock-layout-use-custom"
+					       name="primer-layout-override"
+					       id="primer-layout-use-custom"
 					       value="1"
 					       autocomplete="off"
 						<?php checked( $has_custom ); ?>>
-					<?php _e( 'Custom', 'rock' ); ?>
+					<?php _e( 'Custom', 'primer' ); ?>
 				</label>
 				<span class="clear"></span>
 			</p>
@@ -340,11 +332,11 @@ class Rock_Customizer_Layouts {
 
 		}
 
-		$name = isset( $wp_customize ) ? '_customize-radio' : 'rock';
+		$name = isset( $wp_customize ) ? '_customize-radio' : 'primer';
 
 		?>
 
-		<div class="rock-layout-wrap">
+		<div class="primer-layout-wrap">
 
 			<ul>
 
@@ -358,11 +350,11 @@ class Rock_Customizer_Layouts {
 					?>
 
 					<li class="<?php echo esc_attr( $class ); ?>">
-						<label for="rock-layout-<?php echo esc_attr( $layout ); ?>">
+						<label for="primer-layout-<?php echo esc_attr( $layout ); ?>">
 							<input type="radio"
 							       name="<?php echo $name; // xss ok ?>-layout"
 							       data-customize-setting-link="layout"
-							       id="rock-layout-<?php echo esc_attr( $layout ); ?>"
+							       id="primer-layout-<?php echo esc_attr( $layout ); ?>"
 							       value="<?php echo esc_attr( $layout ); ?>"
 								   <?php checked( $cur_layout, $layout ); ?>
 								   <?php disabled( 'disabled' === $class ); ?>>
@@ -394,27 +386,27 @@ class Rock_Customizer_Layouts {
 	public function save_post( $post_id ) {
 
 		if (
-			empty( $_POST['rock-layout-nonce'] )
+			empty( $_POST['primer-layout-nonce'] )
 			||
-			! wp_verify_nonce( $_POST['rock-layout-nonce'], basename( __FILE__ ) )
+			! wp_verify_nonce( $_POST['primer-layout-nonce'], basename( __FILE__ ) )
 		) {
 
 			return;
 
 		}
 
-		$override = ! empty( $_POST['rock-layout-override'] );
+		$override = ! empty( $_POST['primer-layout-override'] );
 		$current  = $this->get_post_layout( $post_id );
 
 		if ( ! $override && $current ) {
 
-			delete_post_meta( $post_id, 'rock_layout' );
+			delete_post_meta( $post_id, 'primer_layout' );
 
 			return;
 
 		}
 
-		$layout = isset( $_POST['rock-layout'] ) ? sanitize_key( $_POST['rock-layout'] ) : null;
+		$layout = isset( $_POST['primer-layout'] ) ? sanitize_key( $_POST['primer-layout'] ) : null;
 
 		if ( ! $override || ! $this->layout_exists( $layout ) || $layout === $current ) {
 
@@ -422,7 +414,7 @@ class Rock_Customizer_Layouts {
 
 		}
 
-		update_post_meta( $post_id, 'rock_layout', $layout );
+		update_post_meta( $post_id, 'primer_layout', $layout );
 
 	}
 
@@ -439,35 +431,9 @@ class Rock_Customizer_Layouts {
 		$wp_customize->add_section(
 			'layout',
 			array(
-				'title'      => esc_html__( 'Layout', 'rock' ),
+				'title'      => esc_html__( 'Layout', 'primer' ),
 				'priority'   => 30,
 				'capability' => 'edit_theme_options',
-			)
-		);
-
-		$wp_customize->add_setting(
-			'layout',
-			array(
-				'default'           => get_theme_mod( 'layout', $this->default ),
-				'type'              => 'theme_mod',
-				'capability'        => 'edit_theme_options',
-				'sanitize_callback' => 'sanitize_html_class',
-				'transport'         => 'postMessage',
-			)
-		);
-
-		$wp_customize->add_control(
-			new Rock_Customizer_Layouts_Control(
-				$wp_customize,
-				'layout',
-				array(
-					'label'       => esc_html__( 'Default Layout', 'rock' ),
-					'description' => esc_html__( 'All posts and pages on your site will use this layout by default.', 'rock' ),
-					'section'     => 'layout',
-					'settings'    => 'layout',
-					'type'        => 'radio',
-					'choices'     => $this->layouts,
-				)
 			)
 		);
 
@@ -491,34 +457,14 @@ class Rock_Customizer_Layouts {
 		$wp_customize->add_control(
 			'page_width',
 			array(
-				'label'       => esc_html__( 'Page Width', 'rock' ),
-				'description' => esc_html__( 'Display your site differently on larger screens.', 'rock' ),
+				'label'       => esc_html__( 'Page Width', 'primer' ),
+				'description' => esc_html__( 'Display your site differently on larger screens.', 'primer' ),
 				'section'     => 'layout',
 				'settings'    => 'page_width',
 				'type'        => 'radio',
 				'choices'     => $this->page_widths,
 			)
 		);
-
-	}
-
-	/**
-	 * Use full-width layout by default on Page Builder posts.
-	 *
-	 * @action add_post_meta
-	 * @since  1.0.0
-	 *
-	 * @param int    $post_id
-	 * @param string $meta_key
-	 * @param mixed  $meta_value
-	 */
-	public function page_builder_layout( $post_id, $meta_key, $meta_value ) {
-
-		if ( '_fl_builder_draft' === $meta_key && isset( $this->layouts['one-column-wide'] ) ) {
-
-			update_post_meta( $post_id, 'rock_layout', 'one-column-wide' );
-
-		}
 
 	}
 
@@ -535,7 +481,7 @@ class Rock_Customizer_Layouts {
 	public function body_class( array $classes ) {
 
 		$classes[] = sanitize_html_class( sprintf( 'layout-%s', $this->get_current_layout() ) );
-		$classes[] = rock_is_fluid_width() ? 'no-max-width' : null;
+		$classes[] = primer_is_fluid_width() ? 'no-max-width' : null;
 
 		return array_filter( $classes );
 
@@ -578,7 +524,7 @@ class Rock_Customizer_Layouts {
 	 */
 	protected function get_post_layout( $post = null ) {
 
-		return get_post_meta( $this->get_post_id( $post ), 'rock_layout', true );
+		return get_post_meta( $this->get_post_id( $post ), 'primer_layout', true );
 
 	}
 
@@ -605,10 +551,21 @@ class Rock_Customizer_Layouts {
 		$override = $this->get_post_layout( $post );
 		$layout   = ( $override ) ? $override : $this->get_global_layout();
 
+		/**
+		 * Filter the current layout.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param WP_Post|int|null $post
+		 *
+		 * @var string
+		 */
+		$layout = (string) apply_filters( 'primer_current_layout', $layout, $post );
+
 		return $this->layout_exists( $layout ) ? $layout : $this->default;
 
 	}
 
 }
 
-$GLOBALS['rock_customizer_layouts'] = new Rock_Customizer_Layouts;
+$GLOBALS['primer_customizer_layouts'] = new Primer_Customizer_Layouts;

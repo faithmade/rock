@@ -1,6 +1,6 @@
 <?php
 /**
- * Rock functions and definitions.
+ * Primer functions and definitions.
  *
  * Set up the theme and provide some helper functions, which are used in the
  * theme as custom template tags. Others are attached to action and filter
@@ -12,29 +12,29 @@
  * For more information on hooks, actions, and filters,
  * {@link https://codex.wordpress.org/Plugin_API}
  *
- * @package Rock
+ * @package Primer
  * @since   1.0.0
  */
 
 /**
- * Rock theme version.
+ * Primer theme version.
  *
  * @since 1.0.0
  *
  * @var string
  */
-define( 'ROCK_VERSION', '1.0.0' );
+define( 'PRIMER_VERSION', '0.9.0' );
 
 /**
- * Minimum WordPress version required for Rock.
+ * Minimum WordPress version required for Primer.
  *
  * @since 1.0.0
  *
  * @var string
  */
-if ( ! defined( 'ROCK_MIN_WP_VERSION' ) ) {
+if ( ! defined( 'PRIMER_MIN_WP_VERSION' ) ) {
 
-	define( 'ROCK_MIN_WP_VERSION', '4.4' );
+	define( 'PRIMER_MIN_WP_VERSION', '4.4' );
 
 }
 
@@ -43,9 +43,9 @@ if ( ! defined( 'ROCK_MIN_WP_VERSION' ) ) {
  *
  * @since 1.0.0
  */
-if ( version_compare( get_bloginfo( 'version' ), ROCK_MIN_WP_VERSION, '<' ) ) {
+if ( version_compare( get_bloginfo( 'version' ), PRIMER_MIN_WP_VERSION, '<' ) ) {
 
-	require_once get_template_directory() . '/inc/back-compat.php';
+	require_once get_template_directory() . '/inc/compat/wordpress.php';
 
 }
 
@@ -55,20 +55,6 @@ if ( version_compare( get_bloginfo( 'version' ), ROCK_MIN_WP_VERSION, '<' ) ) {
  * @since 1.0.0
  */
 require_once get_template_directory() . '/inc/helpers.php';
-
-/**
- * Load ChurchThemes Content support.
- *
- * @since 1.0.0
- */
-require_once get_template_directory() . '/inc/support-ctc.php';
-
-/**
- * Load ChurchThemes Framework support.
- *
- * @since 1.0.0
- */
-require_once get_template_directory() . '/inc/support-framework.php';
 
 /**
  * Load custom template tags for this theme.
@@ -92,25 +78,44 @@ require_once get_template_directory() . '/inc/walker-nav-menu.php';
 require_once get_template_directory() . '/inc/hooks.php';
 
 /**
- * Load Customizer class.
+ * Load Beaver Builder compatibility file.
  *
  * @since 1.0.0
  */
-require_once get_template_directory() . '/inc/customizer.php';
+if ( class_exists( 'FLBuilder' ) ) {
 
-/**
- * Load WooCommerce compatibility file.
- *
- * @since 1.0.0
- */
-require_once get_template_directory() . '/inc/woocommerce.php';
+	require_once get_template_directory() . '/inc/compat/beaver-builder.php';
+
+}
 
 /**
  * Load Jetpack compatibility file.
  *
  * @since 1.0.0
  */
-require_once get_template_directory() . '/inc/jetpack.php';
+if ( class_exists( 'Jetpack' ) ) {
+
+	require_once get_template_directory() . '/inc/compat/jetpack.php';
+
+}
+
+/**
+ * Load WooCommerce compatibility file.
+ *
+ * @since 1.0.0
+ */
+if ( class_exists( 'WooCommerce' ) ) {
+
+	require_once get_template_directory() . '/inc/compat/woocommerce.php';
+
+}
+
+/**
+ * Load Customizer class (must be required last).
+ *
+ * @since 1.0.0
+ */
+require_once get_template_directory() . '/inc/customizer.php';
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -119,21 +124,24 @@ require_once get_template_directory() . '/inc/jetpack.php';
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  *
- * @since 1.0.0
+ * @global array $primer_image_sizes
+ * @since  1.0.0
  */
-function rock_setup() {
+function primer_setup() {
+
+	global $primer_image_sizes;
 
 	/**
 	 * Load theme translations.
 	 *
 	 * Translations can be filed in the /languages/ directory. If you're
-	 * building a theme based on Rock, use a find and replace to change
-	 * 'rock' to the name of your theme in all the template files.
+	 * building a theme based on Primer, use a find and replace to change
+	 * 'primer' to the name of your theme in all the template files.
 	 *
 	 * @link  https://codex.wordpress.org/Function_Reference/load_theme_textdomain
 	 * @since 1.0.0
 	 */
-	load_theme_textdomain( 'rock', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'primer', get_template_directory() . '/languages' );
 
 	/**
 	 * Filter registered image sizes.
@@ -142,41 +150,48 @@ function rock_setup() {
 	 *
 	 * @var array
 	 */
-	$images_sizes = (array) apply_filters( 'rock_image_sizes',
+	$primer_image_sizes = (array) apply_filters( 'primer_image_sizes',
 		array(
-			'rock-featured' => array(
+			'primer-featured' => array(
 				'width'  => 1600,
 				'height' => 9999,
 				'crop'   => false,
+				'label'  => esc_html__( 'Featured', 'primer' ),
 			),
-			'rock-hero' => array(
+			'primer-hero' => array(
 				'width'  => 2400,
 				'height' => 1300,
 				'crop'   => array( 'center', 'center' ),
+				'label'  => esc_html__( 'Hero', 'primer' ),
 			),
 		)
 	);
 
-	foreach ( $images_sizes as $name => $args ) {
+	foreach ( $primer_image_sizes as $name => &$args ) {
 
-		if (
-			! empty( $name )
-			&&
-			! empty( $args['width'] )
-			&&
-			! empty( $args['height'] )
-			&&
-			! empty( $args['crop'] )
-		) {
+		if ( empty( $name ) || empty( $args['width'] ) || empty( $args['height'] ) ) {
 
-			add_image_size(
-				sanitize_key( $name ),
-				absint( $args['width'] ),
-				absint( $args['height'] ),
-				$args['crop']
-			);
+			unset( $primer_image_sizes[ $name ] );
+
+			continue;
 
 		}
+
+		$args['crop']  = ! empty( $args['crop'] ) ? $args['crop'] : false;
+		$args['label'] = ! empty( $args['label'] ) ? $args['label'] : ucwords( str_replace( array( '-', '_' ), ' ', $name ) );
+
+		add_image_size(
+			sanitize_key( $name ),
+			absint( $args['width'] ),
+			absint( $args['height'] ),
+			$args['crop']
+		);
+
+	}
+
+	if ( $primer_image_sizes ) {
+
+		add_filter( 'image_size_names_choose', 'primer_image_size_names_choose' );
 
 	}
 
@@ -226,11 +241,11 @@ function rock_setup() {
 		 *
 		 * @var array
 		 */
-		(array) apply_filters( 'rock_nav_menus',
+		(array) apply_filters( 'primer_nav_menus',
 			array(
-				'primary' => esc_html__( 'Primary Menu', 'rock' ),
-				'social'  => esc_html__( 'Social Menu', 'rock' ),
-				'footer'  => esc_html__( 'Footer Menu', 'rock' ),
+				'primary' => esc_html__( 'Primary Menu', 'primer' ),
+				'social'  => esc_html__( 'Social Menu', 'primer' ),
+				'footer'  => esc_html__( 'Footer Menu', 'primer' ),
 			)
 		)
 	);
@@ -270,7 +285,30 @@ function rock_setup() {
 	);
 
 }
-add_action( 'after_setup_theme', 'rock_setup' );
+add_action( 'after_setup_theme', 'primer_setup' );
+
+/**
+ * Register image size labels.
+ *
+ * @filter image_size_names_choose
+ * @since  1.0.0
+ *
+ * @param  array $sizes
+ *
+ * @return array
+ */
+function primer_image_size_names_choose( $sizes ) {
+
+	global $primer_image_sizes;
+
+	$labels = array_combine(
+		array_keys( $primer_image_sizes ),
+		wp_list_pluck( $primer_image_sizes, 'label' )
+	);
+
+	return array_merge( $sizes, $labels );
+
+}
 
 /**
  * Sets the content width in pixels, based on the theme layout.
@@ -281,9 +319,9 @@ add_action( 'after_setup_theme', 'rock_setup' );
  * @global int $content_width
  * @since  1.0.0
  */
-function rock_content_width() {
+function primer_content_width() {
 
-	$layout        = rock_get_layout();
+	$layout        = primer_get_layout();
 	$content_width = ( 'one-column-wide' === $layout ) ? 1068 : 688;
 
 	/**
@@ -295,10 +333,10 @@ function rock_content_width() {
 	 *
 	 * @var int
 	 */
-	$GLOBALS['content_width'] = (int) apply_filters( 'rock_content_width', $content_width, $layout );
+	$GLOBALS['content_width'] = (int) apply_filters( 'primer_content_width', $content_width, $layout );
 
 }
-add_action( 'after_setup_theme', 'rock_content_width', 0 );
+add_action( 'after_setup_theme', 'primer_content_width', 0 );
 
 /**
  * Enable support for custom editor style.
@@ -314,7 +352,7 @@ add_action( 'admin_init', 'add_editor_style', 10, 0 );
  * @link  http://codex.wordpress.org/Function_Reference/register_sidebar
  * @since 1.0.0
  */
-function rock_register_sidebars() {
+function primer_register_sidebars() {
 
 	/**
 	 * Filter registered sidebars areas.
@@ -323,51 +361,51 @@ function rock_register_sidebars() {
 	 *
 	 * @var array
 	 */
-	$sidebars = (array) apply_filters( 'rock_sidebars',
+	$sidebars = (array) apply_filters( 'primer_sidebars',
 		array(
 			'sidebar-1' => array(
-				'name'          => esc_html__( 'Sidebar', 'rock' ),
-				'description'   => esc_html__( 'The primary sidebar appears alongside the content of every page, post, archive, and search template.', 'rock' ),
+				'name'          => esc_html__( 'Sidebar', 'primer' ),
+				'description'   => esc_html__( 'The primary sidebar appears alongside the content of every page, post, archive, and search template.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h4 class="widget-title">',
 				'after_title'   => '</h4>',
 			),
 			'sidebar-2' => array(
-				'name'          => esc_html__( 'Secondary Sidebar', 'rock' ),
-				'description'   => esc_html__( 'The secondary sidebar will only appear when you have selected a three-column layout.', 'rock' ),
+				'name'          => esc_html__( 'Secondary Sidebar', 'primer' ),
+				'description'   => esc_html__( 'The secondary sidebar will only appear when you have selected a three-column layout.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h4 class="widget-title">',
 				'after_title'   => '</h4>',
 			),
 			'footer-1' => array(
-				'name'          => esc_html__( 'Footer 1', 'rock' ),
-				'description'   => esc_html__( 'This sidebar is the first column of the footer widget area.', 'rock' ),
+				'name'          => esc_html__( 'Footer 1', 'primer' ),
+				'description'   => esc_html__( 'This sidebar is the first column of the footer widget area.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h4 class="widget-title">',
 				'after_title'   => '</h4>',
 			),
 			'footer-2' => array(
-				'name'          => esc_html__( 'Footer 2', 'rock' ),
-				'description'   => esc_html__( 'This sidebar is the second column of the footer widget area.', 'rock' ),
+				'name'          => esc_html__( 'Footer 2', 'primer' ),
+				'description'   => esc_html__( 'This sidebar is the second column of the footer widget area.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h4 class="widget-title">',
 				'after_title'   => '</h4>',
 			),
 			'footer-3' => array(
-				'name'          => esc_html__( 'Footer 3', 'rock' ),
-				'description'   => esc_html__( 'This sidebar is the third column of the footer widget area.', 'rock' ),
+				'name'          => esc_html__( 'Footer 3', 'primer' ),
+				'description'   => esc_html__( 'This sidebar is the third column of the footer widget area.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h4 class="widget-title">',
 				'after_title'   => '</h4>',
 			),
 			'hero' => array(
-				'name'          => esc_html__( 'Hero', 'rock' ),
-				'description'   => esc_html__( 'Hero widgets appear over the header image on the front page.', 'rock' ),
+				'name'          => esc_html__( 'Hero', 'primer' ),
+				'description'   => esc_html__( 'Hero widgets appear over the header image on the front page.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h2 class="widget-title">',
@@ -383,7 +421,7 @@ function rock_register_sidebars() {
 	}
 
 }
-add_action( 'widgets_init', 'rock_register_sidebars' );
+add_action( 'widgets_init', 'primer_register_sidebars' );
 
 /**
  * Enqueue theme scripts and styles.
@@ -392,17 +430,17 @@ add_action( 'widgets_init', 'rock_register_sidebars' );
  * @link  https://codex.wordpress.org/Function_Reference/wp_enqueue_script
  * @since 1.0.0
  */
-function rock_scripts() {
+function primer_scripts() {
 
-	$suffix = SCRIPT_DEBUG ? '' : '.min';
+	$stylesheet = get_stylesheet();
+	$suffix     = SCRIPT_DEBUG ? '' : '.min';
 
-	wp_enqueue_style( 'rock', get_stylesheet_uri(), false, ROCK_VERSION );
+	wp_enqueue_style( $stylesheet, get_stylesheet_uri(), false, defined( 'PRIMER_CHILD_VERSION' ) ? PRIMER_CHILD_VERSION : PRIMER_VERSION );
 
-	wp_style_add_data( 'rock', 'rtl', 'replace' );
+	wp_style_add_data( $stylesheet, 'rtl', 'replace' );
 
-	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'rock-navigation', get_template_directory_uri() . "/assets/js/navigation{$suffix}.js", array( 'jquery' ), ROCK_VERSION, true );
-	wp_enqueue_script( 'rock-skip-link-focus-fix', get_template_directory_uri() . "/assets/js/skip-link-focus-fix{$suffix}.js", array(), ROCK_VERSION, true );
+	wp_enqueue_script( 'primer-navigation', get_template_directory_uri() . "/assets/js/navigation{$suffix}.js", array( 'jquery' ), PRIMER_VERSION, true );
+	wp_enqueue_script( 'primer-skip-link-focus-fix', get_template_directory_uri() . "/assets/js/skip-link-focus-fix{$suffix}.js", array(), PRIMER_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 
@@ -410,51 +448,21 @@ function rock_scripts() {
 
 	}
 
-	if ( rock_has_hero_image() ) {
+	if ( primer_has_hero_image() ) {
 
 		wp_add_inline_style(
-			'rock',
+			$stylesheet,
 			sprintf(
 				'%s { background-image: url(%s); }',
-				rock_get_hero_image_selector(),
-				esc_url( rock_get_hero_image() )
+				primer_get_hero_image_selector(),
+				esc_url( primer_get_hero_image() )
 			)
 		);
 
 	}
 
-	/**
-	 * Enqueue lt IE 9 Conditional
-	 */
-	wp_enqueue_style( 'rock-lt-ie9-style', get_template_directory_uri() . '/assets/css/ie.css', array(), ROCK_VERSION );
-	wp_style_add_data( 'rock-lt-ie9-style', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'rock-respond', get_template_directory_uri() . '/assets/js/respond.min.js', array(), ROCK_VERSION );
-	wp_script_add_data( 'rock-respond', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'rock-nwmatcher', get_template_directory_uri() . '/assets/js/nwmatcher.min.js', array(), ROCK_VERSION );
-	wp_script_add_data( 'rock-nwmatcher', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'rock-jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), ROCK_VERSION );
-	wp_script_add_data( 'rock-jquery', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'rock-html5shiv', get_template_directory_uri() . '/assets/js/html5shiv.min.js', array(), ROCK_VERSION );
-	wp_script_add_data( 'rock-html5shiv', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'rock-selectivizr', get_template_directory_uri() . '/assets/js/selectivizr.min.js', array(), ROCK_VERSION );
-	wp_script_add_data( 'rock-selectivizr', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'rock-rem', get_template_directory_uri() . '/assets/js/rem.min.js', array(), ROCK_VERSION );
-	wp_script_add_data( 'rock-rem', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'rock-jquery-backgroundSize', get_template_directory_uri() . '/assets/js/jquery.backgroundSize.min.js', array( 'rock-jquery' ), ROCK_VERSION );
-	wp_script_add_data( 'rock-jquery-backgroundSize', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'rock-lt-ie9-script', get_template_directory_uri() . "/assets/js/lt-ie9$suffix.js", array( 'rock-jquery' ), ROCK_VERSION );
-	wp_script_add_data( 'rock-lt-ie9-script', 'conditional', 'lt IE 9' );
-
 }
-add_action( 'wp_enqueue_scripts', 'rock_scripts' );
+add_action( 'wp_enqueue_scripts', 'primer_scripts' );
 
 /**
  * Sets the authordata global when viewing an author archive.
@@ -470,7 +478,7 @@ add_action( 'wp_enqueue_scripts', 'rock_scripts' );
  * @global WP_User  $authordata
  * @since  1.0.0
  */
-function rock_setup_author() {
+function primer_setup_author() {
 
 	global $wp_query, $authordata;
 
@@ -481,7 +489,7 @@ function rock_setup_author() {
 	}
 
 }
-add_action( 'wp', 'rock_setup_author' );
+add_action( 'wp', 'primer_setup_author' );
 
 /**
  * Reset the transient for the active categories check.
@@ -490,15 +498,15 @@ add_action( 'wp', 'rock_setup_author' );
  * @action edit_category
  * @action delete_category
  * @action save_post
- * @see    rock_has_active_categories()
+ * @see    primer_has_active_categories()
  * @since  1.0.0
  */
-function rock_has_active_categories_reset() {
+function primer_has_active_categories_reset() {
 
-	delete_transient( 'rock_has_active_categories' );
+	delete_transient( 'primer_has_active_categories' );
 
 }
-add_action( 'create_category', 'rock_has_active_categories_reset' );
-add_action( 'edit_category',   'rock_has_active_categories_reset' );
-add_action( 'delete_category', 'rock_has_active_categories_reset' );
-add_action( 'save_post',       'rock_has_active_categories_reset' );
+add_action( 'create_category', 'primer_has_active_categories_reset' );
+add_action( 'edit_category',   'primer_has_active_categories_reset' );
+add_action( 'delete_category', 'primer_has_active_categories_reset' );
+add_action( 'save_post',       'primer_has_active_categories_reset' );

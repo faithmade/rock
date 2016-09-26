@@ -6,8 +6,8 @@
 
 ( function( api, $ ) {
 
-	var cssTemplate      = wp.template( 'rock-colors-css' ),
-	    rgbaTemplate     = wp.template( 'rock-colors-css-rgba' ),
+	var cssTemplate      = wp.template( 'primer-colors-css' ),
+	    rgbaTemplate     = wp.template( 'primer-colors-css-rgba' ),
 	    colorSettings    = [],
 	    oldScheme        = null,
 	    schemeIsChanging = false;
@@ -129,8 +129,8 @@
 
 		}
 
-		api.previewer.send( 'rock-update-colors-css', cssTemplate( colors ) );
-		api.previewer.send( 'rock-update-colors-css-rgba', rgbaTemplate( rgbaColors ) );
+		api.previewer.send( 'primer-update-colors-css', cssTemplate( colors ) );
+		api.previewer.send( 'primer-update-colors-css-rgba', rgbaTemplate( rgbaColors ) );
 
 	}
 

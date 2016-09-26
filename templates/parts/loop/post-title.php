@@ -2,7 +2,8 @@
 /**
  * Template part for displaying the post title inside The Loop.
  *
- * @package Rock
+ * @package Primer
+ * @since   1.0.0
  */
 ?>
 
@@ -18,7 +19,7 @@
 			 *
 			 * @since 1.0.0
 			 */
-			do_action( 'rock_before_post_title' );
+			do_action( 'primer_before_post_title' );
 			?>
 
 			<?php if ( is_singular() ) : ?>
@@ -27,7 +28,7 @@
 
 			<?php else : ?>
 
-				<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title(); ?></a></h2>
+				<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
 			<?php endif; ?>
 
@@ -37,7 +38,7 @@
 			 *
 			 * @since 1.0.0
 			 */
-			do_action( 'rock_after_post_title' );
+			do_action( 'primer_after_post_title' );
 			?>
 
 		</div><!-- .entry-header-column -->

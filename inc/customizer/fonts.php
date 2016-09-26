@@ -1,6 +1,12 @@
 <?php
+/**
+ * Customizer Fonts functionality.
+ *
+ * @package Primer
+ * @since   1.0.0
+ */
 
-class Rock_Customizer_Fonts {
+class Primer_Customizer_Fonts {
 
 	/**
 	 * Array of available fonts.
@@ -32,7 +38,7 @@ class Rock_Customizer_Fonts {
 		 *
 		 * @var array
 		 */
-		$this->fonts = (array) apply_filters( 'rock_fonts',
+		$this->fonts = (array) apply_filters( 'primer_fonts',
 			array(
 				'Architects Daughter',
 				'Asap',
@@ -75,11 +81,11 @@ class Rock_Customizer_Fonts {
 		 *
 		 * @var array
 		 */
-		$this->font_types = (array) apply_filters( 'rock_font_types',
+		$this->font_types = (array) apply_filters( 'primer_font_types',
 			array(
 				'site_title_font' => array(
-					'label'       => esc_html__( 'Site Title', 'rock' ),
-					'description' => esc_html__( 'Site title text in the header.', 'rock' ),
+					'label'       => esc_html__( 'Site Title', 'primer' ),
+					'description' => esc_html__( 'Site title text in the header.', 'primer' ),
 					'default'     => 'Open Sans',
 					'css'         => array(
 						'.site-title' => array(
@@ -88,8 +94,8 @@ class Rock_Customizer_Fonts {
 					),
 				),
 				'navigation_font' => array(
-					'label'       => esc_html__( 'Navigation', 'rock' ),
-					'description' => esc_html__( 'Primary menu links and button links.', 'rock' ),
+					'label'       => esc_html__( 'Navigation', 'primer' ),
+					'description' => esc_html__( 'Primary menu links and button links.', 'primer' ),
 					'default'     => 'Open Sans',
 					'css'         => array(
 						'.main-navigation ul li a, .main-navigation ul li a:visited,
@@ -99,8 +105,8 @@ class Rock_Customizer_Fonts {
 					),
 				),
 				'heading_font' => array(
-					'label'       => esc_html__( 'Headings', 'rock' ),
-					'description' => esc_html__( 'Post titles, widget titles, form labels, and table headers.', 'rock' ),
+					'label'       => esc_html__( 'Headings', 'primer' ),
+					'description' => esc_html__( 'Post titles, widget titles, form labels, and table headers.', 'primer' ),
 					'default'     => 'Open Sans',
 					'css'         => array(
 						'h1, h2, h3, h4, h5, h6,
@@ -115,8 +121,8 @@ class Rock_Customizer_Fonts {
 					),
 				),
 				'primary_font' => array(
-					'label'       => esc_html__( 'Primary', 'rock' ),
-					'description' => esc_html__( 'Paragraphs, lists, links, quotes, and tables.', 'rock' ),
+					'label'       => esc_html__( 'Primary', 'primer' ),
+					'description' => esc_html__( 'Paragraphs, lists, links, quotes, and tables.', 'primer' ),
 					'default'     => 'Open Sans',
 					'css'         => array(
 						'body,
@@ -130,8 +136,8 @@ class Rock_Customizer_Fonts {
 					),
 				),
 				'secondary_font' => array(
-					'label'       => esc_html__( 'Secondary', 'rock' ),
-					'description' => esc_html__( 'Bylines, comment counts, reply links, post footers, and quote footers.', 'rock' ),
+					'label'       => esc_html__( 'Secondary', 'primer' ),
+					'description' => esc_html__( 'Bylines, comment counts, reply links, post footers, and quote footers.', 'primer' ),
 					'default'     => 'Open Sans',
 					'css'         => array(
 						'blockquote,
@@ -179,7 +185,7 @@ class Rock_Customizer_Fonts {
 		$wp_customize->add_section(
 			'fonts',
 			array(
-				'title'    => esc_html__( 'Fonts', 'rock' ),
+				'title'    => esc_html__( 'Fonts', 'primer' ),
 				'priority' => 40,
 			)
 		);
@@ -204,7 +210,7 @@ class Rock_Customizer_Fonts {
 
 			$fonts             = array_combine( $this->fonts, $this->fonts );
 			$default           = $this->get_default_font( $name );
-			$fonts[ $default ] = sprintf( esc_html_x( '%s (Default)', 'font name', 'rock' ), $default );
+			$fonts[ $default ] = sprintf( esc_html_x( '%s (Default)', 'font name', 'primer' ), $default );
 
 			$wp_customize->add_control(
 				$name,
@@ -296,7 +302,7 @@ class Rock_Customizer_Fonts {
 		 *
 		 * @var array
 		 */
-		$weights = (array) apply_filters( 'rock_font_weights', array( 300, 400, 700 ), $font, $font_type );
+		$weights = (array) apply_filters( 'primer_font_weights', array( 300, 400, 700 ), $font, $font_type );
 		$weights = array_filter( array_map( 'absint', $weights ) );
 
 		sort( $weights );
@@ -346,14 +352,14 @@ class Rock_Customizer_Fonts {
 		 *
 		 * @var array
 		 */
-		$query_args = (array) apply_filters( 'rock_google_fonts_query_args',
+		$query_args = (array) apply_filters( 'primer_google_fonts_query_args',
 			array(
 				'family' => $font_families,
 				'subset' => 'latin',
 			)
 		);
 
-		wp_enqueue_style( 'rock-google-fonts', add_query_arg( $query_args, '//fonts.googleapis.com/css' ), false );
+		wp_enqueue_style( Primer_Customizer::$stylesheet . '-fonts', add_query_arg( $query_args, '//fonts.googleapis.com/css' ), false );
 
 	}
 
@@ -374,11 +380,11 @@ class Rock_Customizer_Fonts {
 			}
 
 			$css = sprintf(
-				Rock_Customizer::parse_css_rules( $args['css'] ),
+				Primer_Customizer::parse_css_rules( $args['css'] ),
 				$this->get_font( $name )
 			);
 
-			wp_add_inline_style( 'rock-google-fonts', $css );
+			wp_add_inline_style( Primer_Customizer::$stylesheet . '-fonts', $css );
 
 		}
 
@@ -386,4 +392,4 @@ class Rock_Customizer_Fonts {
 
 }
 
-new Rock_Customizer_Fonts;
+new Primer_Customizer_Fonts;

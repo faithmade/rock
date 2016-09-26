@@ -2,7 +2,8 @@
 /**
  * Displays the site header.
  *
- * @package Rock
+ * @package Primer
+ * @since   1.0.0
  */
 ?>
 
@@ -16,7 +17,7 @@
 		 *
 		 * @since 1.0.0
 		 */
-		do_action( 'rock_hero' );
+		do_action( 'primer_hero' );
 		?>
 
 	</div>

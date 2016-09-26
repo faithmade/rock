@@ -9,8 +9,8 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Rock
- * @since 1.0.0
+ * @package Primer
+ * @since   1.0.0
  */
 
 get_header(); ?>

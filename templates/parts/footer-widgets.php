@@ -2,11 +2,12 @@
 /**
  * Displays the footer widget areas.
  *
- * @package Rock
+ * @package Primer
+ * @since   1.0.0
  */
 ?>
 
-<?php if ( $sidebars = rock_get_active_footer_sidebars() ) : ?>
+<?php if ( $sidebars = primer_get_active_footer_sidebars() ) : ?>
 
 	<div class="footer-widget-area columns-<?php echo count( $sidebars ); ?>">
 

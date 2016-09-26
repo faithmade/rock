@@ -2,7 +2,8 @@
 /**
  * Template part for displaying the post content inside The Loop.
  *
- * @package Rock
+ * @package Primer
+ * @since   1.0.0
  */
 ?>
 
@@ -10,11 +11,11 @@
 
 	<?php
 
-	the_content( __( 'Read More <span class="meta-nav">&rarr;</span>', 'rock' ) );
+	the_content( __( 'Read More <span class="meta-nav">&rarr;</span>', 'primer' ) );
 
 	wp_link_pages(
 		array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'rock' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'primer' ),
 			'after'  => '</div>',
 		)
 	);

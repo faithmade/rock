@@ -6,8 +6,8 @@
  *
  * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#footer-php
  *
- * @package Rock
- * @since 1.0.0
+ * @package Primer
+ * @since   1.0.0
  */
 ?>
 
@@ -19,10 +19,10 @@
 		 *
 		 * @since 1.0.0
 		 */
-		do_action( 'rock_before_footer' );
+		do_action( 'primer_before_footer' );
 		?>
 
-		<footer id="colophon" class="site-footer" role="contentinfo">
+		<footer id="colophon" class="site-footer">
 
 			<div class="site-footer-inner">
 
@@ -32,7 +32,7 @@
 				 *
 				 * @since 1.0.0
 				 */
-				do_action( 'rock_footer' );
+				do_action( 'primer_footer' );
 				?>
 
 			</div><!-- .site-footer-inner -->
@@ -45,7 +45,7 @@
 		 *
 		 * @since 1.0.0
 		 */
-		do_action( 'rock_after_footer' );
+		do_action( 'primer_after_footer' );
 		?>
 
 	</div><!-- #page -->

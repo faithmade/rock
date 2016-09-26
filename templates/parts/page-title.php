@@ -2,7 +2,8 @@
 /**
  * Displays page titles.
  *
- * @package Rock
+ * @package Primer
+ * @since   1.0.0
  */
 ?>
 
@@ -16,10 +17,10 @@
 		 *
 		 * @since 1.0.0
 		 */
-		do_action( 'rock_before_page_title' );
+		do_action( 'primer_before_page_title' );
 		?>
 
-		<h1 class="page-title"><?php rock_the_page_title() ?></h1>
+		<h1 class="page-title"><?php primer_the_page_title(); ?></h1>
 
 		<?php
 		/**
@@ -27,7 +28,7 @@
 		 *
 		 * @since 1.0.0
 		 */
-		do_action( 'rock_after_page_title' );
+		do_action( 'primer_after_page_title' );
 		?>
 
 	</header><!-- .entry-header -->

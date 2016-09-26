@@ -1,73 +1,73 @@
-.rock-layout p label {
+.primer-layout p label {
   float: right;
   margin-left: 12px; }
 
-.rock-layout p span.clear {
+.primer-layout p span.clear {
   content: '';
   clear: both;
   display: block; }
 
-.rock-layout-wrap ul {
+.primer-layout-wrap ul {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0; }
-  .rock-layout-wrap ul li {
+  .primer-layout-wrap ul li {
     margin: 0.3em 0.3em;
     padding: 0; }
-    .rock-layout-wrap ul li.disabled {
+    .primer-layout-wrap ul li.disabled {
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=35)";
       filter: alpha(opacity=35);
       opacity: 0.35; }
-    .rock-layout-wrap ul li span {
+    .primer-layout-wrap ul li span {
       display: none; }
-    .rock-layout-wrap ul li img {
+    .primer-layout-wrap ul li img {
       width: -webkit-calc(100% - 0.3em - 12px);
       width: calc(100% - 0.3em - 12px);
       height: auto;
       padding: 6px; }
-    .rock-layout-wrap ul li label {
+    .primer-layout-wrap ul li label {
       display: block;
       position: relative;
       margin-right: 0; }
-      .rock-layout-wrap ul li label > input {
+      .primer-layout-wrap ul li label > input {
         visibility: hidden;
         position: absolute; }
-        .rock-layout-wrap ul li label > input + img {
+        .primer-layout-wrap ul li label > input + img {
           border: 3px solid transparent; }
-    .rock-layout-wrap ul li.active label > input + img {
+    .primer-layout-wrap ul li.active label > input + img {
       cursor: pointer; }
-    .rock-layout-wrap ul li.active label > input:checked + img {
+    .primer-layout-wrap ul li.active label > input:checked + img {
       border-color: #1e8cbe; }
-    .rock-layout-wrap ul li.disabled label > input + img {
+    .primer-layout-wrap ul li.disabled label > input + img {
       cursor: default; }
 
-#side-sortables .rock-layout-wrap ul,
-#customize-control-layout .rock-layout-wrap ul {
+#side-sortables .primer-layout-wrap ul,
+#customize-control-layout .primer-layout-wrap ul {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
-  #side-sortables .rock-layout-wrap ul li,
-  #customize-control-layout .rock-layout-wrap ul li {
+  #side-sortables .primer-layout-wrap ul li,
+  #customize-control-layout .primer-layout-wrap ul li {
     -webkit-flex-basis: -webkit-calc(25% - 0.6em);
     -ms-flex-preferred-size: calc(25% - 0.6em);
     flex-basis: calc(25% - 0.6em); }
 
 @media only screen and (max-width: 850px) {
-  .rock-layout-wrap ul {
+  .primer-layout-wrap ul {
     display: inline-block; }
-    .rock-layout-wrap ul li {
+    .primer-layout-wrap ul li {
       float: none;
       width: 100%;
       padding: 0.5em 0 !important; }
-      .rock-layout-wrap ul li span {
+      .primer-layout-wrap ul li span {
         display: inline-block; }
-      .rock-layout-wrap ul li img {
+      .primer-layout-wrap ul li img {
         display: none; }
-      .rock-layout-wrap ul li label {
+      .primer-layout-wrap ul li label {
         margin-right: 24px; }
-        .rock-layout-wrap ul li label > input {
+        .primer-layout-wrap ul li label > input {
           visibility: visible;
           position: relative; } }

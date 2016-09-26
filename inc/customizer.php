@@ -1,56 +1,52 @@
 <?php
+/**
+ * Customizer bootstrap.
+ *
+ * @package Primer
+ * @since   1.0.0
+ */
 
-class Rock_Customizer {
+class Primer_Customizer {
+
+	/**
+	 * Stylesheet slug.
+	 *
+	 * @var string
+	 */
+	public static $stylesheet;
 
 	/**
 	 * Class constructor.
 	 */
 	public function __construct() {
 
+		self::$stylesheet = get_stylesheet();
+
 		/**
-		 * Autoload all customizer components.
+		 * Load Customizer Colors functionality.
 		 *
 		 * @since 1.0.0
 		 */
-		foreach( glob( dirname( __FILE__ ) . '/customizer/*.php' ) as $filename ) {
+		require_once get_template_directory() . '/inc/customizer/colors.php';
 
-			if ( is_readable( $filename ) ) {
+		/**
+		 * Load Customizer Fonts functionality.
+		 *
+		 * @since 1.0.0
+		 */
+		require_once get_template_directory() . '/inc/customizer/fonts.php';
 
-				require_once $filename;
-
-			}
-
-		}
+		/**
+		 * Load Customizer Layouts functionality.
+		 *
+		 * @since 1.0.0
+		 */
+		require_once get_template_directory() . '/inc/customizer/layouts.php';
 
 		add_action( 'after_setup_theme',      array( $this, 'logo' ) );
-		add_action( 'customize_register',     array( $this, 'require_controls' ), 1 );
 		add_action( 'customize_register',     array( $this, 'selective_refresh' ), 11 );
 		add_action( 'customize_register',     array( $this, 'use_featured_hero_image' ) );
 		add_action( 'customize_preview_init', array( $this, 'customize_preview_js' ) );
-
-	}
-
-	/**
-	 * Include controls class required by our sections.
-	 *
-	 * This is hooked her since WP_Customize_Control is not present before.
-	 */
-	public function require_controls() {
-
-		/**
-		 * Autoload all customizer controls.
-		 *
-		 * @since 1.0.0
-		 */
-		foreach( glob( dirname( __FILE__ ) . '/customizer/controls/*.php' ) as $filename ) {
-
-			if ( is_readable( $filename ) ) {
-
-				require_once $filename;
-
-			}
-
-		}
 
 	}
 
@@ -69,7 +65,7 @@ class Rock_Customizer {
 		 *
 		 * @var array
 		 */
-		$args = (array) apply_filters( 'rock_custom_logo_args',
+		$args = (array) apply_filters( 'primer_custom_logo_args',
 			array(
 				'height'      => 100,
 				'width'       => 400,
@@ -170,8 +166,8 @@ class Rock_Customizer {
 		$wp_customize->add_control(
 			'use_featured_hero_image',
 			array(
-				'label'       => esc_html__( 'Use featured image', 'rock' ),
-				'description' => esc_html__( 'Allow the featured image on the current post to override the hero image.', 'rock' ),
+				'label'       => esc_html__( 'Use featured image', 'primer' ),
+				'description' => esc_html__( 'Allow the featured image on the current post to override the hero image.', 'primer' ),
 				'section'     => 'header_image',
 				'priority'    => 5,
 				'type'        => 'checkbox',
@@ -190,9 +186,9 @@ class Rock_Customizer {
 
 		$suffix = SCRIPT_DEBUG ? '' : '.min';
 
-		wp_enqueue_script( 'rock-customize-preview', get_template_directory_uri() . "/assets/js/admin/customizer{$suffix}.js", array( 'customize-preview' ), ROCK_VERSION, true );
+		wp_enqueue_script( 'primer-customize-preview', get_template_directory_uri() . "/assets/js/admin/customizer{$suffix}.js", array( 'customize-preview' ), PRIMER_VERSION, true );
 
-		wp_localize_script( 'rock-customize-preview', 'colorsSettings', array( 'hero_background_selector' => rock_get_hero_image_selector() ) );
+		wp_localize_script( 'primer-customize-preview', 'colorsSettings', array( 'hero_background_selector' => primer_get_hero_image_selector() ) );
 
 	}
 
@@ -232,4 +228,4 @@ class Rock_Customizer {
 
 }
 
-new Rock_Customizer;
+new Primer_Customizer;

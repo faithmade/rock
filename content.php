@@ -4,20 +4,31 @@
  *
  * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
  *
- * @package Rock
- * @since 1.0.0
+ * @package Primer
+ * @since   1.0.0
  */
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php if ( ! is_single() || ! rock_use_featured_hero_image() ) : ?>
+	<?php
+	/**
+	 * Fires inside the `article` element, before the content.
+	 *
+	 * @hooked primer_woo_shop_messages - 10
+	 *
+	 * @since 1.0.0
+	 */
+	do_action( 'primer_before_post_content' );
+	?>
+
+	<?php if ( ! is_single() || ! primer_use_featured_hero_image() ) : ?>
 
 		<?php get_template_part( 'templates/parts/loop/post', 'thumbnail' ); ?>
 
 	<?php endif; ?>
 
-	<?php get_template_part( 'templates/parts/loop/' . get_post_type(), 'title' ); ?>
+	<?php get_template_part( 'templates/parts/loop/post', 'title' ); ?>
 
 	<?php
 	/**
@@ -25,19 +36,28 @@
 	 *
 	 * @since 1.0.0
 	 */
-	do_action( 'rock_after_post_title_template' );
+	do_action( 'primer_after_post_title_template' );
 	?>
 
 	<?php if ( is_single() ) : ?>
 
-		<?php get_template_part( 'templates/parts/loop/' . get_post_type(), 'content' ); ?>
+		<?php get_template_part( 'templates/parts/loop/post', 'content' ); ?>
 
 	<?php else : ?>
 
-		<?php get_template_part( 'templates/parts/loop/' . get_post_type(), 'excerpt' ); ?>
+		<?php get_template_part( 'templates/parts/loop/post', 'excerpt' ); ?>
 
 	<?php endif; ?>
 
-	<?php get_template_part( 'templates/parts/loop/post' . get_post_type(), 'footer' ); ?>
+	<?php get_template_part( 'templates/parts/loop/post', 'footer' ); ?>
+
+	<?php
+	/**
+	 * Fires inside the `article` element, after the content.
+	 *
+	 * @since 1.0.0
+	 */
+	do_action( 'primer_after_post_content' );
+	?>
 
 </article><!-- #post-## -->
