@@ -3,11 +3,11 @@
 /**
  * Custom class that adds some markup before the nav menu.
  *
- * @package Primer
+ * @package Rock
  * @since   1.0.0
- * @see     primer_add_primary_menu()
+ * @see     rock_add_primary_menu()
  */
-class Primer_Walker_Nav_Menu extends Walker_Nav_Menu {
+class Rock_Walker_Nav_Menu extends Walker_Nav_Menu {
 
 	/**
 	 * Starts the list before the elements are added.

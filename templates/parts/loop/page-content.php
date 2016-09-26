@@ -2,7 +2,7 @@
 /**
  * Template part for displaying the page content inside The Loop.
  *
- * @package Primer
+ * @package Rock
  * @since   1.0.0
  */
 ?>
@@ -14,17 +14,17 @@
 	/**
 	 * Fires inside the `.page-content` element, before the content.
 	 *
-	 * @hooked primer_woo_shop_messages - 10
+	 * @hooked rock_woo_shop_messages - 10
 	 *
 	 * @since 1.0.0
 	 */
-	do_action( 'primer_before_page_content' );
+	do_action( 'rock_before_page_content' );
 
 	the_content();
 
 	wp_link_pages(
 		array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'primer' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'rock' ),
 			'after'  => '</div>',
 		)
 	);
@@ -34,7 +34,7 @@
 	 *
 	 * @since 1.0.0
 	 */
-	do_action( 'primer_after_page_content' );
+	do_action( 'rock_after_page_content' );
 
 	?>
 

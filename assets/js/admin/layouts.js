@@ -5,11 +5,11 @@ window.wp = window.wp || {};
 
 	$( document ).ready( function() {
 
-		$( 'input[name="primer-layout-override"]' ).change( function() {
+		$( 'input[name="rock-layout-override"]' ).change( function() {
 
 			if ( '1' === $( this ).val() ) {
 
-				$( '.primer-layout ul li' )
+				$( '.rock-layout ul li' )
 					.removeClass( 'disabled' )
 					.addClass( 'active' )
 					.find( 'input' )
@@ -19,7 +19,7 @@ window.wp = window.wp || {};
 
 			}
 
-			$( '.primer-layout ul li' )
+			$( '.rock-layout ul li' )
 				.addClass('disabled')
 				.find(':not(.global)')
 				.removeClass( 'active' )
@@ -27,7 +27,7 @@ window.wp = window.wp || {};
 				.find( 'input' )
 				.prop( 'disabled', true );
 
-			$( '.primer-layout ul li.global input' )
+			$( '.rock-layout ul li.global input' )
 				.prop( 'checked', true );
 
 		} );

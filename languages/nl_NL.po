@@ -1,8 +1,8 @@
 # Copyright (c) 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: Primer 0.9.0\n"
-"Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
+"Project-Id-Version: Rock 0.9.0\n"
+"Report-Msgid-Bugs-To: https://github.com/godaddy/wp-rock-theme/issues\n"
 "POT-Creation-Date: 2016-09-20 17:52:54+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -142,10 +142,10 @@ msgstr "Naar inhoud gaan"
 #: inc/compat/wordpress.php:47
 #, fuzzy
 msgid ""
-"Primer requires at least WordPress version %1$s. You are running version "
+"Rock requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Voor Primer is ten minste WordPress-versie %s vereist. Je voert versie %s "
+"Voor Rock is ten minste WordPress-versie %s vereist. Je voert versie %s "
 "uit. Upgrade en probeer het opnieuw."
 
 #: inc/customizer/colors.php:47
@@ -438,19 +438,19 @@ msgstr "1 opmerking"
 
 #. Theme Name of the plugin/theme
 #, fuzzy
-msgid "Primer"
+msgid "Rock"
 msgstr "Primair"
 
 #. Theme URI of the plugin/theme
-msgid "https://github.com/godaddy/wp-primer-theme"
-msgstr "https://github.com/godaddy/wp-primer-theme"
+msgid "https://github.com/godaddy/wp-rock-theme"
+msgstr "https://github.com/godaddy/wp-rock-theme"
 
 #. Description of the plugin/theme
 msgid ""
-"Primer is a powerful theme that brings clarity to your content in a fresh "
+"Rock is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
-"Primer is een krachtig thema dat je content voorziet van helderheid in een "
+"Rock is een krachtig thema dat je content voorziet van helderheid in een "
 "nieuw ontwerp."
 
 #. Author of the plugin/theme

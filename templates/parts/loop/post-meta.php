@@ -2,7 +2,7 @@
 /**
  * Template part for displaying the post meta inside The Loop.
  *
- * @package Primer
+ * @package Rock
  * @since   1.0.0
  */
 ?>
@@ -23,7 +23,7 @@
 
 				<a href="<?php echo get_comments_link(); ?>">
 
-					<span class="comments-link"><?php comments_popup_link( esc_html__( 'Leave a comment', 'primer' ), esc_html__( '1 Comment', 'primer' ), esc_html_x( '% Comments', 'number of comments', 'primer' ) ); ?></span>
+					<span class="comments-link"><?php comments_popup_link( esc_html__( 'Leave a comment', 'rock' ), esc_html__( '1 Comment', 'rock' ), esc_html_x( '% Comments', 'number of comments', 'rock' ) ); ?></span>
 
 				</a>
 

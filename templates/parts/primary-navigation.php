@@ -2,7 +2,7 @@
 /**
  * Displays the primary navigation.
  *
- * @package Primer
+ * @package Rock
  * @since   1.0.0
  */
 ?>
@@ -15,7 +15,7 @@
 	 *
 	 * @since 1.0.0
 	 */
-	do_action( 'primer_before_site_navigation' );
+	do_action( 'rock_before_site_navigation' );
 	?>
 
 	<nav id="site-navigation" class="main-navigation">
@@ -26,7 +26,7 @@
 		 *
 		 * @since 1.0.0
 		 */
-		do_action( 'primer_site_navigation' );
+		do_action( 'rock_site_navigation' );
 		?>
 
 	</nav><!-- #site-navigation -->
@@ -37,7 +37,7 @@
 	 *
 	 * @since 1.0.0
 	 */
-	do_action( 'primer_after_site_navigation' );
+	do_action( 'rock_after_site_navigation' );
 	?>
 
 </div>

@@ -2,7 +2,7 @@
 /**
  * Jetpack compatibility.
  *
- * @package Primer
+ * @package Rock
  * @since   1.0.0
  */
 
@@ -14,7 +14,7 @@
  * @link   https://jetpack.com/support/infinite-scroll/
  * @since  1.0.0
  */
-function primer_jetpack_setup() {
+function rock_jetpack_setup() {
 
 	add_theme_support(
 		'infinite-scroll',
@@ -25,4 +25,4 @@ function primer_jetpack_setup() {
 	);
 
 }
-add_action( 'after_setup_theme', 'primer_jetpack_setup' );
+add_action( 'after_setup_theme', 'rock_jetpack_setup' );

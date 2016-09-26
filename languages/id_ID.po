@@ -1,8 +1,8 @@
 # Copyright (c) 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: Primer 0.9.0\n"
-"Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
+"Project-Id-Version: Rock 0.9.0\n"
+"Report-Msgid-Bugs-To: https://github.com/godaddy/wp-rock-theme/issues\n"
 "POT-Creation-Date: 2016-09-20 17:52:54+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -93,7 +93,7 @@ msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
 msgstr ""
-"Bilah samping primer muncul di samping konten setiap halaman, postingan, "
+"Bilah samping rock muncul di samping konten setiap halaman, postingan, "
 "arsip, dan templat pencarian."
 
 #: functions.php:375
@@ -143,10 +143,10 @@ msgstr "Langsung ke konten"
 #: inc/compat/wordpress.php:47
 #, fuzzy
 msgid ""
-"Primer requires at least WordPress version %1$s. You are running version "
+"Rock requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Primer memerlukan setidaknya WordPress versi %s. Anda menjalankan versi %s. "
+"Rock memerlukan setidaknya WordPress versi %s. Anda menjalankan versi %s. "
 "Tingkatkan dan coba lagi."
 
 #: inc/customizer/colors.php:47
@@ -176,7 +176,7 @@ msgstr ""
 
 #: inc/customizer/colors.php:149
 msgid "Primary Text"
-msgstr "Teks Primer"
+msgstr "Teks Rock"
 
 #: inc/customizer/colors.php:150
 msgid "Paragraphs, lists, menu links, quotes and tables."
@@ -315,7 +315,7 @@ msgstr "Judul postingan, judul widget, label formulir, dan header tabel."
 
 #: inc/customizer/fonts.php:124
 msgid "Primary"
-msgstr "Primer"
+msgstr "Rock"
 
 #: inc/customizer/fonts.php:125
 msgid "Paragraphs, lists, links, quotes, and tables."
@@ -436,19 +436,19 @@ msgstr "1 Komentar"
 
 #. Theme Name of the plugin/theme
 #, fuzzy
-msgid "Primer"
-msgstr "Primer"
+msgid "Rock"
+msgstr "Rock"
 
 #. Theme URI of the plugin/theme
-msgid "https://github.com/godaddy/wp-primer-theme"
-msgstr "https://github.com/godaddy/wp-primer-theme"
+msgid "https://github.com/godaddy/wp-rock-theme"
+msgstr "https://github.com/godaddy/wp-rock-theme"
 
 #. Description of the plugin/theme
 msgid ""
-"Primer is a powerful theme that brings clarity to your content in a fresh "
+"Rock is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
-"Primer adalah tema efektif yang memperjelas konten Anda dengan desain baru."
+"Rock adalah tema efektif yang memperjelas konten Anda dengan desain baru."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"

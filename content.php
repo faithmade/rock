@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
  *
- * @package Primer
+ * @package Rock
  * @since   1.0.0
  */
 ?>
@@ -15,14 +15,14 @@
 	/**
 	 * Fires inside the `article` element, before the content.
 	 *
-	 * @hooked primer_woo_shop_messages - 10
+	 * @hooked rock_woo_shop_messages - 10
 	 *
 	 * @since 1.0.0
 	 */
-	do_action( 'primer_before_post_content' );
+	do_action( 'rock_before_post_content' );
 	?>
 
-	<?php if ( ! is_single() || ! primer_use_featured_hero_image() ) : ?>
+	<?php if ( ! is_single() || ! rock_use_featured_hero_image() ) : ?>
 
 		<?php get_template_part( 'templates/parts/loop/post', 'thumbnail' ); ?>
 
@@ -36,7 +36,7 @@
 	 *
 	 * @since 1.0.0
 	 */
-	do_action( 'primer_after_post_title_template' );
+	do_action( 'rock_after_post_title_template' );
 	?>
 
 	<?php if ( is_single() ) : ?>
@@ -57,7 +57,7 @@
 	 *
 	 * @since 1.0.0
 	 */
-	do_action( 'primer_after_post_content' );
+	do_action( 'rock_after_post_content' );
 	?>
 
 </article><!-- #post-## -->

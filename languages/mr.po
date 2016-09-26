@@ -1,8 +1,8 @@
 # Copyright (c) 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: Primer 0.9.0\n"
-"Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
+"Project-Id-Version: Rock 0.9.0\n"
+"Report-Msgid-Bugs-To: https://github.com/godaddy/wp-rock-theme/issues\n"
 "POT-Creation-Date: 2016-09-20 17:52:54+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -139,7 +139,7 @@ msgstr "सामग्रीवर जा"
 #: inc/compat/wordpress.php:47
 #, fuzzy
 msgid ""
-"Primer requires at least WordPress version %1$s. You are running version "
+"Rock requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
 "किमान WordPress आवृत्तीची प्राथमिक आवश्यकता आहे %s. आपण %s आवृत्ती रन करीत आहात. "
@@ -427,19 +427,19 @@ msgstr "1 टिप्पणी"
 
 #. Theme Name of the plugin/theme
 #, fuzzy
-msgid "Primer"
+msgid "Rock"
 msgstr "प्राथमिक"
 
 #. Theme URI of the plugin/theme
-msgid "https://github.com/godaddy/wp-primer-theme"
-msgstr "https://github.com/godaddy/wp-primer-theme"
+msgid "https://github.com/godaddy/wp-rock-theme"
+msgstr "https://github.com/godaddy/wp-rock-theme"
 
 #. Description of the plugin/theme
 msgid ""
-"Primer is a powerful theme that brings clarity to your content in a fresh "
+"Rock is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
-"Primer एक शक्तीशाली थीम आहे जी आपल्या ताज्या डिझाइनमध्ये सामग्रीला स्पष्टता आणते."
+"Rock एक शक्तीशाली थीम आहे जी आपल्या ताज्या डिझाइनमध्ये सामग्रीला स्पष्टता आणते."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"

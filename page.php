@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Primer
+ * @package Rock
  * @since   1.0.0
  */
 

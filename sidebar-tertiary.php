@@ -4,11 +4,11 @@
  *
  * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#sidebar-php
  *
- * @package Primer
+ * @package Rock
  * @since   1.0.0
  */
 
-if ( ! primer_layout_has_sidebar() || ! is_active_sidebar( 'sidebar-2' ) || 0 === strpos( primer_get_layout(), 'three-column-' ) ) {
+if ( ! rock_layout_has_sidebar() || ! is_active_sidebar( 'sidebar-2' ) || 0 === strpos( rock_get_layout(), 'three-column-' ) ) {
 
 	return;
 

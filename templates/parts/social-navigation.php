@@ -2,7 +2,7 @@
 /**
  * Displays the social navigation.
  *
- * @package Primer
+ * @package Rock
  * @since   1.0.0
  */
 ?>

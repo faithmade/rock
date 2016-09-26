@@ -5,7 +5,7 @@
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#404-php
  *
- * @package Primer
+ * @package Rock
  * @since   1.0.0
  */
 
@@ -19,13 +19,13 @@ get_header(); ?>
 
 			<header class="page-header">
 
-				<h1 class="page-title"><?php esc_html_e( "Oops! That page can't be found.", 'primer' ); ?></h1>
+				<h1 class="page-title"><?php esc_html_e( "Oops! That page can't be found.", 'rock' ); ?></h1>
 
 			</header><!-- .page-header -->
 
 			<div class="page-content">
 
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Please try searching below:', 'primer' ); ?></p>
+				<p><?php esc_html_e( 'It looks like nothing was found at this location. Please try searching below:', 'rock' ); ?></p>
 
 				<?php get_search_form(); ?>
 

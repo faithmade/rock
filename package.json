@@ -1,14 +1,14 @@
 {
-  "name": "primer",
-  "title": "Primer",
-  "description": "Primer is a powerful theme that brings clarity to your content in a fresh design.",
+  "name": "rock",
+  "title": "Rock",
+  "description": "Rock is a powerful theme that brings clarity to your content in a fresh design.",
   "version": "1.0.0",
   "author": "GoDaddy",
   "license": "GPL-2.0",
-  "repository": "godaddy/wp-primer-theme",
-  "homepage": "https://github.com/godaddy/wp-primer-theme",
+  "repository": "godaddy/wp-rock-theme",
+  "homepage": "https://github.com/godaddy/wp-rock-theme",
   "bugs": {
-    "url": "https://github.com/godaddy/wp-primer-theme/issues"
+    "url": "https://github.com/godaddy/wp-rock-theme/issues"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

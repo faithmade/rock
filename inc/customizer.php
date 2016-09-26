@@ -2,11 +2,11 @@
 /**
  * Customizer bootstrap.
  *
- * @package Primer
+ * @package Rock
  * @since   1.0.0
  */
 
-class Primer_Customizer {
+class Rock_Customizer {
 
 	/**
 	 * Stylesheet slug.
@@ -65,7 +65,7 @@ class Primer_Customizer {
 		 *
 		 * @var array
 		 */
-		$args = (array) apply_filters( 'primer_custom_logo_args',
+		$args = (array) apply_filters( 'rock_custom_logo_args',
 			array(
 				'height'      => 100,
 				'width'       => 400,
@@ -166,8 +166,8 @@ class Primer_Customizer {
 		$wp_customize->add_control(
 			'use_featured_hero_image',
 			array(
-				'label'       => esc_html__( 'Use featured image', 'primer' ),
-				'description' => esc_html__( 'Allow the featured image on the current post to override the hero image.', 'primer' ),
+				'label'       => esc_html__( 'Use featured image', 'rock' ),
+				'description' => esc_html__( 'Allow the featured image on the current post to override the hero image.', 'rock' ),
 				'section'     => 'header_image',
 				'priority'    => 5,
 				'type'        => 'checkbox',
@@ -186,9 +186,9 @@ class Primer_Customizer {
 
 		$suffix = SCRIPT_DEBUG ? '' : '.min';
 
-		wp_enqueue_script( 'primer-customize-preview', get_template_directory_uri() . "/assets/js/admin/customizer{$suffix}.js", array( 'customize-preview' ), PRIMER_VERSION, true );
+		wp_enqueue_script( 'rock-customize-preview', get_template_directory_uri() . "/assets/js/admin/customizer{$suffix}.js", array( 'customize-preview' ), PRIMER_VERSION, true );
 
-		wp_localize_script( 'primer-customize-preview', 'colorsSettings', array( 'hero_background_selector' => primer_get_hero_image_selector() ) );
+		wp_localize_script( 'rock-customize-preview', 'colorsSettings', array( 'hero_background_selector' => rock_get_hero_image_selector() ) );
 
 	}
 
@@ -228,4 +228,4 @@ class Primer_Customizer {
 
 }
 
-new Primer_Customizer;
+new Rock_Customizer;

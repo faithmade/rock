@@ -2,7 +2,7 @@
 /**
  * Custom template tags for this theme.
  *
- * @package Primer
+ * @package Rock
  * @since   1.0.0
  */
 
@@ -11,7 +11,7 @@
  *
  * @since 1.0.0
  */
-function primer_the_custom_logo() {
+function rock_the_custom_logo() {
 
 	/**
 	 * For backwards compatibility prior to WordPress 4.5.
@@ -54,7 +54,7 @@ function primer_the_custom_logo() {
  *
  * @since 1.0.0
  */
-function primer_the_site_title() {
+function rock_the_site_title() {
 
 	$html = sprintf(
 		'<h1 class="site-title"><a href="%s" rel="home">%s</a></h1>',
@@ -69,7 +69,7 @@ function primer_the_site_title() {
 	 *
 	 * @var string
 	 */
-	echo (string) apply_filters( 'primer_the_site_title', $html );
+	echo (string) apply_filters( 'rock_the_site_title', $html );
 
 }
 
@@ -78,7 +78,7 @@ function primer_the_site_title() {
  *
  * @since 1.0.0
  */
-function primer_the_site_description() {
+function rock_the_site_description() {
 
 	$html = sprintf(
 		'<div class="site-description">%s</div>',
@@ -92,7 +92,7 @@ function primer_the_site_description() {
 	 *
 	 * @var string
 	 */
-	echo (string) apply_filters( 'primer_the_site_description', $html );
+	echo (string) apply_filters( 'rock_the_site_description', $html );
 
 }
 
@@ -101,9 +101,9 @@ function primer_the_site_description() {
  *
  * @since 1.0.0
  */
-function primer_the_page_title() {
+function rock_the_page_title() {
 
-	if ( $title = primer_get_the_page_title() ) {
+	if ( $title = rock_get_the_page_title() ) {
 
 		echo $title; // xss ok
 
@@ -117,7 +117,7 @@ function primer_the_page_title() {
  * @global WP_Query $wp_query
  * @since  1.0.0
  */
-function primer_paging_nav() {
+function rock_paging_nav() {
 
 	global $wp_query;
 
@@ -130,19 +130,19 @@ function primer_paging_nav() {
 	?>
 	<nav class="navigation paging-navigation">
 
-		<h2 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'primer' ); ?></h2>
+		<h2 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'rock' ); ?></h2>
 
 		<div class="nav-links">
 
 		<?php if ( get_next_posts_link() ) : ?>
 
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'primer' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'rock' ) ); ?></div>
 
 		<?php endif; ?>
 
 		<?php if ( get_previous_posts_link() ) : ?>
 
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'primer' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'rock' ) ); ?></div>
 
 		<?php endif; ?>
 
@@ -159,7 +159,7 @@ function primer_paging_nav() {
  * @global WP_Post $post
  * @since  1.0.0
  */
-function primer_post_nav() {
+function rock_post_nav() {
 
 	global $post;
 
@@ -175,7 +175,7 @@ function primer_post_nav() {
 	?>
 	<nav class="navigation post-navigation">
 
-		<h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'primer' ); ?></h1>
+		<h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'rock' ); ?></h1>
 
 		<div class="nav-links">
 
@@ -205,7 +205,7 @@ function primer_post_nav() {
  *
  * @since 1.0.0
  */
-function primer_posted_on() {
+function rock_posted_on() {
 
 	$time = sprintf(
 		'<time class="entry-date published" datetime="%s">%s</time>',
@@ -236,7 +236,7 @@ function primer_posted_on() {
  *
  * @since 1.0.0
  */
-function primer_post_format() {
+function rock_post_format() {
 
 	$format = get_post_format();
 	$format = empty( $format ) ? 'standard' : $format;
@@ -254,7 +254,7 @@ function primer_post_format() {
  * @link   https://wordpress.org/plugins/really-simple-breadcrumb/
  * @since  1.0.0
  */
-function primer_breadcrumbs() {
+function rock_breadcrumbs() {
 
 	global $post;
 
@@ -275,8 +275,8 @@ function primer_breadcrumbs() {
 
 			printf(
 				'<a href="%s">%s</a>%s',
-				esc_url( primer_get_posts_url() ),
-				esc_html__( 'Blog', 'primer' ),
+				esc_url( rock_get_posts_url() ),
+				esc_html__( 'Blog', 'rock' ),
 				$separator // xss ok
 			);
 

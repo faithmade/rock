@@ -2,7 +2,7 @@
 /**
  * Template part for displaying the post title inside The Loop.
  *
- * @package Primer
+ * @package Rock
  * @since   1.0.0
  */
 ?>
@@ -19,7 +19,7 @@
 			 *
 			 * @since 1.0.0
 			 */
-			do_action( 'primer_before_post_title' );
+			do_action( 'rock_before_post_title' );
 			?>
 
 			<?php if ( is_singular() ) : ?>
@@ -38,7 +38,7 @@
 			 *
 			 * @since 1.0.0
 			 */
-			do_action( 'primer_after_post_title' );
+			do_action( 'rock_after_post_title' );
 			?>
 
 		</div><!-- .entry-header-column -->

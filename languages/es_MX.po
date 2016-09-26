@@ -1,8 +1,8 @@
 # Copyright (c) 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: Primer 0.9.0\n"
-"Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
+"Project-Id-Version: Rock 0.9.0\n"
+"Report-Msgid-Bugs-To: https://github.com/godaddy/wp-rock-theme/issues\n"
 "POT-Creation-Date: 2016-09-20 17:52:54+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
@@ -116,7 +116,7 @@ msgstr "Pie de página 1"
 #: functions.php:384
 msgid "This sidebar is the first column of the footer widget area."
 msgstr ""
-"Esta barra lateral es la primera columna del área de widgets del pie de "
+"Esta barra lateral es la rocka columna del área de widgets del pie de "
 "página."
 
 #: functions.php:391
@@ -152,10 +152,10 @@ msgstr "Saltar al contenido"
 #: inc/compat/wordpress.php:47
 #, fuzzy
 msgid ""
-"Primer requires at least WordPress version %1$s. You are running version "
+"Rock requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Primer requiere al menos la versión de WordPress %s. Estás ejecutando la "
+"Rock requiere al menos la versión de WordPress %s. Estás ejecutando la "
 "versión %s. Actualiza e inténtalo de nuevo."
 
 #: inc/customizer/colors.php:47
@@ -451,19 +451,19 @@ msgstr "1 comentario"
 
 #. Theme Name of the plugin/theme
 #, fuzzy
-msgid "Primer"
+msgid "Rock"
 msgstr "Primario"
 
 #. Theme URI of the plugin/theme
-msgid "https://github.com/godaddy/wp-primer-theme"
-msgstr "https://github.com/godaddy/wp-primer-theme"
+msgid "https://github.com/godaddy/wp-rock-theme"
+msgstr "https://github.com/godaddy/wp-rock-theme"
 
 #. Description of the plugin/theme
 msgid ""
-"Primer is a powerful theme that brings clarity to your content in a fresh "
+"Rock is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
-"Primer es un tema potente que le brinda claridad a tu contenido con un "
+"Rock es un tema potente que le brinda claridad a tu contenido con un "
 "diseño innovador."
 
 #. Author of the plugin/theme
@@ -499,7 +499,7 @@ msgstr "Continuar leyendo %s"
 #: content-none.php:27
 msgctxt "link to write a new post"
 msgid "Ready to publish your first post? %s."
-msgstr "¿Listo para publicar tu primera entrada? %s."
+msgstr "¿Listo para publicar tu rocka entrada? %s."
 
 #: inc/customizer/colors.php:474
 msgctxt "color scheme name"

@@ -2,11 +2,11 @@
 /**
  * WordPress backwards compatibility.
  *
- * Prevents Primer from running on older WordPress versions since
+ * Prevents Rock from running on older WordPress versions since
  * this theme is not meant to be backward compatible beyond two
  * major versions and relies on many newer functions and markup.
  *
- * @package Primer
+ * @package Rock
  * @since   1.0.0
  */
 
@@ -15,16 +15,16 @@
  *
  * @since 1.0.0
  */
-function primer_switch_theme() {
+function rock_switch_theme() {
 
 	switch_theme( WP_DEFAULT_THEME, WP_DEFAULT_THEME );
 
 	unset( $_GET['activated'] );
 
-	add_action( 'admin_notices', 'primer_upgrade_notice' );
+	add_action( 'admin_notices', 'rock_upgrade_notice' );
 
 }
-add_action( 'after_setup_theme', 'primer_switch_theme', 1 );
+add_action( 'after_setup_theme', 'rock_switch_theme', 1 );
 
 /**
  * Return the required WordPress version upgrade message.
@@ -33,7 +33,7 @@ add_action( 'after_setup_theme', 'primer_switch_theme', 1 );
  *
  * @return string
  */
-function primer_get_wp_upgrade_message() {
+function rock_get_wp_upgrade_message() {
 
 	/**
 	 * Filter the required WordPress version upgrade message.
@@ -42,9 +42,9 @@ function primer_get_wp_upgrade_message() {
 	 *
 	 * @var string
 	 */
-	return (string) apply_filters( 'primer_required_wp_version_message',
+	return (string) apply_filters( 'rock_required_wp_version_message',
 		sprintf(
-			__( 'Primer requires at least WordPress version %1$s. You are running version %2$s. Please upgrade and try again.', 'primer' ),
+			__( 'Rock requires at least WordPress version %1$s. You are running version %2$s. Please upgrade and try again.', 'rock' ),
 			PRIMER_MIN_WP_VERSION,
 			get_bloginfo( 'version' )
 		)
@@ -56,13 +56,13 @@ function primer_get_wp_upgrade_message() {
  * Adds a message for unsuccessful theme switch.
  *
  * Prints an update nag after an unsuccessful attempt to
- * activate Primer on older WordPress versions.
+ * activate Rock on older WordPress versions.
  *
  * @since 1.0.0
  */
-function primer_upgrade_notice() {
+function rock_upgrade_notice() {
 
-	printf( '<div class="error"><p>%s</p></div>', primer_get_wp_upgrade_message() );
+	printf( '<div class="error"><p>%s</p></div>', rock_get_wp_upgrade_message() );
 
 }
 
@@ -72,12 +72,12 @@ function primer_upgrade_notice() {
  * @action load-customize.php
  * @since  1.0.0
  */
-function primer_customize() {
+function rock_customize() {
 
-	wp_die( primer_get_wp_upgrade_message(), '', array( 'back_link' => true ) );
+	wp_die( rock_get_wp_upgrade_message(), '', array( 'back_link' => true ) );
 
 }
-add_action( 'load-customize.php', 'primer_customize' );
+add_action( 'load-customize.php', 'rock_customize' );
 
 /**
  * Prevents the Theme Preview from being loaded on older WordPress versions.
@@ -85,13 +85,13 @@ add_action( 'load-customize.php', 'primer_customize' );
  * @action template_redirect
  * @since  1.0.0
  */
-function primer_preview() {
+function rock_preview() {
 
 	if ( isset( $_GET['preview'] ) ) {
 
-		wp_die( primer_get_wp_upgrade_message() );
+		wp_die( rock_get_wp_upgrade_message() );
 
 	}
 
 }
-add_action( 'template_redirect', 'primer_preview' );
+add_action( 'template_redirect', 'rock_preview' );

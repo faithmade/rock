@@ -2,7 +2,7 @@
 /**
  * Display the mobile menu
  *
- * @package Primer
+ * @package Rock
  * @since   1.0.0
  */
 ?>

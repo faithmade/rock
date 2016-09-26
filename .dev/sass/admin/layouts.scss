@@ -1,4 +1,4 @@
-.primer-layout {
+.rock-layout {
 	p {
 		label {
 			float: left;
@@ -13,7 +13,7 @@
 	}
 }
 
-.primer-layout-wrap {
+.rock-layout-wrap {
 	ul {
 		display: flex;
 		margin: 0;
@@ -72,7 +72,7 @@
 
 #side-sortables,
 #customize-control-layout {
-	.primer-layout-wrap ul {
+	.rock-layout-wrap ul {
 		flex-wrap: wrap;
 
 		li {
@@ -82,7 +82,7 @@
 }
 
 @media only screen and (max-width: 850px) {
-	.primer-layout-wrap ul {
+	.rock-layout-wrap ul {
 		display: inline-block;
 
 		li {

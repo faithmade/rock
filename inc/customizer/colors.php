@@ -2,11 +2,11 @@
 /**
  * Customizer Colors functionality.
  *
- * @package Primer
+ * @package Rock
  * @since   1.0.0
  */
 
-class Primer_Customizer_Colors {
+class Rock_Customizer_Colors {
 
 	/**
 	 * Array of customizable colors.
@@ -38,13 +38,13 @@ class Primer_Customizer_Colors {
 		 *
 		 * @var array
 		 */
-		$this->colors = (array) apply_filters( 'primer_colors',
+		$this->colors = (array) apply_filters( 'rock_colors',
 			array(
 				/**
 				 * Text colors
 				 */
 				'header_textcolor' => array(
-					'label'           => esc_html__( 'Site Title Text', 'primer' ),
+					'label'           => esc_html__( 'Site Title Text', 'rock' ),
 					'default'         => '#ffffff',
 					'section'         => 'colors-header',
 					'active_callback' => 'display_header_text',
@@ -60,7 +60,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'tagline_text_color' => array(
-					'label'           => esc_html__( 'Tagline Text', 'primer' ),
+					'label'           => esc_html__( 'Tagline Text', 'rock' ),
 					'default'         => '#ffffff',
 					'section'         => 'colors-header',
 					'active_callback' => 'display_header_text',
@@ -71,7 +71,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'hero_text_color' => array(
-					'label'    => esc_html__( 'Hero Text', 'primer' ),
+					'label'    => esc_html__( 'Hero Text', 'rock' ),
 					'default'  => '#ffffff',
 					'section'  => 'colors-header',
 					'priority' => 20,
@@ -102,7 +102,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'menu_text_color' => array(
-					'label'   => esc_html__( 'Text', 'primer' ),
+					'label'   => esc_html__( 'Text', 'rock' ),
 					'default' => '#ffffff',
 					'section' => 'colors-menu',
 					'css'     => array(
@@ -124,8 +124,8 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'heading_text_color' => array(
-					'label'       => esc_html__( 'Heading Text', 'primer' ),
-					'description' => esc_html__( 'Post titles, widget titles, form labels, table headers and buttons.', 'primer' ),
+					'label'       => esc_html__( 'Heading Text', 'rock' ),
+					'description' => esc_html__( 'Post titles, widget titles, form labels, table headers and buttons.', 'rock' ),
 					'default'     => '#353535',
 					'section'     => 'colors-content',
 					'css'         => array(
@@ -146,8 +146,8 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'primary_text_color' => array(
-					'label'       => esc_html__( 'Primary Text', 'primer' ),
-					'description' => esc_html__( 'Paragraphs, lists, menu links, quotes and tables.', 'primer' ),
+					'label'       => esc_html__( 'Primary Text', 'rock' ),
+					'description' => esc_html__( 'Paragraphs, lists, menu links, quotes and tables.', 'rock' ),
 					'default'     => '#252525',
 					'section'     => 'colors-content',
 					'css'         => array(
@@ -192,8 +192,8 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'secondary_text_color' => array(
-					'label'       => esc_html__( 'Secondary Text', 'primer' ),
-					'description' => esc_html__( 'Post bylines, comment counts, post footers and quote footers.', 'primer' ),
+					'label'       => esc_html__( 'Secondary Text', 'rock' ),
+					'description' => esc_html__( 'Post bylines, comment counts, post footers and quote footers.', 'rock' ),
 					'default'     => '#686868',
 					'section'     => 'colors-content',
 					'css'         => array(
@@ -207,10 +207,10 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_widget_heading_text_color' => array(
-					'label'           => esc_html__( 'Widget Heading Text', 'primer' ),
+					'label'           => esc_html__( 'Widget Heading Text', 'rock' ),
 					'default'         => '#353535',
 					'section'         => 'colors-footer',
-					'active_callback' => 'primer_has_active_footer_sidebars',
+					'active_callback' => 'rock_has_active_footer_sidebars',
 					'css'             => array(
 						'.site-footer .widget-title,
 						.site-footer h1,
@@ -224,10 +224,10 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_widget_text_color' => array(
-					'label'           => esc_html__( 'Widget Text', 'primer' ),
+					'label'           => esc_html__( 'Widget Text', 'rock' ),
 					'default'         => '#252525',
 					'section'         => 'colors-footer',
-					'active_callback' => 'primer_has_active_footer_sidebars',
+					'active_callback' => 'rock_has_active_footer_sidebars',
 					'css'             => array(
 						'.site-footer .widget' => array(
 							'color' => '%1$s',
@@ -235,11 +235,11 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_menu_text_color' => array(
-					'label'           => esc_html__( 'Menu Text', 'primer' ),
+					'label'           => esc_html__( 'Menu Text', 'rock' ),
 					'default'         => '#686868',
 					'section'         => 'colors-footer',
 					'priority'        => 20,
-					'active_callback' => 'primer_has_footer_menu',
+					'active_callback' => 'rock_has_footer_menu',
 					'css'             => array(
 						'.footer-menu ul li a,
 						.footer-menu ul li a:visited' => array(
@@ -257,7 +257,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_text_color' => array(
-					'label'    => esc_html__( 'Copyright Text', 'primer' ),
+					'label'    => esc_html__( 'Copyright Text', 'rock' ),
 					'default'  => '#686868',
 					'section'  => 'colors-footer',
 					'priority' => 30,
@@ -271,7 +271,7 @@ class Primer_Customizer_Colors {
 				 * Link / Button colors
 				 */
 				'link_color' => array(
-					'label'   => esc_html__( 'Link Text', 'primer' ),
+					'label'   => esc_html__( 'Link Text', 'rock' ),
 					'default' => '#ff6663',
 					'section' => 'colors-content',
 					'css'     => array(
@@ -293,7 +293,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'button_color' => array(
-					'label'   => esc_html__( 'Background', 'primer' ),
+					'label'   => esc_html__( 'Background', 'rock' ),
 					'default' => '#ff6663',
 					'section' => 'colors-buttons',
 					'css'     => array(
@@ -319,7 +319,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'button_text_color' => array(
-					'label'   => esc_html__( 'Text', 'primer' ),
+					'label'   => esc_html__( 'Text', 'rock' ),
 					'default' => '#ffffff',
 					'section' => 'colors-buttons',
 					'css'     => array(
@@ -336,7 +336,7 @@ class Primer_Customizer_Colors {
 				 * Background colors
 				 */
 				'background_color' => array(
-					'label'   => esc_html__( 'Page Background', 'primer' ),
+					'label'   => esc_html__( 'Page Background', 'rock' ),
 					'default' => '#f5f5f5',
 					'section' => 'colors-content',
 					'css'     => array(
@@ -346,7 +346,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'content_background_color' => array(
-					'label'   => esc_html__( 'Content Background', 'primer' ),
+					'label'   => esc_html__( 'Content Background', 'rock' ),
 					'default' => '#ffffff',
 					'section' => 'colors-content',
 					'css'     => array(
@@ -356,17 +356,17 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'hero_background_color' => array(
-					'label'    => esc_html__( 'Hero Background', 'primer' ),
+					'label'    => esc_html__( 'Hero Background', 'rock' ),
 					'default'  => '#0b3954',
 					'section'  => 'colors-header',
 					'priority' => 20,
 					'css'      => array(
-						primer_get_hero_image_selector() => array(
+						rock_get_hero_image_selector() => array(
 							'background-color' => '%1$s',
 						),
 					),
 					'rgba_css' => array(
-						primer_get_hero_image_selector() => array(
+						rock_get_hero_image_selector() => array(
 							'-webkit-box-shadow' => 'inset 0 0 0 9999em',
 							'-moz-box-shadow'    => 'inset 0 0 0 9999em',
 							'box-shadow'         => 'inset 0 0 0 9999em',
@@ -375,7 +375,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'menu_background_color' => array(
-					'label'   => esc_html__( 'Background', 'primer' ),
+					'label'   => esc_html__( 'Background', 'rock' ),
 					'default' => '#0b3954',
 					'section' => 'colors-menu',
 					'css'     => array(
@@ -385,10 +385,10 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_widget_background_color' => array(
-					'label'           => esc_html__( 'Widgets Background', 'primer' ),
+					'label'           => esc_html__( 'Widgets Background', 'rock' ),
 					'default'         => '#0b3954',
 					'section'         => 'colors-footer',
-					'active_callback' => 'primer_has_active_footer_sidebars',
+					'active_callback' => 'rock_has_active_footer_sidebars',
 					'css'             => array(
 						'.site-footer' => array(
 							'background-color' => '%1$s',
@@ -396,10 +396,10 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_widget_content_background_color' => array(
-					'label'           => esc_html__( 'Widget Content Background', 'primer' ),
+					'label'           => esc_html__( 'Widget Content Background', 'rock' ),
 					'default'         => '#ffffff',
 					'section'         => 'colors-footer',
-					'active_callback' => 'primer_has_active_footer_sidebars',
+					'active_callback' => 'rock_has_active_footer_sidebars',
 					'css'             => array(
 						'.site-footer .widget' => array(
 							'background-color' => '%1$s',
@@ -407,7 +407,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_background_color' => array(
-					'label'    => esc_html__( 'Footer Background', 'primer' ),
+					'label'    => esc_html__( 'Footer Background', 'rock' ),
 					'default'  => '#f5f5f5',
 					'section'  => 'colors-footer',
 					'priority' => 30,
@@ -445,7 +445,7 @@ class Primer_Customizer_Colors {
 		 */
 		$custom_scheme = array(
 			'_custom' => array(
-				'label' => sprintf( '- %s -' , esc_html__( 'Custom', 'primer' ) ),
+				'label' => sprintf( '- %s -' , esc_html__( 'Custom', 'rock' ) ),
 			),
 		);
 
@@ -454,7 +454,7 @@ class Primer_Customizer_Colors {
 		 *
 		 * The `default` color scheme is required and not filterable.
 		 * If you want to customize values in this scheme, do so via
-		 * a `primer_colors` filter in your Child Theme.
+		 * a `rock_colors` filter in your Child Theme.
 		 *
 		 * @since 1.0.0
 		 *
@@ -462,7 +462,7 @@ class Primer_Customizer_Colors {
 		 */
 		$default_scheme = array(
 			'default' => array(
-				'label'  => esc_html__( 'Default', 'primer' ),
+				'label'  => esc_html__( 'Default', 'rock' ),
 				'colors' => array_combine(
 					array_keys( $this->colors ),
 					wp_list_pluck( $this->colors, 'default' )
@@ -472,47 +472,47 @@ class Primer_Customizer_Colors {
 
 		$color_schemes = array(
 			'blush' => array(
-				'label' => esc_html_x( 'Blush', 'color scheme name', 'primer' ),
+				'label' => esc_html_x( 'Blush', 'color scheme name', 'rock' ),
 				'base'  => '#cc494f',
 			),
 			'bronze' => array(
-				'label' => esc_html_x( 'Bronze', 'color scheme name', 'primer' ),
+				'label' => esc_html_x( 'Bronze', 'color scheme name', 'rock' ),
 				'base'  => '#b1a18b',
 			),
 			'canary' => array(
-				'label' => esc_html_x( 'Canary', 'color scheme name', 'primer' ),
+				'label' => esc_html_x( 'Canary', 'color scheme name', 'rock' ),
 				'base'  => '#e9c46a',
 			),
 			'cool' => array(
-				'label' => esc_html_x( 'Cool', 'color scheme name', 'primer' ),
+				'label' => esc_html_x( 'Cool', 'color scheme name', 'rock' ),
 				'base'  => '#78c3fb',
 			),
 			'dark' => array(
-				'label' => esc_html_x( 'Dark', 'color scheme name', 'primer' ),
+				'label' => esc_html_x( 'Dark', 'color scheme name', 'rock' ),
 				'base'  => '#222222',
 			),
 			'iguana' => array(
-				'label' => esc_html_x( 'Iguana', 'color scheme name', 'primer' ),
+				'label' => esc_html_x( 'Iguana', 'color scheme name', 'rock' ),
 				'base'  => '#62bf7c',
 			),
 			'muted' => array(
-				'label' => esc_html_x( 'Muted', 'color scheme name', 'primer' ),
+				'label' => esc_html_x( 'Muted', 'color scheme name', 'rock' ),
 				'base'  => '#3e4c75',
 			),
 			'plum' => array(
-				'label' => esc_html_x( 'Plum', 'color scheme name', 'primer' ),
+				'label' => esc_html_x( 'Plum', 'color scheme name', 'rock' ),
 				'base'  => '#5d5179',
 			),
 			'rose' => array(
-				'label' => esc_html_x( 'Rose', 'color scheme name', 'primer' ),
+				'label' => esc_html_x( 'Rose', 'color scheme name', 'rock' ),
 				'base'  => '#f49390',
 			),
 			'tangerine' => array(
-				'label' => esc_html_x( 'Tangerine', 'color scheme name', 'primer' ),
+				'label' => esc_html_x( 'Tangerine', 'color scheme name', 'rock' ),
 				'base'  => '#fc9e4f',
 			),
 			'turquoise' => array(
-				'label' => esc_html_x( 'Turquoise', 'color scheme name', 'primer' ),
+				'label' => esc_html_x( 'Turquoise', 'color scheme name', 'rock' ),
 				'base'  => '#48e5c2',
 			),
 		);
@@ -652,7 +652,7 @@ class Primer_Customizer_Colors {
 				),
 			);
 
-			$color_schemes = primer_array_replace_recursive( $color_schemes, $overrides );
+			$color_schemes = rock_array_replace_recursive( $color_schemes, $overrides );
 
 		}
 
@@ -663,7 +663,7 @@ class Primer_Customizer_Colors {
 		 *
 		 * @var array
 		 */
-		$color_schemes = (array) apply_filters( 'primer_color_schemes', $color_schemes );
+		$color_schemes = (array) apply_filters( 'rock_color_schemes', $color_schemes );
 
 		// Remove any invalid color schemes
 		$color_schemes = array_filter(
@@ -702,7 +702,7 @@ class Primer_Customizer_Colors {
 		$wp_customize->add_panel(
 			'colors',
 			array(
-				'title'       => esc_html__( 'Colors', 'primer' ),
+				'title'       => esc_html__( 'Colors', 'rock' ),
 				'description' => 'Get what you need.',
 				'priority'    => 40,
 			)
@@ -711,7 +711,7 @@ class Primer_Customizer_Colors {
 		$wp_customize->add_section(
 			'colors-scheme',
 			array(
-				'title' => esc_html__( 'Color Schemes', 'primer' ),
+				'title' => esc_html__( 'Color Schemes', 'rock' ),
 				'panel' => 'colors',
 			)
 		);
@@ -719,7 +719,7 @@ class Primer_Customizer_Colors {
 		$wp_customize->add_section(
 			'colors-header',
 			array(
-				'title' => esc_html__( 'Header', 'primer' ),
+				'title' => esc_html__( 'Header', 'rock' ),
 				'panel' => 'colors',
 			)
 		);
@@ -727,7 +727,7 @@ class Primer_Customizer_Colors {
 		$wp_customize->add_section(
 			'colors-menu',
 			array(
-				'title' => esc_html__( 'Menu', 'primer' ),
+				'title' => esc_html__( 'Menu', 'rock' ),
 				'panel' => 'colors',
 			)
 		);
@@ -735,7 +735,7 @@ class Primer_Customizer_Colors {
 		$wp_customize->add_section(
 			'colors-buttons',
 			array(
-				'title' => esc_html__( 'Buttons', 'primer' ),
+				'title' => esc_html__( 'Buttons', 'rock' ),
 				'panel' => 'colors',
 			)
 		);
@@ -743,7 +743,7 @@ class Primer_Customizer_Colors {
 		$wp_customize->add_section(
 			'colors-content',
 			array(
-				'title' => esc_html__( 'Content', 'primer' ),
+				'title' => esc_html__( 'Content', 'rock' ),
 				'panel' => 'colors',
 			)
 		);
@@ -751,7 +751,7 @@ class Primer_Customizer_Colors {
 		$wp_customize->add_section(
 			'colors-footer',
 			array(
-				'title' => esc_html__( 'Footer', 'primer' ),
+				'title' => esc_html__( 'Footer', 'rock' ),
 				'panel' => 'colors',
 			)
 		);
@@ -845,18 +845,18 @@ class Primer_Customizer_Colors {
 
 		$default = $this->get_default_color( $name, 'default' );
 		$hex     = trim( get_theme_mod( $name, $default ), '#' );
-		$css     = sprintf( Primer_Customizer::parse_css_rules( $args['css'] ), '#' . $hex );
+		$css     = sprintf( Rock_Customizer::parse_css_rules( $args['css'] ), '#' . $hex );
 
 		if ( ! empty( $args['rgba_css'] ) ) {
 
 			$css .= sprintf(
-				Primer_Customizer::parse_css_rules( $args['rgba_css'] ),
-				implode( ', ', primer_hex2rgb( $hex ) )
+				Rock_Customizer::parse_css_rules( $args['rgba_css'] ),
+				implode( ', ', rock_hex2rgb( $hex ) )
 			);
 
 		}
 
-		wp_add_inline_style( Primer_Customizer::$stylesheet, $css );
+		wp_add_inline_style( Rock_Customizer::$stylesheet, $css );
 
 	}
 
@@ -961,7 +961,7 @@ class Primer_Customizer_Colors {
 		$wp_customize->add_control(
 			'color_scheme',
 			array(
-				'label'    => esc_html__( 'Base Color Scheme', 'primer' ),
+				'label'    => esc_html__( 'Base Color Scheme', 'rock' ),
 				'section'  => 'colors-scheme',
 				'type'     => 'select',
 				'choices'  => $choices,
@@ -981,9 +981,9 @@ class Primer_Customizer_Colors {
 
 		$suffix = SCRIPT_DEBUG ? '' : '.min';
 
-		wp_enqueue_script( 'primer-colors-control', get_template_directory_uri() . "/assets/js/admin/colors-control{$suffix}.js", array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), PRIMER_VERSION, true );
+		wp_enqueue_script( 'rock-colors-control', get_template_directory_uri() . "/assets/js/admin/colors-control{$suffix}.js", array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), PRIMER_VERSION, true );
 
-		wp_localize_script( 'primer-colors-control', 'colorSchemes', $this->color_schemes );
+		wp_localize_script( 'rock-colors-control', 'colorSchemes', $this->color_schemes );
 
 	}
 
@@ -995,7 +995,7 @@ class Primer_Customizer_Colors {
 	public function colors_preview_css() {
 
 		?>
-		<script type="text/html" id="tmpl-primer-colors-css">
+		<script type="text/html" id="tmpl-rock-colors-css">
 			<?php
 
 			foreach ( $this->colors as $name => $args ) {
@@ -1007,7 +1007,7 @@ class Primer_Customizer_Colors {
 				}
 
 				printf(
-					Primer_Customizer::parse_css_rules( $args['css'] ),
+					Rock_Customizer::parse_css_rules( $args['css'] ),
 					sprintf( '{{ data.%s }}', $name )
 				);
 
@@ -1022,18 +1022,18 @@ class Primer_Customizer_Colors {
 		if ( ! $rgba_colors ) {
 
 			// Required for themes without rgba css rules
-			echo '<script type="text/html" id="tmpl-primer-colors-css-rgba"></script>';
+			echo '<script type="text/html" id="tmpl-rock-colors-css-rgba"></script>';
 
 		}
 
 		?>
-		<script type="text/html" id="tmpl-primer-colors-css-rgba">
+		<script type="text/html" id="tmpl-rock-colors-css-rgba">
 			<?php
 
 			foreach ( $rgba_colors as $name => $css ) {
 
 				printf(
-					Primer_Customizer::parse_css_rules( $css ),
+					Rock_Customizer::parse_css_rules( $css ),
 					sprintf( '{{ data.%s }}', $name )
 				);
 
@@ -1138,7 +1138,7 @@ class Primer_Customizer_Colors {
 		 *
 		 * @var array
 		 */
-		$args = (array) apply_filters( 'primer_custom_header_args',
+		$args = (array) apply_filters( 'rock_custom_header_args',
 			array(
 				'default-text-color' => $this->get_default_color( 'header_textcolor', 'default' ),
 				'width'              => 2400,
@@ -1155,7 +1155,7 @@ class Primer_Customizer_Colors {
 		 *
 		 * @var array
 		 */
-		$defaults = (array) apply_filters( 'primer_default_hero_images',
+		$defaults = (array) apply_filters( 'rock_default_hero_images',
 			array(
 				'default' => array(
 					'url'           => 'assets/images/hero.jpg',
@@ -1216,7 +1216,7 @@ class Primer_Customizer_Colors {
 
 			printf(
 				"<style type='text/css'>\n%s\n</style>",
-				sprintf( Primer_Customizer::parse_css_rules( $css ), $color )
+				sprintf( Rock_Customizer::parse_css_rules( $css ), $color )
 			);
 
 		}
@@ -1238,7 +1238,7 @@ class Primer_Customizer_Colors {
 		 *
 		 * @var array
 		 */
-		$args = (array) apply_filters( 'primer_custom_background_args',
+		$args = (array) apply_filters( 'rock_custom_background_args',
 			array(
 				'default-color' => $this->get_default_color( 'background_color', 'default' ),
 			)
@@ -1270,11 +1270,11 @@ class Primer_Customizer_Colors {
 		$wp_customize->add_control(
 			'hero_image_color_overlay',
 			array(
-				'label'           => esc_html__( 'Hero Background Overlay', 'primer' ),
-				'description'     => esc_html__( 'Control the color overlay transparency when using a custom Header Image.', 'primer' ),
+				'label'           => esc_html__( 'Hero Background Overlay', 'rock' ),
+				'description'     => esc_html__( 'Control the color overlay transparency when using a custom Header Image.', 'rock' ),
 				'section'         => 'colors-header',
 				'priority'        => 20,
-				'active_callback' => 'primer_has_hero_image',
+				'active_callback' => 'rock_has_hero_image',
 				'type'            => 'range',
 				'input_attrs'     => array(
 					'min'  => 0,
@@ -1302,7 +1302,7 @@ class Primer_Customizer_Colors {
 		 *
 		 * @var int
 		 */
-		return (int) apply_filters( 'primer_hero_image_color_overlay_default', 50 );
+		return (int) apply_filters( 'rock_hero_image_color_overlay_default', 50 );
 
 	}
 
@@ -1323,4 +1323,4 @@ class Primer_Customizer_Colors {
 
 }
 
-new Primer_Customizer_Colors;
+new Rock_Customizer_Colors;

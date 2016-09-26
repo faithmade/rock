@@ -2,7 +2,7 @@
 /**
  * Displays the footer site info.
  *
- * @package Primer
+ * @package Rock
  * @since   1.0.0
  */
 ?>
@@ -19,7 +19,7 @@
 			 *
 			 * @since 1.0.0
 			 */
-			do_action( 'primer_site_info' );
+			do_action( 'rock_site_info' );
 			?>
 
 		</div><!-- .site-info-inner -->
