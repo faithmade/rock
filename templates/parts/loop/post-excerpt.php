@@ -3,6 +3,7 @@
  * Template part for displaying the post excerpt inside The Loop.
  *
  * @package Rock
+ * @since   1.0.0
  */
 ?>
 

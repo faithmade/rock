@@ -1,4 +1,10 @@
 <?php
+/**
+ * Customizer Layouts functionality.
+ *
+ * @package Rock
+ * @since   1.0.0
+ */
 
 class Rock_Customizer_Layouts {
 
@@ -98,7 +104,6 @@ class Rock_Customizer_Layouts {
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
 		add_action( 'customize_register',    array( $this, 'customize_register' ) );
-		add_action( 'add_post_meta',         array( $this, 'page_builder_layout' ), 10, 3 );
 
 		if ( $this->meta_box ) {
 
@@ -277,19 +282,6 @@ class Rock_Customizer_Layouts {
 
 		<div class="rock-layout">
 
-			<?php
-
-			printf(
-				 '<p>' . esc_html_x( 'The site-wide Default layout setting is located in the %s.', 'link to the Customizer', 'rock' ) . '</p>',
-				sprintf(
-					'<a href="%s">%s</a>',
-					add_query_arg( 'autofocus[section]', 'layout', admin_url( 'customize.php' ) ),
-					esc_html_x( 'Customizer', 'title of a component found in WordPress', 'rock' )
-				)
-			);
-
-			?>
-
 			<p>
 				<label for="rock-layout-use-default">
 					<input type="radio"
@@ -445,32 +437,6 @@ class Rock_Customizer_Layouts {
 			)
 		);
 
-		$wp_customize->add_setting(
-			'layout',
-			array(
-				'default'           => get_theme_mod( 'layout', $this->default ),
-				'type'              => 'theme_mod',
-				'capability'        => 'edit_theme_options',
-				'sanitize_callback' => 'sanitize_html_class',
-				'transport'         => 'postMessage',
-			)
-		);
-
-		$wp_customize->add_control(
-			new Rock_Customizer_Layouts_Control(
-				$wp_customize,
-				'layout',
-				array(
-					'label'       => esc_html__( 'Default Layout', 'rock' ),
-					'description' => esc_html__( 'All posts and pages on your site will use this layout by default.', 'rock' ),
-					'section'     => 'layout',
-					'settings'    => 'layout',
-					'type'        => 'radio',
-					'choices'     => $this->layouts,
-				)
-			)
-		);
-
 		if ( ! $this->page_widths ) {
 
 			return;
@@ -499,26 +465,6 @@ class Rock_Customizer_Layouts {
 				'choices'     => $this->page_widths,
 			)
 		);
-
-	}
-
-	/**
-	 * Use full-width layout by default on Page Builder posts.
-	 *
-	 * @action add_post_meta
-	 * @since  1.0.0
-	 *
-	 * @param int    $post_id
-	 * @param string $meta_key
-	 * @param mixed  $meta_value
-	 */
-	public function page_builder_layout( $post_id, $meta_key, $meta_value ) {
-
-		if ( '_fl_builder_draft' === $meta_key && isset( $this->layouts['one-column-wide'] ) ) {
-
-			update_post_meta( $post_id, 'rock_layout', 'one-column-wide' );
-
-		}
 
 	}
 
@@ -604,6 +550,17 @@ class Rock_Customizer_Layouts {
 
 		$override = $this->get_post_layout( $post );
 		$layout   = ( $override ) ? $override : $this->get_global_layout();
+
+		/**
+		 * Filter the current layout.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param WP_Post|int|null $post
+		 *
+		 * @var string
+		 */
+		$layout = (string) apply_filters( 'rock_current_layout', $layout, $post );
 
 		return $this->layout_exists( $layout ) ? $layout : $this->default;
 

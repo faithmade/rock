@@ -3,7 +3,31 @@
  * Custom actions for this theme.
  *
  * @package Rock
+ * @since   1.0.0
  */
+
+/**
+ * Display some elements conditionally (Rock only).
+ *
+ * @action template_redirect
+ * @since  1.0.0
+ */
+function rock_elements() {
+
+	if ( is_child_theme() ) {
+
+		return;
+
+	}
+
+	if ( ( is_front_page() && (bool) get_post_meta( get_queried_object_id(), '_fl_builder_enabled', true ) ) || is_home() ) {
+
+		remove_action( 'rock_after_header', 'rock_add_page_title' );
+
+	}
+
+}
+add_action( 'template_redirect', 'rock_elements' );
 
 /**
  * Display site title in the header.
@@ -129,7 +153,7 @@ add_action( 'rock_after_header', 'rock_add_page_title' );
 /**
  * Display post meta template.
  *
- * @action rock_after_loop_post_template
+ * @action rock_after_post_title_template
  * @since 1.0.0
  */
 function rock_add_post_meta() {
@@ -137,7 +161,7 @@ function rock_add_post_meta() {
 	get_template_part( 'templates/parts/loop/post', 'meta' );
 
 }
-add_action( 'rock_after_loop_post_template', 'rock_add_post_meta' );
+add_action( 'rock_after_post_title_template', 'rock_add_post_meta' );
 
 /**
  * Display widget areas in the footer.

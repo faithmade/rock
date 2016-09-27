@@ -1,4 +1,10 @@
 <?php
+/**
+ * Customizer Fonts functionality.
+ *
+ * @package Rock
+ * @since   1.0.0
+ */
 
 class Rock_Customizer_Fonts {
 
@@ -353,7 +359,7 @@ class Rock_Customizer_Fonts {
 			)
 		);
 
-		wp_enqueue_style( 'rock-google-fonts', add_query_arg( $query_args, '//fonts.googleapis.com/css' ), false );
+		wp_enqueue_style( Rock_Customizer::$stylesheet . '-fonts', add_query_arg( $query_args, '//fonts.googleapis.com/css' ), false );
 
 	}
 
@@ -378,7 +384,7 @@ class Rock_Customizer_Fonts {
 				$this->get_font( $name )
 			);
 
-			wp_add_inline_style( 'rock-google-fonts', $css );
+			wp_add_inline_style( Rock_Customizer::$stylesheet . '-fonts', $css );
 
 		}
 

@@ -23,7 +23,7 @@
  *
  * @var string
  */
-define( 'ROCK_VERSION', '1.0.0' );
+define( 'ROCK_VERSION', '3.0.0' );
 
 /**
  * Minimum WordPress version required for Rock.
@@ -45,7 +45,7 @@ if ( ! defined( 'ROCK_MIN_WP_VERSION' ) ) {
  */
 if ( version_compare( get_bloginfo( 'version' ), ROCK_MIN_WP_VERSION, '<' ) ) {
 
-	require_once get_template_directory() . '/inc/back-compat.php';
+	require_once get_template_directory() . '/inc/compat/wordpress.php';
 
 }
 
@@ -55,20 +55,6 @@ if ( version_compare( get_bloginfo( 'version' ), ROCK_MIN_WP_VERSION, '<' ) ) {
  * @since 1.0.0
  */
 require_once get_template_directory() . '/inc/helpers.php';
-
-/**
- * Load ChurchThemes Content support.
- *
- * @since 1.0.0
- */
-require_once get_template_directory() . '/inc/support-ctc.php';
-
-/**
- * Load ChurchThemes Framework support.
- *
- * @since 1.0.0
- */
-require_once get_template_directory() . '/inc/support-framework.php';
 
 /**
  * Load custom template tags for this theme.
@@ -92,25 +78,44 @@ require_once get_template_directory() . '/inc/walker-nav-menu.php';
 require_once get_template_directory() . '/inc/hooks.php';
 
 /**
- * Load Customizer class.
+ * Load Beaver Builder compatibility file.
  *
  * @since 1.0.0
  */
-require_once get_template_directory() . '/inc/customizer.php';
+if ( class_exists( 'FLBuilder' ) ) {
 
-/**
- * Load WooCommerce compatibility file.
- *
- * @since 1.0.0
- */
-require_once get_template_directory() . '/inc/woocommerce.php';
+	require_once get_template_directory() . '/inc/compat/beaver-builder.php';
+
+}
 
 /**
  * Load Jetpack compatibility file.
  *
  * @since 1.0.0
  */
-require_once get_template_directory() . '/inc/jetpack.php';
+if ( class_exists( 'Jetpack' ) ) {
+
+	require_once get_template_directory() . '/inc/compat/jetpack.php';
+
+}
+
+/**
+ * Load WooCommerce compatibility file.
+ *
+ * @since 1.0.0
+ */
+if ( class_exists( 'WooCommerce' ) ) {
+
+	require_once get_template_directory() . '/inc/compat/woocommerce.php';
+
+}
+
+/**
+ * Load Customizer class (must be required last).
+ *
+ * @since 1.0.0
+ */
+require_once get_template_directory() . '/inc/customizer.php';
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -119,9 +124,12 @@ require_once get_template_directory() . '/inc/jetpack.php';
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  *
- * @since 1.0.0
+ * @global array $rock_image_sizes
+ * @since  1.0.0
  */
 function rock_setup() {
+
+	global $rock_image_sizes;
 
 	/**
 	 * Load theme translations.
@@ -142,41 +150,48 @@ function rock_setup() {
 	 *
 	 * @var array
 	 */
-	$images_sizes = (array) apply_filters( 'rock_image_sizes',
+	$rock_image_sizes = (array) apply_filters( 'rock_image_sizes',
 		array(
 			'rock-featured' => array(
 				'width'  => 1600,
 				'height' => 9999,
 				'crop'   => false,
+				'label'  => esc_html__( 'Featured', 'rock' ),
 			),
 			'rock-hero' => array(
 				'width'  => 2400,
 				'height' => 1300,
 				'crop'   => array( 'center', 'center' ),
+				'label'  => esc_html__( 'Hero', 'rock' ),
 			),
 		)
 	);
 
-	foreach ( $images_sizes as $name => $args ) {
+	foreach ( $rock_image_sizes as $name => &$args ) {
 
-		if (
-			! empty( $name )
-			&&
-			! empty( $args['width'] )
-			&&
-			! empty( $args['height'] )
-			&&
-			! empty( $args['crop'] )
-		) {
+		if ( empty( $name ) || empty( $args['width'] ) || empty( $args['height'] ) ) {
 
-			add_image_size(
-				sanitize_key( $name ),
-				absint( $args['width'] ),
-				absint( $args['height'] ),
-				$args['crop']
-			);
+			unset( $rock_image_sizes[ $name ] );
+
+			continue;
 
 		}
+
+		$args['crop']  = ! empty( $args['crop'] ) ? $args['crop'] : false;
+		$args['label'] = ! empty( $args['label'] ) ? $args['label'] : ucwords( str_replace( array( '-', '_' ), ' ', $name ) );
+
+		add_image_size(
+			sanitize_key( $name ),
+			absint( $args['width'] ),
+			absint( $args['height'] ),
+			$args['crop']
+		);
+
+	}
+
+	if ( $rock_image_sizes ) {
+
+		add_filter( 'image_size_names_choose', 'rock_image_size_names_choose' );
 
 	}
 
@@ -271,6 +286,29 @@ function rock_setup() {
 
 }
 add_action( 'after_setup_theme', 'rock_setup' );
+
+/**
+ * Register image size labels.
+ *
+ * @filter image_size_names_choose
+ * @since  1.0.0
+ *
+ * @param  array $sizes
+ *
+ * @return array
+ */
+function rock_image_size_names_choose( $sizes ) {
+
+	global $rock_image_sizes;
+
+	$labels = array_combine(
+		array_keys( $rock_image_sizes ),
+		wp_list_pluck( $rock_image_sizes, 'label' )
+	);
+
+	return array_merge( $sizes, $labels );
+
+}
 
 /**
  * Sets the content width in pixels, based on the theme layout.
@@ -394,13 +432,13 @@ add_action( 'widgets_init', 'rock_register_sidebars' );
  */
 function rock_scripts() {
 
-	$suffix = SCRIPT_DEBUG ? '' : '.min';
+	$stylesheet = get_stylesheet();
+	$suffix     = SCRIPT_DEBUG ? '' : '.min';
 
-	wp_enqueue_style( 'rock', get_stylesheet_uri(), false, ROCK_VERSION );
+	wp_enqueue_style( $stylesheet, get_stylesheet_uri(), false, defined( 'ROCK_CHILD_VERSION' ) ? ROCK_CHILD_VERSION : ROCK_VERSION );
 
-	wp_style_add_data( 'rock', 'rtl', 'replace' );
+	wp_style_add_data( $stylesheet, 'rtl', 'replace' );
 
-	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'rock-navigation', get_template_directory_uri() . "/assets/js/navigation{$suffix}.js", array( 'jquery' ), ROCK_VERSION, true );
 	wp_enqueue_script( 'rock-skip-link-focus-fix', get_template_directory_uri() . "/assets/js/skip-link-focus-fix{$suffix}.js", array(), ROCK_VERSION, true );
 
@@ -413,7 +451,7 @@ function rock_scripts() {
 	if ( rock_has_hero_image() ) {
 
 		wp_add_inline_style(
-			'rock',
+			$stylesheet,
 			sprintf(
 				'%s { background-image: url(%s); }',
 				rock_get_hero_image_selector(),
@@ -422,36 +460,6 @@ function rock_scripts() {
 		);
 
 	}
-
-	/**
-	 * Enqueue lt IE 9 Conditional
-	 */
-	wp_enqueue_style( 'rock-lt-ie9-style', get_template_directory_uri() . '/assets/css/ie.css', array(), ROCK_VERSION );
-	wp_style_add_data( 'rock-lt-ie9-style', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'rock-respond', get_template_directory_uri() . '/assets/js/respond.min.js', array(), ROCK_VERSION );
-	wp_script_add_data( 'rock-respond', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'rock-nwmatcher', get_template_directory_uri() . '/assets/js/nwmatcher.min.js', array(), ROCK_VERSION );
-	wp_script_add_data( 'rock-nwmatcher', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'rock-jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), ROCK_VERSION );
-	wp_script_add_data( 'rock-jquery', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'rock-html5shiv', get_template_directory_uri() . '/assets/js/html5shiv.min.js', array(), ROCK_VERSION );
-	wp_script_add_data( 'rock-html5shiv', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'rock-selectivizr', get_template_directory_uri() . '/assets/js/selectivizr.min.js', array(), ROCK_VERSION );
-	wp_script_add_data( 'rock-selectivizr', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'rock-rem', get_template_directory_uri() . '/assets/js/rem.min.js', array(), ROCK_VERSION );
-	wp_script_add_data( 'rock-rem', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'rock-jquery-backgroundSize', get_template_directory_uri() . '/assets/js/jquery.backgroundSize.min.js', array( 'rock-jquery' ), ROCK_VERSION );
-	wp_script_add_data( 'rock-jquery-backgroundSize', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'rock-lt-ie9-script', get_template_directory_uri() . "/assets/js/lt-ie9$suffix.js", array( 'rock-jquery' ), ROCK_VERSION );
-	wp_script_add_data( 'rock-lt-ie9-script', 'conditional', 'lt IE 9' );
 
 }
 add_action( 'wp_enqueue_scripts', 'rock_scripts' );

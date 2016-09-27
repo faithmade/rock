@@ -1,7 +1,16 @@
 .hentry {
 	margin: 0 0 1.5em;
-	padding: 2.5em 3.375em;
+	padding: 3.375em 3.375em 2.5em;
 	background-color: $color__content-bg;
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	&:after {
+		@include clearfix;
+		@include clearfix-after;
+	}
 
 	@media #{$medium-only} {
 		padding: 1.5em 2.375em;
@@ -33,6 +42,14 @@
 	}
 }
 
+.featured-image{
+	margin-bottom: 1.5em;
+
+	img{
+		display: block;
+	}
+}
+
 .entry-title {
 	a,
 	a:visited,
@@ -49,13 +66,45 @@
 .entry-meta {
 	font-size: 90%;
 	color: $color__secondary-text;
+
+	.posted-date,
+	.posted-author,
+	.comments-number {
+		margin-right: 1rem;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@media #{$small-only} {
+			display: block;
+			margin-right: 0;
+		}
+
+		&:before {
+			position: relative;
+			top: 3px;
+			font-family: 'genericons';
+			font-size: 18px;
+			padding-right: 2px;
+		}
+	}
+
+	.posted-date:before {
+		content: '\f303';
+		top: 4px;
+	}
+
+	.posted-author:before {
+		content: '\f304';
+	}
+
+	.comments-number:before {
+		content: '\f300';
+	}
 }
 
 @media #{$small-only} {
-
-	.comments-number {
-		display: block;
-	}
 
 	.post-navigation {
 		font-size: 90%;
@@ -75,10 +124,11 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 1em 0 0;
 }
 
 .entry-footer {
+	padding-top: 1em;
 	font-size: 85%;
 	color: $color__secondary-text;
 

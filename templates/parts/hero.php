@@ -3,6 +3,7 @@
  * Displays the site header.
  *
  * @package Rock
+ * @since   1.0.0
  */
 ?>
 

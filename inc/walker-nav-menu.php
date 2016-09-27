@@ -3,8 +3,9 @@
 /**
  * Custom class that adds some markup before the nav menu.
  *
- * @since 1.0.0
- * @see   rock_add_primary_menu()
+ * @package Rock
+ * @since   1.0.0
+ * @see     rock_add_primary_menu()
  */
 class Rock_Walker_Nav_Menu extends Walker_Nav_Menu {
 

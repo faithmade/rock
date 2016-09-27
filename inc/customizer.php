@@ -1,56 +1,52 @@
 <?php
+/**
+ * Customizer bootstrap.
+ *
+ * @package Rock
+ * @since   1.0.0
+ */
 
 class Rock_Customizer {
+
+	/**
+	 * Stylesheet slug.
+	 *
+	 * @var string
+	 */
+	public static $stylesheet;
 
 	/**
 	 * Class constructor.
 	 */
 	public function __construct() {
 
+		self::$stylesheet = get_stylesheet();
+
 		/**
-		 * Autoload all customizer components.
+		 * Load Customizer Colors functionality.
 		 *
 		 * @since 1.0.0
 		 */
-		foreach( glob( dirname( __FILE__ ) . '/customizer/*.php' ) as $filename ) {
+		require_once get_template_directory() . '/inc/customizer/colors.php';
 
-			if ( is_readable( $filename ) ) {
+		/**
+		 * Load Customizer Fonts functionality.
+		 *
+		 * @since 1.0.0
+		 */
+		require_once get_template_directory() . '/inc/customizer/fonts.php';
 
-				require_once $filename;
-
-			}
-
-		}
+		/**
+		 * Load Customizer Layouts functionality.
+		 *
+		 * @since 1.0.0
+		 */
+		require_once get_template_directory() . '/inc/customizer/layouts.php';
 
 		add_action( 'after_setup_theme',      array( $this, 'logo' ) );
-		add_action( 'customize_register',     array( $this, 'require_controls' ), 1 );
 		add_action( 'customize_register',     array( $this, 'selective_refresh' ), 11 );
 		add_action( 'customize_register',     array( $this, 'use_featured_hero_image' ) );
 		add_action( 'customize_preview_init', array( $this, 'customize_preview_js' ) );
-
-	}
-
-	/**
-	 * Include controls class required by our sections.
-	 *
-	 * This is hooked her since WP_Customize_Control is not present before.
-	 */
-	public function require_controls() {
-
-		/**
-		 * Autoload all customizer controls.
-		 *
-		 * @since 1.0.0
-		 */
-		foreach( glob( dirname( __FILE__ ) . '/customizer/controls/*.php' ) as $filename ) {
-
-			if ( is_readable( $filename ) ) {
-
-				require_once $filename;
-
-			}
-
-		}
 
 	}
 

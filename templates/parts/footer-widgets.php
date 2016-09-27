@@ -3,6 +3,7 @@
  * Displays the footer widget areas.
  *
  * @package Rock
+ * @since   1.0.0
  */
 ?>
 

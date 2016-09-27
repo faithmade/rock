@@ -3,12 +3,22 @@
  * Template part for displaying the page content inside The Loop.
  *
  * @package Rock
+ * @since   1.0.0
  */
 ?>
 
 <div class="page-content">
 
 	<?php
+
+	/**
+	 * Fires inside the `.page-content` element, before the content.
+	 *
+	 * @hooked rock_woo_shop_messages - 10
+	 *
+	 * @since 1.0.0
+	 */
+	do_action( 'rock_before_page_content' );
 
 	the_content();
 
@@ -18,6 +28,13 @@
 			'after'  => '</div>',
 		)
 	);
+
+	/**
+	* Fires inside the `.page-content` element, after the content.
+	 *
+	 * @since 1.0.0
+	 */
+	do_action( 'rock_after_page_content' );
 
 	?>
 

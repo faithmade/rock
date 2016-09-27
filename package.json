@@ -1,29 +1,33 @@
 {
   "name": "rock",
   "title": "Rock",
-  "description": "Rock is a WordPress theme for churches with powerful layout options, customizable colors, fonts, and more.",
-  "version": "2.0.0",
-  "author": "Lift",
+  "description": "Rock is a powerful theme that brings clarity to your content in a fresh design.",
+  "version": "1.0.0",
+  "author": "GoDaddy",
   "license": "GPL-2.0",
-  "repository": "faithmade/rock",
-  "homepage": "https://rock.churchthemes.net",
+  "repository": "godaddy/wp-rock-theme",
+  "homepage": "https://github.com/godaddy/wp-rock-theme",
   "bugs": {
-    "url": "https://github.com/faithmade/rock/issues"
+    "url": "https://github.com/godaddy/wp-rock-theme/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-autoprefixer": "~3.0.4",
     "grunt-browser-sync": "~2.2.0",
-    "grunt-contrib-cssmin": "~0.14.0",
+    "grunt-contrib-clean": "~1.0.0",
+    "grunt-contrib-copy": "~1.0.0",
+    "grunt-contrib-cssmin": "~1.0.2",
     "grunt-contrib-jshint": "~1.0.0",
-    "grunt-contrib-uglify": "~1.0.1",
+    "grunt-contrib-uglify": "~2.0.0",
     "grunt-contrib-watch": "~1.0.0",
     "grunt-cssjanus": "~0.3.2",
     "grunt-dev-update": "~2.0.0",
-    "grunt-pot": "~0.2.1",
     "grunt-po2mo": "~0.1.2",
     "grunt-sass": "1.2.0",
-    "grunt-text-replace": "~0.4.0",
+    "grunt-wp-i18n": "~0.5.4",
     "load-grunt-tasks": "~3.5.0",
     "matchdep": "~1.0.1",
     "susy": "~2.2.12"

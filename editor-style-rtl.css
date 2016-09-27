@@ -289,7 +289,7 @@ code {
 pre code {
   padding: 0;
   border: none;
-  background-color: none; }
+  background-color: transparent; }
 
 abbr, acronym {
   border-bottom: 1px dotted rgba(37, 37, 37, 0.1);
@@ -468,12 +468,8 @@ input[type="submit"] {
   color: #ffffff;
   line-height: 1;
   margin-bottom: 0.5em;
-  padding: 1em 1.5em;
-  font-size: 1rem;
-  white-space: nowrap;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px; }
+  padding: 0.75em 1em;
+  white-space: nowrap; }
   button:hover, button:active, button:focus,
   a.button:hover,
   a.button:active,

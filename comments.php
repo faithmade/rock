@@ -8,7 +8,7 @@
  * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#comments-php
  *
  * @package Rock
- * @since 1.0.0
+ * @since   1.0.0
  */
 
 /*
@@ -49,7 +49,7 @@ if ( post_password_required() ) {
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 
-			<nav id="comment-nav-above" class="comment-navigation" role="navigation">
+			<nav id="comment-nav-above" class="comment-navigation">
 
 				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'rock' ); ?></h1>
 
@@ -74,7 +74,7 @@ if ( post_password_required() ) {
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 
-			<nav id="comment-nav-below" class="comment-navigation" role="navigation">
+			<nav id="comment-nav-below" class="comment-navigation">
 
 				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'rock' ); ?></h1>
 

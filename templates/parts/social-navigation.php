@@ -3,6 +3,7 @@
  * Displays the social navigation.
  *
  * @package Rock
+ * @since   1.0.0
  */
 ?>
 

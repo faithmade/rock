@@ -3,6 +3,7 @@
  * Custom helper functions for this theme.
  *
  * @package Rock
+ * @since   1.0.0
  */
 
 /**
@@ -17,6 +18,8 @@ function rock_get_the_page_title() {
 	switch ( true ) {
 
 		case is_front_page() :
+
+			$title = get_the_title( get_option( 'page_on_front' ) );
 
 			break;
 
@@ -58,9 +61,12 @@ function rock_get_the_page_title() {
 
 		case ( ( $post = get_queried_object() ) && ! is_post_type_hierarchical( get_post_type( $post ) ) ) :
 
-			if ( 'post' === $post->post_type ) {
+			$show_on_front  = get_option( 'show_on_front' );
+			$page_for_posts = get_option( 'page_for_posts' );
 
-				$title = get_the_title( get_option( 'page_for_posts' ) );
+			if ( 'post' === $post->post_type && 'posts' !== $show_on_front && ! empty( $page_for_posts ) ) {
+
+				$title = get_the_title( $page_for_posts );
 
 				break;
 
@@ -121,7 +127,7 @@ function rock_is_fixed_width() {
 /**
  * Return the current layout.
  *
- * @global string $rock_customizer_layouts
+ * @global Rock_Customizer_Layouts $rock_customizer_layouts
  * @since  1.0.0
  *
  * @param  int $post_id (optional)
@@ -141,8 +147,8 @@ function rock_get_layout( $post_id = null ) {
 /**
  * Return the global layout.
  *
- * @global string $rock_customizer_layouts
- * @since 1.0.0
+ * @global Rock_Customizer_Layouts $rock_customizer_layouts
+ * @since  1.0.0
  *
  * @return string
  */

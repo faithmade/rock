@@ -3,10 +3,11 @@
  * Displays the footer navigation.
  *
  * @package Rock
+ * @since   1.0.0
  */
 ?>
 
-<nav class="footer-menu" role="navigation">
+<nav class="footer-menu">
 
 	<?php
 

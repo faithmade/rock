@@ -3,6 +3,7 @@
  * Displays the footer site info.
  *
  * @package Rock
+ * @since   1.0.0
  */
 ?>
 

@@ -3,6 +3,7 @@
  * Custom template tags for this theme.
  *
  * @package Rock
+ * @since   1.0.0
  */
 
 /**
@@ -80,7 +81,7 @@ function rock_the_site_title() {
 function rock_the_site_description() {
 
 	$html = sprintf(
-		'<div class="site-description">%s</a></div>',
+		'<div class="site-description">%s</div>',
 		get_bloginfo( 'description' )
 	);
 
@@ -127,9 +128,9 @@ function rock_paging_nav() {
 	}
 
 	?>
-	<nav class="navigation paging-navigation" role="navigation">
+	<nav class="navigation paging-navigation">
 
-		<h1 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'rock' ); ?></h1>
+		<h2 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'rock' ); ?></h2>
 
 		<div class="nav-links">
 
@@ -172,7 +173,7 @@ function rock_post_nav() {
 	}
 
 	?>
-	<nav class="navigation post-navigation" role="navigation">
+	<nav class="navigation post-navigation">
 
 		<h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'rock' ); ?></h1>
 
@@ -265,7 +266,7 @@ function rock_breadcrumbs() {
 
 		printf(
 			'<a href="%s">%s</a>%s',
-			esc_url( home_url() ),
+			esc_url( home_url( '/' ) ),
 			esc_html( get_bloginfo( 'name' ) ),
 			$separator // xss ok
 		);
@@ -295,7 +296,7 @@ function rock_breadcrumbs() {
 
 		} elseif ( is_page() && $post->post_parent ) {
 
-			$home = get_page( get_option( 'page_on_front' ) );
+			$home = get_post( get_option( 'page_on_front' ) );
 
 			for ( $i = count( $post->ancestors )-1; $i >= 0; $i-- ) {
 
@@ -306,11 +307,11 @@ function rock_breadcrumbs() {
 				}
 			}
 
-			echo the_title();
+			the_title();
 
 		} elseif ( is_page() ) {
 
-			echo the_title();
+			the_title();
 
 		} elseif ( is_404() ) {
 

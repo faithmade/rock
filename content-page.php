@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
  *
  * @package Rock
- * @since 1.0.0
+ * @since   1.0.0
  */
 ?>
 
@@ -17,14 +17,8 @@
 
 	<?php endif; ?>
 
-	<?php if ( ! rock_has_hero_image() && ! has_action( 'rock_after_header', 'rock_add_page_title' ) ) : ?>
+	<?php get_template_part( 'templates/parts/loop/page', 'content' ); ?>
 
-		<?php get_template_part( 'templates/parts/loop/' . get_post_type(), 'title' ); ?>
-
-	<?php endif; ?>
-
-	<?php get_template_part( 'templates/parts/loop/' . get_post_type(), 'content' ); ?>
-
-	<?php get_template_part( 'templates/parts/loop/' . get_post_type(), 'footer' ); ?>
+	<?php get_template_part( 'templates/parts/loop/page', 'footer' ); ?>
 
 </article><!-- #post-## -->

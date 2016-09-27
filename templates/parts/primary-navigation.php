@@ -3,6 +3,7 @@
  * Displays the primary navigation.
  *
  * @package Rock
+ * @since   1.0.0
  */
 ?>
 
@@ -17,11 +18,11 @@
 	do_action( 'rock_before_site_navigation' );
 	?>
 
-	<nav id="site-navigation" class="main-navigation" role="navigation">
+	<nav id="site-navigation" class="main-navigation">
 
 		<?php
 		/**
-		 * Fires inside the `<nav id="site-navigation" class="main-navigation" role="navigation">` element.
+		 * Fires inside the `<nav id="site-navigation" class="main-navigation">` element.
 		 *
 		 * @since 1.0.0
 		 */
@@ -32,7 +33,7 @@
 
 	<?php
 	/**
-	 * Fires after the `<nav id="site-navigation" class="main-navigation" role="navigation">` element.
+	 * Fires after the `<nav id="site-navigation" class="main-navigation">` element.
 	 *
 	 * @since 1.0.0
 	 */

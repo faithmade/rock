@@ -2,7 +2,7 @@
 	position: relative;
 	background-color: $color__hero-bg;
 	background-size: cover;
-	background-position: top center;
+	background-position: bottom center;
 	background-repeat: no-repeat;
 }
 
@@ -18,7 +18,7 @@ body.no-max-width .site-header-wrapper {
 	@include span(12);
 
 	position: relative;
-	z-index: 1;
+	z-index: 10;
 	padding: 6% 1rem;
 
 	@media #{$small-only} {
@@ -28,10 +28,10 @@ body.no-max-width .site-header-wrapper {
 }
 
 .site-title {
-	margin-bottom: 0;
+	margin-bottom: 0.25rem;
 	letter-spacing: -0.03em;
 	font-weight: 700;
-	font-size: 1.75em;
+	font-size: 2em;
 
 	a {
 		color: $color__site-title-text;
@@ -58,7 +58,6 @@ body.no-max-width .site-header-wrapper {
 		@include container($container-size);
 
 		position: relative;
-		z-index: 9999;
 		clear: both;
 
 		h1 {

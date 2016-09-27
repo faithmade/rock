@@ -3,6 +3,7 @@
  * Displays page titles.
  *
  * @package Rock
+ * @since   1.0.0
  */
 ?>
 
@@ -19,7 +20,7 @@
 		do_action( 'rock_before_page_title' );
 		?>
 
-		<h1 class="page-title"><?php rock_the_page_title() ?></h1>
+		<h1 class="page-title"><?php rock_the_page_title(); ?></h1>
 
 		<?php
 		/**
