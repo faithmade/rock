@@ -11,11 +11,7 @@
 
 	<?php
 
-<<<<<<< Updated upstream
-	the_content( __( 'Read More <span class="meta-nav">&rarr;</span>', 'rock' ) );
-=======
 	the_content( esc_html__( 'Read More <span class="meta-nav">&rarr;</span>', 'rock' ) );
->>>>>>> Stashed changes
 
 	wp_link_pages(
 		array(
