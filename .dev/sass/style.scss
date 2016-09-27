@@ -1,10 +1,10 @@
 /**
- * Theme Name: Rock
- * Theme URI: https://github.com/godaddy/wp-rock-theme
- * Author: GoDaddy
- * Author URI: https://www.godaddy.com/
- * Description: Rock is a powerful theme that brings clarity to your content in a fresh design.
- * Version: 1.0.0
+ * Theme Name: Rock Framework
+ * Theme URI: https://rock.churchthemes.net
+ * Author: Lift
+ * Author URI: https://liftux.com/
+ * Description: Rock is a WordPress theme for churches with powerful layout options, customizable colors, fonts, and more.
+ * Version: 3.0.0
  * License: GPL-2.0
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: rock
@@ -14,7 +14,7 @@
  * This theme, like WordPress, is licensed under the GPL.
  * Use it to make something cool, have fun, and share what you've learned with others.
  *
- * Copyright © 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
+ * Copyright © 2016 Walmedia, LLC. and GoDaddy Operating Company, LLC. All Rights Reserved.
  */
 
 /*--------------------------------------------------------------
@@ -83,15 +83,9 @@
 @import "components/links";
 
 /*--------------------------------------------------------------
-<<<<<<< Updated upstream
 # Pointers
 --------------------------------------------------------------*/
 @import "components/pointers";
-=======
-# Media
---------------------------------------------------------------*/
-@import "components/media";
->>>>>>> Stashed changes
 
 /*--------------------------------------------------------------
 # Menus

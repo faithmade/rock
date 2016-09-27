@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /**
- * Theme Name: Rock
- * Theme URI: https://github.com/godaddy/wp-rock-theme
- * Author: GoDaddy
- * Author URI: https://www.godaddy.com/
- * Description: Rock is a powerful theme that brings clarity to your content in a fresh design.
- * Version: 1.0.0
+ * Theme Name: Rock Framework
+ * Theme URI: https://rock.churchthemes.net
+ * Author: Lift
+ * Author URI: https://liftux.com/
+ * Description: Rock is a WordPress theme for churches with powerful layout options, customizable colors, fonts, and more.
+ * Version: 3.0.0
  * License: GPL-2.0
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: rock
@@ -15,7 +15,7 @@
  * This theme, like WordPress, is licensed under the GPL.
  * Use it to make something cool, have fun, and share what you've learned with others.
  *
- * Copyright © 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
+ * Copyright © 2016 Walmedia, LLC. and GoDaddy Operating Company, LLC. All Rights Reserved.
  */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -566,7 +566,6 @@ a {
     outline: 0; }
 
 /*--------------------------------------------------------------
-<<<<<<< Updated upstream
 # Pointers
 --------------------------------------------------------------*/
 .wp-pointer-content {
@@ -588,23 +587,6 @@ a {
     .wp-pointer-content a.close:visited:active,
     .wp-pointer-content a.close:visited:focus {
       color: #00a0d2; }
-=======
-# Media
---------------------------------------------------------------*/
-.page-content .wp-smiley,
-.entry-content .wp-smiley,
-.comment-content .wp-smiley {
-  border: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0; }
-
-/* Make sure embeds and iframes fit their containers. */
-embed,
-iframe,
-object {
-  max-width: 100%; }
->>>>>>> Stashed changes
 
 /*--------------------------------------------------------------
 # Menus
@@ -1453,7 +1435,6 @@ body.error404 .site-content {
 body.no-max-width .site-content {
   max-width: none; }
 
-<<<<<<< Updated upstream
 @media only screen and (min-width: 40.063em) and (max-width: 61.063em) {
   body.layout-one-column-narrow .site-content {
     max-width: 80%;
@@ -1473,36 +1454,6 @@ body.no-max-width .site-content {
       content: " ";
       display: block;
       clear: both; } }
-=======
-body.fl-builder.layout-one-column-wide .site-content,
-body.fl-builder.layout-one-column-wide.page .hentry,
-body.fl-builder.layout-one-column-wide .page-content,
-body.fl-builder.layout-one-column-wide .content-area {
-  float: none;
-  max-width: none;
-  width: auto;
-  margin: 0;
-  padding: 0;
-  background-color: transparent; }
-
-@media only screen and (min-width: 40.063em) {
-  body.fl-builder.layout-one-column-wide .content-area {
-    float: none;
-    width: auto;
-    max-width: none;
-    margin: 0;
-    padding: 0;
-    background-color: transparent; } }
-
-body.layout-one-column-narrow .site-content {
-  max-width: 66.66667%;
-  margin-right: auto;
-  margin-left: auto; }
-  body.layout-one-column-narrow .site-content:after {
-    content: " ";
-    display: block;
-    clear: both; }
->>>>>>> Stashed changes
 
 .content-area {
   width: 63.88889%;

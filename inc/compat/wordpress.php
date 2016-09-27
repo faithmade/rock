@@ -45,7 +45,7 @@ function rock_get_wp_upgrade_message() {
 	return (string) apply_filters( 'rock_required_wp_version_message',
 		sprintf(
 			__( 'Rock requires at least WordPress version %1$s. You are running version %2$s. Please upgrade and try again.', 'rock' ),
-			PRIMER_MIN_WP_VERSION,
+			ROCK_MIN_WP_VERSION,
 			get_bloginfo( 'version' )
 		)
 	);

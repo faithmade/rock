@@ -24,7 +24,7 @@
  * @var string
  */
 <<<<<<< Updated upstream
-define( 'PRIMER_VERSION', '0.9.0' );
+define( 'ROCK_VERSION', '0.9.0' );
 =======
 define( 'ROCK_VERSION', '2.0.0' );
 >>>>>>> Stashed changes
@@ -36,9 +36,9 @@ define( 'ROCK_VERSION', '2.0.0' );
  *
  * @var string
  */
-if ( ! defined( 'PRIMER_MIN_WP_VERSION' ) ) {
+if ( ! defined( 'ROCK_MIN_WP_VERSION' ) ) {
 
-	define( 'PRIMER_MIN_WP_VERSION', '4.4' );
+	define( 'ROCK_MIN_WP_VERSION', '4.4' );
 
 }
 
@@ -47,7 +47,7 @@ if ( ! defined( 'PRIMER_MIN_WP_VERSION' ) ) {
  *
  * @since 1.0.0
  */
-if ( version_compare( get_bloginfo( 'version' ), PRIMER_MIN_WP_VERSION, '<' ) ) {
+if ( version_compare( get_bloginfo( 'version' ), ROCK_MIN_WP_VERSION, '<' ) ) {
 
 	require_once get_template_directory() . '/inc/compat/wordpress.php';
 
@@ -439,12 +439,12 @@ function rock_scripts() {
 	$stylesheet = get_stylesheet();
 	$suffix     = SCRIPT_DEBUG ? '' : '.min';
 
-	wp_enqueue_style( $stylesheet, get_stylesheet_uri(), false, defined( 'PRIMER_CHILD_VERSION' ) ? PRIMER_CHILD_VERSION : PRIMER_VERSION );
+	wp_enqueue_style( $stylesheet, get_stylesheet_uri(), false, defined( 'ROCK_CHILD_VERSION' ) ? ROCK_CHILD_VERSION : ROCK_VERSION );
 
 	wp_style_add_data( $stylesheet, 'rtl', 'replace' );
 
-	wp_enqueue_script( 'rock-navigation', get_template_directory_uri() . "/assets/js/navigation{$suffix}.js", array( 'jquery' ), PRIMER_VERSION, true );
-	wp_enqueue_script( 'rock-skip-link-focus-fix', get_template_directory_uri() . "/assets/js/skip-link-focus-fix{$suffix}.js", array(), PRIMER_VERSION, true );
+	wp_enqueue_script( 'rock-navigation', get_template_directory_uri() . "/assets/js/navigation{$suffix}.js", array( 'jquery' ), ROCK_VERSION, true );
+	wp_enqueue_script( 'rock-skip-link-focus-fix', get_template_directory_uri() . "/assets/js/skip-link-focus-fix{$suffix}.js", array(), ROCK_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 

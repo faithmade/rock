@@ -199,14 +199,14 @@ class Rock_Customizer_Layouts {
 			'rock-layouts',
 			get_template_directory_uri() . "/assets/js/admin/layouts{$suffix}.js",
 			array( 'jquery' ),
-			PRIMER_VERSION
+			ROCK_VERSION
 		);
 
 		wp_enqueue_style(
 			'rock-layouts',
 			get_template_directory_uri() . "/assets/css/admin/layouts{$rtl}{$suffix}.css",
 			array(),
-			PRIMER_VERSION
+			ROCK_VERSION
 		);
 
 	}
