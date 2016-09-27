@@ -23,11 +23,7 @@
  *
  * @var string
  */
-<<<<<<< Updated upstream
-define( 'ROCK_VERSION', '0.9.0' );
-=======
-define( 'ROCK_VERSION', '2.0.0' );
->>>>>>> Stashed changes
+define( 'ROCK_VERSION', '3.0.0' );
 
 /**
  * Minimum WordPress version required for Rock.
