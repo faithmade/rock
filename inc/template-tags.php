@@ -328,3 +328,28 @@ function rock_breadcrumbs() {
 	echo '</div>';
 
 }
+
+/**
+ * Gets the content template
+ *
+ * @since 1.0
+ */
+function rock_get_content_template() {
+  switch ( get_post_type() ) {
+    case 'ctc_sermon':
+      get_template_part( 'content', 'sermon' );
+    break;
+    case 'ctc_event':
+      get_template_part( 'content', 'event' );
+    break;
+    case 'ctc_person':
+      get_template_part( 'content', 'person' );
+    break;
+    case 'ctc_location':
+      get_template_part( 'content', 'location' );
+    break;
+    default:
+      get_template_part( 'content', get_post_format() );
+    break;
+  }
+}
