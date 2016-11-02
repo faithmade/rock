@@ -284,6 +284,16 @@ function rock_setup() {
 		)
 	);
 
+	/**
+	 * Enable support for Church Themes Plugin
+	 *
+	 * @since 3.0.0
+	 */
+	add_theme_support( 'sermons' );
+	add_theme_support( 'events' );
+	add_theme_support( 'people' );
+	add_theme_support( 'locations' );
+
 }
 add_action( 'after_setup_theme', 'rock_setup' );
 
