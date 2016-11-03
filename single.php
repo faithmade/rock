@@ -16,7 +16,7 @@ get_header(); ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php get_template_part( 'content' ); ?>
+		<?php rock_get_content_template() ?>
 
 		<?php rock_post_nav(); ?>
 
