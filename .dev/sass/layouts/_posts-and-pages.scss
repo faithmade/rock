@@ -19,6 +19,20 @@
 	@media #{$small-only} {
 		padding: 1em;
 	}
+
+	.fl-builder & {
+		padding: 3.375em 0 2.5em;
+
+		@media #{$medium-only} {
+			padding: 1.5em 0;
+		}
+
+		@media #{$small-only} {
+			padding: 1em 0;
+		}
+
+	}
+
 }
 
 .sticky {

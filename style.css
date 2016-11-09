@@ -2015,6 +2015,14 @@ body.no-max-width .site-info-wrapper .site-info {
   @media only screen and (max-width: 40.063em) {
     .hentry {
       padding: 1em; } }
+  .fl-builder .hentry {
+    padding: 3.375em 0 2.5em; }
+    @media only screen and (min-width: 40.063em) and (max-width: 61.063em) {
+      .fl-builder .hentry {
+        padding: 1.5em 0; } }
+    @media only screen and (max-width: 40.063em) {
+      .fl-builder .hentry {
+        padding: 1em 0; } }
 
 .sticky {
   display: block; }
