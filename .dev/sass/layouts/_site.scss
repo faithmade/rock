@@ -1,139 +1,143 @@
-.site-content {
-	@include container($container-size);
+body:not(.fl-builder) {
 
-	margin-top: 2em;
+	.site-content {
+		@include container($container-size);
 
-	@media #{$medium-down} {
-		margin-top: 7 / 18 + 1%;
+		margin-top: 2em;
+
+		@media #{$medium-down} {
+			margin-top: 7 / 18 + 1%;
+		}
 	}
-}
 
-body.error404 .site-content {
-	margin-bottom: 2em;
-}
-
-body.no-max-width .site-content {
-	max-width: none;
-}
-
-@media #{$medium-only} {
-
-	body.layout-one-column-narrow .site-content {
-		@include container(80%);
+	body.error404 .site-content {
+		margin-bottom: 2em;
 	}
-}
 
-@media #{$large-up} {
-
-	body.layout-one-column-narrow .site-content {
-		@include container(66.66667%);
+	body.no-max-width .site-content {
+		max-width: none;
 	}
-}
 
-.content-area {
-	@include span(first 8);
+	@media #{$medium-only} {
 
-	@media #{$medium-down} {
-		@include span(12);
+		body.layout-one-column-narrow .site-content {
+			@include container(80%);
+		}
 	}
-}
 
-#secondary {
-	@include span(last 4);
+	@media #{$large-up} {
 
-	@media #{$medium-down} {
-		@include span(12);
+		body.layout-one-column-narrow .site-content {
+			@include container(66.66667%);
+		}
 	}
-}
 
-#tertiary {
-	display: none;
+	.content-area {
+		@include span(first 8);
 
-	@media #{$medium-down} {
-		@include span(12);
-	}
-}
-
-@media #{$large-up} {
-
-	.layout-one-column-wide,
-	.layout-one-column-narrow {
-		.content-area,
-		#secondary,
-		#tertiary {
+		@media #{$medium-down} {
 			@include span(12);
 		}
 	}
 
-	.layout-two-column-default {
-		.content-area {
-			@include span(first 8);
-		}
+	#secondary {
+		@include span(last 4);
 
-		#secondary {
-			@include span(last 4);
+		@media #{$medium-down} {
+			@include span(12);
 		}
 	}
 
-	.layout-two-column-reversed {
-		.content-area {
-			@include span(last 8);
-		}
+	#tertiary {
+		display: none;
 
-		#secondary {
-			@include span(first 4);
+		@media #{$medium-down} {
+			@include span(12);
 		}
 	}
 
-	.layout-three-column-default {
-		.content-area {
-			@include span(first 6);
+	@media #{$large-up} {
+
+		.layout-one-column-wide,
+		.layout-one-column-narrow {
+			.content-area,
+			#secondary,
+			#tertiary {
+				@include span(12);
+			}
 		}
 
-		#secondary {
-			@include span(3 at 7);
+		.layout-two-column-default {
+			.content-area {
+				@include span(first 8);
+			}
+
+			#secondary {
+				@include span(last 4);
+			}
 		}
 
-		#tertiary {
-			@include span(last 3);
+		.layout-two-column-reversed {
+			.content-area {
+				@include span(last 8);
+			}
 
-			display: block;
+			#secondary {
+				@include span(first 4);
+			}
+		}
+
+		.layout-three-column-default {
+			.content-area {
+				@include span(first 6);
+			}
+
+			#secondary {
+				@include span(3 at 7);
+			}
+
+			#tertiary {
+				@include span(last 3);
+
+				display: block;
+			}
+		}
+
+		.layout-three-column-reversed {
+			.content-area {
+				@include span(last 6);
+			}
+
+			#secondary {
+				@include span(first 3);
+			}
+
+			#tertiary {
+				@include span(3 at 4);
+
+				display: block;
+			}
+		}
+
+		.layout-three-column-center {
+			.content-area {
+				@include span(6 at 4);
+
+				@include push(3 of 12);
+			}
+
+			#secondary {
+				@include span(first 3);
+
+				@include pull(9 of 12);
+			}
+
+			#tertiary {
+				@include span(last 3);
+
+				display: block;
+			}
 		}
 	}
 
-	.layout-three-column-reversed {
-		.content-area {
-			@include span(last 6);
-		}
-
-		#secondary {
-			@include span(first 3);
-		}
-
-		#tertiary {
-			@include span(3 at 4);
-
-			display: block;
-		}
-	}
-
-	.layout-three-column-center {
-		.content-area {
-			@include span(6 at 4);
-
-			@include push(3 of 12);
-		}
-
-		#secondary {
-			@include span(first 3);
-
-			@include pull(9 of 12);
-		}
-
-		#tertiary {
-			@include span(last 3);
-
-			display: block;
-		}
-	}
 }
