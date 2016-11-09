@@ -40,7 +40,7 @@
     .rock-layout-wrap ul li.active label > input + img {
       cursor: pointer; }
     .rock-layout-wrap ul li.active label > input:checked + img {
-      border-color: #1e8cbe; }
+      border-color: #38b093; }
     .rock-layout-wrap ul li.disabled label > input + img {
       cursor: default; }
 
