@@ -2219,3 +2219,8 @@ body.single-product span.onsale {
   padding: 3px 18px;
   top: 0;
   left: 0; }
+  embed,
+  iframe,
+  object {
+  	max-width: 100%;
+  }
