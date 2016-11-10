@@ -281,7 +281,8 @@ class Rock_Customizer_Colors {
 						.tags-links a,
 						.post-edit-link,
 						.comments-link a,
-						.edit-link a' => array(
+						.edit-link a,
+						.entry-footer a' => array(
 							'color' => '%1$s',
 						),
 						'.social-menu a:hover' => array(
