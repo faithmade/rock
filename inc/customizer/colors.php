@@ -201,7 +201,7 @@ class Rock_Customizer_Colors {
 						.entry-meta,
 						.entry-footer,
 						.comment-meta .says,
-						.logged-in-as, .cat-links a, .tags-links a, .post-edit-link, .comments-link a' => array(
+						.logged-in-as' => array(
 							'color' => '%1$s',
 						),
 					),
@@ -276,7 +276,12 @@ class Rock_Customizer_Colors {
 					'section' => 'colors-content',
 					'css'     => array(
 						'a, a:visited,
-						.entry-title a:hover, .entry-title a:visited:hover' => array(
+						.entry-title a:hover, .entry-title a:visited:hover
+						.cat-links a,
+						.tags-links a,
+						.post-edit-link,
+						.comments-link a,
+						.edit-link a' => array(
 							'color' => '%1$s',
 						),
 						'.social-menu a:hover' => array(
