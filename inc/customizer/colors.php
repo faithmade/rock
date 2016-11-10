@@ -201,7 +201,7 @@ class Rock_Customizer_Colors {
 						.entry-meta,
 						.entry-footer,
 						.comment-meta .says,
-						.logged-in-as' => array(
+						.logged-in-as, .cat-links a, .tags-links a, .post-edit-link, .comments-link a' => array(
 							'color' => '%1$s',
 						),
 					),
