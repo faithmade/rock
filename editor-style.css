@@ -509,6 +509,7 @@ a {
   padding: 0; }
 
 /* Make sure embeds and iframes fit their containers. */
+video,
 embed,
 iframe,
 object {
