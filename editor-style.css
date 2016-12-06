@@ -515,6 +515,9 @@ iframe,
 object {
   max-width: 100%; }
 
+.featured-image + .entry-media.audio {
+  margin-top: -24px; }
+
 .wp-caption {
   margin-bottom: 1.5em;
   max-width: 100%; }
