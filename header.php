@@ -76,6 +76,8 @@
 
 		</header><!-- #masthead -->
 
+		<!-- HERE I AM -->
+
 		<?php
 		/**
 		 * Fires after the `<header>` element.
